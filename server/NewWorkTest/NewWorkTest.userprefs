@@ -1,0 +1,37 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\MsgTest.cs">
+    <Files>
+      <File FileName="NewWorkTest.sln" Line="1" Column="1" />
+      <File FileName="Assets\scripts\MsgTest.cs" Line="10" Column="38" />
+      <File FileName="Assets\scripts\PacketLogin.cs" Line="174" Column="1" />
+      <File FileName="Assets\scripts\rn.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\BufferConnection.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\NetPacketHand.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\NetWorkManager.cs" Line="1" Column="1" />
+      <File FileName="..\..\Protobuf编译C++和C#文件，带例子\dota\MsgID.cs" Line="1" Column="1" />
+      <File FileName="..\..\Protobuf编译C++和C#文件，带例子\dota\MsgData.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State />
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>allData</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="E:\UnityWorkspace\NewWorkTest\Assets\scripts\NetWorkManager.cs" line="217" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="Assets\scripts\NetWorkManager.cs" line="664" offsetX="253" offsetY="11271" expression="buf" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+</Properties>

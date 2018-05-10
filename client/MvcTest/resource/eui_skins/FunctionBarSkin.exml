@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="FunctionBarSkin" width="720" height="170" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image x="0" y="0" anchorOffsetX="0" width="720" height="170" source="menu_bg_png"/>
+	<e:Button id="roleBtn" label="Excel" x="0" y="20" skinName="main.RoleBtnSkin" enabled="true" width="112" height="112"/>
+	<e:Button id="backpackBtn" label="prox数据存取" x="101.66333333333333" y="20" skinName="main.BackpackBtnSkin" width="112" height="112"/>
+	<e:Button id="qianghuaBtn" label="protobuf演示" x="202.33666666666664" y="20" skinName="main.QianghuaBtnSkin" width="112" height="112"/>
+	<e:Button id="zhaoXianBtn" label="按钮特效" x="303.99999999999994" y="20" skinName="main.ZhaoXianBtnSkin" width="112" height="112"/>
+	<e:Button id="chuangDangBtn" x="405.66333333333324" y="20" skinName="main.ChuangDangBtnSkin" label="面板特效" width="112" height="112"/>
+	<e:Button id="shopBtn" label="图片特效" x="506.3366666666666" y="20" skinName="main.ShopBtnSkin" width="112" height="112"/>
+	<e:Button id="mapBtn" label="提示特效" x="608" y="20" skinName="main.MapBtnSkin" width="112" height="112"/>
+	<e:Image width="720" height="20" x="0" y="0" source="top_cutline_png" anchorOffsetY="0" scaleY="1"/>
+</e:Skin>

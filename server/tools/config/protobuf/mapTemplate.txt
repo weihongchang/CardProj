@@ -1,0 +1,19 @@
+package com.core.Message.Model;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.core.Message.List.*;
+import com.core.Recognizer.IMsgMappingProvider;
+
+public class PlayerMsgMappingProvider implements IMsgMappingProvider {
+
+	public Map<Short, Class<?>> getMsgMapping() {
+		Map<Short, Class<?>> map = new HashMap<Short, Class<?>>();
+		
+#initCode#		
+		
+		return map;
+	}
+
+}

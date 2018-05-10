@@ -1,0 +1,21 @@
+//option java_package = "com.core.Message.Model";
+package com.core.Message.Model;
+option java_outer_classname = "Enum";
+
+// =============== 该文件只存放枚举 ==============
+// 所有枚举命名以Proto开头
+// protobuf 要求所有枚举变量唯一，新加的枚举变量一定要加前缀
+enum ProtoRarity {
+	GRAY = 0;
+	GREEN = 1;
+	BLUE = 2;
+	YELLOW = 3;
+	RED = 4;
+}
+// 新加的以CODE开头
+enum ProtoErrorCode {
+	SUCCESS = 0; //操作成功
+	NETWORK_TIMEOUT = 1; //网络超时
+	SERVER_IS_UNDER_MAINTENANCE = 2; //服务器正在维护
+	SYSTEM_ERROR = 3;
+}

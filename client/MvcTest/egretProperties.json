@@ -1,0 +1,57 @@
+{
+  "engineVersion": "5.1.7",
+  "compilerVersion": "5.1.7",
+  "template": {},
+  "target": {
+    "current": "web"
+  },
+  "eui": {
+    "exmlRoot": [
+      "resource/eui_skins"
+    ],
+    "themes": [
+      "resource/default.thm.json"
+    ],
+    "exmlPublishPolicy": "commonjs"
+  },
+  "modules": [
+    {
+      "name": "egret"
+    },
+    {
+      "name": "eui"
+    },
+    {
+      "name": "assetsmanager"
+    },
+    {
+      "name": "tween"
+    },
+    {
+      "name": "game"
+    },
+    {
+      "name": "socket"
+    },
+    {
+      "name": "promise"
+    },
+    {
+      "name": "dragonBones"
+    },
+    {
+      "name": "puremvc",
+      "path": "../modules/puremvc"
+    },
+    {
+      "name": "protobuf",
+      "path": "../modules/protobuf"
+    }
+  ],
+  "targets": {
+    "android": {
+      "appname": "test",
+      "packagename": "com.qingyou.test"
+    }
+  }
+}

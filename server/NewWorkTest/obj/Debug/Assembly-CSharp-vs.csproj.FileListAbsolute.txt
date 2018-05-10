@@ -1,0 +1,13 @@
+E:\UnityWorkspace\NewWorkTest\Temp\bin\Debug\Assembly-CSharp.dll
+E:\UnityWorkspace\NewWorkTest\Temp\bin\Debug\Assembly-CSharp.pdb
+E:\UnityWorkspace\NewWorkTest\Temp\bin\Debug\Google.ProtocolBuffers.dll
+E:\UnityWorkspace\NewWorkTest\Temp\bin\Debug\UnityEditor.dll
+E:\UnityWorkspace\NewWorkTest\Temp\bin\Debug\UnityEngine.dll
+E:\UnityWorkspace\NewWorkTest\Temp\bin\Debug\UnityEngine.UI.dll
+E:\UnityWorkspace\NewWorkTest\Temp\bin\Debug\Mono.Cecil.dll
+E:\UnityWorkspace\NewWorkTest\Temp\bin\Debug\nunit.framework.dll
+E:\UnityWorkspace\NewWorkTest\Temp\bin\Debug\Unity.DataContract.dll
+E:\UnityWorkspace\NewWorkTest\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+E:\UnityWorkspace\NewWorkTest\obj\Debug\Assembly-CSharp.dll
+E:\UnityWorkspace\NewWorkTest\obj\Debug\Assembly-CSharp.pdb
+E:\UnityWorkspace\NewWorkTest\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache

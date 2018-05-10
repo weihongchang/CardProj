@@ -1,0 +1,6 @@
+package ServerMessage;  
+message SignUpResponse  
+{  
+    optional int32 errorCode = 1;  
+    optional float version = 2;  
+}  

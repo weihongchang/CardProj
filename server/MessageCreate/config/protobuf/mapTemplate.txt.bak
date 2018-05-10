@@ -1,0 +1,41 @@
+package com.wanmei.project612.network.protocol.generate;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.google.protobuf.MessageLite;
+import com.wanmei.project612.network.protocol.generate.Message.*;
+
+
+/**
+ * 协议ID映射管理
+ * 自动生成文件，切勿修改
+ */
+public class MessageMappingManager {
+
+	/** msgId <-> MessageLite Req请求映射 */
+	private Map<Integer, MessageLite> idClazzMap;
+
+	/** MessageLiteClass <--> msgId Resp响应映射 */
+	private Map<Class<? extends MessageLite>, Integer> clazzIdMap;
+	
+	public void init() {
+		idClazzMap = new HashMap<Integer, MessageLite>();
+		clazzIdMap = new HashMap<Class<? extends MessageLite>, Integer>();
+
+#initCode#
+
+	}
+	
+	public MessageLite getMessage(int messageId) {
+		return idClazzMap.get(messageId);
+	}
+
+	public int getMessageId(Class<?> clazz) {
+		return clazzIdMap.get(clazz);
+	}
+
+	public Map<Integer, MessageLite> getAllMessage() {
+		return idClazzMap;
+	}
+}

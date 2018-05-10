@@ -1,0 +1,19 @@
+//option java_package = "com.core.Message.Model";
+package com.core.Message.Model;
+option java_outer_classname = "Struct";
+import "enum.proto";
+
+// =============== 该文件只存放公用结构 ==============
+/*
+ * 所有新增加的结构命名都以Pb开头
+ * 所有未以Pb开头的结构，都是需要删除或者修改的
+ * 标记：
+ * 1. Deprecated 过时的结构(等待删除)
+ * 2. Modify 需要修改的结构
+ */
+
+//消息提醒
+message PbNewsPrompt {
+	required int32 newsPromptId = 1;//消息模块id
+    required bool isShow = 2;//是否显示提示符号  true显示  false 不显示
+}
