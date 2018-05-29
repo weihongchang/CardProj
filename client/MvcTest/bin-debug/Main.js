@@ -275,16 +275,16 @@ var Main = (function (_super) {
      * Click the button
      */
     Main.prototype.onButtonClick = function (e) {
-        // let panel = new eui.Panel();
-        // panel.title = "Title";
-        // panel.horizontalCenter = 0;
-        // panel.verticalCenter = 0;
-        // this.addChild(panel);
-        // SocketManager.connectServer("127.0.0.1",8888);
-        game.AppFacade.getInstance().startUp(GameLayerManager.gameLayer());
-        game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_HOME);
-        game.AppFacade.getInstance().sendNotification(MainNotify.OPEN_MAIN);
-        GameLayerManager.gameLayer().removeChild(this.imgBG);
+        var panel = new eui.Panel();
+        panel.title = "Title";
+        panel.horizontalCenter = 0;
+        panel.verticalCenter = 0;
+        this.addChild(panel);
+        SocketManager.connectServer("127.0.0.1", 8888);
+        // game.AppFacade.getInstance().startUp(GameLayerManager.gameLayer());
+        // game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_HOME);
+        // game.AppFacade.getInstance().sendNotification(MainNotify.OPEN_MAIN);
+        // GameLayerManager.gameLayer().removeChild(this.imgBG);
     };
     Main.prototype.onButton1Click = function (e) {
         UserInfoRequest.sendUserInfo(Number("1234556"), "jksldjkfsl");

@@ -31,10 +31,11 @@ option java_outer_classname = "MsgTest";
 // 登录请求
 // messageId:101
 //template
-message user_login{
+message CSLogin{
 	required string email = 1;
 	optional string password = 2;
 	optional string sessionKey = 3;
+	optional int32 serverid = 4;
 }
 
 // 登录响应

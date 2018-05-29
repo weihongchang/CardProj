@@ -231,19 +231,19 @@ private imgBG :egret.Sprite;
      * Click the button
      */
     private onButtonClick(e: egret.TouchEvent) {
-        // let panel = new eui.Panel();
-        // panel.title = "Title";
-        // panel.horizontalCenter = 0;
-        // panel.verticalCenter = 0;
-        // this.addChild(panel);
-        // SocketManager.connectServer("127.0.0.1",8888);
+        let panel = new eui.Panel();
+        panel.title = "Title";
+        panel.horizontalCenter = 0;
+        panel.verticalCenter = 0;
+        this.addChild(panel);
+        SocketManager.connectServer("127.0.0.1",8888);
 
         
 
-        game.AppFacade.getInstance().startUp(GameLayerManager.gameLayer());
-        game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_HOME);
-        game.AppFacade.getInstance().sendNotification(MainNotify.OPEN_MAIN);
-        GameLayerManager.gameLayer().removeChild(this.imgBG);
+        // game.AppFacade.getInstance().startUp(GameLayerManager.gameLayer());
+        // game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_HOME);
+        // game.AppFacade.getInstance().sendNotification(MainNotify.OPEN_MAIN);
+        // GameLayerManager.gameLayer().removeChild(this.imgBG);
        
     }
 

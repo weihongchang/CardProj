@@ -20,6 +20,10 @@ module game {
 				case 101:
 					console.log("101");
 					break;
+				case 102:
+					console.log("102");
+					new Processor_100().executeData(data);
+					break;
 			}
 		}
 

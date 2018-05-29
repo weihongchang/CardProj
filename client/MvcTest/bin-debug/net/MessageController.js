@@ -20,6 +20,10 @@ var game;
                 case 101:
                     console.log("101");
                     break;
+                case 102:
+                    console.log("102");
+                    new game.Processor_100().executeData(data);
+                    break;
             }
         };
         return MessageController;

@@ -42,12 +42,11 @@ public class CSLoginHandler extends CGMessage {
     public void execute() {
         System.out.println("loginhandler");
         
-//        Message.SCMsg.Builder msg = Message.SCMsg.newBuilder();
+        Message.SCLogin.Builder msg = Message.SCLogin.newBuilder();
 //        msg.setUsername("h接口数量的减肥速度");
-        MsgTest.LoginResp.Builder msg = MsgTest.LoginResp.newBuilder();
+//        MsgTest.LoginResp.Builder msg = MsgTest.LoginResp.newBuilder();
         
-        msg.setStatus(100);
-        msg.setDes("ddwe");
+        msg.setLoginStatus(0);
 //        this.getChannel().getPlayer().sendMessage(msg.build());
         WsPool.sendMessageToUser(conn, msg.build());
         
