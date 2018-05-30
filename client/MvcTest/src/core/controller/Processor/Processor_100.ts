@@ -29,7 +29,9 @@ module game {
             var new_user_login = user_login_class.decode(data.buffer);
             console.log("反序列化数据：",new_user_login);
             
-            this.sendNotification(UserInfoNotify.UPDATE_DATA,new_user_login);
+            // this.sendNotification(UserInfoNotify.UPDATE_DATA,new_user_login);
+            game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_HOME);
+            game.AppFacade.getInstance().sendNotification(MainNotify.OPEN_MAIN);
         }
         public execute(notification: puremvc.INotification): void {
             var data: any = notification.getBody();//携带数据
@@ -41,7 +43,11 @@ module game {
             var new_user_login = user_login_class.decode(data.buffer);
             console.log("反序列化数据：",new_user_login);
             
-            this.sendNotification(UserInfoNotify.UPDATE_DATA,new_user_login);
+            // this.sendNotification(UserInfoNotify.UPDATE_DATA,new_user_login);
+            game.AppFacade.getInstance().startUp(GameLayerManager.gameLayer());
+            game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_HOME);
+            game.AppFacade.getInstance().sendNotification(MainNotify.OPEN_MAIN);
+            // GameLayerManager.gameLayer().removeChild(this.imgBG);
         }
     }
 }

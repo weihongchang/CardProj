@@ -5,9 +5,6 @@ import javax.persistence.Id;
 import javax.persistence.Index;
 import javax.persistence.Table;
 
-/**
- * Created by lidongyuan@pwrd.com on 2015/11/5.
- */
 @Entity
 @Table(name = "player", indexes = {@Index(columnList = "account,worldid")})
 public class PlayerModel {

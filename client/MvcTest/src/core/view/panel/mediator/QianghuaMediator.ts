@@ -35,7 +35,7 @@ module game {
                     break;
                 }
                 case SysNotify.CONNECT_SERVER_SUCCESS: {
-                    this.qinghuaPanel.showText.text += "服务器连接成功...\n";
+                    // this.qinghuaPanel.showText.text += "服务器连接成功...\n";
                     break;
                 }
                 case UserInfoNotify.UPDATE_DATA: {

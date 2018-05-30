@@ -6,7 +6,9 @@ import org.slf4j.Logger;
 import com.core.WsServer;
 import com.core.Recognizer.GameMesageRecognizer;
 import com.core.db.DbManager;
+import com.core.db.MongoUtil;
 import com.log.Loggers;
+import com.mongodb.client.MongoDatabase;
 
 
 public class GameStart {
@@ -18,7 +20,12 @@ public class GameStart {
 		logger.info("Game Start .....");
 		// 获取当前时间
 		long t0 = System.currentTimeMillis();
-		DbManager.getSession();
+//		DbManager.getSession();
+		MongoDatabase md = MongoUtil.instance.getDB("CardGame");
+		if(md == null)
+		{
+//			MongoUtil.instance.
+		}
 //		ChannelInboundHandler<GameMessageChannel> ioHandler = new GameChannelInboundHandler();
 		
 //		IMsgDispatcher msgDispatcher = new GameMsgDispatcher<IMsgProcessor>(MainMsgProcessor.theInstance());

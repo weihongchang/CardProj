@@ -33,7 +33,9 @@ var game;
             //反序列化
             var new_user_login = user_login_class.decode(data.buffer);
             console.log("反序列化数据：", new_user_login);
-            this.sendNotification(UserInfoNotify.UPDATE_DATA, new_user_login);
+            // this.sendNotification(UserInfoNotify.UPDATE_DATA,new_user_login);
+            game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_HOME);
+            game.AppFacade.getInstance().sendNotification(MainNotify.OPEN_MAIN);
         };
         Processor_100.prototype.execute = function (notification) {
             var data = notification.getBody(); //携带数据
@@ -42,7 +44,11 @@ var game;
             //反序列化
             var new_user_login = user_login_class.decode(data.buffer);
             console.log("反序列化数据：", new_user_login);
-            this.sendNotification(UserInfoNotify.UPDATE_DATA, new_user_login);
+            // this.sendNotification(UserInfoNotify.UPDATE_DATA,new_user_login);
+            game.AppFacade.getInstance().startUp(GameLayerManager.gameLayer());
+            game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_HOME);
+            game.AppFacade.getInstance().sendNotification(MainNotify.OPEN_MAIN);
+            // GameLayerManager.gameLayer().removeChild(this.imgBG);
         };
         Processor_100.NAME = "Processor_100";
         return Processor_100;
