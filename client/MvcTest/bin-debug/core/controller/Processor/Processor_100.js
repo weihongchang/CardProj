@@ -33,9 +33,21 @@ var game;
             //反序列化
             var new_user_login = user_login_class.decode(data.buffer);
             console.log("反序列化数据：", new_user_login);
-            // this.sendNotification(UserInfoNotify.UPDATE_DATA,new_user_login);
-            game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_HOME);
-            game.AppFacade.getInstance().sendNotification(MainNotify.OPEN_MAIN);
+            // console.log(game.DataManager.getInstance().player.name);
+            if (new_user_login.status >= 0) {
+                game.DataManager.getInstance().player.playerid = new_user_login.playerid;
+                game.DataManager.getInstance().player.name = new_user_login.name;
+                game.DataManager.getInstance().player.exp = new_user_login.exp;
+                game.DataManager.getInstance().player.level = new_user_login.level;
+                game.DataManager.getInstance().player.money = new_user_login.money;
+                game.DataManager.getInstance().player.gold = new_user_login.gold;
+                // this.sendNotification(UserInfoNotify.UPDATE_DATA,new_user_login);
+                game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_HOME);
+                game.AppFacade.getInstance().sendNotification(MainNotify.OPEN_MAIN);
+            }
+            else {
+                console.error("登陆失败！");
+            }
         };
         Processor_100.prototype.execute = function (notification) {
             var data = notification.getBody(); //携带数据

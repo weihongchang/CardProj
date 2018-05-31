@@ -43,7 +43,7 @@ module game {
 
             this.roleInfo.imgHead.source="head_lusu_png";
 
-            DataManager.getInstance().InitTestData();
+            // DataManager.getInstance().InitTestData();
         }
 
         private onMainBtnClick(e: egret.TouchEvent) {

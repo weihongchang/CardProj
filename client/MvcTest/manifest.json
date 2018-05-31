@@ -14,9 +14,9 @@
 	],
 	"game": [
 		"bin-debug/core/ani/BaseMovieClip.js",
-		"bin-debug/core/model/ResourceProxyBase.js",
 		"bin-debug/core/view/panel/BaseMediator.js",
-		"bin-debug/core/model/proxy/TemplateProxy.js",
+		"bin-debug/core/model/ResourceProxyBase.js",
+		"bin-debug/core/model/proxy/GameProxy.js",
 		"bin-debug/ThemeAdapter.js",
 		"bin-debug/WaitPanel.js",
 		"bin-debug/component/EButton.js",
@@ -47,12 +47,13 @@
 		"bin-debug/core/data/DungeonData.js",
 		"bin-debug/core/data/DungeonLevelData.js",
 		"bin-debug/core/data/FormationData.js",
+		"bin-debug/core/data/PlayerData.js",
 		"bin-debug/core/logic/Battle/BattleManager.js",
 		"bin-debug/core/logic/Battle/Formation.js",
 		"bin-debug/core/model/P.js",
 		"bin-debug/Main.js",
-		"bin-debug/core/model/proxy/GameProxy.js",
-		"bin-debug/LoadingUI.js",
+		"bin-debug/utils/UtilsClass/TipsUtils.js",
+		"bin-debug/core/model/proxy/TemplateProxy.js",
 		"bin-debug/core/model/vo/GameVO.js",
 		"bin-debug/core/view/GameLayerManager.js",
 		"bin-debug/core/view/MainManager.js",
@@ -90,6 +91,6 @@
 		"bin-debug/utils/TipsManager.js",
 		"bin-debug/utils/TipsPanel.js",
 		"bin-debug/utils/UtilsClass/BitmapBlink.js",
-		"bin-debug/utils/UtilsClass/TipsUtils.js"
+		"bin-debug/LoadingUI.js"
 	]
 }

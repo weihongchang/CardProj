@@ -18,8 +18,18 @@ var game;
         function RoleInfo() {
             var _this = _super.call(this) || this;
             _this.skinName = "resource/eui_skins/RoleInfoSkin.exml";
+            _this.addEventListener(eui.UIEvent.COMPLETE, _this.createCompleteEvent, _this);
             return _this;
         }
+        RoleInfo.prototype.createCompleteEvent = function (event) {
+            this.removeEventListener(eui.UIEvent.COMPLETE, this.createCompleteEvent, this);
+            if (game.DataManager.getInstance().player != null) {
+                // console.log("roleinfo....."+game.DataManager.getInstance().player.name);
+                this.labelName.$setText(game.DataManager.getInstance().player.name);
+                this.labelMoney.text = game.DataManager.getInstance().player.money + "";
+                this.labelGold.text = game.DataManager.getInstance().player.gold + "";
+            }
+        };
         return RoleInfo;
     }(eui.Component));
     game.RoleInfo = RoleInfo;

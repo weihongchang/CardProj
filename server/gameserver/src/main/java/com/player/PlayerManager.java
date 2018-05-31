@@ -1,10 +1,12 @@
 package com.player;
 
 import javax.management.InstanceAlreadyExistsException;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import com.util.IdGenerator;
 
 public class PlayerManager {
+	private Logger logger = LoggerFactory.getLogger("msg");
 	private static PlayerManager instance;
 	
 	public static PlayerManager getInstance()
@@ -31,5 +33,10 @@ public class PlayerManager {
 		long newID = ig.nextId();
 		ig = null;
 		return newID;
+	}
+	
+	public Logger getLogger()
+	{
+		return logger;
 	}
 }

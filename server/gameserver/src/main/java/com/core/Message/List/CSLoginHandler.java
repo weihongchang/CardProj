@@ -52,6 +52,13 @@ public class CSLoginHandler extends CGMessage {
         if( userName == null || userName.isEmpty() )
         {
         	msg.setLoginStatus(-1);
+        	msg.setExp(player.getExp());
+	        msg.setGold(player.getGold());
+	        msg.setLevel(player.getLevel());
+	        msg.setMoney(player.getMoney());
+	        msg.setName(player.getName());
+	        msg.setPlayerid(player.getPlayerid()+"");
+             
         	WsPool.sendMessageToUser(conn, msg.build());
         	return ;
         }
@@ -65,8 +72,9 @@ public class CSLoginHandler extends CGMessage {
         	if( pl != null )
         	{
         		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
-           	 	player.setLastLoginTime(df.format(new Date()));   
+           	 	pl.setLastLoginTime(df.format(new Date()));   
         		WsPool.updatePlayer(pl, conn);
+        		player = pl;
         	}
         }
         else
@@ -88,6 +96,13 @@ public class CSLoginHandler extends CGMessage {
         }
 
         msg.setLoginStatus(0);
+        msg.setExp(player.getExp());
+        msg.setGold(player.getGold());
+        msg.setLevel(player.getLevel());
+        msg.setMoney(player.getMoney());
+        msg.setName(player.getName());
+        msg.setPlayerid(player.getPlayerid()+"");
+        
         WsPool.sendMessageToUser(conn, msg.build());
         
         

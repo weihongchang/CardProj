@@ -902,6 +902,76 @@ public final class Message {
      * <code>required int32 loginStatus = 1;</code>
      */
     int getLoginStatus();
+
+    // required string playerid = 2;
+    /**
+     * <code>required string playerid = 2;</code>
+     */
+    boolean hasPlayerid();
+    /**
+     * <code>required string playerid = 2;</code>
+     */
+    java.lang.String getPlayerid();
+    /**
+     * <code>required string playerid = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getPlayeridBytes();
+
+    // required string name = 3;
+    /**
+     * <code>required string name = 3;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>required string name = 3;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>required string name = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    // required int32 exp = 4;
+    /**
+     * <code>required int32 exp = 4;</code>
+     */
+    boolean hasExp();
+    /**
+     * <code>required int32 exp = 4;</code>
+     */
+    int getExp();
+
+    // required int32 level = 5;
+    /**
+     * <code>required int32 level = 5;</code>
+     */
+    boolean hasLevel();
+    /**
+     * <code>required int32 level = 5;</code>
+     */
+    int getLevel();
+
+    // required int32 money = 6;
+    /**
+     * <code>required int32 money = 6;</code>
+     */
+    boolean hasMoney();
+    /**
+     * <code>required int32 money = 6;</code>
+     */
+    int getMoney();
+
+    // required int32 gold = 7;
+    /**
+     * <code>required int32 gold = 7;</code>
+     */
+    boolean hasGold();
+    /**
+     * <code>required int32 gold = 7;</code>
+     */
+    int getGold();
   }
   /**
    * Protobuf type {@code com.core.Message.Model.SCLogin}
@@ -964,6 +1034,36 @@ public final class Message {
               loginStatus_ = input.readInt32();
               break;
             }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              playerid_ = input.readBytes();
+              break;
+            }
+            case 26: {
+              bitField0_ |= 0x00000004;
+              name_ = input.readBytes();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              exp_ = input.readInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              level_ = input.readInt32();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              money_ = input.readInt32();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              gold_ = input.readInt32();
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1020,8 +1120,164 @@ public final class Message {
       return loginStatus_;
     }
 
+    // required string playerid = 2;
+    public static final int PLAYERID_FIELD_NUMBER = 2;
+    private java.lang.Object playerid_;
+    /**
+     * <code>required string playerid = 2;</code>
+     */
+    public boolean hasPlayerid() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string playerid = 2;</code>
+     */
+    public java.lang.String getPlayerid() {
+      java.lang.Object ref = playerid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          playerid_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string playerid = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPlayeridBytes() {
+      java.lang.Object ref = playerid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        playerid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // required string name = 3;
+    public static final int NAME_FIELD_NUMBER = 3;
+    private java.lang.Object name_;
+    /**
+     * <code>required string name = 3;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required string name = 3;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string name = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // required int32 exp = 4;
+    public static final int EXP_FIELD_NUMBER = 4;
+    private int exp_;
+    /**
+     * <code>required int32 exp = 4;</code>
+     */
+    public boolean hasExp() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required int32 exp = 4;</code>
+     */
+    public int getExp() {
+      return exp_;
+    }
+
+    // required int32 level = 5;
+    public static final int LEVEL_FIELD_NUMBER = 5;
+    private int level_;
+    /**
+     * <code>required int32 level = 5;</code>
+     */
+    public boolean hasLevel() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>required int32 level = 5;</code>
+     */
+    public int getLevel() {
+      return level_;
+    }
+
+    // required int32 money = 6;
+    public static final int MONEY_FIELD_NUMBER = 6;
+    private int money_;
+    /**
+     * <code>required int32 money = 6;</code>
+     */
+    public boolean hasMoney() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>required int32 money = 6;</code>
+     */
+    public int getMoney() {
+      return money_;
+    }
+
+    // required int32 gold = 7;
+    public static final int GOLD_FIELD_NUMBER = 7;
+    private int gold_;
+    /**
+     * <code>required int32 gold = 7;</code>
+     */
+    public boolean hasGold() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>required int32 gold = 7;</code>
+     */
+    public int getGold() {
+      return gold_;
+    }
+
     private void initFields() {
       loginStatus_ = 0;
+      playerid_ = "";
+      name_ = "";
+      exp_ = 0;
+      level_ = 0;
+      money_ = 0;
+      gold_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1029,6 +1285,30 @@ public final class Message {
       if (isInitialized != -1) return isInitialized == 1;
 
       if (!hasLoginStatus()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasPlayerid()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasExp()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasLevel()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasMoney()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasGold()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -1042,6 +1322,24 @@ public final class Message {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeInt32(1, loginStatus_);
       }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getPlayeridBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, exp_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(5, level_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeInt32(6, money_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeInt32(7, gold_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1054,6 +1352,30 @@ public final class Message {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, loginStatus_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getPlayeridBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, exp_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, level_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, money_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, gold_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1178,6 +1500,18 @@ public final class Message {
         super.clear();
         loginStatus_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
+        playerid_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        exp_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        level_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        money_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        gold_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -1210,6 +1544,30 @@ public final class Message {
           to_bitField0_ |= 0x00000001;
         }
         result.loginStatus_ = loginStatus_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.playerid_ = playerid_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.exp_ = exp_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.level_ = level_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.money_ = money_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.gold_ = gold_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1229,12 +1587,58 @@ public final class Message {
         if (other.hasLoginStatus()) {
           setLoginStatus(other.getLoginStatus());
         }
+        if (other.hasPlayerid()) {
+          bitField0_ |= 0x00000002;
+          playerid_ = other.playerid_;
+          onChanged();
+        }
+        if (other.hasName()) {
+          bitField0_ |= 0x00000004;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasExp()) {
+          setExp(other.getExp());
+        }
+        if (other.hasLevel()) {
+          setLevel(other.getLevel());
+        }
+        if (other.hasMoney()) {
+          setMoney(other.getMoney());
+        }
+        if (other.hasGold()) {
+          setGold(other.getGold());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasLoginStatus()) {
+          
+          return false;
+        }
+        if (!hasPlayerid()) {
+          
+          return false;
+        }
+        if (!hasName()) {
+          
+          return false;
+        }
+        if (!hasExp()) {
+          
+          return false;
+        }
+        if (!hasLevel()) {
+          
+          return false;
+        }
+        if (!hasMoney()) {
+          
+          return false;
+        }
+        if (!hasGold()) {
           
           return false;
         }
@@ -1289,6 +1693,286 @@ public final class Message {
       public Builder clearLoginStatus() {
         bitField0_ = (bitField0_ & ~0x00000001);
         loginStatus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required string playerid = 2;
+      private java.lang.Object playerid_ = "";
+      /**
+       * <code>required string playerid = 2;</code>
+       */
+      public boolean hasPlayerid() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string playerid = 2;</code>
+       */
+      public java.lang.String getPlayerid() {
+        java.lang.Object ref = playerid_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          playerid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string playerid = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPlayeridBytes() {
+        java.lang.Object ref = playerid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          playerid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string playerid = 2;</code>
+       */
+      public Builder setPlayerid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        playerid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string playerid = 2;</code>
+       */
+      public Builder clearPlayerid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        playerid_ = getDefaultInstance().getPlayerid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string playerid = 2;</code>
+       */
+      public Builder setPlayeridBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        playerid_ = value;
+        onChanged();
+        return this;
+      }
+
+      // required string name = 3;
+      private java.lang.Object name_ = "";
+      /**
+       * <code>required string name = 3;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required string name = 3;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string name = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string name = 3;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string name = 3;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string name = 3;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      // required int32 exp = 4;
+      private int exp_ ;
+      /**
+       * <code>required int32 exp = 4;</code>
+       */
+      public boolean hasExp() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required int32 exp = 4;</code>
+       */
+      public int getExp() {
+        return exp_;
+      }
+      /**
+       * <code>required int32 exp = 4;</code>
+       */
+      public Builder setExp(int value) {
+        bitField0_ |= 0x00000008;
+        exp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 exp = 4;</code>
+       */
+      public Builder clearExp() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        exp_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 level = 5;
+      private int level_ ;
+      /**
+       * <code>required int32 level = 5;</code>
+       */
+      public boolean hasLevel() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>required int32 level = 5;</code>
+       */
+      public int getLevel() {
+        return level_;
+      }
+      /**
+       * <code>required int32 level = 5;</code>
+       */
+      public Builder setLevel(int value) {
+        bitField0_ |= 0x00000010;
+        level_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 level = 5;</code>
+       */
+      public Builder clearLevel() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        level_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 money = 6;
+      private int money_ ;
+      /**
+       * <code>required int32 money = 6;</code>
+       */
+      public boolean hasMoney() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>required int32 money = 6;</code>
+       */
+      public int getMoney() {
+        return money_;
+      }
+      /**
+       * <code>required int32 money = 6;</code>
+       */
+      public Builder setMoney(int value) {
+        bitField0_ |= 0x00000020;
+        money_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 money = 6;</code>
+       */
+      public Builder clearMoney() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        money_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 gold = 7;
+      private int gold_ ;
+      /**
+       * <code>required int32 gold = 7;</code>
+       */
+      public boolean hasGold() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>required int32 gold = 7;</code>
+       */
+      public int getGold() {
+        return gold_;
+      }
+      /**
+       * <code>required int32 gold = 7;</code>
+       */
+      public Builder setGold(int value) {
+        bitField0_ |= 0x00000040;
+        gold_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 gold = 7;</code>
+       */
+      public Builder clearGold() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        gold_ = 0;
         onChanged();
         return this;
       }
@@ -4779,15 +5463,17 @@ public final class Message {
       "\nenum.proto\032\014struct.proto\"\\\n\007CSLogin\022\025\n\r" +
       "loginUserName\030\001 \002(\t\022\025\n\rloginPassWord\030\002 \001" +
       "(\t\022\022\n\nsessionKey\030\003 \001(\t\022\017\n\007worldid\030\004 \001(\005\"" +
-      "\036\n\007SCLogin\022\023\n\013loginStatus\030\001 \002(\005\"@\n\nCSReg" +
-      "ister\022\030\n\020registerUserName\030\001 \002(\t\022\030\n\020regis" +
-      "terPassword\030\002 \002(\t\"\034\n\nSCRegister\022\016\n\006statu" +
-      "s\030\001 \002(\005\"]\n\014SCServerList\022\020\n\010serverId\030\001 \002(" +
-      "\005\022\022\n\nserverName\030\002 \002(\t\022\024\n\014serverStatus\030\003 " +
-      "\002(\005\022\021\n\tserverDes\030\004 \002(\t\"P\n\005CSMsg\022\020\n\010usern",
-      "ame\030\001 \002(\t\022\020\n\010password\030\002 \001(\t\022\022\n\nsessionKe" +
-      "y\030\003 \001(\t\022\017\n\007worldid\030\004 \001(\005\"\031\n\005SCMsg\022\020\n\010use" +
-      "rname\030\001 \002(\tB\tB\007Message"
+      "w\n\007SCLogin\022\023\n\013loginStatus\030\001 \002(\005\022\020\n\010playe" +
+      "rid\030\002 \002(\t\022\014\n\004name\030\003 \002(\t\022\013\n\003exp\030\004 \002(\005\022\r\n\005" +
+      "level\030\005 \002(\005\022\r\n\005money\030\006 \002(\005\022\014\n\004gold\030\007 \002(\005" +
+      "\"@\n\nCSRegister\022\030\n\020registerUserName\030\001 \002(\t" +
+      "\022\030\n\020registerPassword\030\002 \002(\t\"\034\n\nSCRegister" +
+      "\022\016\n\006status\030\001 \002(\005\"]\n\014SCServerList\022\020\n\010serv",
+      "erId\030\001 \002(\005\022\022\n\nserverName\030\002 \002(\t\022\024\n\014server" +
+      "Status\030\003 \002(\005\022\021\n\tserverDes\030\004 \002(\t\"P\n\005CSMsg" +
+      "\022\020\n\010username\030\001 \002(\t\022\020\n\010password\030\002 \001(\t\022\022\n\n" +
+      "sessionKey\030\003 \001(\t\022\017\n\007worldid\030\004 \001(\005\"\031\n\005SCM" +
+      "sg\022\020\n\010username\030\001 \002(\tB\tB\007Message"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -4805,7 +5491,7 @@ public final class Message {
           internal_static_com_core_Message_Model_SCLogin_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_core_Message_Model_SCLogin_descriptor,
-              new java.lang.String[] { "LoginStatus", });
+              new java.lang.String[] { "LoginStatus", "Playerid", "Name", "Exp", "Level", "Money", "Gold", });
           internal_static_com_core_Message_Model_CSRegister_descriptor =
             getDescriptor().getMessageTypes().get(2);
           internal_static_com_core_Message_Model_CSRegister_fieldAccessorTable = new

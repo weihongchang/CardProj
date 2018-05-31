@@ -15,6 +15,17 @@ var game;
             return this.instance;
         };
         DataManager.prototype.InitTestData = function () {
+            this.player = new game.PlayerData();
+            // this.player.account = "";
+            // this.player.playerid = "";
+            // this.player.name= "2323";
+            // this.player.exp = 0;
+            // this.player.level = 0;
+            // this.player.money = 0;
+            // this.player.gold = 0;
+            // this.player.ip= "";
+            // this.player.createTime= "";
+            // this.player.lastLoginTime= "";
             for (var i = 1; i < 10; i++) {
                 var dungeon = new game.DungeonData();
                 dungeon.dungeonID = i;

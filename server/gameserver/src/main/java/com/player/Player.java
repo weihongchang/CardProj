@@ -1,8 +1,6 @@
 package com.player;
 
 import org.java_websocket.WebSocket;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.core.WsPool;
 import com.google.protobuf.GeneratedMessage;
@@ -15,7 +13,7 @@ import com.google.protobuf.GeneratedMessage;
  */
 public class Player  {
 	
-	Logger logger = LoggerFactory.getLogger("msg");
+//	Logger logger = LoggerFactory.getLogger("msg");
 	
 //
 //	/** 玩家与GameServer的会话 */
@@ -35,9 +33,9 @@ public class Player  {
 	private String lastLoginTime;
 	
 	
-	public Player(String _ip)
+	public Player(String ip)
 	{
-		this.ip = _ip;
+		this.ip = ip;
 	}
 	
 	public long getPlayerid() {
@@ -128,8 +126,8 @@ public class Player  {
 		WebSocket conn = WsPool.getConnByUser(getIp());
 		if (conn != null) {
 			WsPool.sendMessageToUser(conn, msg);
-			logger.info("[send] " + msg.toString());
-			logger.debug("[send] " + msg.toString());
+			PlayerManager.getInstance().getLogger().info("[send] " + msg.toString());
+			PlayerManager.getInstance().getLogger().debug("[send] " + msg.toString());
 		}
 	}
 	

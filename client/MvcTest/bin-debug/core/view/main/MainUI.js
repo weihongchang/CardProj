@@ -47,8 +47,8 @@ var game;
             _this.functionBar.mapBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onMapBtnClick, _this);
             //this.btnAtk.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onAct,this);
             _this.roleInfo.imgHead.source = "head_lusu_png";
-            game.DataManager.getInstance().InitTestData();
             return _this;
+            // DataManager.getInstance().InitTestData();
         }
         MainUI.prototype.onMainBtnClick = function (e) {
             if (this.isHide) {

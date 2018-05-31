@@ -12,8 +12,10 @@ module game {
 
 		public dungeonList:DungeonData[] = [];
 		public dungeonLevelList:DungeonLevelData[] = [];
+		public player:PlayerData ;
 
 		public InitTestData(){
+			this.player = new PlayerData();
 
 			for (var i:number = 1; i < 10; i++){
 				var dungeon = new DungeonData();

@@ -172,6 +172,7 @@ var Main = (function (_super) {
      * Create scene interface
      */
     Main.prototype.createGameScene = function () {
+        game.DataManager.getInstance().InitTestData();
         this.imgBG = new egret.Sprite;
         var sky = this.createBitmapByName("PreLoadingBg_jpg");
         var bg2 = this.createBitmapByName("bg2_png");
@@ -302,6 +303,7 @@ var Main = (function (_super) {
      * Click the button
      */
     Main.prototype.onButtonClick = function (e) {
+        console.log(game.DataManager.getInstance().player.name);
         game.AppFacade.getInstance().startUp(GameLayerManager.gameLayer());
         var panel = new eui.Panel();
         panel.title = "Title";

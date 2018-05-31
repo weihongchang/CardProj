@@ -109,6 +109,8 @@ private imgBG :egret.Sprite;
      */
     protected createGameScene(): void {
 
+        game.DataManager.getInstance().InitTestData();
+
         this.imgBG = new egret.Sprite;
         let sky = this.createBitmapByName("PreLoadingBg_jpg");
         let bg2 = this.createBitmapByName("bg2_png");
@@ -265,6 +267,7 @@ private imgBG :egret.Sprite;
      */
     private onButtonClick(e: egret.TouchEvent) {
 
+        console.log(game.DataManager.getInstance().player.name);
         game.AppFacade.getInstance().startUp(GameLayerManager.gameLayer());
         let panel = new eui.Panel();
         panel.title = "Title";
