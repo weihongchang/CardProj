@@ -1,13 +1,10 @@
 package com.core.Message;
 
-import com.core.GameMessageChannel;
-import com.google.protobuf.InvalidProtocolBufferException;
-
 /**
  * 客户端发送给服务器的消息的
  * 
  */
-public abstract class CGMessage extends BaseNettyMessage<GameMessageChannel> {
+public abstract class CGMessage extends BaseMessage {
 	
 	@Override
 	protected boolean writeImpl()  {

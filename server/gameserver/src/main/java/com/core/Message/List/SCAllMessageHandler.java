@@ -8,6 +8,7 @@ import com.core.Exception.MessageParseException;
 import com.core.Message.CGMessage;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.InvalidProtocolBufferException;
+import com.player.Player;
 
 import io.netty.buffer.ByteBuf;
 
@@ -45,7 +46,7 @@ public class SCAllMessageHandler extends CGMessage {
     	return true;
     }
 
-    public void execute() {
+    public void execute(Player player) {
       
         
     }

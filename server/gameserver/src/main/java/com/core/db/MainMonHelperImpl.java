@@ -1,25 +1,5 @@
 package com.core.db;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
-import org.bson.Document;
-import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.data.mongodb.core.query.Update;
-
-import com.core.db.model.PlayerModel;
-import com.google.gson.Gson;
-import com.mongodb.DBObject;
-import com.mongodb.MongoClient;
-import com.mongodb.client.MongoDatabase;
-import com.mongodb.util.JSON;
-
-
 /**
  * 测试类
  * @author koo
@@ -28,12 +8,13 @@ import com.mongodb.util.JSON;
 public class MainMonHelperImpl { 
 	
     public static void main(String[] args) throws Exception {
-    	
-    	MongoHelper mongoHelper = new MongoHelper();
-        MongoClient mongoClient = mongoHelper.getMongoClient();
-        MongoDatabase mongoDataBase = mongoHelper.getMongoDataBase(mongoClient);
-        MongoDaoImpl mongoDaoImpl = new MongoDaoImpl();
-        MongoTemplate mongoTemplate = new MongoTemplate(mongoClient, "CardGame");
+//    	
+//    	MongoHelper mongoHelper = new MongoHelper();
+//        MongoClient mongoClient = mongoHelper.getMongoClient();
+//        MongoDatabase mongoDataBase = mongoHelper.getMongoDataBase(mongoClient);
+//        MongoTemplate mongoTemplate = mongoHelper.getMongoTemplate(mongoClient);
+//        MongoDaoImpl mongoDaoImpl = new MongoDaoImpl();
+        
 //		增加一条数据
 //        User u1=new User();
 //        u1.setId(1+"");
@@ -44,23 +25,23 @@ public class MainMonHelperImpl {
 //        
 //        mongoTemplate.insert(u1);
 
-        
-        //查询数据
-        List<User> userList =  mongoTemplate.findAll(User.class);
-        if(userList != null)
-        {
-        	for (Iterator iterator = userList.iterator(); iterator.hasNext();) {
-				User user = (User) iterator.next();
-				if( user != null )
-				{
-					System.out.println(user.getId()+"   "+user.getContent()+"   "+user.getDate());
-				}
-			}
-        }
-        else
-        {
-        	System.out.println("list is null!!!");
-        }
+//        
+//        //查询数据
+//        List<User> userList =  mongoTemplate.findAll(User.class);
+//        if(userList != null)
+//        {
+//        	for (Iterator iterator = userList.iterator(); iterator.hasNext();) {
+//				User user = (User) iterator.next();
+//				if( user != null )
+//				{
+//					System.out.println(user.getId()+"   "+user.getContent()+"   "+user.getDate());
+//				}
+//			}
+//        }
+//        else
+//        {
+//        	System.out.println("list is null!!!");
+//        }
         
         
         
@@ -154,7 +135,8 @@ public class MainMonHelperImpl {
         //检索全部
 //      FindIterable<Document> queryAllResult = mongoDaoImpl.queryAll(mongoDataBase, table);
 //      mongoDaoImpl.printFindIterable(queryAllResult);
-      mongoHelper.closeMongoClient(mongoDataBase,mongoClient);
+        
+//        mongoHelper.closeMongoClient(mongoDataBase,mongoClient);
 
     }
 

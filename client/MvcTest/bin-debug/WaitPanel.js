@@ -34,11 +34,14 @@ var WaitPanel = (function (_super) {
         this.bg.graphics.endFill();
         this.bg.width = this.w;
         this.bg.height = this.h;
-        this.addChild(this.bg);
+        // this.addChild(this.bg);
+        this.addChildAt(this.bg, 10);
         this.touchEnabled = true;
         this.waitImg = new egret.Bitmap;
         this.waitImg.texture = RES.getRes("loadingCircle_png");
-        this.addChild(this.waitImg);
+        this.waitImg.name = "waitImg";
+        // this.addChild(this.waitImg);
+        this.addChildAt(this.waitImg, 10);
         this.waitImg.x = this.w / 2;
         this.waitImg.y = this.h / 2;
         this.waitImg.anchorOffsetX = this.waitImg.width / 2;

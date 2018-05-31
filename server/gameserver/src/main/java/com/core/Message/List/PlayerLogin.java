@@ -10,6 +10,7 @@ import com.core.Message.MessageType;
 import com.core.Message.Model.MsgTest;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.InvalidProtocolBufferException;
+import com.player.Player;
 
 import io.netty.buffer.ByteBuf;
 
@@ -17,7 +18,7 @@ public class PlayerLogin extends CGMessage {
 
 	private GeneratedMessage data;
 	
-	public void execute() {
+	public void execute(Player player) {
 		// TODO Auto-generated method stub
 		
 		String account = ((MsgTest.LoginReq)getData()).getEmail();
@@ -33,7 +34,7 @@ public class PlayerLogin extends CGMessage {
 		
 		
 		pl.setData(b.build());
-		this.getChannel().getPlayer().sendMessage(pl);
+//		this.getChannel().getPlayer().sendMessage(pl);
 	}
 
 	@Override

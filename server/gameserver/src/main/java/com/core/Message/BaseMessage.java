@@ -3,6 +3,7 @@ package com.core.Message;
 import org.java_websocket.WebSocket;
 
 import com.core.IMsg;
+import com.core.WsPool;
 import com.core.Exception.MessageParseException;
 import com.google.protobuf.InvalidProtocolBufferException;
 
@@ -131,7 +132,7 @@ public abstract class BaseMessage implements IMsg {
 	 * 
 	 */
 	public void run() {
-		this.execute();
+		this.execute(WsPool.getPlayerByUser(conn.getRemoteSocketAddress().toString()));
 	}
 	
 	

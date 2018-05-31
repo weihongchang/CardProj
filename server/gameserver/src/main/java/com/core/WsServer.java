@@ -37,8 +37,8 @@ public class WsServer extends WebSocketServer {
     public void onOpen(WebSocket conn, ClientHandshake handshake) {
         // ws连接的时候触发的代码，onOpen中我们不做任何操作
     	System.out.println("新链接"+conn.getRemoteSocketAddress());
-    	WsPool.addUser(conn.getRemoteSocketAddress().toString(), conn);
-    	
+    	String ip = conn.getRemoteSocketAddress().toString();
+    	WsPool.addUser( ip , conn);
     }
 
     @Override
@@ -97,7 +97,7 @@ public class WsServer extends WebSocketServer {
 			
 			if (msg.read(in,conn)) {
 				in.clear();
-				msg.execute();
+				msg.execute(WsPool.getPlayerByUser(conn.getRemoteSocketAddress().toString()));
 			}
 		} catch (MessageParseException e) {
 			// TODO Auto-generated catch block

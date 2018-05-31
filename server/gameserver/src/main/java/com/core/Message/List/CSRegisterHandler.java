@@ -1,7 +1,6 @@
 package com.core.Message.List;
 
 import java.nio.ByteBuffer;
-import io.netty.buffer.ByteBuf;
 
 import org.java_websocket.WebSocket;
 
@@ -10,6 +9,9 @@ import com.core.Message.CGMessage;
 import com.core.Message.Model.Message;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.InvalidProtocolBufferException;
+import com.player.Player;
+
+import io.netty.buffer.ByteBuf;
 
 /**
  * Created by weihongchang
@@ -33,12 +35,12 @@ public class CSRegisterHandler extends CGMessage {
 		return true;
     }
 
-    public void execute() {
+    public void execute(Player player) {
         System.out.println("CSRegisterHandler");
         Message.SCRegister.Builder msg = Message.SCRegister.newBuilder();
         msg.setStatus(5252);
         
-        this.getChannel().getPlayer().sendMessage(msg.build());
+//        this.getChannel().getPlayer().sendMessage(msg.build());
         
     }
 

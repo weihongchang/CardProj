@@ -6,14 +6,14 @@
   */
 var UserInfoRequest;
 (function (UserInfoRequest) {
-    function sendUserInfo(userId, userName) {
+    function sendUserInfo(UserName, Pwd) {
         //创建user_login_class
         var user_login_class = Global.getMessage("CSLogin");
         //创建一条消息
         var user_login = new user_login_class({
-            "email": userId + "",
-            "password": userName,
-            "sessionKey": userName,
+            "email": UserName,
+            "password": Pwd,
+            "sessionKey": UserName,
             "serverid": 12
         });
         //序列化

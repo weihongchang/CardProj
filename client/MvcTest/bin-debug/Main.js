@@ -211,13 +211,40 @@ var Main = (function (_super) {
         var textfield = new egret.TextField();
         this.imgBG.addChild(textfield);
         textfield.alpha = 0;
+        textfield.border = true;
         textfield.width = stageW - 172;
         textfield.textAlign = egret.HorizontalAlign.CENTER;
         textfield.size = 24;
         textfield.textColor = 0xffffff;
         textfield.x = 172;
         textfield.y = 135;
+        // textfield.touchEnabled = true;
         this.textfield = textfield;
+        this.nameLabel = new egret.TextField();
+        this.nameLabel.textColor = 0xffffff;
+        this.nameLabel.width = stageW - 172;
+        this.nameLabel.height = 60;
+        this.nameLabel.border = true;
+        //设置显示背景
+        this.nameLabel.background = true;
+        //设置背景颜色
+        this.nameLabel.backgroundColor = 0xffffff;
+        this.nameLabel.text = "用户名";
+        //设置边框颜色
+        this.nameLabel.borderColor = 0x00ff00;
+        //设置字体
+        this.nameLabel.fontFamily = "Arial";
+        //设置文本颜色
+        this.nameLabel.textColor = 0xFF0000;
+        //设置字号
+        this.nameLabel.size = 30;
+        this.nameLabel.x = 172;
+        this.nameLabel.y = 880;
+        this.nameLabel.multiline = false;
+        // nameLabel.lineSpacing = 5;
+        this.nameLabel.verticalAlign = egret.VerticalAlign.MIDDLE;
+        this.nameLabel.type = egret.TextFieldType.INPUT;
+        this.imgBG.addChild(this.nameLabel);
         var button = new EButton(this, "enter_h_png", this.onButtonClick, "", 30, 2, null);
         button.x = stageW / 2 - button.width / 2;
         button.y = stageH / 4 * 3;
@@ -226,7 +253,7 @@ var Main = (function (_super) {
         button1.x = stageW / 2 - button.width / 2;
         button1.y = stageH / 4 * 3 + 100;
         this.imgBG.addChild(button1);
-        GameLayerManager.gameLayer().addChild(this.imgBG);
+        GameLayerManager.gameLayer().mainLayer.addChild(this.imgBG);
         // EXML.load("resource/eui_skins/MainSkin.exml",this.onLoaded,this);
     };
     Main.prototype.onLoaded = function (clazz) {
@@ -287,8 +314,13 @@ var Main = (function (_super) {
         // GameLayerManager.gameLayer().removeChild(this.imgBG);
     };
     Main.prototype.onButton1Click = function (e) {
-        UserInfoRequest.sendUserInfo(Number("1234556"), "jksldjkfsl");
-        GameLayerManager.gameLayer().removeChild(this.imgBG);
+        if (this.nameLabel.text != "") {
+            UserInfoRequest.sendUserInfo(this.nameLabel.text, "123456");
+            GameLayerManager.gameLayer().mainLayer.removeChild(this.imgBG);
+        }
+        else {
+            console.log("用户名不能为空！！");
+        }
     };
     return Main;
 }(eui.UILayer));

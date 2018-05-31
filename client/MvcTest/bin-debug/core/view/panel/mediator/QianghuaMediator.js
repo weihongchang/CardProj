@@ -74,7 +74,7 @@ var game;
             SocketManager.connectServer("echo.websocket.org", 80);
         };
         QianghuaMediator.prototype.sendMsgButtonClick = function (event) {
-            UserInfoRequest.sendUserInfo(Number(this.qinghuaPanel.input1.text), this.qinghuaPanel.input2.text);
+            UserInfoRequest.sendUserInfo(this.qinghuaPanel.input1.text, this.qinghuaPanel.input2.text);
         };
         QianghuaMediator.prototype.closeButtonClick = function (event) {
             this.closePanel(1);

@@ -1,9 +1,6 @@
 package com.core.Recognizer;
 
-import java.nio.ByteBuffer;
-
 import org.apache.commons.lang.math.NumberUtils;
-import org.java_websocket.WebSocket;
 
 import com.core.IMsg;
 import com.core.Exception.MessageParseException;

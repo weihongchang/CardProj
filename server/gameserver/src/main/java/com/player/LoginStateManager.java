@@ -2,8 +2,6 @@ package com.player;
 
 import com.core.IMsg;
 import com.core.Message.CGMessage;
-import com.core.Message.MessageType;
-import com.start.GameStart;
 
 /**
  *  玩家状态管理器，管理玩家登陆、退出等大的状态
@@ -36,24 +34,24 @@ public class LoginStateManager {
 		// 获取消息类型
 		short msgType = ((IMsg)msg).getType();
 
-		switch (player.getState()) {
-			case initOk:
-//				if (msgType == MessageType.CG_PUBLIC_PLAYER_LOGIN) {
+//		switch (player.getState()) {
+//			case initOk:
+////				if (msgType == MessageType.CG_PUBLIC_PLAYER_LOGIN) {
+////					return true;
+////				}
+//				if( GameStart.recognizer.isInMessageLsit(msgType) )
+//				{
 //					return true;
 //				}
-				if( GameStart.recognizer.isInMessageLsit(msgType) )
-				{
-					return true;
-				}
-				break;
-			case authOk:
-				break;
-			case inGame:
-				return true;
-
-			default:
-				break;
-		}
+//				break;
+//			case authOk:
+//				break;
+//			case inGame:
+//				return true;
+//
+//			default:
+//				break;
+//		}
 
 		return false;
 	}

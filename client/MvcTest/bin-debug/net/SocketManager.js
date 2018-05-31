@@ -24,7 +24,7 @@ var SocketManager;
     //连接成功返回
     function onSocketOpen() {
         Global.hideWaritPanel();
-        game.AppFacade.getInstance().sendNotification(SysNotify.CONNECT_SERVER_SUCCESS);
+        // game.AppFacade.getInstance().sendNotification(SysNotify.CONNECT_SERVER_SUCCESS);
     }
     SocketManager.onSocketOpen = onSocketOpen;
     //消息返回  

@@ -1,12 +1,15 @@
 package com.core.Message.List;
 
 import java.nio.ByteBuffer;
+
 import org.java_websocket.WebSocket;
+
 import com.core.Exception.MessageParseException;
 import com.core.Message.CGMessage;
 import com.core.Message.Model.Message;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.InvalidProtocolBufferException;
+import com.player.Player;
 
 import io.netty.buffer.ByteBuf;
 
@@ -33,7 +36,7 @@ public class CSMsgHandler extends CGMessage {
     }
    
 
-    public void execute() {
+    public void execute(Player player) {
         System.out.println("CSMsgHandler");
     }
 

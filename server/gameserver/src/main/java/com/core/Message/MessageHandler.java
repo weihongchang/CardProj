@@ -38,7 +38,7 @@ public class MessageHandler {
 		
 		
 		pl.setData(b.build());
-		player.sendMessage(pl);
+//		player.sendMessage(pl);
 		
 //		GCRoleList gcRoleList = new GCRoleList();
 //		PROTO_GC_RoleList.Builder roleList = PROTO_GC_RoleList.newBuilder();

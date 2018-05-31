@@ -1,21 +1,26 @@
 package com.core.Message.List;
 
 import java.nio.ByteBuffer;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
 
 import org.java_websocket.WebSocket;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 
-import com.core.IMsg;
 import com.core.WsPool;
 import com.core.Exception.MessageParseException;
 import com.core.Message.CGMessage;
 import com.core.Message.Model.Message;
-import com.core.Message.Model.Message.SCMsg;
-import com.core.Message.Model.MsgTest;
+import com.core.Message.Model.Message.CSLogin;
+import com.core.db.MongoManager;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.InvalidProtocolBufferException;
+import com.player.Player;
+import com.player.PlayerManager;
 
 import io.netty.buffer.ByteBuf;
-import io.netty.handler.codec.sctp.SctpMessageCompletionHandler;
 
 /**
  * Created by weihongchang
@@ -39,16 +44,52 @@ public class CSLoginHandler extends CGMessage {
 		return true;
     }
 
-    public void execute() {
+    public void execute(Player player) {
         System.out.println("loginhandler");
+        String userName = ((CSLogin)data).getLoginUserName();
         
         Message.SCLogin.Builder msg = Message.SCLogin.newBuilder();
-//        msg.setUsername("h接口数量的减肥速度");
-//        MsgTest.LoginResp.Builder msg = MsgTest.LoginResp.newBuilder();
+        if( userName == null || userName.isEmpty() )
+        {
+        	msg.setLoginStatus(-1);
+        	WsPool.sendMessageToUser(conn, msg.build());
+        	return ;
+        }
         
+        Query query=new Query(Criteria.where("account").is(userName));
+        List<Player> accountList =  MongoManager.getInstance().getMongoTemplate().find(query,Player.class);
+        if( accountList!= null && accountList.size() > 0 )
+        {
+        	//已有账号
+        	Player pl = accountList.get(0);
+        	if( pl != null )
+        	{
+        		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
+           	 	player.setLastLoginTime(df.format(new Date()));   
+        		WsPool.updatePlayer(pl, conn);
+        	}
+        }
+        else
+        {
+        	//创建账号
+        	 player.setAccount(userName);
+        	 player.setName("111");
+        	 player.setPlayerid(PlayerManager.getInstance().newPlayerID(1023));
+        	 player.setExp(0);
+        	 player.setGold(0);
+        	 player.setLevel(1);
+        	 player.setMoney(0);
+        	 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
+        	 player.setCreateTime(df.format(new Date()));
+        	 player.setLastLoginTime(df.format(new Date()));   
+        	 
+
+        	 MongoManager.getInstance().getMongoTemplate().insert(player);
+        }
+
         msg.setLoginStatus(0);
-//        this.getChannel().getPlayer().sendMessage(msg.build());
         WsPool.sendMessageToUser(conn, msg.build());
+        
         
     }
 

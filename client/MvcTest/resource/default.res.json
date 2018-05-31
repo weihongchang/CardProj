@@ -2403,39 +2403,39 @@
 			"scale9grid": "127,51,118,8"
 		},
 		{
-			"name": "btn_normal_normal_png",
+			"url": "images/mainui/btn_normal_normal.png",
 			"type": "image",
-			"url": "images/mainui/btn_normal_normal.png"
+			"name": "btn_normal_normal_png"
 		},
 		{
-			"name": "btn_active_lighted_png",
+			"url": "images/mainui/btn_active_lighted.png",
 			"type": "image",
-			"url": "images/mainui/btn_active_lighted.png"
+			"name": "btn_active_lighted_png"
 		},
 		{
-			"name": "btn_active_normal_png",
+			"url": "images/mainui/btn_active_normal.png",
 			"type": "image",
-			"url": "images/mainui/btn_active_normal.png"
+			"name": "btn_active_normal_png"
 		},
 		{
-			"name": "btn_elite_lighted_png",
+			"url": "images/mainui/btn_elite_lighted.png",
 			"type": "image",
-			"url": "images/mainui/btn_elite_lighted.png"
+			"name": "btn_elite_lighted_png"
 		},
 		{
-			"name": "btn_elite_normal_png",
+			"url": "images/mainui/btn_elite_normal.png",
 			"type": "image",
-			"url": "images/mainui/btn_elite_normal.png"
+			"name": "btn_elite_normal_png"
 		},
 		{
-			"name": "btn_normal_lighted_png",
+			"url": "images/mainui/btn_normal_lighted.png",
 			"type": "image",
-			"url": "images/mainui/btn_normal_lighted.png"
+			"name": "btn_normal_lighted_png"
 		},
 		{
-			"name": "dengludikuang_png",
+			"url": "images/loading/dengludikuang.png",
 			"type": "image",
-			"url": "images/loading/dengludikuang.png"
+			"name": "dengludikuang_png"
 		}
 	]
 }

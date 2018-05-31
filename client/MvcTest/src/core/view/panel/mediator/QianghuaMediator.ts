@@ -70,7 +70,7 @@ module game {
         }
         
         private sendMsgButtonClick(event: egret.TouchEvent): void {
-            UserInfoRequest.sendUserInfo(Number(this.qinghuaPanel.input1.text),this.qinghuaPanel.input2.text);
+            UserInfoRequest.sendUserInfo(this.qinghuaPanel.input1.text,this.qinghuaPanel.input2.text);
         }
 
         

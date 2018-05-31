@@ -17,7 +17,7 @@ module SocketManager {
         this.sock.type = "webSocketTypeBinary";
         this.sock.addEventListener(egret.ProgressEvent.SOCKET_DATA, this.onReceiveMessage, this);
         this.sock.addEventListener(egret.Event.CONNECT, this.onSocketOpen, this);
-
+    
         this.sock.connect(host, port);
     }
 

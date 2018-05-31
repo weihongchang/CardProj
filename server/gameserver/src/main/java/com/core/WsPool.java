@@ -1,8 +1,6 @@
 package com.core;
 
 
-import java.io.OutputStream;
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -17,13 +15,16 @@ import com.core.Exception.MessageParseException;
 import com.core.Message.List.SCAllMessageHandler;
 import com.google.protobuf.GeneratedMessage;
 import com.log.Loggers;
+import com.player.Player;
 import com.start.GameStart;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 
 public class WsPool {
+	
     private static final Map<WebSocket, String> wsUserMap = new HashMap<WebSocket, String>();
+    private static final Map<String, Player> wsPlayerMap = new HashMap<String, Player>();
     private static final Logger logger = Loggers.gameLogger;
     /**
      * 通过websocket连接获取其对应的用户
@@ -41,7 +42,7 @@ public class WsPool {
      * 
      * @param user
      */
-    public static WebSocket getWsByUser(String userName) {
+    public static WebSocket getConnByUser(String userName) {
         Set<WebSocket> keySet = wsUserMap.keySet();
         synchronized (keySet) {
             for (WebSocket conn : keySet) {
@@ -53,6 +54,23 @@ public class WsPool {
         }
         return null;
     }
+    
+
+    
+    public static Player getPlayerByUser(String userName)
+    {
+    	if(wsPlayerMap.containsKey(userName))
+    	{
+    		return wsPlayerMap.get(userName);
+    	}
+    	
+        return null;
+    }
+    
+    public static void updatePlayer(Player player,WebSocket conn)
+    {
+    	wsPlayerMap.put(conn.getRemoteSocketAddress().toString(), player);
+    }
 
     /**
      * 向连接池中添加连接
@@ -61,6 +79,8 @@ public class WsPool {
      */
     public static void addUser(String userName, WebSocket conn) {
         wsUserMap.put(conn, userName); // 添加连接
+        wsPlayerMap.put(userName, new Player(userName));
+        System.out.println("新用户["+userName+"]上线");
     }
 
     /**
@@ -84,6 +104,8 @@ public class WsPool {
      */
     public static boolean removeUser(WebSocket conn) {
         if (wsUserMap.containsKey(conn)) {
+        	System.out.println("新用户["+wsUserMap.get(conn)+"]下线");
+        	wsPlayerMap.remove(wsUserMap.get(conn));
             wsUserMap.remove(conn); // 移除连接
             return true;
         } else {

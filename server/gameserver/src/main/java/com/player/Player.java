@@ -1,15 +1,11 @@
 package com.player;
 
+import org.java_websocket.WebSocket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.common.IInitializeRequired;
-import com.core.GameMessageChannel;
-import com.core.IMsg;
-import com.core.Message.List.SCAllMessageHandler;
+import com.core.WsPool;
 import com.google.protobuf.GeneratedMessage;
-import com.google.protobuf.MessageLite;
-import com.start.GameStart;
 
 /**
  * 游戏中的玩家，维护玩家的会话和玩家所有角色的引用
@@ -17,33 +13,38 @@ import com.start.GameStart;
  * @author 
  *
  */
-public class Player implements IInitializeRequired {
+public class Player  {
 	
 	Logger logger = LoggerFactory.getLogger("msg");
 	
-
-	/** 玩家与GameServer的会话 */
-	private GameMessageChannel channel;	
+//
+//	/** 玩家与GameServer的会话 */
+//	private GameMessageChannel channel;	
+//	
+//	private LoginStateManager _loginStateMang;
 	
-	private LoginStateManager _loginStateMang;
-	
-	
-	private int playerid;
+	private String account;
+	private long playerid;
 	private String name;
 	private int exp;
 	private int level;
+	private int money;
+	private int gold;
+	private String ip;
+	private String createTime;
+	private String lastLoginTime;
 	
 	
-	public Player()
+	public Player(String _ip)
 	{
-		
+		this.ip = _ip;
 	}
 	
-	public int getPlayerid() {
+	public long getPlayerid() {
 		return playerid;
 	}
 
-	public void setPlayerid(int playerid) {
+	public void setPlayerid(long playerid) {
 		this.playerid = playerid;
 	}
 
@@ -71,46 +72,62 @@ public class Player implements IInitializeRequired {
 		this.level = level;
 	}
 
-	public Player(GameMessageChannel channel) {
-		this.channel = channel;		
-		channel.setPlayer(this);
-		this._loginStateMang = new LoginStateManager(this);
-	}
-	
-	public void init() {
-		
-	}
-	
-	public LoginStateManager getStateManager() {
-		return _loginStateMang;
-	}
 
 	
-	/**
-	 * @return
-	 */
-	public LoginStateEnum getState() {
-		return this._loginStateMang.getState();
+	public String getIp() {
+		return ip;
 	}
-	
-	
-	public void sendMessage(IMsg msg)
-	{
-		if (this.channel != null) {
-			channel.write(msg);
-			logger.info("[send] " + msg.toString());
-			logger.debug("[send] " + msg.toString());
-		}
+
+	public void setIp(String ip) {
+		this.ip = ip;
 	}
-	
-	public void sendMessage(GeneratedMessage msgLite)
+
+
+	public String getAccount() {
+		return account;
+	}
+
+	public void setAccount(String account) {
+		this.account = account;
+	}
+
+	public String getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(String createTime) {
+		this.createTime = createTime;
+	}
+
+	public String getLastLoginTime() {
+		return lastLoginTime;
+	}
+
+	public void setLastLoginTime(String lastLoginTime) {
+		this.lastLoginTime = lastLoginTime;
+	}
+
+	public int getMoney() {
+		return money;
+	}
+
+	public void setMoney(int money) {
+		this.money = money;
+	}
+
+	public int getGold() {
+		return gold;
+	}
+
+	public void setGold(int gold) {
+		this.gold = gold;
+	}
+
+	public void sendMessage(GeneratedMessage msg)
 	{
-		SCAllMessageHandler msg = new SCAllMessageHandler(msgLite);
-		short mType = GameStart.recognizer.getTypeForMsg(msgLite.getClass());
-		msg.setType(mType);
-		
-		if (this.channel != null) {
-			channel.write(msg);
+		WebSocket conn = WsPool.getConnByUser(getIp());
+		if (conn != null) {
+			WsPool.sendMessageToUser(conn, msg);
 			logger.info("[send] " + msg.toString());
 			logger.debug("[send] " + msg.toString());
 		}

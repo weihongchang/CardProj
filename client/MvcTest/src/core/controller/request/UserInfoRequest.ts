@@ -6,15 +6,15 @@
   */
 
 module UserInfoRequest {
-    export function sendUserInfo(userId:number,userName:string): void {
+    export function sendUserInfo(UserName:string,Pwd:string): void {
         //创建user_login_class
         var user_login_class = Global.getMessage("CSLogin");
         
         //创建一条消息
         var user_login = new user_login_class({
-            "email": userId+"",
-            "password": userName,
-            "sessionKey":userName,
+            "email": UserName,
+            "password": Pwd,
+            "sessionKey":UserName,
             "serverid":12
         });
         
