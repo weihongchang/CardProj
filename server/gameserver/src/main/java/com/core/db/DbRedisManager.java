@@ -2,7 +2,7 @@ package com.core.db;
 
 import com.core.db.redismanager.RedisItemManager;
 import com.core.db.redismanager.RedisPlayerManager;
-import com.item.Item;
+import com.model.item.Item;
 
 public class DbRedisManager {
 

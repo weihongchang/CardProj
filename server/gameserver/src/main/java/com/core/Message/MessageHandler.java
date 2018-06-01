@@ -4,7 +4,7 @@ package com.core.Message;
 
 import com.core.Message.List.PlayerLogin;
 import com.core.Message.Model.MsgTest;
-import com.player.Player;
+import com.model.player.Player;
 
 public class MessageHandler {
 	private static MessageHandler instance ;

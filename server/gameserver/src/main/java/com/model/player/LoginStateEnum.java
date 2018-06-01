@@ -1,4 +1,4 @@
-package com.player;
+package com.model.player;
 
 /**
  * GameServer上的玩家状态定义，玩家状态统一由主线程维护

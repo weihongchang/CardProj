@@ -211,7 +211,8 @@ private imgBG :egret.Sprite;
         this.imgBG.addChild(button1);
 
         GameLayerManager.gameLayer().mainLayer.addChild(this.imgBG);
-
+        game.AppFacade.getInstance().startUp(GameLayerManager.gameLayer());
+        SocketManager.connectServer("127.0.0.1",8888);
         // EXML.load("resource/eui_skins/MainSkin.exml",this.onLoaded,this);
     }
 
@@ -269,11 +270,11 @@ private imgBG :egret.Sprite;
 
         console.log(game.DataManager.getInstance().player.name);
         game.AppFacade.getInstance().startUp(GameLayerManager.gameLayer());
-        let panel = new eui.Panel();
-        panel.title = "Title";
-        panel.horizontalCenter = 0;
-        panel.verticalCenter = 0;
-        this.addChild(panel);
+        // let panel = new eui.Panel();
+        // panel.title = "Title";
+        // panel.horizontalCenter = 0;
+        // panel.verticalCenter = 0;
+        // this.addChild(panel);
         SocketManager.connectServer("127.0.0.1",8888);
 
         
@@ -286,16 +287,21 @@ private imgBG :egret.Sprite;
     }
 
      private onButton1Click(e: egret.TouchEvent) {
-        
-         if(this.nameLabel.text != "")
-         {
-            UserInfoRequest.sendUserInfo(this.nameLabel.text,"123456");
-            GameLayerManager.gameLayer().mainLayer.removeChild(this.imgBG);
-            
-         }
-         else
-         {
-             console.log("用户名不能为空！！");
-         }
+        if(SocketManager.connState)
+        {
+            if(this.nameLabel.text != "")
+            {
+                UserInfoRequest.sendUserInfo(this.nameLabel.text,"123456");
+                GameLayerManager.gameLayer().mainLayer.removeChild(this.imgBG);
+            }
+            else
+            {
+                EffectUtils.showTipsMid("用户名不能为空",true);
+            }
+        }
+        else
+        {
+            EffectUtils.showTipsMid("网络连接异常！",true);
+        }
     }
 }

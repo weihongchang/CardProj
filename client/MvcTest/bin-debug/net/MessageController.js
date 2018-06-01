@@ -13,6 +13,7 @@ var game;
             return this.instance;
         };
         MessageController.prototype.fireMessage = function (msgid, data) {
+            console.log("收到消息:" + msgid);
             switch (msgid) {
                 case 0:
                     new game.Processor_100().executeData(data);
@@ -23,6 +24,10 @@ var game;
                 case 102:
                     console.log("102");
                     new game.Processor_100().executeData(data);
+                    break;
+                case 104:
+                    console.log("104");
+                    new game.Processor_SCBuyHero().executeData(data);
                     break;
             }
         };

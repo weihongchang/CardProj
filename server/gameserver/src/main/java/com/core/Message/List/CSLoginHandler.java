@@ -17,8 +17,8 @@ import com.core.Message.Model.Message.CSLogin;
 import com.core.db.MongoManager;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.InvalidProtocolBufferException;
-import com.player.Player;
-import com.player.PlayerManager;
+import com.model.player.Player;
+import com.model.player.PlayerManager;
 
 import io.netty.buffer.ByteBuf;
 
@@ -73,6 +73,7 @@ public class CSLoginHandler extends CGMessage {
         	{
         		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
            	 	pl.setLastLoginTime(df.format(new Date()));   
+           	 	pl.setIp(conn.getRemoteSocketAddress().toString());
         		WsPool.updatePlayer(pl, conn);
         		player = pl;
         	}

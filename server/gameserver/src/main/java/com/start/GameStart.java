@@ -7,6 +7,7 @@ import com.core.WsServer;
 import com.core.Recognizer.GameMesageRecognizer;
 import com.core.db.MongoManager;
 import com.log.Loggers;
+import com.util.LoadJsonManager;
 
 
 public class GameStart {
@@ -18,6 +19,10 @@ public class GameStart {
 		logger.info("Game Start .....");
 		// 获取当前时间
 		long t0 = System.currentTimeMillis();
+		
+		//加载数据表
+		LoadJsonManager.getInstance().loadAllJson();
+		
 		
 		MongoManager.getInstance();
 //		DbManager.getSession();

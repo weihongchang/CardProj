@@ -12,6 +12,7 @@ module game {
 
 		public fireMessage(msgid:number,data:egret.ByteArray)
 		{
+			console.log("收到消息:"+msgid);
 			switch(msgid)
 			{
 				case 0:
@@ -24,6 +25,10 @@ module game {
 					console.log("102");
 					new Processor_100().executeData(data);
 					break;
+				case 104:
+					console.log("104");
+					new Processor_SCBuyHero().executeData(data);
+					break
 			}
 		}
 

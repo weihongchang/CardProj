@@ -50,8 +50,15 @@ message LoginResp {
 	required int32 gold 		=	7;
 }
 
-// 测试
+// 买英雄
 // messageId:103
-message LoginTest {
+message CSBuyHero {
+	required int32 bType = 1;
+}
+
+// 买英雄
+// messageId:104
+message SCBuyHero {
 	required int32 status = 1;
+	repeated int32 heroid = 2;
 }

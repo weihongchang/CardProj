@@ -255,6 +255,8 @@ var Main = (function (_super) {
         button1.y = stageH / 4 * 3 + 100;
         this.imgBG.addChild(button1);
         GameLayerManager.gameLayer().mainLayer.addChild(this.imgBG);
+        game.AppFacade.getInstance().startUp(GameLayerManager.gameLayer());
+        SocketManager.connectServer("127.0.0.1", 8888);
         // EXML.load("resource/eui_skins/MainSkin.exml",this.onLoaded,this);
     };
     Main.prototype.onLoaded = function (clazz) {
@@ -305,23 +307,28 @@ var Main = (function (_super) {
     Main.prototype.onButtonClick = function (e) {
         console.log(game.DataManager.getInstance().player.name);
         game.AppFacade.getInstance().startUp(GameLayerManager.gameLayer());
-        var panel = new eui.Panel();
-        panel.title = "Title";
-        panel.horizontalCenter = 0;
-        panel.verticalCenter = 0;
-        this.addChild(panel);
+        // let panel = new eui.Panel();
+        // panel.title = "Title";
+        // panel.horizontalCenter = 0;
+        // panel.verticalCenter = 0;
+        // this.addChild(panel);
         SocketManager.connectServer("127.0.0.1", 8888);
         // game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_HOME);
         // game.AppFacade.getInstance().sendNotification(MainNotify.OPEN_MAIN);
         // GameLayerManager.gameLayer().removeChild(this.imgBG);
     };
     Main.prototype.onButton1Click = function (e) {
-        if (this.nameLabel.text != "") {
-            UserInfoRequest.sendUserInfo(this.nameLabel.text, "123456");
-            GameLayerManager.gameLayer().mainLayer.removeChild(this.imgBG);
+        if (SocketManager.connState) {
+            if (this.nameLabel.text != "") {
+                UserInfoRequest.sendUserInfo(this.nameLabel.text, "123456");
+                GameLayerManager.gameLayer().mainLayer.removeChild(this.imgBG);
+            }
+            else {
+                EffectUtils.showTipsMid("用户名不能为空", true);
+            }
         }
         else {
-            console.log("用户名不能为空！！");
+            EffectUtils.showTipsMid("网络连接异常！", true);
         }
     };
     return Main;

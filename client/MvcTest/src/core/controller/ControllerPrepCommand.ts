@@ -17,6 +17,7 @@ module game {
             
             //服务器返回command
             (new Processor_100()).register();
+            (new Processor_SCBuyHero()).register();
         }
 	}
 }

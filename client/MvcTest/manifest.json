@@ -42,6 +42,7 @@
 		"bin-debug/core/controller/StartupCommand.js",
 		"bin-debug/core/controller/ViewPrepCommand.js",
 		"bin-debug/core/controller/Processor/Processor_100.js",
+		"bin-debug/core/controller/Processor/Processor_SCBuyHero.js",
 		"bin-debug/core/controller/request/UserInfoRequest.js",
 		"bin-debug/core/data/DataManager.js",
 		"bin-debug/core/data/DungeonData.js",

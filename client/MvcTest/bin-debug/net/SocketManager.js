@@ -9,6 +9,7 @@
 var SocketManager;
 (function (SocketManager) {
     var sock = new egret.WebSocket();
+    SocketManager.connState = false;
     //连接服务器
     function connectServer(host, port) {
         if (host === void 0) { host = ""; }
@@ -18,15 +19,33 @@ var SocketManager;
         this.sock.type = "webSocketTypeBinary";
         this.sock.addEventListener(egret.ProgressEvent.SOCKET_DATA, this.onReceiveMessage, this);
         this.sock.addEventListener(egret.Event.CONNECT, this.onSocketOpen, this);
+        this.sock.addEventListener(egret.Event.CLOSE, this.SocketClose, this);
+        this.sock.addEventListener(egret.IOErrorEvent.IO_ERROR, this.SocketError, this);
         this.sock.connect(host, port);
     }
     SocketManager.connectServer = connectServer;
     //连接成功返回
     function onSocketOpen() {
+        this.connState = true;
         Global.hideWaritPanel();
         game.AppFacade.getInstance().sendNotification(SysNotify.CONNECT_SERVER_SUCCESS);
     }
     SocketManager.onSocketOpen = onSocketOpen;
+    //连接异常
+    function SocketError() {
+        this.connState = false;
+        Global.hideWaritPanel();
+        EffectUtils.showTipsMid("网络连接异常", true);
+        // game.AppFacade.getInstance().sendNotification(SysNotify.CONNECT_SERVER_SUCCESS);
+    }
+    SocketManager.SocketError = SocketError;
+    //连接关闭
+    function SocketClose() {
+        this.connState = false;
+        Global.hideWaritPanel();
+        // game.AppFacade.getInstance().sendNotification(SysNotify.CONNECT_SERVER_SUCCESS);
+    }
+    SocketManager.SocketClose = SocketClose;
     //消息返回  
     function onReceiveMessage() {
         Global.hideWaritPanel();
@@ -39,15 +58,6 @@ var SocketManager;
         var cmdDataBA = new egret.ByteArray();
         _arr.readBytes(cmdDataBA);
         game.MessageController.getInstance().fireMessage(mainId, cmdDataBA);
-        // //        //初始化template_proto
-        //        var message = dcodeIO.ProtoBuf.loadProto(RES.getRes("template_proto"));
-        // //            
-        //        //创建user_login_class
-        //        var user_login_class = message.build("LoginResp");
-        //        //反序列化
-        //        var new_user_login = user_login_class.decode(cmdDataBA.buffer);
-        //        console.log("反序列化数据：",new_user_login);  
-        // game.AppFacade.getInstance().sendNotification("Processor_" + mainId ,cmdDataBA);
     }
     SocketManager.onReceiveMessage = onReceiveMessage;
     //向服务端发送消息
@@ -65,5 +75,17 @@ var SocketManager;
         this.sock.flush();
     }
     SocketManager.sendMessage = sendMessage;
+    function sendBuyHero(btype) {
+        //创建user_login_class
+        var buyhero = Global.getMessage("CSBuyHero");
+        //创建一条消息
+        var user_login = new buyhero({
+            "bType": btype
+        });
+        //序列化
+        var bytes = user_login.toArrayBuffer();
+        SocketManager.sendMessage(103, 1, bytes);
+    }
+    SocketManager.sendBuyHero = sendBuyHero;
 })(SocketManager || (SocketManager = {}));
 //# sourceMappingURL=SocketManager.js.map

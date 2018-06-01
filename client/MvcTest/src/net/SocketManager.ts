@@ -9,6 +9,8 @@
 module SocketManager {
 
     var sock: egret.WebSocket = new egret.WebSocket();
+
+    export var connState:boolean = false;
     
     //连接服务器
     export function connectServer(host: string = "", port: number = 80) {
@@ -17,14 +19,33 @@ module SocketManager {
         this.sock.type = "webSocketTypeBinary";
         this.sock.addEventListener(egret.ProgressEvent.SOCKET_DATA, this.onReceiveMessage, this);
         this.sock.addEventListener(egret.Event.CONNECT, this.onSocketOpen, this);
+        this.sock.addEventListener(egret.Event.CLOSE ,this.SocketClose,this);
+        this.sock.addEventListener(egret.IOErrorEvent.IO_ERROR ,this.SocketError,this);
+
     
         this.sock.connect(host, port);
     }
 
     //连接成功返回
     export function onSocketOpen(): void {
+        this.connState = true;
         Global.hideWaritPanel();
         game.AppFacade.getInstance().sendNotification(SysNotify.CONNECT_SERVER_SUCCESS);
+    }
+
+     //连接异常
+    export function SocketError(): void {
+        this.connState = false;
+        Global.hideWaritPanel();
+        EffectUtils.showTipsMid("网络连接异常",true);
+        // game.AppFacade.getInstance().sendNotification(SysNotify.CONNECT_SERVER_SUCCESS);
+    }
+
+      //连接关闭
+    export function SocketClose(): void {
+        this.connState = false;
+        Global.hideWaritPanel();
+        // game.AppFacade.getInstance().sendNotification(SysNotify.CONNECT_SERVER_SUCCESS);
     }
 
     //消息返回  
@@ -41,17 +62,6 @@ module SocketManager {
 
         game.MessageController.getInstance().fireMessage(mainId,cmdDataBA);
         
-// //        //初始化template_proto
-//        var message = dcodeIO.ProtoBuf.loadProto(RES.getRes("template_proto"));
-// //            
-//        //创建user_login_class
-//        var user_login_class = message.build("LoginResp");
-           
-//        //反序列化
-//        var new_user_login = user_login_class.decode(cmdDataBA.buffer);
-//        console.log("反序列化数据：",new_user_login);  
-        
-        // game.AppFacade.getInstance().sendNotification("Processor_" + mainId ,cmdDataBA);
     }
 
     //向服务端发送消息
@@ -69,6 +79,22 @@ module SocketManager {
         this.sock.writeBytes(sendMsg);
         
         this.sock.flush();
+    }
+
+
+     export function sendBuyHero(btype:number): void {
+        //创建user_login_class
+        var buyhero = Global.getMessage("CSBuyHero");
+        
+        //创建一条消息
+        var user_login = new buyhero({
+            "bType": btype
+        });
+        
+        //序列化
+        var bytes = user_login.toArrayBuffer();
+
+        SocketManager.sendMessage(103,1,bytes)  
     }
 }
 

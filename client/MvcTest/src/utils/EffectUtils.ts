@@ -151,6 +151,14 @@ module EffectUtils {
 
     }    
 
+    /**
+     * 屏幕中间弹提示
+     */
+    export function showTipsMid(str:string,isWarning:boolean)
+    {
+        EffectUtils.showTips(str,4,GameConfig.LabelFontSize.normalSize,isWarning,GameConfig.curStage().stageWidth/2,GameConfig.curStage().stageHeight/2);
+    }
+
     //========================== a lot of effect will coming! ============================
    
     var isPlayEffectPlay:Boolean = false; 

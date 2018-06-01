@@ -1,4 +1,4 @@
-package com.player;
+package com.model.player;
 
 import javax.management.InstanceAlreadyExistsException;
 import org.slf4j.Logger;

@@ -20,6 +20,7 @@ var game;
             // this.skinName = "src/core/view/panel/ui/ZhaoXianSkin.exml";
             _this.skinName = "resource/eui_skins/Panel_ZhaoXianSkin.exml";
             _this.addEventListener(eui.UIEvent.COMPLETE, _this.createCompleteEvent, _this);
+            _this.btn_card1.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.card1Click, _this);
             return _this;
         }
         ZhaoXianPanel.prototype.createCompleteEvent = function (event) {
@@ -28,6 +29,9 @@ var game;
         };
         ZhaoXianPanel.prototype.partAdded = function (partName, instance) {
             _super.prototype.partAdded.call(this, partName, instance);
+        };
+        ZhaoXianPanel.prototype.card1Click = function (e) {
+            SocketManager.sendBuyHero(1);
         };
         return ZhaoXianPanel;
     }(eui.Component));

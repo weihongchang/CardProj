@@ -1988,63 +1988,43 @@ public final class Message {
     // @@protoc_insertion_point(class_scope:com.core.Message.Model.SCLogin)
   }
 
-  public interface CSRegisterOrBuilder
+  public interface CSBuyHeroOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required string registerUserName = 1;
+    // required int32 bType = 1;
     /**
-     * <code>required string registerUserName = 1;</code>
+     * <code>required int32 bType = 1;</code>
      */
-    boolean hasRegisterUserName();
+    boolean hasBType();
     /**
-     * <code>required string registerUserName = 1;</code>
+     * <code>required int32 bType = 1;</code>
      */
-    java.lang.String getRegisterUserName();
-    /**
-     * <code>required string registerUserName = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getRegisterUserNameBytes();
-
-    // required string registerPassword = 2;
-    /**
-     * <code>required string registerPassword = 2;</code>
-     */
-    boolean hasRegisterPassword();
-    /**
-     * <code>required string registerPassword = 2;</code>
-     */
-    java.lang.String getRegisterPassword();
-    /**
-     * <code>required string registerPassword = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getRegisterPasswordBytes();
+    int getBType();
   }
   /**
-   * Protobuf type {@code com.core.Message.Model.CSRegister}
+   * Protobuf type {@code com.core.Message.Model.CSBuyHero}
    *
    * <pre>
-   * 注册
+   * 买英雄
    * messageId:103
    * </pre>
    */
-  public static final class CSRegister extends
+  public static final class CSBuyHero extends
       com.google.protobuf.GeneratedMessage
-      implements CSRegisterOrBuilder {
-    // Use CSRegister.newBuilder() to construct.
-    private CSRegister(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      implements CSBuyHeroOrBuilder {
+    // Use CSBuyHero.newBuilder() to construct.
+    private CSBuyHero(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CSRegister(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CSBuyHero(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final CSRegister defaultInstance;
-    public static CSRegister getDefaultInstance() {
+    private static final CSBuyHero defaultInstance;
+    public static CSBuyHero getDefaultInstance() {
       return defaultInstance;
     }
 
-    public CSRegister getDefaultInstanceForType() {
+    public CSBuyHero getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -2054,7 +2034,7 @@ public final class Message {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private CSRegister(
+    private CSBuyHero(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2077,14 +2057,9 @@ public final class Message {
               }
               break;
             }
-            case 10: {
+            case 8: {
               bitField0_ |= 0x00000001;
-              registerUserName_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              registerPassword_ = input.readBytes();
+              bType_ = input.readInt32();
               break;
             }
           }
@@ -2101,132 +2076,57 @@ public final class Message {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSRegister_descriptor;
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSBuyHero_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSRegister_fieldAccessorTable
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSBuyHero_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.core.Message.Model.Message.CSRegister.class, com.core.Message.Model.Message.CSRegister.Builder.class);
+              com.core.Message.Model.Message.CSBuyHero.class, com.core.Message.Model.Message.CSBuyHero.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CSRegister> PARSER =
-        new com.google.protobuf.AbstractParser<CSRegister>() {
-      public CSRegister parsePartialFrom(
+    public static com.google.protobuf.Parser<CSBuyHero> PARSER =
+        new com.google.protobuf.AbstractParser<CSBuyHero>() {
+      public CSBuyHero parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CSRegister(input, extensionRegistry);
+        return new CSBuyHero(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CSRegister> getParserForType() {
+    public com.google.protobuf.Parser<CSBuyHero> getParserForType() {
       return PARSER;
     }
 
     private int bitField0_;
-    // required string registerUserName = 1;
-    public static final int REGISTERUSERNAME_FIELD_NUMBER = 1;
-    private java.lang.Object registerUserName_;
+    // required int32 bType = 1;
+    public static final int BTYPE_FIELD_NUMBER = 1;
+    private int bType_;
     /**
-     * <code>required string registerUserName = 1;</code>
+     * <code>required int32 bType = 1;</code>
      */
-    public boolean hasRegisterUserName() {
+    public boolean hasBType() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required string registerUserName = 1;</code>
+     * <code>required int32 bType = 1;</code>
      */
-    public java.lang.String getRegisterUserName() {
-      java.lang.Object ref = registerUserName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          registerUserName_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>required string registerUserName = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getRegisterUserNameBytes() {
-      java.lang.Object ref = registerUserName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        registerUserName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // required string registerPassword = 2;
-    public static final int REGISTERPASSWORD_FIELD_NUMBER = 2;
-    private java.lang.Object registerPassword_;
-    /**
-     * <code>required string registerPassword = 2;</code>
-     */
-    public boolean hasRegisterPassword() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required string registerPassword = 2;</code>
-     */
-    public java.lang.String getRegisterPassword() {
-      java.lang.Object ref = registerPassword_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          registerPassword_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>required string registerPassword = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getRegisterPasswordBytes() {
-      java.lang.Object ref = registerPassword_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        registerPassword_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public int getBType() {
+      return bType_;
     }
 
     private void initFields() {
-      registerUserName_ = "";
-      registerPassword_ = "";
+      bType_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
 
-      if (!hasRegisterUserName()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasRegisterPassword()) {
+      if (!hasBType()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -2238,10 +2138,7 @@ public final class Message {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getRegisterUserNameBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getRegisterPasswordBytes());
+        output.writeInt32(1, bType_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -2254,11 +2151,7 @@ public final class Message {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getRegisterUserNameBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getRegisterPasswordBytes());
+          .computeInt32Size(1, bType_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2272,53 +2165,53 @@ public final class Message {
       return super.writeReplace();
     }
 
-    public static com.core.Message.Model.Message.CSRegister parseFrom(
+    public static com.core.Message.Model.Message.CSBuyHero parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.core.Message.Model.Message.CSRegister parseFrom(
+    public static com.core.Message.Model.Message.CSBuyHero parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.core.Message.Model.Message.CSRegister parseFrom(byte[] data)
+    public static com.core.Message.Model.Message.CSBuyHero parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.core.Message.Model.Message.CSRegister parseFrom(
+    public static com.core.Message.Model.Message.CSBuyHero parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.core.Message.Model.Message.CSRegister parseFrom(java.io.InputStream input)
+    public static com.core.Message.Model.Message.CSBuyHero parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.core.Message.Model.Message.CSRegister parseFrom(
+    public static com.core.Message.Model.Message.CSBuyHero parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.core.Message.Model.Message.CSRegister parseDelimitedFrom(java.io.InputStream input)
+    public static com.core.Message.Model.Message.CSBuyHero parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.core.Message.Model.Message.CSRegister parseDelimitedFrom(
+    public static com.core.Message.Model.Message.CSBuyHero parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.core.Message.Model.Message.CSRegister parseFrom(
+    public static com.core.Message.Model.Message.CSBuyHero parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.core.Message.Model.Message.CSRegister parseFrom(
+    public static com.core.Message.Model.Message.CSBuyHero parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2327,7 +2220,7 @@ public final class Message {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.core.Message.Model.Message.CSRegister prototype) {
+    public static Builder newBuilder(com.core.Message.Model.Message.CSBuyHero prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -2339,29 +2232,29 @@ public final class Message {
       return builder;
     }
     /**
-     * Protobuf type {@code com.core.Message.Model.CSRegister}
+     * Protobuf type {@code com.core.Message.Model.CSBuyHero}
      *
      * <pre>
-     * 注册
+     * 买英雄
      * messageId:103
      * </pre>
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.core.Message.Model.Message.CSRegisterOrBuilder {
+       implements com.core.Message.Model.Message.CSBuyHeroOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSRegister_descriptor;
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSBuyHero_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSRegister_fieldAccessorTable
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSBuyHero_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.core.Message.Model.Message.CSRegister.class, com.core.Message.Model.Message.CSRegister.Builder.class);
+                com.core.Message.Model.Message.CSBuyHero.class, com.core.Message.Model.Message.CSBuyHero.Builder.class);
       }
 
-      // Construct using com.core.Message.Model.Message.CSRegister.newBuilder()
+      // Construct using com.core.Message.Model.Message.CSBuyHero.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2381,10 +2274,8 @@ public final class Message {
 
       public Builder clear() {
         super.clear();
-        registerUserName_ = "";
+        bType_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        registerPassword_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -2394,69 +2285,54 @@ public final class Message {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSRegister_descriptor;
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSBuyHero_descriptor;
       }
 
-      public com.core.Message.Model.Message.CSRegister getDefaultInstanceForType() {
-        return com.core.Message.Model.Message.CSRegister.getDefaultInstance();
+      public com.core.Message.Model.Message.CSBuyHero getDefaultInstanceForType() {
+        return com.core.Message.Model.Message.CSBuyHero.getDefaultInstance();
       }
 
-      public com.core.Message.Model.Message.CSRegister build() {
-        com.core.Message.Model.Message.CSRegister result = buildPartial();
+      public com.core.Message.Model.Message.CSBuyHero build() {
+        com.core.Message.Model.Message.CSBuyHero result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.core.Message.Model.Message.CSRegister buildPartial() {
-        com.core.Message.Model.Message.CSRegister result = new com.core.Message.Model.Message.CSRegister(this);
+      public com.core.Message.Model.Message.CSBuyHero buildPartial() {
+        com.core.Message.Model.Message.CSBuyHero result = new com.core.Message.Model.Message.CSBuyHero(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.registerUserName_ = registerUserName_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.registerPassword_ = registerPassword_;
+        result.bType_ = bType_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.core.Message.Model.Message.CSRegister) {
-          return mergeFrom((com.core.Message.Model.Message.CSRegister)other);
+        if (other instanceof com.core.Message.Model.Message.CSBuyHero) {
+          return mergeFrom((com.core.Message.Model.Message.CSBuyHero)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.core.Message.Model.Message.CSRegister other) {
-        if (other == com.core.Message.Model.Message.CSRegister.getDefaultInstance()) return this;
-        if (other.hasRegisterUserName()) {
-          bitField0_ |= 0x00000001;
-          registerUserName_ = other.registerUserName_;
-          onChanged();
-        }
-        if (other.hasRegisterPassword()) {
-          bitField0_ |= 0x00000002;
-          registerPassword_ = other.registerPassword_;
-          onChanged();
+      public Builder mergeFrom(com.core.Message.Model.Message.CSBuyHero other) {
+        if (other == com.core.Message.Model.Message.CSBuyHero.getDefaultInstance()) return this;
+        if (other.hasBType()) {
+          setBType(other.getBType());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
-        if (!hasRegisterUserName()) {
-          
-          return false;
-        }
-        if (!hasRegisterPassword()) {
+        if (!hasBType()) {
           
           return false;
         }
@@ -2467,11 +2343,11 @@ public final class Message {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.core.Message.Model.Message.CSRegister parsedMessage = null;
+        com.core.Message.Model.Message.CSBuyHero parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.core.Message.Model.Message.CSRegister) e.getUnfinishedMessage();
+          parsedMessage = (com.core.Message.Model.Message.CSBuyHero) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -2482,166 +2358,51 @@ public final class Message {
       }
       private int bitField0_;
 
-      // required string registerUserName = 1;
-      private java.lang.Object registerUserName_ = "";
+      // required int32 bType = 1;
+      private int bType_ ;
       /**
-       * <code>required string registerUserName = 1;</code>
+       * <code>required int32 bType = 1;</code>
        */
-      public boolean hasRegisterUserName() {
+      public boolean hasBType() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required string registerUserName = 1;</code>
+       * <code>required int32 bType = 1;</code>
        */
-      public java.lang.String getRegisterUserName() {
-        java.lang.Object ref = registerUserName_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          registerUserName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      public int getBType() {
+        return bType_;
       }
       /**
-       * <code>required string registerUserName = 1;</code>
+       * <code>required int32 bType = 1;</code>
        */
-      public com.google.protobuf.ByteString
-          getRegisterUserNameBytes() {
-        java.lang.Object ref = registerUserName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          registerUserName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>required string registerUserName = 1;</code>
-       */
-      public Builder setRegisterUserName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        registerUserName_ = value;
+      public Builder setBType(int value) {
+        bitField0_ |= 0x00000001;
+        bType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string registerUserName = 1;</code>
+       * <code>required int32 bType = 1;</code>
        */
-      public Builder clearRegisterUserName() {
+      public Builder clearBType() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        registerUserName_ = getDefaultInstance().getRegisterUserName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string registerUserName = 1;</code>
-       */
-      public Builder setRegisterUserNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        registerUserName_ = value;
+        bType_ = 0;
         onChanged();
         return this;
       }
 
-      // required string registerPassword = 2;
-      private java.lang.Object registerPassword_ = "";
-      /**
-       * <code>required string registerPassword = 2;</code>
-       */
-      public boolean hasRegisterPassword() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required string registerPassword = 2;</code>
-       */
-      public java.lang.String getRegisterPassword() {
-        java.lang.Object ref = registerPassword_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          registerPassword_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>required string registerPassword = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getRegisterPasswordBytes() {
-        java.lang.Object ref = registerPassword_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          registerPassword_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>required string registerPassword = 2;</code>
-       */
-      public Builder setRegisterPassword(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        registerPassword_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string registerPassword = 2;</code>
-       */
-      public Builder clearRegisterPassword() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        registerPassword_ = getDefaultInstance().getRegisterPassword();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string registerPassword = 2;</code>
-       */
-      public Builder setRegisterPasswordBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        registerPassword_ = value;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:com.core.Message.Model.CSRegister)
+      // @@protoc_insertion_point(builder_scope:com.core.Message.Model.CSBuyHero)
     }
 
     static {
-      defaultInstance = new CSRegister(true);
+      defaultInstance = new CSBuyHero(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.core.Message.Model.CSRegister)
+    // @@protoc_insertion_point(class_scope:com.core.Message.Model.CSBuyHero)
   }
 
-  public interface SCRegisterOrBuilder
+  public interface SCBuyHeroOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
     // required int32 status = 1;
@@ -2653,31 +2414,45 @@ public final class Message {
      * <code>required int32 status = 1;</code>
      */
     int getStatus();
+
+    // repeated int32 heroid = 2;
+    /**
+     * <code>repeated int32 heroid = 2;</code>
+     */
+    java.util.List<java.lang.Integer> getHeroidList();
+    /**
+     * <code>repeated int32 heroid = 2;</code>
+     */
+    int getHeroidCount();
+    /**
+     * <code>repeated int32 heroid = 2;</code>
+     */
+    int getHeroid(int index);
   }
   /**
-   * Protobuf type {@code com.core.Message.Model.SCRegister}
+   * Protobuf type {@code com.core.Message.Model.SCBuyHero}
    *
    * <pre>
-   * 注册返回
+   * 买英雄下行
    * messageId:104
    * </pre>
    */
-  public static final class SCRegister extends
+  public static final class SCBuyHero extends
       com.google.protobuf.GeneratedMessage
-      implements SCRegisterOrBuilder {
-    // Use SCRegister.newBuilder() to construct.
-    private SCRegister(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      implements SCBuyHeroOrBuilder {
+    // Use SCBuyHero.newBuilder() to construct.
+    private SCBuyHero(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private SCRegister(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private SCBuyHero(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final SCRegister defaultInstance;
-    public static SCRegister getDefaultInstance() {
+    private static final SCBuyHero defaultInstance;
+    public static SCBuyHero getDefaultInstance() {
       return defaultInstance;
     }
 
-    public SCRegister getDefaultInstanceForType() {
+    public SCBuyHero getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -2687,7 +2462,7 @@ public final class Message {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private SCRegister(
+    private SCBuyHero(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2715,6 +2490,27 @@ public final class Message {
               status_ = input.readInt32();
               break;
             }
+            case 16: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                heroid_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              heroid_.add(input.readInt32());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
+                heroid_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                heroid_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2723,34 +2519,37 @@ public final class Message {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          heroid_ = java.util.Collections.unmodifiableList(heroid_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCRegister_descriptor;
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCBuyHero_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCRegister_fieldAccessorTable
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCBuyHero_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.core.Message.Model.Message.SCRegister.class, com.core.Message.Model.Message.SCRegister.Builder.class);
+              com.core.Message.Model.Message.SCBuyHero.class, com.core.Message.Model.Message.SCBuyHero.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<SCRegister> PARSER =
-        new com.google.protobuf.AbstractParser<SCRegister>() {
-      public SCRegister parsePartialFrom(
+    public static com.google.protobuf.Parser<SCBuyHero> PARSER =
+        new com.google.protobuf.AbstractParser<SCBuyHero>() {
+      public SCBuyHero parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SCRegister(input, extensionRegistry);
+        return new SCBuyHero(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<SCRegister> getParserForType() {
+    public com.google.protobuf.Parser<SCBuyHero> getParserForType() {
       return PARSER;
     }
 
@@ -2771,8 +2570,32 @@ public final class Message {
       return status_;
     }
 
+    // repeated int32 heroid = 2;
+    public static final int HEROID_FIELD_NUMBER = 2;
+    private java.util.List<java.lang.Integer> heroid_;
+    /**
+     * <code>repeated int32 heroid = 2;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getHeroidList() {
+      return heroid_;
+    }
+    /**
+     * <code>repeated int32 heroid = 2;</code>
+     */
+    public int getHeroidCount() {
+      return heroid_.size();
+    }
+    /**
+     * <code>repeated int32 heroid = 2;</code>
+     */
+    public int getHeroid(int index) {
+      return heroid_.get(index);
+    }
+
     private void initFields() {
       status_ = 0;
+      heroid_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -2793,6 +2616,9 @@ public final class Message {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeInt32(1, status_);
       }
+      for (int i = 0; i < heroid_.size(); i++) {
+        output.writeInt32(2, heroid_.get(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -2806,6 +2632,15 @@ public final class Message {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, status_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < heroid_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(heroid_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getHeroidList().size();
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
       return size;
@@ -2818,53 +2653,53 @@ public final class Message {
       return super.writeReplace();
     }
 
-    public static com.core.Message.Model.Message.SCRegister parseFrom(
+    public static com.core.Message.Model.Message.SCBuyHero parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.core.Message.Model.Message.SCRegister parseFrom(
+    public static com.core.Message.Model.Message.SCBuyHero parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.core.Message.Model.Message.SCRegister parseFrom(byte[] data)
+    public static com.core.Message.Model.Message.SCBuyHero parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.core.Message.Model.Message.SCRegister parseFrom(
+    public static com.core.Message.Model.Message.SCBuyHero parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.core.Message.Model.Message.SCRegister parseFrom(java.io.InputStream input)
+    public static com.core.Message.Model.Message.SCBuyHero parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.core.Message.Model.Message.SCRegister parseFrom(
+    public static com.core.Message.Model.Message.SCBuyHero parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.core.Message.Model.Message.SCRegister parseDelimitedFrom(java.io.InputStream input)
+    public static com.core.Message.Model.Message.SCBuyHero parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.core.Message.Model.Message.SCRegister parseDelimitedFrom(
+    public static com.core.Message.Model.Message.SCBuyHero parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.core.Message.Model.Message.SCRegister parseFrom(
+    public static com.core.Message.Model.Message.SCBuyHero parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.core.Message.Model.Message.SCRegister parseFrom(
+    public static com.core.Message.Model.Message.SCBuyHero parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2873,7 +2708,7 @@ public final class Message {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.core.Message.Model.Message.SCRegister prototype) {
+    public static Builder newBuilder(com.core.Message.Model.Message.SCBuyHero prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -2885,29 +2720,29 @@ public final class Message {
       return builder;
     }
     /**
-     * Protobuf type {@code com.core.Message.Model.SCRegister}
+     * Protobuf type {@code com.core.Message.Model.SCBuyHero}
      *
      * <pre>
-     * 注册返回
+     * 买英雄下行
      * messageId:104
      * </pre>
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.core.Message.Model.Message.SCRegisterOrBuilder {
+       implements com.core.Message.Model.Message.SCBuyHeroOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCRegister_descriptor;
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCBuyHero_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCRegister_fieldAccessorTable
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCBuyHero_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.core.Message.Model.Message.SCRegister.class, com.core.Message.Model.Message.SCRegister.Builder.class);
+                com.core.Message.Model.Message.SCBuyHero.class, com.core.Message.Model.Message.SCBuyHero.Builder.class);
       }
 
-      // Construct using com.core.Message.Model.Message.SCRegister.newBuilder()
+      // Construct using com.core.Message.Model.Message.SCBuyHero.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2929,6 +2764,8 @@ public final class Message {
         super.clear();
         status_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
+        heroid_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -2938,47 +2775,62 @@ public final class Message {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCRegister_descriptor;
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCBuyHero_descriptor;
       }
 
-      public com.core.Message.Model.Message.SCRegister getDefaultInstanceForType() {
-        return com.core.Message.Model.Message.SCRegister.getDefaultInstance();
+      public com.core.Message.Model.Message.SCBuyHero getDefaultInstanceForType() {
+        return com.core.Message.Model.Message.SCBuyHero.getDefaultInstance();
       }
 
-      public com.core.Message.Model.Message.SCRegister build() {
-        com.core.Message.Model.Message.SCRegister result = buildPartial();
+      public com.core.Message.Model.Message.SCBuyHero build() {
+        com.core.Message.Model.Message.SCBuyHero result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.core.Message.Model.Message.SCRegister buildPartial() {
-        com.core.Message.Model.Message.SCRegister result = new com.core.Message.Model.Message.SCRegister(this);
+      public com.core.Message.Model.Message.SCBuyHero buildPartial() {
+        com.core.Message.Model.Message.SCBuyHero result = new com.core.Message.Model.Message.SCBuyHero(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
         result.status_ = status_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          heroid_ = java.util.Collections.unmodifiableList(heroid_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.heroid_ = heroid_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.core.Message.Model.Message.SCRegister) {
-          return mergeFrom((com.core.Message.Model.Message.SCRegister)other);
+        if (other instanceof com.core.Message.Model.Message.SCBuyHero) {
+          return mergeFrom((com.core.Message.Model.Message.SCBuyHero)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.core.Message.Model.Message.SCRegister other) {
-        if (other == com.core.Message.Model.Message.SCRegister.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.core.Message.Model.Message.SCBuyHero other) {
+        if (other == com.core.Message.Model.Message.SCBuyHero.getDefaultInstance()) return this;
         if (other.hasStatus()) {
           setStatus(other.getStatus());
+        }
+        if (!other.heroid_.isEmpty()) {
+          if (heroid_.isEmpty()) {
+            heroid_ = other.heroid_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureHeroidIsMutable();
+            heroid_.addAll(other.heroid_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -2996,11 +2848,11 @@ public final class Message {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.core.Message.Model.Message.SCRegister parsedMessage = null;
+        com.core.Message.Model.Message.SCBuyHero parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.core.Message.Model.Message.SCRegister) e.getUnfinishedMessage();
+          parsedMessage = (com.core.Message.Model.Message.SCBuyHero) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -3044,15 +2896,81 @@ public final class Message {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.core.Message.Model.SCRegister)
+      // repeated int32 heroid = 2;
+      private java.util.List<java.lang.Integer> heroid_ = java.util.Collections.emptyList();
+      private void ensureHeroidIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          heroid_ = new java.util.ArrayList<java.lang.Integer>(heroid_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated int32 heroid = 2;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getHeroidList() {
+        return java.util.Collections.unmodifiableList(heroid_);
+      }
+      /**
+       * <code>repeated int32 heroid = 2;</code>
+       */
+      public int getHeroidCount() {
+        return heroid_.size();
+      }
+      /**
+       * <code>repeated int32 heroid = 2;</code>
+       */
+      public int getHeroid(int index) {
+        return heroid_.get(index);
+      }
+      /**
+       * <code>repeated int32 heroid = 2;</code>
+       */
+      public Builder setHeroid(
+          int index, int value) {
+        ensureHeroidIsMutable();
+        heroid_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 heroid = 2;</code>
+       */
+      public Builder addHeroid(int value) {
+        ensureHeroidIsMutable();
+        heroid_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 heroid = 2;</code>
+       */
+      public Builder addAllHeroid(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureHeroidIsMutable();
+        super.addAll(values, heroid_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 heroid = 2;</code>
+       */
+      public Builder clearHeroid() {
+        heroid_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.core.Message.Model.SCBuyHero)
     }
 
     static {
-      defaultInstance = new SCRegister(true);
+      defaultInstance = new SCBuyHero(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.core.Message.Model.SCRegister)
+    // @@protoc_insertion_point(class_scope:com.core.Message.Model.SCBuyHero)
   }
 
   public interface SCServerListOrBuilder
@@ -5426,15 +5344,15 @@ public final class Message {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_core_Message_Model_SCLogin_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_core_Message_Model_CSRegister_descriptor;
+    internal_static_com_core_Message_Model_CSBuyHero_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_core_Message_Model_CSRegister_fieldAccessorTable;
+      internal_static_com_core_Message_Model_CSBuyHero_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_core_Message_Model_SCRegister_descriptor;
+    internal_static_com_core_Message_Model_SCBuyHero_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_core_Message_Model_SCRegister_fieldAccessorTable;
+      internal_static_com_core_Message_Model_SCBuyHero_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_core_Message_Model_SCServerList_descriptor;
   private static
@@ -5466,14 +5384,14 @@ public final class Message {
       "w\n\007SCLogin\022\023\n\013loginStatus\030\001 \002(\005\022\020\n\010playe" +
       "rid\030\002 \002(\t\022\014\n\004name\030\003 \002(\t\022\013\n\003exp\030\004 \002(\005\022\r\n\005" +
       "level\030\005 \002(\005\022\r\n\005money\030\006 \002(\005\022\014\n\004gold\030\007 \002(\005" +
-      "\"@\n\nCSRegister\022\030\n\020registerUserName\030\001 \002(\t" +
-      "\022\030\n\020registerPassword\030\002 \002(\t\"\034\n\nSCRegister" +
-      "\022\016\n\006status\030\001 \002(\005\"]\n\014SCServerList\022\020\n\010serv",
-      "erId\030\001 \002(\005\022\022\n\nserverName\030\002 \002(\t\022\024\n\014server" +
-      "Status\030\003 \002(\005\022\021\n\tserverDes\030\004 \002(\t\"P\n\005CSMsg" +
-      "\022\020\n\010username\030\001 \002(\t\022\020\n\010password\030\002 \001(\t\022\022\n\n" +
-      "sessionKey\030\003 \001(\t\022\017\n\007worldid\030\004 \001(\005\"\031\n\005SCM" +
-      "sg\022\020\n\010username\030\001 \002(\tB\tB\007Message"
+      "\"\032\n\tCSBuyHero\022\r\n\005bType\030\001 \002(\005\"+\n\tSCBuyHer" +
+      "o\022\016\n\006status\030\001 \002(\005\022\016\n\006heroid\030\002 \003(\005\"]\n\014SCS" +
+      "erverList\022\020\n\010serverId\030\001 \002(\005\022\022\n\nserverNam",
+      "e\030\002 \002(\t\022\024\n\014serverStatus\030\003 \002(\005\022\021\n\tserverD" +
+      "es\030\004 \002(\t\"P\n\005CSMsg\022\020\n\010username\030\001 \002(\t\022\020\n\010p" +
+      "assword\030\002 \001(\t\022\022\n\nsessionKey\030\003 \001(\t\022\017\n\007wor" +
+      "ldid\030\004 \001(\005\"\031\n\005SCMsg\022\020\n\010username\030\001 \002(\tB\tB" +
+      "\007Message"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -5492,18 +5410,18 @@ public final class Message {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_core_Message_Model_SCLogin_descriptor,
               new java.lang.String[] { "LoginStatus", "Playerid", "Name", "Exp", "Level", "Money", "Gold", });
-          internal_static_com_core_Message_Model_CSRegister_descriptor =
+          internal_static_com_core_Message_Model_CSBuyHero_descriptor =
             getDescriptor().getMessageTypes().get(2);
-          internal_static_com_core_Message_Model_CSRegister_fieldAccessorTable = new
+          internal_static_com_core_Message_Model_CSBuyHero_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_com_core_Message_Model_CSRegister_descriptor,
-              new java.lang.String[] { "RegisterUserName", "RegisterPassword", });
-          internal_static_com_core_Message_Model_SCRegister_descriptor =
+              internal_static_com_core_Message_Model_CSBuyHero_descriptor,
+              new java.lang.String[] { "BType", });
+          internal_static_com_core_Message_Model_SCBuyHero_descriptor =
             getDescriptor().getMessageTypes().get(3);
-          internal_static_com_core_Message_Model_SCRegister_fieldAccessorTable = new
+          internal_static_com_core_Message_Model_SCBuyHero_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_com_core_Message_Model_SCRegister_descriptor,
-              new java.lang.String[] { "Status", });
+              internal_static_com_core_Message_Model_SCBuyHero_descriptor,
+              new java.lang.String[] { "Status", "Heroid", });
           internal_static_com_core_Message_Model_SCServerList_descriptor =
             getDescriptor().getMessageTypes().get(4);
           internal_static_com_core_Message_Model_SCServerList_fieldAccessorTable = new

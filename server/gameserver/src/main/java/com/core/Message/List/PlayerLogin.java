@@ -10,7 +10,7 @@ import com.core.Message.MessageType;
 import com.core.Message.Model.MsgTest;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.InvalidProtocolBufferException;
-import com.player.Player;
+import com.model.player.Player;
 
 import io.netty.buffer.ByteBuf;
 

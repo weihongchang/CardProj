@@ -152,6 +152,13 @@ var EffectUtils;
         }
     }
     EffectUtils.showTips = showTips;
+    /**
+     * 屏幕中间弹提示
+     */
+    function showTipsMid(str, isWarning) {
+        EffectUtils.showTips(str, 4, GameConfig.LabelFontSize.normalSize, isWarning, GameConfig.curStage().stageWidth / 2, GameConfig.curStage().stageHeight / 2);
+    }
+    EffectUtils.showTipsMid = showTipsMid;
     //========================== a lot of effect will coming! ============================
     var isPlayEffectPlay = false;
     /**

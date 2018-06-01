@@ -15,7 +15,7 @@ import com.core.Exception.MessageParseException;
 import com.core.Message.List.SCAllMessageHandler;
 import com.google.protobuf.GeneratedMessage;
 import com.log.Loggers;
-import com.player.Player;
+import com.model.player.Player;
 import com.start.GameStart;
 
 import io.netty.buffer.ByteBuf;

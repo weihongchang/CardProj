@@ -1,4 +1,4 @@
-package com.player;
+package com.model.player;
 
 import org.java_websocket.WebSocket;
 

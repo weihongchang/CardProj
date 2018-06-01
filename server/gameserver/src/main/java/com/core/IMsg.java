@@ -7,7 +7,7 @@ import java.nio.ByteBuffer;
 import org.java_websocket.WebSocket;
 
 import com.core.Exception.MessageParseException;
-import com.player.Player;
+import com.model.player.Player;
 
 import io.netty.buffer.ByteBuf;
 

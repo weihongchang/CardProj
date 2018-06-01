@@ -7,8 +7,8 @@ import java.util.Map;
 import org.slf4j.Logger;
 
 import com.core.db.RedisManager;
-import com.item.Item;
 import com.log.Loggers;
+import com.model.item.Item;
 
 public class RedisItemManager {
 

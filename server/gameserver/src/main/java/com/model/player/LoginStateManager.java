@@ -1,4 +1,4 @@
-package com.player;
+package com.model.player;
 
 import com.core.IMsg;
 import com.core.Message.CGMessage;

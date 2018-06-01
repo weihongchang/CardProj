@@ -1,4 +1,4 @@
-package com.item;
+package com.model.item;
 
 public class Item {
 

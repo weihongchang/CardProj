@@ -26,6 +26,7 @@ var game;
             (new game.MainManager()).register();
             //服务器返回command
             (new game.Processor_100()).register();
+            (new game.Processor_SCBuyHero()).register();
         };
         return ControllerPrepCommand;
     }(puremvc.SimpleCommand));
