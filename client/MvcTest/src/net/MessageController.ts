@@ -29,6 +29,10 @@ module game {
 					console.log("104");
 					new Processor_SCBuyHero().executeData(data);
 					break
+				case 106:
+					console.log("106");
+					new Processor_SCHeroList().executeData(data);
+					break
 			}
 		}
 

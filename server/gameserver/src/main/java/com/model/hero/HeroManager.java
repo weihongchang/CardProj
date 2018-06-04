@@ -6,6 +6,7 @@ import java.util.Random;
 import java.util.Vector;
 
 import com.model.BaseTemplate;
+import com.model.player.Player;
 
 public class HeroManager {
 	private static volatile HeroManager sInst = null;
@@ -30,6 +31,23 @@ public class HeroManager {
 		}
 		return inst;
 	}
+	
+	/**
+	 * 当前英雄最大id
+	 */
+	private int maxHeroID = 100000;
+	
+	
+/**************************************************************************************/
+/**************************************************************************************/
+	
+	public int getMaxHeroID() {
+		return maxHeroID;
+	}
+
+	public void setMaxHeroID(int maxHeroID) {
+		this.maxHeroID = maxHeroID;
+	}
 
 	public List<BaseTemplate> getHeroTemplateList() {
 		return heroTemplateList;
@@ -37,6 +55,17 @@ public class HeroManager {
 
 	public void setHeroTemplateList(List<BaseTemplate> arr) {
 		this.heroTemplateList = arr;
+	}
+	
+/*******************************************************************************/
+/*******************************************************************************/
+	/**
+	 * 获取一个新的英雄id
+	 * @return
+	 */
+	public synchronized long newHeroID()
+	{
+		return	maxHeroID++;
 	}
 	
 	/**
@@ -100,5 +129,25 @@ public class HeroManager {
 		}
 		
 		return hlist;
+	}
+	
+	/**
+	 * 获取的新英雄
+	 * @param player
+	 * @param template
+	 */
+	public boolean createHero(Player player,HeroTemplate template)
+	{
+		if(player != null  && template != null)
+		{
+			int heroID = getMaxHeroID();
+			Hero hero = new Hero(player.getPlayerid(), Integer.parseInt( template.heroid),heroID );
+			if( hero != null )
+			{
+				player.AddHero(hero);
+				return true;
+			}
+		}
+		return false;
 	}
 }

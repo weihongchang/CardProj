@@ -35,18 +35,21 @@ var game;
             if (this.list == null)
                 this.list = new eui.List();
             this.list.useVirtualLayout = true;
+            var sourceArr = [];
             if (nType == 1) {
                 this.list.itemRenderer = game.Item_HeroList;
+                var herolist = game.DataManager.getInstance().heroList["heroData"];
+                if (herolist) {
+                    for (var i = 0; i < herolist.length; i++) {
+                        var heroID = herolist[i]["heroid"];
+                        var tid = herolist[i]["templateid"];
+                        sourceArr.push({ Item_HeroList: "item" + (i + 1), index: (i + 1), heroid: heroID, templateid: tid });
+                    }
+                }
             }
             else if (nType == 2) {
                 this.list.itemRenderer = game.Item_ItemList;
-            }
-            var sourceArr = [];
-            for (var i = 1; i < 10; i++) {
-                if (nType == 1) {
-                    sourceArr.push({ Item_HeroList: "item" + i });
-                }
-                else if (nType == 2) {
+                for (var i = 1; i < 10; i++) {
                     sourceArr.push({ Item_ItemList: "item" + i });
                 }
             }

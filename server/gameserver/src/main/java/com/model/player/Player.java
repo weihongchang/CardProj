@@ -1,9 +1,13 @@
 package com.model.player;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.java_websocket.WebSocket;
 
 import com.core.WsPool;
 import com.google.protobuf.GeneratedMessage;
+import com.model.hero.Hero;
 
 /**
  * 游戏中的玩家，维护玩家的会话和玩家所有角色的引用
@@ -31,6 +35,9 @@ public class Player  {
 	private String ip;
 	private String createTime;
 	private String lastLoginTime;
+	
+	//英雄列表
+	private List<Hero> heroList = new ArrayList<>();
 	
 	
 	public Player(String ip)
@@ -121,6 +128,19 @@ public class Player  {
 		this.gold = gold;
 	}
 
+	
+	public List<Hero> getHeroList() {
+		return heroList;
+	}
+
+	public void setHeroList(List<Hero> heroList) {
+		this.heroList = heroList;
+	}
+
+	/**
+	 * 发送消息到客户端
+	 * @param msg
+	 */
 	public void sendMessage(GeneratedMessage msg)
 	{
 		WebSocket conn = WsPool.getConnByUser(getIp());
@@ -131,7 +151,13 @@ public class Player  {
 		}
 	}
 	
-	
-	
+	/**
+	 * 添加一个英雄
+	 * @param hero
+	 */
+	public void AddHero(Hero hero)
+	{
+		heroList.add(hero);
+	}
 
 }

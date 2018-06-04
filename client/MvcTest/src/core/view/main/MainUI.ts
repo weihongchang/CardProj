@@ -40,6 +40,7 @@ module game {
             this.functionBar.mapBtn.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onMapBtnClick,this);
 
             //this.btnAtk.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onAct,this);
+            // console.log(GlobalData.HeroTemplate[0].heroid);
 
             this.roleInfo.imgHead.source="head_lusu_png";
 

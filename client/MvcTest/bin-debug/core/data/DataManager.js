@@ -7,6 +7,7 @@ var game;
         function DataManager() {
             this.dungeonList = [];
             this.dungeonLevelList = [];
+            this.heroList = [];
         }
         DataManager.getInstance = function () {
             if (this.instance == null) {

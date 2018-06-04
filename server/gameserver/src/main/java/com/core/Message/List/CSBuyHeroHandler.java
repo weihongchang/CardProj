@@ -15,6 +15,7 @@ import com.google.protobuf.InvalidProtocolBufferException;
 import com.model.hero.HeroManager;
 import com.model.hero.HeroTemplate;
 import com.model.player.Player;
+import com.model.player.PlayerManager;
 
 import io.netty.buffer.ByteBuf;
 
@@ -54,11 +55,15 @@ public class CSBuyHeroHandler extends CGMessage {
         if(hlist != null && hlist .size()>0)
         {
         	for (int i = 0; i < hlist.size(); i++) {
-        		msg.addHeroid( Integer.parseInt( hlist.get(i).heroid));
+        		if(HeroManager.getInstance().createHero(player, hlist.get(i)))
+        			msg.addHeroid( Integer.parseInt( hlist.get(i).heroid));
 			}
         }
 
         player.sendMessage(msg.build());
+        
+        PlayerManager.getInstance().sendHeroList(player);
+        
         
     }
 

@@ -11,4 +11,11 @@ module game {
 			public createTime:string= "";
 			public lastLoginTime:string= "";
 	}
+
+	export class HeroData {
+			public templateid:number = 0;
+			public playerid:number = 0;
+			public exp:number = 0;
+			public level:number = 0;
+	}
 }

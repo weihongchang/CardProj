@@ -20,5 +20,16 @@ var game;
     }());
     game.PlayerData = PlayerData;
     __reflect(PlayerData.prototype, "game.PlayerData");
+    var HeroData = (function () {
+        function HeroData() {
+            this.templateid = 0;
+            this.playerid = 0;
+            this.exp = 0;
+            this.level = 0;
+        }
+        return HeroData;
+    }());
+    game.HeroData = HeroData;
+    __reflect(HeroData.prototype, "game.HeroData");
 })(game || (game = {}));
 //# sourceMappingURL=PlayerData.js.map

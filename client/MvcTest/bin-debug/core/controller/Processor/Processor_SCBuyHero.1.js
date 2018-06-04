@@ -32,16 +32,15 @@ var game;
             var user_login_class = Global.getMessage("SCBuyHero");
             //反序列化
             var new_user_login = user_login_class.decode(data.buffer);
-            console.log("反序列化数据：", new_user_login);
+            console.log("buyhero反序列化数据：", new_user_login);
             // console.log(game.DataManager.getInstance().player.name);
             if (new_user_login.status >= 0) {
-                game.DataManager.getInstance().player.playerid = new_user_login.playerid;
-                game.DataManager.getInstance().player.name = new_user_login.name;
-                game.DataManager.getInstance().player.exp = new_user_login.exp;
-                game.DataManager.getInstance().player.level = new_user_login.level;
-                game.DataManager.getInstance().player.money = new_user_login.money;
-                game.DataManager.getInstance().player.gold = new_user_login.gold;
-                // this.sendNotification(UserInfoNotify.UPDATE_DATA,new_user_login);
+                for (var i = 1; i < new_user_login.heroid.length; i++) {
+                    var hero = GlobalData.getHero(new_user_login.heroid[i]);
+                    if (hero) {
+                        console.log("获得武将[" + hero["heroname"] + "]");
+                    }
+                }
                 game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_HOME);
                 game.AppFacade.getInstance().sendNotification(MainNotify.OPEN_MAIN);
             }
@@ -57,4 +56,4 @@ var game;
     game.Processor_SCBuyHero = Processor_SCBuyHero;
     __reflect(Processor_SCBuyHero.prototype, "game.Processor_SCBuyHero", ["puremvc.ICommand", "puremvc.INotifier"]);
 })(game || (game = {}));
-//# sourceMappingURL=Processor_SCBuyHero.js.map
+//# sourceMappingURL=Processor_SCBuyHero.1.js.map

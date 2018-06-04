@@ -29,6 +29,10 @@ var game;
                     console.log("104");
                     new game.Processor_SCBuyHero().executeData(data);
                     break;
+                case 106:
+                    console.log("106");
+                    new game.Processor_SCHeroList().executeData(data);
+                    break;
             }
         };
         return MessageController;

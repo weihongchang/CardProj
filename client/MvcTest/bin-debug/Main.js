@@ -100,23 +100,34 @@ var Main = (function (_super) {
     };
     Main.prototype.runGame = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var result, userInfo;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
+            var _a, userInfo;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
                     case 0: return [4 /*yield*/, this.loadResource()];
                     case 1:
-                        _a.sent();
+                        _b.sent();
                         this.createGameScene();
-                        return [4 /*yield*/, RES.getResAsync("description_json")];
+                        // const result = await RES.getResAsync("description_json")
+                        // this.startAnimation(result);
+                        _a = GlobalData;
+                        return [4 /*yield*/, RES.getResAsync("Hero_json")
+                            // JSON.parse(GlobalData.heroTemplate)
+                            // this.starHeroFile(result);
+                        ];
                     case 2:
-                        result = _a.sent();
-                        this.startAnimation(result);
+                        // const result = await RES.getResAsync("description_json")
+                        // this.startAnimation(result);
+                        _a.heroTemplate = _b.sent();
+                        // JSON.parse(GlobalData.heroTemplate)
+                        // this.starHeroFile(result);
                         return [4 /*yield*/, platform.login()];
                     case 3:
-                        _a.sent();
+                        // JSON.parse(GlobalData.heroTemplate)
+                        // this.starHeroFile(result);
+                        _b.sent();
                         return [4 /*yield*/, platform.getUserInfo()];
                     case 4:
-                        userInfo = _a.sent();
+                        userInfo = _b.sent();
                         return [2 /*return*/];
                 }
             });
@@ -249,7 +260,7 @@ var Main = (function (_super) {
         var button = new EButton(this, "enter_h_png", this.onButtonClick, "", 30, 2, null);
         button.x = stageW / 2 - button.width / 2;
         button.y = stageH / 4 * 3;
-        this.imgBG.addChild(button);
+        // this.imgBG.addChild(button);
         var button1 = new EButton(this, "enter_h_png", this.onButton1Click, "", 30, 2, null);
         button1.x = stageW / 2 - button.width / 2;
         button1.y = stageH / 4 * 3 + 100;

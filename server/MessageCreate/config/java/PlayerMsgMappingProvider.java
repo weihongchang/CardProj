@@ -15,9 +15,8 @@ public class PlayerMsgMappingProvider implements IMsgMappingProvider {
 		map.put((short)102,Message.SCLogin.class);
 		map.put((short)103,CSBuyHeroHandler.class);
 		map.put((short)104,Message.SCBuyHero.class);
-		map.put((short)106,Message.SCServerList.class);
-		map.put((short)107,CSMsgHandler.class);
-		map.put((short)108,Message.SCMsg.class);
+		map.put((short)105,CSHeroHandler.class);
+		map.put((short)106,Message.SCHeroList.class);
 		
 		
 		return map;

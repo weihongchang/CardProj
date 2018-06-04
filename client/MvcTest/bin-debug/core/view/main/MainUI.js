@@ -46,6 +46,7 @@ var game;
             _this.functionBar.shopBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onShopBtnClick, _this);
             _this.functionBar.mapBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onMapBtnClick, _this);
             //this.btnAtk.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onAct,this);
+            // console.log(GlobalData.HeroTemplate[0].heroid);
             _this.roleInfo.imgHead.source = "head_lusu_png";
             return _this;
             // DataManager.getInstance().InitTestData();

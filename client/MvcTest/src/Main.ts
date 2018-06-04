@@ -64,8 +64,13 @@ private imgBG :egret.Sprite;
     private async runGame() {
         await this.loadResource()
         this.createGameScene();
-        const result = await RES.getResAsync("description_json")
-        this.startAnimation(result);
+        // const result = await RES.getResAsync("description_json")
+        // this.startAnimation(result);
+
+        GlobalData.heroTemplate = await RES.getResAsync("Hero_json")
+        // JSON.parse(GlobalData.heroTemplate)
+        // this.starHeroFile(result);
+        
         await platform.login();
         const userInfo = await platform.getUserInfo();
         // console.log(userInfo);
@@ -202,7 +207,7 @@ private imgBG :egret.Sprite;
         let button:EButton  = new EButton(this,"enter_h_png",this.onButtonClick,"",30,2,null);
         button.x = stageW/2-button.width/2;
         button.y = stageH/4*3;
-        this.imgBG.addChild(button);
+        // this.imgBG.addChild(button);
 
 
         let button1:EButton  = new EButton(this,"enter_h_png",this.onButton1Click,"",30,2,null);
@@ -230,6 +235,8 @@ private imgBG :egret.Sprite;
         result.texture = texture;
         return result;
     }
+
+
     /**
      * 描述文件加载成功，开始播放动画
      * Description file loading is successful, start to play the animation

@@ -62,3 +62,18 @@ message SCBuyHero {
 	required int32 status = 1;
 	repeated int32 heroid = 2;
 }
+
+// 英雄数据
+// messageId:105
+message CSHero {
+	required int32 heroid		= 1;
+	required int32 templateid 	= 2;
+	required int32 level 		= 3;
+	required int32 exp 			= 4;
+}
+
+// 英雄列表下行
+// messageId:106
+message SCHeroList {
+	repeated CSHero heroData = 1;
+}

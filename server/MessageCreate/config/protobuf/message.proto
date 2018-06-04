@@ -65,28 +65,21 @@ message SCBuyHero {
 	repeated int32 heroid = 2;
 }
 
+// 英雄数据
+// messageId:105
+message CSHero {
+	required int32 heroid		= 1;
+	required int32 templateid 	= 2;
+	required int32 level 		= 3;
+	required int32 exp 			= 4;
+}
 
-// 服务器列表
+// 英雄列表下行
 // messageId:106
-message SCServerList {
-	required int32 serverId 	= 1;//服务器id
-	required string serverName 	= 2;//服务器名称
-	required int32 serverStatus = 3;//服务器状态
-	required string serverDes 	= 4;//服务器描述信息
+message SCHeroList {
+	repeated CSHero heroData = 1;
 }
 
 
 
-// messageId:107
-message CSMsg {
-	required string username = 1;
-	optional string password = 2;
-	optional string sessionKey = 3;
-	optional int32 worldid = 4;
-}
 
-// 登录响应
-// messageId:108
-message SCMsg {
-	required string username = 1;
-}

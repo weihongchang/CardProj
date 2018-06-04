@@ -34,28 +34,29 @@ module game {
             
 
             this.list.useVirtualLayout = true;
+            var sourceArr:any[] = [];
             if(nType == 1)
             {
                 this.list.itemRenderer = Item_HeroList;
+                var herolist = DataManager.getInstance().heroList["heroData"];
+                if(herolist){
+                    for (var i:number = 0; i < herolist.length; i++)
+                    {
+                        var heroID = herolist[i]["heroid"];
+                        var tid = herolist[i]["templateid"];
+                        sourceArr.push({Item_HeroList:"item"+(i+1),index:(i+1),heroid:heroID,templateid:tid});
+                    }
+                }
             }
             else if(nType == 2)
             {
                 this.list.itemRenderer = Item_ItemList;
-            }
 
-            var sourceArr:any[] = [];
-
-            for (var i:number = 1; i < 10; i++){
-                if(nType == 1)
-                {
-                    sourceArr.push({Item_HeroList:"item"+i});
-                }
-                else if(nType == 2)
-                {
+                for (var i:number = 1; i < 10; i++){
                     sourceArr.push({Item_ItemList:"item"+i});
                 }
             }
-            
+
             this.list.dataProvider = new eui.ArrayCollection(sourceArr);
             
             //  this.list.dataProviderRefreshed();

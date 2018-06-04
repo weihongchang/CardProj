@@ -27,17 +27,18 @@ module game {
             
             //反序列化
             var new_user_login = user_login_class.decode(data.buffer);
-            console.log("反序列化数据：",new_user_login);
+            console.log("buyhero反序列化数据：",new_user_login);
             // console.log(game.DataManager.getInstance().player.name);
             if( new_user_login.status >= 0 )
-            {
-                DataManager.getInstance().player.playerid = new_user_login.playerid;
-                DataManager.getInstance().player.name = new_user_login.name;
-                DataManager.getInstance().player.exp = new_user_login.exp;
-                DataManager.getInstance().player.level = new_user_login.level;
-                DataManager.getInstance().player.money = new_user_login.money;
-                DataManager.getInstance().player.gold = new_user_login.gold;
-                // this.sendNotification(UserInfoNotify.UPDATE_DATA,new_user_login);
+            {   
+                for (var i:number = 1; i < new_user_login.heroid.length; i++){
+                    var hero = GlobalData.getHero( new_user_login.heroid[i] );
+                    if(hero)
+                    {
+                        console.log("获得武将["+hero["heroname"]+"]");
+                    }
+                }
+               
                 game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_HOME);
                 game.AppFacade.getInstance().sendNotification(MainNotify.OPEN_MAIN);
             }
