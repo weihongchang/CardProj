@@ -4350,6 +4350,2538 @@ public final class Message {
     // @@protoc_insertion_point(class_scope:com.core.Message.Model.SCHeroList)
   }
 
+  public interface SCHeroOneOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required .com.core.Message.Model.CSHero heroData = 1;
+    /**
+     * <code>required .com.core.Message.Model.CSHero heroData = 1;</code>
+     */
+    boolean hasHeroData();
+    /**
+     * <code>required .com.core.Message.Model.CSHero heroData = 1;</code>
+     */
+    com.core.Message.Model.Message.CSHero getHeroData();
+    /**
+     * <code>required .com.core.Message.Model.CSHero heroData = 1;</code>
+     */
+    com.core.Message.Model.Message.CSHeroOrBuilder getHeroDataOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.core.Message.Model.SCHeroOne}
+   *
+   * <pre>
+   * 英雄下行
+   * messageId:108
+   * </pre>
+   */
+  public static final class SCHeroOne extends
+      com.google.protobuf.GeneratedMessage
+      implements SCHeroOneOrBuilder {
+    // Use SCHeroOne.newBuilder() to construct.
+    private SCHeroOne(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SCHeroOne(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SCHeroOne defaultInstance;
+    public static SCHeroOne getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SCHeroOne getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SCHeroOne(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.core.Message.Model.Message.CSHero.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = heroData_.toBuilder();
+              }
+              heroData_ = input.readMessage(com.core.Message.Model.Message.CSHero.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(heroData_);
+                heroData_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCHeroOne_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCHeroOne_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.core.Message.Model.Message.SCHeroOne.class, com.core.Message.Model.Message.SCHeroOne.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SCHeroOne> PARSER =
+        new com.google.protobuf.AbstractParser<SCHeroOne>() {
+      public SCHeroOne parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SCHeroOne(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SCHeroOne> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required .com.core.Message.Model.CSHero heroData = 1;
+    public static final int HERODATA_FIELD_NUMBER = 1;
+    private com.core.Message.Model.Message.CSHero heroData_;
+    /**
+     * <code>required .com.core.Message.Model.CSHero heroData = 1;</code>
+     */
+    public boolean hasHeroData() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .com.core.Message.Model.CSHero heroData = 1;</code>
+     */
+    public com.core.Message.Model.Message.CSHero getHeroData() {
+      return heroData_;
+    }
+    /**
+     * <code>required .com.core.Message.Model.CSHero heroData = 1;</code>
+     */
+    public com.core.Message.Model.Message.CSHeroOrBuilder getHeroDataOrBuilder() {
+      return heroData_;
+    }
+
+    private void initFields() {
+      heroData_ = com.core.Message.Model.Message.CSHero.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasHeroData()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getHeroData().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, heroData_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, heroData_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.core.Message.Model.Message.SCHeroOne parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.core.Message.Model.Message.SCHeroOne parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.SCHeroOne parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.core.Message.Model.Message.SCHeroOne parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.SCHeroOne parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.core.Message.Model.Message.SCHeroOne parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.SCHeroOne parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.core.Message.Model.Message.SCHeroOne parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.SCHeroOne parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.core.Message.Model.Message.SCHeroOne parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.core.Message.Model.Message.SCHeroOne prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.core.Message.Model.SCHeroOne}
+     *
+     * <pre>
+     * 英雄下行
+     * messageId:108
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.core.Message.Model.Message.SCHeroOneOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCHeroOne_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCHeroOne_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.core.Message.Model.Message.SCHeroOne.class, com.core.Message.Model.Message.SCHeroOne.Builder.class);
+      }
+
+      // Construct using com.core.Message.Model.Message.SCHeroOne.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getHeroDataFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (heroDataBuilder_ == null) {
+          heroData_ = com.core.Message.Model.Message.CSHero.getDefaultInstance();
+        } else {
+          heroDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCHeroOne_descriptor;
+      }
+
+      public com.core.Message.Model.Message.SCHeroOne getDefaultInstanceForType() {
+        return com.core.Message.Model.Message.SCHeroOne.getDefaultInstance();
+      }
+
+      public com.core.Message.Model.Message.SCHeroOne build() {
+        com.core.Message.Model.Message.SCHeroOne result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.core.Message.Model.Message.SCHeroOne buildPartial() {
+        com.core.Message.Model.Message.SCHeroOne result = new com.core.Message.Model.Message.SCHeroOne(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (heroDataBuilder_ == null) {
+          result.heroData_ = heroData_;
+        } else {
+          result.heroData_ = heroDataBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.core.Message.Model.Message.SCHeroOne) {
+          return mergeFrom((com.core.Message.Model.Message.SCHeroOne)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.core.Message.Model.Message.SCHeroOne other) {
+        if (other == com.core.Message.Model.Message.SCHeroOne.getDefaultInstance()) return this;
+        if (other.hasHeroData()) {
+          mergeHeroData(other.getHeroData());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasHeroData()) {
+          
+          return false;
+        }
+        if (!getHeroData().isInitialized()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.core.Message.Model.Message.SCHeroOne parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.core.Message.Model.Message.SCHeroOne) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required .com.core.Message.Model.CSHero heroData = 1;
+      private com.core.Message.Model.Message.CSHero heroData_ = com.core.Message.Model.Message.CSHero.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.core.Message.Model.Message.CSHero, com.core.Message.Model.Message.CSHero.Builder, com.core.Message.Model.Message.CSHeroOrBuilder> heroDataBuilder_;
+      /**
+       * <code>required .com.core.Message.Model.CSHero heroData = 1;</code>
+       */
+      public boolean hasHeroData() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .com.core.Message.Model.CSHero heroData = 1;</code>
+       */
+      public com.core.Message.Model.Message.CSHero getHeroData() {
+        if (heroDataBuilder_ == null) {
+          return heroData_;
+        } else {
+          return heroDataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .com.core.Message.Model.CSHero heroData = 1;</code>
+       */
+      public Builder setHeroData(com.core.Message.Model.Message.CSHero value) {
+        if (heroDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          heroData_ = value;
+          onChanged();
+        } else {
+          heroDataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.core.Message.Model.CSHero heroData = 1;</code>
+       */
+      public Builder setHeroData(
+          com.core.Message.Model.Message.CSHero.Builder builderForValue) {
+        if (heroDataBuilder_ == null) {
+          heroData_ = builderForValue.build();
+          onChanged();
+        } else {
+          heroDataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.core.Message.Model.CSHero heroData = 1;</code>
+       */
+      public Builder mergeHeroData(com.core.Message.Model.Message.CSHero value) {
+        if (heroDataBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              heroData_ != com.core.Message.Model.Message.CSHero.getDefaultInstance()) {
+            heroData_ =
+              com.core.Message.Model.Message.CSHero.newBuilder(heroData_).mergeFrom(value).buildPartial();
+          } else {
+            heroData_ = value;
+          }
+          onChanged();
+        } else {
+          heroDataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.core.Message.Model.CSHero heroData = 1;</code>
+       */
+      public Builder clearHeroData() {
+        if (heroDataBuilder_ == null) {
+          heroData_ = com.core.Message.Model.Message.CSHero.getDefaultInstance();
+          onChanged();
+        } else {
+          heroDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .com.core.Message.Model.CSHero heroData = 1;</code>
+       */
+      public com.core.Message.Model.Message.CSHero.Builder getHeroDataBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getHeroDataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .com.core.Message.Model.CSHero heroData = 1;</code>
+       */
+      public com.core.Message.Model.Message.CSHeroOrBuilder getHeroDataOrBuilder() {
+        if (heroDataBuilder_ != null) {
+          return heroDataBuilder_.getMessageOrBuilder();
+        } else {
+          return heroData_;
+        }
+      }
+      /**
+       * <code>required .com.core.Message.Model.CSHero heroData = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.core.Message.Model.Message.CSHero, com.core.Message.Model.Message.CSHero.Builder, com.core.Message.Model.Message.CSHeroOrBuilder> 
+          getHeroDataFieldBuilder() {
+        if (heroDataBuilder_ == null) {
+          heroDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.core.Message.Model.Message.CSHero, com.core.Message.Model.Message.CSHero.Builder, com.core.Message.Model.Message.CSHeroOrBuilder>(
+                  heroData_,
+                  getParentForChildren(),
+                  isClean());
+          heroData_ = null;
+        }
+        return heroDataBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.core.Message.Model.SCHeroOne)
+    }
+
+    static {
+      defaultInstance = new SCHeroOne(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.core.Message.Model.SCHeroOne)
+  }
+
+  public interface CSItemOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 itemid = 1;
+    /**
+     * <code>required int32 itemid = 1;</code>
+     */
+    boolean hasItemid();
+    /**
+     * <code>required int32 itemid = 1;</code>
+     */
+    int getItemid();
+
+    // required int32 templateid = 2;
+    /**
+     * <code>required int32 templateid = 2;</code>
+     */
+    boolean hasTemplateid();
+    /**
+     * <code>required int32 templateid = 2;</code>
+     */
+    int getTemplateid();
+
+    // required int32 level = 3;
+    /**
+     * <code>required int32 level = 3;</code>
+     */
+    boolean hasLevel();
+    /**
+     * <code>required int32 level = 3;</code>
+     */
+    int getLevel();
+
+    // required int32 exp = 4;
+    /**
+     * <code>required int32 exp = 4;</code>
+     */
+    boolean hasExp();
+    /**
+     * <code>required int32 exp = 4;</code>
+     */
+    int getExp();
+
+    // required int32 color = 5;
+    /**
+     * <code>required int32 color = 5;</code>
+     */
+    boolean hasColor();
+    /**
+     * <code>required int32 color = 5;</code>
+     */
+    int getColor();
+  }
+  /**
+   * Protobuf type {@code com.core.Message.Model.CSItem}
+   *
+   * <pre>
+   * 道具数据
+   * messageId:109
+   * </pre>
+   */
+  public static final class CSItem extends
+      com.google.protobuf.GeneratedMessage
+      implements CSItemOrBuilder {
+    // Use CSItem.newBuilder() to construct.
+    private CSItem(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSItem(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSItem defaultInstance;
+    public static CSItem getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSItem getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSItem(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              itemid_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              templateid_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              level_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              exp_ = input.readInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              color_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSItem_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSItem_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.core.Message.Model.Message.CSItem.class, com.core.Message.Model.Message.CSItem.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSItem> PARSER =
+        new com.google.protobuf.AbstractParser<CSItem>() {
+      public CSItem parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSItem(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSItem> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 itemid = 1;
+    public static final int ITEMID_FIELD_NUMBER = 1;
+    private int itemid_;
+    /**
+     * <code>required int32 itemid = 1;</code>
+     */
+    public boolean hasItemid() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 itemid = 1;</code>
+     */
+    public int getItemid() {
+      return itemid_;
+    }
+
+    // required int32 templateid = 2;
+    public static final int TEMPLATEID_FIELD_NUMBER = 2;
+    private int templateid_;
+    /**
+     * <code>required int32 templateid = 2;</code>
+     */
+    public boolean hasTemplateid() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int32 templateid = 2;</code>
+     */
+    public int getTemplateid() {
+      return templateid_;
+    }
+
+    // required int32 level = 3;
+    public static final int LEVEL_FIELD_NUMBER = 3;
+    private int level_;
+    /**
+     * <code>required int32 level = 3;</code>
+     */
+    public boolean hasLevel() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required int32 level = 3;</code>
+     */
+    public int getLevel() {
+      return level_;
+    }
+
+    // required int32 exp = 4;
+    public static final int EXP_FIELD_NUMBER = 4;
+    private int exp_;
+    /**
+     * <code>required int32 exp = 4;</code>
+     */
+    public boolean hasExp() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required int32 exp = 4;</code>
+     */
+    public int getExp() {
+      return exp_;
+    }
+
+    // required int32 color = 5;
+    public static final int COLOR_FIELD_NUMBER = 5;
+    private int color_;
+    /**
+     * <code>required int32 color = 5;</code>
+     */
+    public boolean hasColor() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>required int32 color = 5;</code>
+     */
+    public int getColor() {
+      return color_;
+    }
+
+    private void initFields() {
+      itemid_ = 0;
+      templateid_ = 0;
+      level_ = 0;
+      exp_ = 0;
+      color_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasItemid()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasTemplateid()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasLevel()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasExp()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasColor()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, itemid_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, templateid_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, level_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, exp_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(5, color_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, itemid_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, templateid_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, level_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, exp_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, color_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.core.Message.Model.Message.CSItem parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.core.Message.Model.Message.CSItem parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.CSItem parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.core.Message.Model.Message.CSItem parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.CSItem parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.core.Message.Model.Message.CSItem parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.CSItem parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.core.Message.Model.Message.CSItem parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.CSItem parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.core.Message.Model.Message.CSItem parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.core.Message.Model.Message.CSItem prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.core.Message.Model.CSItem}
+     *
+     * <pre>
+     * 道具数据
+     * messageId:109
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.core.Message.Model.Message.CSItemOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSItem_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSItem_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.core.Message.Model.Message.CSItem.class, com.core.Message.Model.Message.CSItem.Builder.class);
+      }
+
+      // Construct using com.core.Message.Model.Message.CSItem.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        itemid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        templateid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        level_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        exp_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        color_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSItem_descriptor;
+      }
+
+      public com.core.Message.Model.Message.CSItem getDefaultInstanceForType() {
+        return com.core.Message.Model.Message.CSItem.getDefaultInstance();
+      }
+
+      public com.core.Message.Model.Message.CSItem build() {
+        com.core.Message.Model.Message.CSItem result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.core.Message.Model.Message.CSItem buildPartial() {
+        com.core.Message.Model.Message.CSItem result = new com.core.Message.Model.Message.CSItem(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.itemid_ = itemid_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.templateid_ = templateid_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.level_ = level_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.exp_ = exp_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.color_ = color_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.core.Message.Model.Message.CSItem) {
+          return mergeFrom((com.core.Message.Model.Message.CSItem)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.core.Message.Model.Message.CSItem other) {
+        if (other == com.core.Message.Model.Message.CSItem.getDefaultInstance()) return this;
+        if (other.hasItemid()) {
+          setItemid(other.getItemid());
+        }
+        if (other.hasTemplateid()) {
+          setTemplateid(other.getTemplateid());
+        }
+        if (other.hasLevel()) {
+          setLevel(other.getLevel());
+        }
+        if (other.hasExp()) {
+          setExp(other.getExp());
+        }
+        if (other.hasColor()) {
+          setColor(other.getColor());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasItemid()) {
+          
+          return false;
+        }
+        if (!hasTemplateid()) {
+          
+          return false;
+        }
+        if (!hasLevel()) {
+          
+          return false;
+        }
+        if (!hasExp()) {
+          
+          return false;
+        }
+        if (!hasColor()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.core.Message.Model.Message.CSItem parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.core.Message.Model.Message.CSItem) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 itemid = 1;
+      private int itemid_ ;
+      /**
+       * <code>required int32 itemid = 1;</code>
+       */
+      public boolean hasItemid() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 itemid = 1;</code>
+       */
+      public int getItemid() {
+        return itemid_;
+      }
+      /**
+       * <code>required int32 itemid = 1;</code>
+       */
+      public Builder setItemid(int value) {
+        bitField0_ |= 0x00000001;
+        itemid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 itemid = 1;</code>
+       */
+      public Builder clearItemid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        itemid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 templateid = 2;
+      private int templateid_ ;
+      /**
+       * <code>required int32 templateid = 2;</code>
+       */
+      public boolean hasTemplateid() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 templateid = 2;</code>
+       */
+      public int getTemplateid() {
+        return templateid_;
+      }
+      /**
+       * <code>required int32 templateid = 2;</code>
+       */
+      public Builder setTemplateid(int value) {
+        bitField0_ |= 0x00000002;
+        templateid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 templateid = 2;</code>
+       */
+      public Builder clearTemplateid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        templateid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 level = 3;
+      private int level_ ;
+      /**
+       * <code>required int32 level = 3;</code>
+       */
+      public boolean hasLevel() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required int32 level = 3;</code>
+       */
+      public int getLevel() {
+        return level_;
+      }
+      /**
+       * <code>required int32 level = 3;</code>
+       */
+      public Builder setLevel(int value) {
+        bitField0_ |= 0x00000004;
+        level_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 level = 3;</code>
+       */
+      public Builder clearLevel() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        level_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 exp = 4;
+      private int exp_ ;
+      /**
+       * <code>required int32 exp = 4;</code>
+       */
+      public boolean hasExp() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required int32 exp = 4;</code>
+       */
+      public int getExp() {
+        return exp_;
+      }
+      /**
+       * <code>required int32 exp = 4;</code>
+       */
+      public Builder setExp(int value) {
+        bitField0_ |= 0x00000008;
+        exp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 exp = 4;</code>
+       */
+      public Builder clearExp() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        exp_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 color = 5;
+      private int color_ ;
+      /**
+       * <code>required int32 color = 5;</code>
+       */
+      public boolean hasColor() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>required int32 color = 5;</code>
+       */
+      public int getColor() {
+        return color_;
+      }
+      /**
+       * <code>required int32 color = 5;</code>
+       */
+      public Builder setColor(int value) {
+        bitField0_ |= 0x00000010;
+        color_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 color = 5;</code>
+       */
+      public Builder clearColor() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        color_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.core.Message.Model.CSItem)
+    }
+
+    static {
+      defaultInstance = new CSItem(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.core.Message.Model.CSItem)
+  }
+
+  public interface SCItemListOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // repeated .com.core.Message.Model.CSItem itemData = 1;
+    /**
+     * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+     */
+    java.util.List<com.core.Message.Model.Message.CSItem> 
+        getItemDataList();
+    /**
+     * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+     */
+    com.core.Message.Model.Message.CSItem getItemData(int index);
+    /**
+     * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+     */
+    int getItemDataCount();
+    /**
+     * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+     */
+    java.util.List<? extends com.core.Message.Model.Message.CSItemOrBuilder> 
+        getItemDataOrBuilderList();
+    /**
+     * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+     */
+    com.core.Message.Model.Message.CSItemOrBuilder getItemDataOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code com.core.Message.Model.SCItemList}
+   *
+   * <pre>
+   * 道具列表下行
+   * messageId:110
+   * </pre>
+   */
+  public static final class SCItemList extends
+      com.google.protobuf.GeneratedMessage
+      implements SCItemListOrBuilder {
+    // Use SCItemList.newBuilder() to construct.
+    private SCItemList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SCItemList(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SCItemList defaultInstance;
+    public static SCItemList getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SCItemList getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SCItemList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                itemData_ = new java.util.ArrayList<com.core.Message.Model.Message.CSItem>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              itemData_.add(input.readMessage(com.core.Message.Model.Message.CSItem.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          itemData_ = java.util.Collections.unmodifiableList(itemData_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCItemList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCItemList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.core.Message.Model.Message.SCItemList.class, com.core.Message.Model.Message.SCItemList.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SCItemList> PARSER =
+        new com.google.protobuf.AbstractParser<SCItemList>() {
+      public SCItemList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SCItemList(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SCItemList> getParserForType() {
+      return PARSER;
+    }
+
+    // repeated .com.core.Message.Model.CSItem itemData = 1;
+    public static final int ITEMDATA_FIELD_NUMBER = 1;
+    private java.util.List<com.core.Message.Model.Message.CSItem> itemData_;
+    /**
+     * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+     */
+    public java.util.List<com.core.Message.Model.Message.CSItem> getItemDataList() {
+      return itemData_;
+    }
+    /**
+     * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+     */
+    public java.util.List<? extends com.core.Message.Model.Message.CSItemOrBuilder> 
+        getItemDataOrBuilderList() {
+      return itemData_;
+    }
+    /**
+     * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+     */
+    public int getItemDataCount() {
+      return itemData_.size();
+    }
+    /**
+     * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+     */
+    public com.core.Message.Model.Message.CSItem getItemData(int index) {
+      return itemData_.get(index);
+    }
+    /**
+     * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+     */
+    public com.core.Message.Model.Message.CSItemOrBuilder getItemDataOrBuilder(
+        int index) {
+      return itemData_.get(index);
+    }
+
+    private void initFields() {
+      itemData_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      for (int i = 0; i < getItemDataCount(); i++) {
+        if (!getItemData(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < itemData_.size(); i++) {
+        output.writeMessage(1, itemData_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < itemData_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, itemData_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.core.Message.Model.Message.SCItemList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.core.Message.Model.Message.SCItemList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.SCItemList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.core.Message.Model.Message.SCItemList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.SCItemList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.core.Message.Model.Message.SCItemList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.SCItemList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.core.Message.Model.Message.SCItemList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.SCItemList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.core.Message.Model.Message.SCItemList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.core.Message.Model.Message.SCItemList prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.core.Message.Model.SCItemList}
+     *
+     * <pre>
+     * 道具列表下行
+     * messageId:110
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.core.Message.Model.Message.SCItemListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCItemList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCItemList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.core.Message.Model.Message.SCItemList.class, com.core.Message.Model.Message.SCItemList.Builder.class);
+      }
+
+      // Construct using com.core.Message.Model.Message.SCItemList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getItemDataFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (itemDataBuilder_ == null) {
+          itemData_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          itemDataBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCItemList_descriptor;
+      }
+
+      public com.core.Message.Model.Message.SCItemList getDefaultInstanceForType() {
+        return com.core.Message.Model.Message.SCItemList.getDefaultInstance();
+      }
+
+      public com.core.Message.Model.Message.SCItemList build() {
+        com.core.Message.Model.Message.SCItemList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.core.Message.Model.Message.SCItemList buildPartial() {
+        com.core.Message.Model.Message.SCItemList result = new com.core.Message.Model.Message.SCItemList(this);
+        int from_bitField0_ = bitField0_;
+        if (itemDataBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            itemData_ = java.util.Collections.unmodifiableList(itemData_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.itemData_ = itemData_;
+        } else {
+          result.itemData_ = itemDataBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.core.Message.Model.Message.SCItemList) {
+          return mergeFrom((com.core.Message.Model.Message.SCItemList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.core.Message.Model.Message.SCItemList other) {
+        if (other == com.core.Message.Model.Message.SCItemList.getDefaultInstance()) return this;
+        if (itemDataBuilder_ == null) {
+          if (!other.itemData_.isEmpty()) {
+            if (itemData_.isEmpty()) {
+              itemData_ = other.itemData_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureItemDataIsMutable();
+              itemData_.addAll(other.itemData_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.itemData_.isEmpty()) {
+            if (itemDataBuilder_.isEmpty()) {
+              itemDataBuilder_.dispose();
+              itemDataBuilder_ = null;
+              itemData_ = other.itemData_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              itemDataBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getItemDataFieldBuilder() : null;
+            } else {
+              itemDataBuilder_.addAllMessages(other.itemData_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        for (int i = 0; i < getItemDataCount(); i++) {
+          if (!getItemData(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.core.Message.Model.Message.SCItemList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.core.Message.Model.Message.SCItemList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // repeated .com.core.Message.Model.CSItem itemData = 1;
+      private java.util.List<com.core.Message.Model.Message.CSItem> itemData_ =
+        java.util.Collections.emptyList();
+      private void ensureItemDataIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          itemData_ = new java.util.ArrayList<com.core.Message.Model.Message.CSItem>(itemData_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.core.Message.Model.Message.CSItem, com.core.Message.Model.Message.CSItem.Builder, com.core.Message.Model.Message.CSItemOrBuilder> itemDataBuilder_;
+
+      /**
+       * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public java.util.List<com.core.Message.Model.Message.CSItem> getItemDataList() {
+        if (itemDataBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(itemData_);
+        } else {
+          return itemDataBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public int getItemDataCount() {
+        if (itemDataBuilder_ == null) {
+          return itemData_.size();
+        } else {
+          return itemDataBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public com.core.Message.Model.Message.CSItem getItemData(int index) {
+        if (itemDataBuilder_ == null) {
+          return itemData_.get(index);
+        } else {
+          return itemDataBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public Builder setItemData(
+          int index, com.core.Message.Model.Message.CSItem value) {
+        if (itemDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureItemDataIsMutable();
+          itemData_.set(index, value);
+          onChanged();
+        } else {
+          itemDataBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public Builder setItemData(
+          int index, com.core.Message.Model.Message.CSItem.Builder builderForValue) {
+        if (itemDataBuilder_ == null) {
+          ensureItemDataIsMutable();
+          itemData_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          itemDataBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public Builder addItemData(com.core.Message.Model.Message.CSItem value) {
+        if (itemDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureItemDataIsMutable();
+          itemData_.add(value);
+          onChanged();
+        } else {
+          itemDataBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public Builder addItemData(
+          int index, com.core.Message.Model.Message.CSItem value) {
+        if (itemDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureItemDataIsMutable();
+          itemData_.add(index, value);
+          onChanged();
+        } else {
+          itemDataBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public Builder addItemData(
+          com.core.Message.Model.Message.CSItem.Builder builderForValue) {
+        if (itemDataBuilder_ == null) {
+          ensureItemDataIsMutable();
+          itemData_.add(builderForValue.build());
+          onChanged();
+        } else {
+          itemDataBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public Builder addItemData(
+          int index, com.core.Message.Model.Message.CSItem.Builder builderForValue) {
+        if (itemDataBuilder_ == null) {
+          ensureItemDataIsMutable();
+          itemData_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          itemDataBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public Builder addAllItemData(
+          java.lang.Iterable<? extends com.core.Message.Model.Message.CSItem> values) {
+        if (itemDataBuilder_ == null) {
+          ensureItemDataIsMutable();
+          super.addAll(values, itemData_);
+          onChanged();
+        } else {
+          itemDataBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public Builder clearItemData() {
+        if (itemDataBuilder_ == null) {
+          itemData_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          itemDataBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public Builder removeItemData(int index) {
+        if (itemDataBuilder_ == null) {
+          ensureItemDataIsMutable();
+          itemData_.remove(index);
+          onChanged();
+        } else {
+          itemDataBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public com.core.Message.Model.Message.CSItem.Builder getItemDataBuilder(
+          int index) {
+        return getItemDataFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public com.core.Message.Model.Message.CSItemOrBuilder getItemDataOrBuilder(
+          int index) {
+        if (itemDataBuilder_ == null) {
+          return itemData_.get(index);  } else {
+          return itemDataBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public java.util.List<? extends com.core.Message.Model.Message.CSItemOrBuilder> 
+           getItemDataOrBuilderList() {
+        if (itemDataBuilder_ != null) {
+          return itemDataBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(itemData_);
+        }
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public com.core.Message.Model.Message.CSItem.Builder addItemDataBuilder() {
+        return getItemDataFieldBuilder().addBuilder(
+            com.core.Message.Model.Message.CSItem.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public com.core.Message.Model.Message.CSItem.Builder addItemDataBuilder(
+          int index) {
+        return getItemDataFieldBuilder().addBuilder(
+            index, com.core.Message.Model.Message.CSItem.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public java.util.List<com.core.Message.Model.Message.CSItem.Builder> 
+           getItemDataBuilderList() {
+        return getItemDataFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.core.Message.Model.Message.CSItem, com.core.Message.Model.Message.CSItem.Builder, com.core.Message.Model.Message.CSItemOrBuilder> 
+          getItemDataFieldBuilder() {
+        if (itemDataBuilder_ == null) {
+          itemDataBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.core.Message.Model.Message.CSItem, com.core.Message.Model.Message.CSItem.Builder, com.core.Message.Model.Message.CSItemOrBuilder>(
+                  itemData_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          itemData_ = null;
+        }
+        return itemDataBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.core.Message.Model.SCItemList)
+    }
+
+    static {
+      defaultInstance = new SCItemList(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.core.Message.Model.SCItemList)
+  }
+
+  public interface SCItemOneOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required .com.core.Message.Model.CSItem itemData = 1;
+    /**
+     * <code>required .com.core.Message.Model.CSItem itemData = 1;</code>
+     */
+    boolean hasItemData();
+    /**
+     * <code>required .com.core.Message.Model.CSItem itemData = 1;</code>
+     */
+    com.core.Message.Model.Message.CSItem getItemData();
+    /**
+     * <code>required .com.core.Message.Model.CSItem itemData = 1;</code>
+     */
+    com.core.Message.Model.Message.CSItemOrBuilder getItemDataOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.core.Message.Model.SCItemOne}
+   *
+   * <pre>
+   * 道具下行
+   * messageId:112
+   * </pre>
+   */
+  public static final class SCItemOne extends
+      com.google.protobuf.GeneratedMessage
+      implements SCItemOneOrBuilder {
+    // Use SCItemOne.newBuilder() to construct.
+    private SCItemOne(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SCItemOne(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SCItemOne defaultInstance;
+    public static SCItemOne getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SCItemOne getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SCItemOne(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.core.Message.Model.Message.CSItem.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = itemData_.toBuilder();
+              }
+              itemData_ = input.readMessage(com.core.Message.Model.Message.CSItem.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(itemData_);
+                itemData_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCItemOne_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCItemOne_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.core.Message.Model.Message.SCItemOne.class, com.core.Message.Model.Message.SCItemOne.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SCItemOne> PARSER =
+        new com.google.protobuf.AbstractParser<SCItemOne>() {
+      public SCItemOne parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SCItemOne(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SCItemOne> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required .com.core.Message.Model.CSItem itemData = 1;
+    public static final int ITEMDATA_FIELD_NUMBER = 1;
+    private com.core.Message.Model.Message.CSItem itemData_;
+    /**
+     * <code>required .com.core.Message.Model.CSItem itemData = 1;</code>
+     */
+    public boolean hasItemData() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .com.core.Message.Model.CSItem itemData = 1;</code>
+     */
+    public com.core.Message.Model.Message.CSItem getItemData() {
+      return itemData_;
+    }
+    /**
+     * <code>required .com.core.Message.Model.CSItem itemData = 1;</code>
+     */
+    public com.core.Message.Model.Message.CSItemOrBuilder getItemDataOrBuilder() {
+      return itemData_;
+    }
+
+    private void initFields() {
+      itemData_ = com.core.Message.Model.Message.CSItem.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasItemData()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getItemData().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, itemData_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, itemData_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.core.Message.Model.Message.SCItemOne parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.core.Message.Model.Message.SCItemOne parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.SCItemOne parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.core.Message.Model.Message.SCItemOne parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.SCItemOne parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.core.Message.Model.Message.SCItemOne parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.SCItemOne parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.core.Message.Model.Message.SCItemOne parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.SCItemOne parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.core.Message.Model.Message.SCItemOne parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.core.Message.Model.Message.SCItemOne prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.core.Message.Model.SCItemOne}
+     *
+     * <pre>
+     * 道具下行
+     * messageId:112
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.core.Message.Model.Message.SCItemOneOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCItemOne_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCItemOne_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.core.Message.Model.Message.SCItemOne.class, com.core.Message.Model.Message.SCItemOne.Builder.class);
+      }
+
+      // Construct using com.core.Message.Model.Message.SCItemOne.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getItemDataFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (itemDataBuilder_ == null) {
+          itemData_ = com.core.Message.Model.Message.CSItem.getDefaultInstance();
+        } else {
+          itemDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCItemOne_descriptor;
+      }
+
+      public com.core.Message.Model.Message.SCItemOne getDefaultInstanceForType() {
+        return com.core.Message.Model.Message.SCItemOne.getDefaultInstance();
+      }
+
+      public com.core.Message.Model.Message.SCItemOne build() {
+        com.core.Message.Model.Message.SCItemOne result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.core.Message.Model.Message.SCItemOne buildPartial() {
+        com.core.Message.Model.Message.SCItemOne result = new com.core.Message.Model.Message.SCItemOne(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (itemDataBuilder_ == null) {
+          result.itemData_ = itemData_;
+        } else {
+          result.itemData_ = itemDataBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.core.Message.Model.Message.SCItemOne) {
+          return mergeFrom((com.core.Message.Model.Message.SCItemOne)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.core.Message.Model.Message.SCItemOne other) {
+        if (other == com.core.Message.Model.Message.SCItemOne.getDefaultInstance()) return this;
+        if (other.hasItemData()) {
+          mergeItemData(other.getItemData());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasItemData()) {
+          
+          return false;
+        }
+        if (!getItemData().isInitialized()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.core.Message.Model.Message.SCItemOne parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.core.Message.Model.Message.SCItemOne) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required .com.core.Message.Model.CSItem itemData = 1;
+      private com.core.Message.Model.Message.CSItem itemData_ = com.core.Message.Model.Message.CSItem.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.core.Message.Model.Message.CSItem, com.core.Message.Model.Message.CSItem.Builder, com.core.Message.Model.Message.CSItemOrBuilder> itemDataBuilder_;
+      /**
+       * <code>required .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public boolean hasItemData() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public com.core.Message.Model.Message.CSItem getItemData() {
+        if (itemDataBuilder_ == null) {
+          return itemData_;
+        } else {
+          return itemDataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public Builder setItemData(com.core.Message.Model.Message.CSItem value) {
+        if (itemDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          itemData_ = value;
+          onChanged();
+        } else {
+          itemDataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public Builder setItemData(
+          com.core.Message.Model.Message.CSItem.Builder builderForValue) {
+        if (itemDataBuilder_ == null) {
+          itemData_ = builderForValue.build();
+          onChanged();
+        } else {
+          itemDataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public Builder mergeItemData(com.core.Message.Model.Message.CSItem value) {
+        if (itemDataBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              itemData_ != com.core.Message.Model.Message.CSItem.getDefaultInstance()) {
+            itemData_ =
+              com.core.Message.Model.Message.CSItem.newBuilder(itemData_).mergeFrom(value).buildPartial();
+          } else {
+            itemData_ = value;
+          }
+          onChanged();
+        } else {
+          itemDataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public Builder clearItemData() {
+        if (itemDataBuilder_ == null) {
+          itemData_ = com.core.Message.Model.Message.CSItem.getDefaultInstance();
+          onChanged();
+        } else {
+          itemDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public com.core.Message.Model.Message.CSItem.Builder getItemDataBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getItemDataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      public com.core.Message.Model.Message.CSItemOrBuilder getItemDataOrBuilder() {
+        if (itemDataBuilder_ != null) {
+          return itemDataBuilder_.getMessageOrBuilder();
+        } else {
+          return itemData_;
+        }
+      }
+      /**
+       * <code>required .com.core.Message.Model.CSItem itemData = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.core.Message.Model.Message.CSItem, com.core.Message.Model.Message.CSItem.Builder, com.core.Message.Model.Message.CSItemOrBuilder> 
+          getItemDataFieldBuilder() {
+        if (itemDataBuilder_ == null) {
+          itemDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.core.Message.Model.Message.CSItem, com.core.Message.Model.Message.CSItem.Builder, com.core.Message.Model.Message.CSItemOrBuilder>(
+                  itemData_,
+                  getParentForChildren(),
+                  isClean());
+          itemData_ = null;
+        }
+        return itemDataBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.core.Message.Model.SCItemOne)
+    }
+
+    static {
+      defaultInstance = new SCItemOne(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.core.Message.Model.SCItemOne)
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_core_Message_Model_CSLogin_descriptor;
   private static
@@ -4380,6 +6912,26 @@ public final class Message {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_core_Message_Model_SCHeroList_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_core_Message_Model_SCHeroOne_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_core_Message_Model_SCHeroOne_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_core_Message_Model_CSItem_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_core_Message_Model_CSItem_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_core_Message_Model_SCItemList_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_core_Message_Model_SCItemList_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_core_Message_Model_SCItemOne_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_core_Message_Model_SCItemOne_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4401,7 +6953,14 @@ public final class Message {
       "ero\022\016\n\006heroid\030\001 \002(\005\022\022\n\ntemplateid\030\002 \002(\005\022",
       "\r\n\005level\030\003 \002(\005\022\013\n\003exp\030\004 \002(\005\">\n\nSCHeroLis" +
       "t\0220\n\010heroData\030\001 \003(\0132\036.com.core.Message.M" +
-      "odel.CSHeroB\tB\007Message"
+      "odel.CSHero\"=\n\tSCHeroOne\0220\n\010heroData\030\001 \002" +
+      "(\0132\036.com.core.Message.Model.CSHero\"W\n\006CS" +
+      "Item\022\016\n\006itemid\030\001 \002(\005\022\022\n\ntemplateid\030\002 \002(\005" +
+      "\022\r\n\005level\030\003 \002(\005\022\013\n\003exp\030\004 \002(\005\022\r\n\005color\030\005 " +
+      "\002(\005\">\n\nSCItemList\0220\n\010itemData\030\001 \003(\0132\036.co" +
+      "m.core.Message.Model.CSItem\"=\n\tSCItemOne" +
+      "\0220\n\010itemData\030\001 \002(\0132\036.com.core.Message.Mo" +
+      "del.CSItemB\tB\007Message"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -4444,6 +7003,30 @@ public final class Message {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_core_Message_Model_SCHeroList_descriptor,
               new java.lang.String[] { "HeroData", });
+          internal_static_com_core_Message_Model_SCHeroOne_descriptor =
+            getDescriptor().getMessageTypes().get(6);
+          internal_static_com_core_Message_Model_SCHeroOne_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_core_Message_Model_SCHeroOne_descriptor,
+              new java.lang.String[] { "HeroData", });
+          internal_static_com_core_Message_Model_CSItem_descriptor =
+            getDescriptor().getMessageTypes().get(7);
+          internal_static_com_core_Message_Model_CSItem_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_core_Message_Model_CSItem_descriptor,
+              new java.lang.String[] { "Itemid", "Templateid", "Level", "Exp", "Color", });
+          internal_static_com_core_Message_Model_SCItemList_descriptor =
+            getDescriptor().getMessageTypes().get(8);
+          internal_static_com_core_Message_Model_SCItemList_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_core_Message_Model_SCItemList_descriptor,
+              new java.lang.String[] { "ItemData", });
+          internal_static_com_core_Message_Model_SCItemOne_descriptor =
+            getDescriptor().getMessageTypes().get(9);
+          internal_static_com_core_Message_Model_SCItemOne_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_core_Message_Model_SCItemOne_descriptor,
+              new java.lang.String[] { "ItemData", });
           return null;
         }
       };

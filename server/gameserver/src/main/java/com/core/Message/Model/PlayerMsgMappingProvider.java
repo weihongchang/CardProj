@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.core.Message.List.*;
-import com.core.Message.Model.Message.CSHero;
 import com.core.Recognizer.IMsgMappingProvider;
 
 public class PlayerMsgMappingProvider implements IMsgMappingProvider {
@@ -16,8 +15,12 @@ public class PlayerMsgMappingProvider implements IMsgMappingProvider {
 		map.put((short)102,Message.SCLogin.class);
 		map.put((short)103,CSBuyHeroHandler.class);
 		map.put((short)104,Message.SCBuyHero.class);
-		map.put((short)105,CSHero.class);
+		map.put((short)105,CSHeroHandler.class);
 		map.put((short)106,Message.SCHeroList.class);
+		map.put((short)108,Message.SCHeroOne.class);
+		map.put((short)109,CSItemHandler.class);
+		map.put((short)110,Message.SCItemList.class);
+		map.put((short)112,Message.SCItemOne.class);
 		
 		
 		return map;

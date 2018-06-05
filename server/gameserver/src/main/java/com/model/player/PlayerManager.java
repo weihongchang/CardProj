@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import com.core.Message.Model.Message;
 import com.model.hero.Hero;
+import com.model.item.Item;
 import com.util.IdGenerator;
 
 public class PlayerManager {
@@ -76,6 +77,35 @@ public class PlayerManager {
 		}
 		
 		if( msg.getHeroDataCount() >0 )
+		{
+			player.sendMessage(msg.build());
+		}
+		
+	}
+	
+	
+	/**
+	 * 发送道具列表
+	 * @param player
+	 */
+	public void sendItemList(Player player)
+	{
+		Message.SCItemList.Builder msg = Message.SCItemList.newBuilder();
+		for (int i = 0; i < player.getItemList().size(); i++) {
+			Item item = player.getItemList().get( i );
+			if( item != null )
+			{
+				Message.CSItem.Builder h = Message.CSItem.newBuilder();
+				h.setColor( item.getColor());
+				h.setItemid(item.getItemID());
+				h.setTemplateid(item.getTemplateID());
+				h.setLevel(item.getLevel());
+				
+				msg.addItemData(h);
+			}
+		}
+		
+		if( msg.getItemDataCount() >0 )
 		{
 			player.sendMessage(msg.build());
 		}

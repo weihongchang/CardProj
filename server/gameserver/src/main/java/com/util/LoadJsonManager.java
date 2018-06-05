@@ -9,6 +9,7 @@ import com.alibaba.fastjson.JSON;
 import com.model.BaseTemplate;
 import com.model.hero.HeroManager;
 import com.model.hero.HeroTemplate;
+import com.model.item.ItemManager;
 
 public class LoadJsonManager {
 	private static LoadJsonManager instance;
@@ -27,10 +28,19 @@ public class LoadJsonManager {
 		
 	}
 	
+	/**
+	 * 加载所有数据模板
+	 */
 	public void loadAllJson()
 	{
+		//加载所有英雄模板
 		List<BaseTemplate> hlist =  loadJosonFile("Hero", "com.model.hero.HeroTemplate");
 		HeroManager.getInstance().setHeroTemplateList(hlist);
+		
+		//加载所有道具模板
+		List<BaseTemplate> itemlist =  loadJosonFile("Item", "com.model.item.ItemTemplate");
+		ItemManager.getInstance().setImteTemplateList(itemlist);
+		
 	}
 	
 	/**

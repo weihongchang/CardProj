@@ -6,8 +6,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.query.Query;
 
 import com.core.db.MongoManager;
-import com.model.hero.Hero;
-import com.model.hero.HeroTemplate;
+import com.model.BaseTemplate;
 import com.model.player.Player;
 
 public class ItemManager {
@@ -33,7 +32,10 @@ public class ItemManager {
 	/**
 	 * 当前英雄最大id
 	 */
-	private long maxItemID = 100000;
+	private int maxItemID = 100000;
+	
+	//道具模板集合
+	private List<BaseTemplate> ImteTemplateList = null;
 	
 	
 /**************************************************************************************/
@@ -43,13 +45,21 @@ public class ItemManager {
 	 * 获取最大物品ID
 	 * @return
 	 */
-	public synchronized long getMaxItemID() {
+	public synchronized int getMaxItemID() {
 		return maxItemID++;
 	}
 	
 	
-	public void setMaxItemID(long maxItemID) {
+	public void setMaxItemID(int maxItemID) {
 		this.maxItemID = maxItemID;
+	}
+
+	public List<BaseTemplate> getImteTemplateList() {
+		return ImteTemplateList;
+	}
+
+	public void setImteTemplateList(List<BaseTemplate> imteTemplateList) {
+		ImteTemplateList = imteTemplateList;
 	}
 
 	/**
@@ -61,7 +71,7 @@ public class ItemManager {
 	{
 		if(player != null  && template != null)
 		{
-			long itemID = getMaxItemID();
+			int itemID = getMaxItemID();
 			Item item = new Item(player.getPlayerid(), Integer.parseInt( template.itemid),itemID );
 			if( item != null )
 			{

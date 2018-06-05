@@ -68,6 +68,7 @@ private imgBG :egret.Sprite;
         // this.startAnimation(result);
 
         GlobalData.heroTemplate = await RES.getResAsync("Hero_json")
+        GlobalData.itemTemplate = await RES.getResAsync("Item_json")
         // JSON.parse(GlobalData.heroTemplate)
         // this.starHeroFile(result);
         

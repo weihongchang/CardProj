@@ -11,7 +11,7 @@ public class Item {
 	/**
 	 * 道具唯一id
 	 */
-	private long itemID;
+	private int itemID;
 	
 	/**
 	 * 拥有玩家id
@@ -21,7 +21,7 @@ public class Item {
 	private int level;
 	private int color;
 	
-	public Item(long playerID,int templateID,long itemID)
+	public Item(long playerID,int templateID,int itemID)
 	{
 		this.playerID = playerID;
 		this.templateID = templateID;
@@ -35,10 +35,10 @@ public class Item {
 	 */
 	private String createTime;
 	
-	public long getItemID() {
+	public int getItemID() {
 		return itemID;
 	}
-	public void setItemID(long itemID) {
+	public void setItemID(int itemID) {
 		this.itemID = itemID;
 	}
 	public long getPlayerid() {

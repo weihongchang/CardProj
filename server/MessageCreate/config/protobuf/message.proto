@@ -80,6 +80,34 @@ message SCHeroList {
 	repeated CSHero heroData = 1;
 }
 
+// 英雄下行
+// messageId:108
+message SCHeroOne {
+	required CSHero heroData = 1;
+}
+
+// 道具数据
+// messageId:109
+message CSItem {
+	required int32 itemid		= 1;
+	required int32 templateid 	= 2;
+	required int32 level 		= 3;
+	required int32 exp 			= 4;
+	required int32 color 		= 5;
+}
+
+// 道具列表下行
+// messageId:110
+message SCItemList {
+	repeated CSItem itemData = 1;
+}
+
+// 道具下行
+// messageId:112
+message SCItemOne {
+	required CSItem itemData = 1;
+}
+
 
 
 
