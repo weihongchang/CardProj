@@ -5,11 +5,15 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.java_websocket.WebSocket;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
 
 import com.core.Exception.MessageParseException;
 import com.core.Message.CGMessage;
 import com.core.Message.Model.Message;
 import com.core.Message.Model.Message.CSBuyHero;
+import com.core.db.MongoManager;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.model.hero.HeroManager;
@@ -59,6 +63,12 @@ public class CSBuyHeroHandler extends CGMessage {
         			msg.addHeroid( Integer.parseInt( hlist.get(i).heroid));
 			}
         }
+        
+        Query query=new Query(Criteria.where("playerid").is(player.getPlayerid()));
+		Update update = Update.update("heroList", player.getHeroList());
+		MongoManager.getInstance().getMongoTemplate().updateFirst(query, update, "class");
+		
+		
 
         player.sendMessage(msg.build());
         
