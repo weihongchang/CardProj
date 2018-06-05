@@ -68,19 +68,19 @@ public class DbRedisManager {
 	
 	public static void addTestItemData()
 	{
-		int testid=1000;
-		for( int i=0;i<100;i++ )
-		{
-			int cid = testid+i;
-			Item rp = new Item();	
-			rp.setPlayerid(cid);
-			rp.setItemID(cid);
-			rp.setLevel(i+1);
-			rp.setName("item"+cid);
-			rp.setColor(1);
-			
-			RedisItemManager.getInstance().AddItemData(rp);
-		}
+//		int testid=1000;
+//		for( int i=0;i<100;i++ )
+//		{
+//			int cid = testid+i;
+//			Item rp = new Item();	
+//			rp.setPlayerid(cid);
+//			rp.setItemID(cid);
+//			rp.setLevel(i+1);
+//			rp.setName("item"+cid);
+//			rp.setColor(1);
+//			
+//			RedisItemManager.getInstance().AddItemData(rp);
+//		}
 	}
 	
 

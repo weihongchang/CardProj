@@ -1,5 +1,7 @@
 package com.model.hero;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 public class Hero {
 	
 	//模板id

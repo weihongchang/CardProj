@@ -5,7 +5,13 @@ import java.util.List;
 import java.util.Random;
 import java.util.Vector;
 
+import org.springframework.data.domain.Sort;
+import org.springframework.data.mongodb.core.query.Query;
+
+import com.core.db.MongoManager;
 import com.model.BaseTemplate;
+import com.model.item.Item;
+import com.model.item.ItemManager;
 import com.model.player.Player;
 
 public class HeroManager {
@@ -41,8 +47,8 @@ public class HeroManager {
 /**************************************************************************************/
 /**************************************************************************************/
 	
-	public int getMaxHeroID() {
-		return maxHeroID;
+	public synchronized int getMaxHeroID() {
+		return maxHeroID++;
 	}
 
 	public void setMaxHeroID(int maxHeroID) {
@@ -149,5 +155,20 @@ public class HeroManager {
 			}
 		}
 		return false;
+	}
+	
+	/**
+	 * 初始化hero最大id
+	 */
+	public void dbLoadHeroMaxID()
+	{
+		Query query=new Query();
+		query.with(new Sort(Sort.Direction.DESC,   "heroID"));
+		query.limit(1);
+		List<Hero> herolist = MongoManager.getInstance().getMongoTemplate().find(query, Hero.class);
+		if( herolist != null && herolist.size()>0)
+		{
+			HeroManager.getInstance().setMaxHeroID(herolist.get(0).getHeroID());
+		}
 	}
 }

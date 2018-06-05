@@ -64,15 +64,14 @@ public class CSBuyHeroHandler extends CGMessage {
 			}
         }
         
-        Query query=new Query(Criteria.where("playerid").is(player.getPlayerid()));
-		Update update = Update.update("heroList", player.getHeroList());
-		MongoManager.getInstance().getMongoTemplate().updateFirst(query, update, Player.class);
+//        Query query=new Query(Criteria.where("playerid").is(player.getPlayerid()));
+//		Update update = Update.update("heroList", player.getHeroList());
+//		MongoManager.getInstance().getMongoTemplate().updateFirst(query, update, Player.class);
 
         player.sendMessage(msg.build());
         
         PlayerManager.getInstance().sendHeroList(player);
-        
-//    	MongoManager.getInstance().getMongoTemplate().updateFirst(new Query(Criteria.where("playerid").is(player.getPlayerid())),Update.update("heroList", player.getHeroList()), Player.class, "player");
+
     }
 
 	public boolean read(ByteBuffer buff) throws MessageParseException {

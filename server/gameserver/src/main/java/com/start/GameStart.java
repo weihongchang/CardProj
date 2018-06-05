@@ -1,12 +1,20 @@
 package com.start;
 
+import java.util.List;
+
 import org.java_websocket.WebSocketImpl;
 import org.slf4j.Logger;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 
 import com.core.WsServer;
 import com.core.Recognizer.GameMesageRecognizer;
 import com.core.db.MongoManager;
 import com.log.Loggers;
+import com.model.hero.HeroManager;
+import com.model.item.Item;
+import com.model.item.ItemManager;
 import com.util.LoadJsonManager;
 
 
@@ -25,6 +33,13 @@ public class GameStart {
 		
 		
 		MongoManager.getInstance();
+		
+		//加载最大itemID
+		ItemManager.getInstance().dbLoadItemMaxID();
+		
+		//加载最大heroID
+		HeroManager.getInstance().dbLoadHeroMaxID();
+		
 //		DbManager.getSession();
 
 //		ChannelInboundHandler<GameMessageChannel> ioHandler = new GameChannelInboundHandler();

@@ -35,12 +35,12 @@ public class RedisItemManager {
 	 */
 	public void AddItemData(Item item)
 	{
-		int playerid = item.getPlayerid();
-		long itemid = item.getItemID();
-		RedisManager.getInstance().getJedis().lpush("playeritem-"+playerid, itemid+"");
-		
-		Map itemMap = RedisManager.getInstance().getClassValueMap(item);
-		RedisManager.getInstance().getJedis().hmset("item-"+item.getItemID(),itemMap);
+//		int playerid = item.getPlayerid();
+//		long itemid = item.getItemID();
+//		RedisManager.getInstance().getJedis().lpush("playeritem-"+playerid, itemid+"");
+//		
+//		Map itemMap = RedisManager.getInstance().getClassValueMap(item);
+//		RedisManager.getInstance().getJedis().hmset("item-"+item.getItemID(),itemMap);
 	}
 	
 	/**

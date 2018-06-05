@@ -76,6 +76,7 @@ public class CSLoginHandler extends CGMessage {
            	 	pl.setIp(conn.getRemoteSocketAddress().toString());
         		WsPool.updatePlayer(pl, conn);
         		player = pl;
+        		player.dbLoadHero();
         	}
         }
         else
@@ -105,6 +106,8 @@ public class CSLoginHandler extends CGMessage {
         msg.setPlayerid(player.getPlayerid()+"");
         
         WsPool.sendMessageToUser(conn, msg.build());
+        
+        PlayerManager.getInstance().sendHeroList(player);
         
         
     }
