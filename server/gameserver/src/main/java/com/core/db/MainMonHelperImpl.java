@@ -1,5 +1,11 @@
 package com.core.db;
 
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
+
+import com.model.player.Player;
+
 /**
  * 测试类
  * @author koo
@@ -46,9 +52,9 @@ public class MainMonHelperImpl {
         
         
         //修改数据
-//        Query query=new Query(Criteria.where("_id").is(id));
-//        Update update = Update.update("要更新的字段", "更新的值");
-//        mongoTemplate.updateFirst(query, update, User.class);
+        Query query=new Query(Criteria.where("account").is("用户名"));
+        Update update = Update.update("level", 5);
+        MongoManager.getInstance().getMongoTemplate().updateFirst(query, update, Player.class);
         
 //        Map<String,Integer> map1 = mongoDaoImpl.queryByID(mongoDataBase, table, 2);//检索event_id,注意id类型是字符串还是int
 //        if(map1 != null)
@@ -136,7 +142,7 @@ public class MainMonHelperImpl {
 //      FindIterable<Document> queryAllResult = mongoDaoImpl.queryAll(mongoDataBase, table);
 //      mongoDaoImpl.printFindIterable(queryAllResult);
         
-//        mongoHelper.closeMongoClient(mongoDataBase,mongoClient);
+        MongoManager.getInstance().closeMongoClient();
 
     }
 
