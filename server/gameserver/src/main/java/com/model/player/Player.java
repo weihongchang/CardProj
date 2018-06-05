@@ -170,8 +170,8 @@ public class Player  {
 		WebSocket conn = WsPool.getConnByUser(getIp());
 		if (conn != null) {
 			WsPool.sendMessageToUser(conn, msg);
-			PlayerManager.getInstance().getLogger().info("[send] " + msg.toString());
-			PlayerManager.getInstance().getLogger().debug("[send] " + msg.toString());
+//			PlayerManager.getInstance().getLogger().info("[send] " + msg.toString());
+//			PlayerManager.getInstance().getLogger().debug("[send] " + msg.toString());
 		}
 	}
 	

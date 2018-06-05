@@ -49,8 +49,13 @@ var game;
             }
             else if (nType == 2) {
                 this.list.itemRenderer = game.Item_ItemList;
-                for (var i = 1; i < 10; i++) {
-                    sourceArr.push({ Item_ItemList: "item" + i });
+                var herolist = game.DataManager.getInstance().itemList["itemData"];
+                if (herolist) {
+                    for (var i = 0; i < herolist.length; i++) {
+                        var heroID = herolist[i]["itemid"];
+                        var tid = herolist[i]["templateid"];
+                        sourceArr.push({ Item_ItemList: "item" + (i + 1), index: (i + 1), itemid: heroID, templateid: tid });
+                    }
                 }
             }
             this.list.dataProvider = new eui.ArrayCollection(sourceArr);

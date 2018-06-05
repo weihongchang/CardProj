@@ -9,11 +9,12 @@ var GlobalData;
     //我的名字
     GlobalData.myName = "dily";
     GlobalData.heroTemplate = [];
+    GlobalData.itemTemplate = [];
     /**
      * 根据heroID获取模板
      */
     function getHero(heroID) {
-        console.log("heroid" + heroID);
+        // console.log("heroid"+heroID);
         for (var i = 0; i < GlobalData.heroTemplate.length; i++) {
             if (GlobalData.heroTemplate[i].heroid == heroID) {
                 return GlobalData.heroTemplate[i];
@@ -22,5 +23,18 @@ var GlobalData;
         return null;
     }
     GlobalData.getHero = getHero;
+    /**
+     * 根据itemID获取模板
+     */
+    function getItemTemplate(itemID) {
+        console.log("itemID" + itemID);
+        for (var i = 0; i < GlobalData.itemTemplate.length; i++) {
+            if (GlobalData.itemTemplate[i].itemid == itemID) {
+                return GlobalData.itemTemplate[i];
+            }
+        }
+        return null;
+    }
+    GlobalData.getItemTemplate = getItemTemplate;
 })(GlobalData || (GlobalData = {}));
 //# sourceMappingURL=GlobalData.js.map

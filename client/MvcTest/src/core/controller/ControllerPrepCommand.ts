@@ -19,6 +19,9 @@ module game {
             (new Processor_100()).register();
             (new Processor_SCBuyHero()).register();
             (new Processor_SCHeroList()).register();
+            (new Processor_SCItemList()).register();
+            (new Processor_SCHero()).register();
+            (new Processor_SCItem()).register();
         }
 	}
 }

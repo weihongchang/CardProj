@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.core.query.Query;
 
 import com.core.db.MongoManager;
 import com.model.BaseTemplate;
+import com.model.hero.HeroTemplate;
 import com.model.player.Player;
 
 public class ItemManager {
@@ -35,7 +36,7 @@ public class ItemManager {
 	private int maxItemID = 100000;
 	
 	//道具模板集合
-	private List<BaseTemplate> ImteTemplateList = null;
+	private List<BaseTemplate> itemTemplateList = null;
 	
 	
 /**************************************************************************************/
@@ -55,11 +56,47 @@ public class ItemManager {
 	}
 
 	public List<BaseTemplate> getImteTemplateList() {
-		return ImteTemplateList;
+		return itemTemplateList;
 	}
 
 	public void setImteTemplateList(List<BaseTemplate> imteTemplateList) {
-		ImteTemplateList = imteTemplateList;
+		itemTemplateList = imteTemplateList;
+	}
+	
+	
+	/**
+	 * 根据道具模板id获取模板数据
+	 * @param tID
+	 * @return
+	 */
+	public ItemTemplate getItemTemplateForID(int tID)
+	{
+		for (int i = 0; i < itemTemplateList.size(); i++) {
+			ItemTemplate heroTemplate = (ItemTemplate) itemTemplateList.get( i );
+			if(heroTemplate != null && heroTemplate.itemid.equals( tID+"" ))
+			{
+				return heroTemplate;
+			}
+		}
+		return null;
+	}
+	
+	/**
+	 * 根据index获取hero模板
+	 * @param index
+	 * @return
+	 */
+	public ItemTemplate getItemTemplateForIndex(int index)
+	{
+		if(index >=0 && index < itemTemplateList.size()) 
+		{
+			ItemTemplate heroTemplate = (ItemTemplate) itemTemplateList.get( index );
+			if(heroTemplate != null  )
+			{
+				return heroTemplate;
+			}
+		}
+		return null;
 	}
 
 	/**

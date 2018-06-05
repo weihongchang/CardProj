@@ -14,5 +14,33 @@ module  game {
 		{
 			super.childrenCreated();
 		}
+
+		public imgHead:eui.Image;
+		public label_level0:eui.Label;
+		public label_Name:eui.Label;
+		
+
+
+
+		protected dataChanged(): void 
+		{
+			// console.trace(this.data, ">>>>>>>>>>>>>>>>>>>>>>>>>>")
+			console.log(this.data, ">>>>>>>>>>>>>>>>>>>>>>>>>>Itemlist");
+			
+			var itemTemplate = GlobalData.getItemTemplate( this.data["templateid"]);
+			if(itemTemplate)
+			{
+				this.label_level0.text = "1";
+				this.label_Name.text = itemTemplate["itemnameid"];
+				if( this.data.index == 1 || this.data.index == 3 )
+				{
+					this.imgHead.source = "head_caifuren_png";	
+				}
+				else
+				{
+					this.imgHead.source = "head_caocao_png";
+				}
+			}
+		}
 	}
 }

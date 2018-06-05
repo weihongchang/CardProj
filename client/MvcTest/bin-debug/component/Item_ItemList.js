@@ -21,6 +21,21 @@ var game;
         Item_ItemList.prototype.childrenCreated = function () {
             _super.prototype.childrenCreated.call(this);
         };
+        Item_ItemList.prototype.dataChanged = function () {
+            // console.trace(this.data, ">>>>>>>>>>>>>>>>>>>>>>>>>>")
+            console.log(this.data, ">>>>>>>>>>>>>>>>>>>>>>>>>>Itemlist");
+            var itemTemplate = GlobalData.getItemTemplate(this.data["templateid"]);
+            if (itemTemplate) {
+                this.label_level0.text = "1";
+                this.label_Name.text = itemTemplate["itemnameid"];
+                if (this.data.index == 1 || this.data.index == 3) {
+                    this.imgHead.source = "head_caifuren_png";
+                }
+                else {
+                    this.imgHead.source = "head_caocao_png";
+                }
+            }
+        };
         return Item_ItemList;
     }(eui.ItemRenderer));
     game.Item_ItemList = Item_ItemList;

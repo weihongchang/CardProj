@@ -18,6 +18,8 @@ import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.model.hero.HeroManager;
 import com.model.hero.HeroTemplate;
+import com.model.item.ItemManager;
+import com.model.item.ItemTemplate;
 import com.model.player.Player;
 import com.model.player.PlayerManager;
 
@@ -71,6 +73,14 @@ public class CSBuyHeroHandler extends CGMessage {
         player.sendMessage(msg.build());
         
         PlayerManager.getInstance().sendHeroList(player);
+        
+        ItemTemplate item1 = ItemManager.getInstance().getItemTemplateForID(270003);
+        ItemManager.getInstance().createItem(player, item1);
+        
+        ItemTemplate item2 = ItemManager.getInstance().getItemTemplateForID(270004);
+        ItemManager.getInstance().createItem(player, item2);
+        
+        PlayerManager.getInstance().sendItemList(player);
 
     }
 

@@ -16,29 +16,29 @@ r.prototype = e.prototype, t.prototype = new r();
   */
 var game;
 (function (game) {
-    var Processor_SCHeroList = (function (_super) {
-        __extends(Processor_SCHeroList, _super);
-        function Processor_SCHeroList() {
+    var Processor_SCHero = (function (_super) {
+        __extends(Processor_SCHero, _super);
+        function Processor_SCHero() {
             return _super.call(this) || this;
         }
         /**
          * 注册消息
          */
-        Processor_SCHeroList.prototype.register = function () {
-            this.facade.registerCommand("Processor_SCHeroList", Processor_SCHeroList);
+        Processor_SCHero.prototype.register = function () {
+            this.facade.registerCommand("Processor_SCHero", Processor_SCHero);
         };
-        Processor_SCHeroList.prototype.executeData = function (data) {
-            var heroList = Global.getMessage("SCHeroList");
+        Processor_SCHero.prototype.executeData = function (data) {
+            var heroList = Global.getMessage("SCHeroOne");
             //反序列化
             game.DataManager.getInstance().heroList = heroList.decode(data.buffer);
             // console.log("buyhero反序列化数据：",DataManager.getInstance().heroList);
         };
-        Processor_SCHeroList.prototype.execute = function (notification) {
+        Processor_SCHero.prototype.execute = function (notification) {
         };
-        Processor_SCHeroList.NAME = "Processor_SCHeroList";
-        return Processor_SCHeroList;
+        Processor_SCHero.NAME = "Processor_SCHero";
+        return Processor_SCHero;
     }(puremvc.SimpleCommand));
-    game.Processor_SCHeroList = Processor_SCHeroList;
-    __reflect(Processor_SCHeroList.prototype, "game.Processor_SCHeroList", ["puremvc.ICommand", "puremvc.INotifier"]);
+    game.Processor_SCHero = Processor_SCHero;
+    __reflect(Processor_SCHero.prototype, "game.Processor_SCHero", ["puremvc.ICommand", "puremvc.INotifier"]);
 })(game || (game = {}));
-//# sourceMappingURL=Processor_SCHeroList.js.map
+//# sourceMappingURL=Processor_SCHero.js.map

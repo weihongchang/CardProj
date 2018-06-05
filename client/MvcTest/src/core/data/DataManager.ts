@@ -14,6 +14,7 @@ module game {
 		public dungeonLevelList:DungeonLevelData[] = [];
 		public player:PlayerData ;
 		public heroList:any = [];
+		public itemList:any = [];
 
 		public InitTestData(){
 			this.player = new PlayerData();

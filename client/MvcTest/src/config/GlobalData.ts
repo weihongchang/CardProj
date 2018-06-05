@@ -16,7 +16,7 @@ module GlobalData {
      */
     export  function getHero(heroID:string):Object
     {
-        console.log("heroid"+heroID);
+        // console.log("heroid"+heroID);
         for(var i:number = 0;i<heroTemplate.length;i++)
         {
             if(heroTemplate[i].heroid == heroID)
@@ -36,7 +36,7 @@ module GlobalData {
         console.log("itemID"+itemID);
         for(var i:number = 0;i<itemTemplate.length;i++)
         {
-            if(itemTemplate[i].heroid == itemID)
+            if(itemTemplate[i].itemid == itemID)
             {
               return itemTemplate[i];
             }

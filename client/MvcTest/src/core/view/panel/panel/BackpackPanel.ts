@@ -52,8 +52,14 @@ module game {
             {
                 this.list.itemRenderer = Item_ItemList;
 
-                for (var i:number = 1; i < 10; i++){
-                    sourceArr.push({Item_ItemList:"item"+i});
+                var herolist = DataManager.getInstance().itemList["itemData"];
+                if(herolist){
+                    for (var i:number = 0; i < herolist.length; i++)
+                    {
+                        var heroID = herolist[i]["itemid"];
+                        var tid = herolist[i]["templateid"];
+                        sourceArr.push({Item_ItemList:"item"+(i+1),index:(i+1),itemid:heroID,templateid:tid});
+                    }
                 }
             }
 

@@ -100,34 +100,38 @@ var Main = (function (_super) {
     };
     Main.prototype.runGame = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _a, userInfo;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
+            var _a, _b, userInfo;
+            return __generator(this, function (_c) {
+                switch (_c.label) {
                     case 0: return [4 /*yield*/, this.loadResource()];
                     case 1:
-                        _b.sent();
+                        _c.sent();
                         this.createGameScene();
                         // const result = await RES.getResAsync("description_json")
                         // this.startAnimation(result);
                         _a = GlobalData;
-                        return [4 /*yield*/, RES.getResAsync("Hero_json")
-                            // JSON.parse(GlobalData.heroTemplate)
-                            // this.starHeroFile(result);
-                        ];
+                        return [4 /*yield*/, RES.getResAsync("Hero_json")];
                     case 2:
                         // const result = await RES.getResAsync("description_json")
                         // this.startAnimation(result);
-                        _a.heroTemplate = _b.sent();
+                        _a.heroTemplate = _c.sent();
+                        _b = GlobalData;
+                        return [4 /*yield*/, RES.getResAsync("Item_json")
+                            // JSON.parse(GlobalData.heroTemplate)
+                            // this.starHeroFile(result);
+                        ];
+                    case 3:
+                        _b.itemTemplate = _c.sent();
                         // JSON.parse(GlobalData.heroTemplate)
                         // this.starHeroFile(result);
                         return [4 /*yield*/, platform.login()];
-                    case 3:
+                    case 4:
                         // JSON.parse(GlobalData.heroTemplate)
                         // this.starHeroFile(result);
-                        _b.sent();
+                        _c.sent();
                         return [4 /*yield*/, platform.getUserInfo()];
-                    case 4:
-                        userInfo = _b.sent();
+                    case 5:
+                        userInfo = _c.sent();
                         return [2 /*return*/];
                 }
             });

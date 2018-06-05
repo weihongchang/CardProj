@@ -55,6 +55,15 @@ public class PlayerManager {
 	
 /******************************************************************************************/
 /******************************************************************************************/
+	
+	public void sendLoginAllMsg(Player player)
+	{
+		PlayerManager.getInstance().sendHeroList(player);
+		
+		PlayerManager.getInstance().sendItemList(player);
+	}
+	
+	
 	/**
 	 * 发送英雄列表
 	 * @param player
@@ -100,6 +109,7 @@ public class PlayerManager {
 				h.setItemid(item.getItemID());
 				h.setTemplateid(item.getTemplateID());
 				h.setLevel(item.getLevel());
+				h.setExp(0);
 				
 				msg.addItemData(h);
 			}

@@ -33,6 +33,18 @@ var game;
                     console.log("106");
                     new game.Processor_SCHeroList().executeData(data);
                     break;
+                case 108:
+                    console.log("108-SCHeroOne");
+                    new game.Processor_SCHero().executeData(data);
+                    break;
+                case 110:
+                    console.log("110");
+                    new game.Processor_SCItemList().executeData(data);
+                    break;
+                case 112:
+                    console.log("112");
+                    new game.Processor_SCItem().executeData(data);
+                    break;
             }
         };
         return MessageController;

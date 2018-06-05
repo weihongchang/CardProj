@@ -77,6 +77,7 @@ public class CSLoginHandler extends CGMessage {
         		WsPool.updatePlayer(pl, conn);
         		player = pl;
         		player.dbLoadHero();
+        		player.dbLoadItem();
         	}
         }
         else
@@ -107,7 +108,7 @@ public class CSLoginHandler extends CGMessage {
         
         WsPool.sendMessageToUser(conn, msg.build());
         
-        PlayerManager.getInstance().sendHeroList(player);
+        PlayerManager.getInstance().sendLoginAllMsg(player);
         
         
     }

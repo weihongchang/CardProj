@@ -33,6 +33,18 @@ module game {
 					console.log("106");
 					new Processor_SCHeroList().executeData(data);
 					break
+				case 108:
+					console.log("108-SCHeroOne");
+					new Processor_SCHero().executeData(data);
+					break
+				case 110:
+					console.log("110");
+					new Processor_SCItemList().executeData(data);
+					break
+				case 112:
+					console.log("112");
+					new Processor_SCItem().executeData(data);
+					break
 			}
 		}
 

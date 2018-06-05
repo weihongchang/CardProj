@@ -6,26 +6,26 @@
   */
 module game {
 
-    export class Processor_SCHeroList extends puremvc.SimpleCommand implements puremvc.ICommand {
+    export class Processor_SCItem extends puremvc.SimpleCommand implements puremvc.ICommand {
         public constructor() {
             super();
         }
 
-        public static NAME: string = "Processor_SCHeroList";
+        public static NAME: string = "Processor_SCItem";
 
         /**
          * 注册消息
          */
         public register(): void {
-            this.facade.registerCommand("Processor_SCHeroList",Processor_SCHeroList);
+            this.facade.registerCommand("Processor_SCItem",Processor_SCItem);
         }
 
         public executeData(data:egret.ByteArray): void {
            
-            var heroList = Global.getMessage("SCHeroList");
+            var heroList = Global.getMessage("SCItemOne");
             
             //反序列化
-            DataManager.getInstance().heroList = heroList.decode(data.buffer);
+            // DataManager.getInstance().heroList = heroList.decode(data.buffer);
             // console.log("buyhero反序列化数据：",DataManager.getInstance().heroList);
             
         }
