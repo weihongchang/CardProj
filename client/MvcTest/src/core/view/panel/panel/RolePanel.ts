@@ -19,9 +19,13 @@ module game {
         public btn_formationClose:eui.Image;
         public group_formation:eui.Group;
 
+        public img_fromation_hero0:eui.Image;
+
         private currentPointX:number;
         private isMoving:boolean = false;
         private currentPage = 0;
+
+        private isImgMove:boolean = false;
 
         public constructor() {
             super();
@@ -37,10 +41,31 @@ module game {
             this.img_rightBtn.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onFormation,this);
             this.btn_changeHero.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onChangeHero,this);
             this.btn_formationClose.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onFormationClose,this);
+
+            this.img_fromation_hero0.addEventListener(egret.TouchEvent.TOUCH_MOVE,this.imgTouchBegin,this);
+             
+            this.img_fromation_hero0.addEventListener(egret.TouchEvent.TOUCH_BEGIN,function(e:egret.TouchEvent){
+                this.isImgMove = true;
+             },this);
+
+            this.img_fromation_hero0.addEventListener(egret.TouchEvent.TOUCH_END,function(e:egret.TouchEvent){
+                this.isImgMove = false;
+                
+            },this);
+
             // this.scroller.addEventListener(egret.TouchEvent.TOUCH_END,this.onMoveEnd,this);
             // this.scroller.addEventListener(egret.TouchEvent.TOUCH_MOVE,this.onMove,this);
             // this.scroller.addEventListener(egret.TouchEvent.TOUCH_CANCEL,this.onMoveCancel,this);
             
+        }
+
+        public imgTouchBegin(e:egret.TouchEvent)
+        {
+            if(this.isImgMove)
+            {
+                this.img_fromation_hero0.x = e.$stageX-this.img_fromation_hero0.width/2;
+                this.img_fromation_hero0.y = e.$stageY - this.img_fromation_hero0.height/2;
+            }
         }
 
         public createCompleteEvent(event:eui.UIEvent):void{

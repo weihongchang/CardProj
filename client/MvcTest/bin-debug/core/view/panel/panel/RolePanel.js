@@ -22,6 +22,7 @@ var game;
             _this.size = 6;
             _this.isMoving = false;
             _this.currentPage = 0;
+            _this.isImgMove = false;
             // this.skinName = "src/core/view/panel/ui/RoleSkin.exml";
             _this.skinName = "resource/eui_skins/Panel_RoleSkin.exml";
             _this.group_formation.visible = false;
@@ -32,11 +33,24 @@ var game;
             _this.img_rightBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onFormation, _this);
             _this.btn_changeHero.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onChangeHero, _this);
             _this.btn_formationClose.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onFormationClose, _this);
+            _this.img_fromation_hero0.addEventListener(egret.TouchEvent.TOUCH_MOVE, _this.imgTouchBegin, _this);
+            _this.img_fromation_hero0.addEventListener(egret.TouchEvent.TOUCH_BEGIN, function (e) {
+                this.isImgMove = true;
+            }, _this);
+            _this.img_fromation_hero0.addEventListener(egret.TouchEvent.TOUCH_END, function (e) {
+                this.isImgMove = false;
+            }, _this);
             return _this;
             // this.scroller.addEventListener(egret.TouchEvent.TOUCH_END,this.onMoveEnd,this);
             // this.scroller.addEventListener(egret.TouchEvent.TOUCH_MOVE,this.onMove,this);
             // this.scroller.addEventListener(egret.TouchEvent.TOUCH_CANCEL,this.onMoveCancel,this);
         }
+        RolePanel.prototype.imgTouchBegin = function (e) {
+            if (this.isImgMove) {
+                this.img_fromation_hero0.x = e.$stageX - this.img_fromation_hero0.width / 2;
+                this.img_fromation_hero0.y = e.$stageY - this.img_fromation_hero0.height / 2;
+            }
+        };
         RolePanel.prototype.createCompleteEvent = function (event) {
             this.removeEventListener(eui.UIEvent.COMPLETE, this.createCompleteEvent, this);
             // game.AppFacade.getInstance().registerMediator( new RoleMediator(this) );
