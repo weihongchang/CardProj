@@ -1,0 +1,2992 @@
+[
+  {
+    "sid": 1,
+    "chaname": "鱼鳞阵",
+    "engname": "Blade Master"
+  },
+  {
+    "sid": 2,
+    "chaname": "鹤翼阵",
+    "engname": "Corporal"
+  },
+  {
+    "sid": 3,
+    "chaname": "锥形阵",
+    "engname": "Fencing master"
+  },
+  {
+    "sid": 4,
+    "chaname": "锋矢阵",
+    "engname": ""
+  },
+  {
+    "sid": 5,
+    "chaname": "雁形阵",
+    "engname": ""
+  },
+  {
+    "sid": 6,
+    "chaname": "箕形阵",
+    "engname": ""
+  },
+  {
+    "sid": 7,
+    "chaname": "长蛇阵",
+    "engname": "3000战魂"
+  },
+  {
+    "sid": 8,
+    "chaname": "方圆阵",
+    "engname": "8000军功"
+  },
+  {
+    "sid": 9,
+    "chaname": "可获得200点声望",
+    "engname": "200声望"
+  },
+  {
+    "sid": 10,
+    "chaname": "可获得100点声望",
+    "engname": "100声望"
+  },
+  {
+    "sid": 11,
+    "chaname": "可获得50点声望",
+    "engname": "50声望"
+  },
+  {
+    "sid": 12,
+    "chaname": "可获得10点声望",
+    "engname": "10声望"
+  },
+  {
+    "sid": 13,
+    "chaname": "可获得800点战魂",
+    "engname": "800战魂"
+  },
+  {
+    "sid": 14,
+    "chaname": "可获得1600点战魂",
+    "engname": "1600战魂"
+  },
+  {
+    "sid": 15,
+    "chaname": "",
+    "engname": "3500战魂"
+  },
+  {
+    "sid": 16,
+    "chaname": "眉尖刀",
+    "engname": ""
+  },
+  {
+    "sid": 17,
+    "chaname": "古锭刀",
+    "engname": ""
+  },
+  {
+    "sid": 18,
+    "chaname": "贯石斧",
+    "engname": ""
+  },
+  {
+    "sid": 19,
+    "chaname": "七星宝刀",
+    "engname": ""
+  },
+  {
+    "sid": 20,
+    "chaname": "雌雄对剑",
+    "engname": ""
+  },
+  {
+    "sid": 21,
+    "chaname": "青虹神剑",
+    "engname": ""
+  },
+  {
+    "sid": 22,
+    "chaname": "养由基弓",
+    "engname": ""
+  },
+  {
+    "sid": 23,
+    "chaname": "铁脊蛇矛",
+    "engname": ""
+  },
+  {
+    "sid": 24,
+    "chaname": "青龙偃月刀",
+    "engname": ""
+  },
+  {
+    "sid": 25,
+    "chaname": "方天画戟",
+    "engname": ""
+  },
+  {
+    "sid": 26,
+    "chaname": "倚天剑",
+    "engname": ""
+  },
+  {
+    "sid": 27,
+    "chaname": "虎皮铠甲",
+    "engname": ""
+  },
+  {
+    "sid": 28,
+    "chaname": "黑铁战甲",
+    "engname": ""
+  },
+  {
+    "sid": 29,
+    "chaname": "碧焰战甲",
+    "engname": ""
+  },
+  {
+    "sid": 30,
+    "chaname": "南斗战甲",
+    "engname": ""
+  },
+  {
+    "sid": 31,
+    "chaname": "冽光战甲",
+    "engname": ""
+  },
+  {
+    "sid": 32,
+    "chaname": "镇妖战甲",
+    "engname": ""
+  },
+  {
+    "sid": 33,
+    "chaname": "屠神战甲",
+    "engname": ""
+  },
+  {
+    "sid": 34,
+    "chaname": "陨星战甲",
+    "engname": ""
+  },
+  {
+    "sid": 35,
+    "chaname": "涅槃战甲",
+    "engname": ""
+  },
+  {
+    "sid": 36,
+    "chaname": "伏羲战甲",
+    "engname": ""
+  },
+  {
+    "sid": 37,
+    "chaname": "九鼎战甲",
+    "engname": ""
+  },
+  {
+    "sid": 38,
+    "chaname": "青玉腰带",
+    "engname": ""
+  },
+  {
+    "sid": 39,
+    "chaname": "黄龙腰带",
+    "engname": ""
+  },
+  {
+    "sid": 40,
+    "chaname": "霸王腰带",
+    "engname": ""
+  },
+  {
+    "sid": 41,
+    "chaname": "杀神腰带",
+    "engname": ""
+  },
+  {
+    "sid": 42,
+    "chaname": "兵圣腰带",
+    "engname": ""
+  },
+  {
+    "sid": 43,
+    "chaname": "刑天腰带",
+    "engname": ""
+  },
+  {
+    "sid": 44,
+    "chaname": "至尊腰带",
+    "engname": ""
+  },
+  {
+    "sid": 45,
+    "chaname": "霸王腰带",
+    "engname": ""
+  },
+  {
+    "sid": 46,
+    "chaname": "古皇腰带",
+    "engname": ""
+  },
+  {
+    "sid": 47,
+    "chaname": "刑天腰带",
+    "engname": ""
+  },
+  {
+    "sid": 48,
+    "chaname": "天帝腰带",
+    "engname": ""
+  },
+  {
+    "sid": 49,
+    "chaname": "黑铁",
+    "engname": ""
+  },
+  {
+    "sid": 50,
+    "chaname": "寒铁",
+    "engname": ""
+  },
+  {
+    "sid": 51,
+    "chaname": "钨钢",
+    "engname": ""
+  },
+  {
+    "sid": 52,
+    "chaname": "玄铁",
+    "engname": ""
+  },
+  {
+    "sid": 53,
+    "chaname": "星辰铁",
+    "engname": ""
+  },
+  {
+    "sid": 54,
+    "chaname": "松木",
+    "engname": ""
+  },
+  {
+    "sid": 55,
+    "chaname": "紫檀",
+    "engname": ""
+  },
+  {
+    "sid": 56,
+    "chaname": "栖凤木",
+    "engname": ""
+  },
+  {
+    "sid": 57,
+    "chaname": "降龙木",
+    "engname": ""
+  },
+  {
+    "sid": 58,
+    "chaname": "生命之木",
+    "engname": ""
+  },
+  {
+    "sid": 59,
+    "chaname": "红玉",
+    "engname": ""
+  },
+  {
+    "sid": 60,
+    "chaname": "翡翠",
+    "engname": ""
+  },
+  {
+    "sid": 61,
+    "chaname": "青田玉",
+    "engname": ""
+  },
+  {
+    "sid": 62,
+    "chaname": "和氏玉",
+    "engname": ""
+  },
+  {
+    "sid": 63,
+    "chaname": "天外之玉",
+    "engname": ""
+  },
+  {
+    "sid": 64,
+    "chaname": "打造一阶、二阶武器的材料，可用军功兑换",
+    "engname": "黑铁"
+  },
+  {
+    "sid": 65,
+    "chaname": "打造三阶、四阶武器的材料，可用军功兑换",
+    "engname": "寒铁"
+  },
+  {
+    "sid": 66,
+    "chaname": "打造五阶、六阶武器的材料，可用军功兑换",
+    "engname": "钨钢"
+  },
+  {
+    "sid": 67,
+    "chaname": "打造七阶、八阶武器的材料，可用军功兑换",
+    "engname": "玄铁"
+  },
+  {
+    "sid": 68,
+    "chaname": "打造九阶、十阶武器的材料，可用军功兑换",
+    "engname": "星辰铁"
+  },
+  {
+    "sid": 69,
+    "chaname": "打造一阶、二阶铠甲的材料，可用军功兑换",
+    "engname": "松木"
+  },
+  {
+    "sid": 70,
+    "chaname": "打造三阶、四阶铠甲的材料，可用军功兑换",
+    "engname": "紫檀"
+  },
+  {
+    "sid": 71,
+    "chaname": "打造五阶、六阶铠甲的材料，可用军功兑换",
+    "engname": "栖凤木"
+  },
+  {
+    "sid": 72,
+    "chaname": "打造七阶、八阶铠甲的材料，可用军功兑换",
+    "engname": "降龙木"
+  },
+  {
+    "sid": 73,
+    "chaname": "打造九阶、十阶铠甲的材料，可用军功兑换",
+    "engname": "生命之木"
+  },
+  {
+    "sid": 74,
+    "chaname": "打造一阶、二阶将印的材料，可用军功兑换",
+    "engname": "红玉"
+  },
+  {
+    "sid": 75,
+    "chaname": "打造三阶、四阶将印的材料，可用军功兑换",
+    "engname": "翡翠"
+  },
+  {
+    "sid": 76,
+    "chaname": "打造五阶、六阶将印的材料，可用军功兑换",
+    "engname": "青田玉"
+  },
+  {
+    "sid": 77,
+    "chaname": "打造七阶、八阶将印的材料，可用军功兑换",
+    "engname": "和氏玉"
+  },
+  {
+    "sid": 78,
+    "chaname": "打造九阶、十阶将印的材料，可用军功兑换",
+    "engname": "天外之玉"
+  },
+  {
+    "sid": 79,
+    "chaname": "一级图纸",
+    "engname": ""
+  },
+  {
+    "sid": 80,
+    "chaname": "二级图纸",
+    "engname": ""
+  },
+  {
+    "sid": 81,
+    "chaname": "三级图纸",
+    "engname": ""
+  },
+  {
+    "sid": 82,
+    "chaname": "四级图纸",
+    "engname": ""
+  },
+  {
+    "sid": 83,
+    "chaname": "五级图纸",
+    "engname": ""
+  },
+  {
+    "sid": 84,
+    "chaname": "六级图纸",
+    "engname": ""
+  },
+  {
+    "sid": 85,
+    "chaname": "七级图纸",
+    "engname": ""
+  },
+  {
+    "sid": 86,
+    "chaname": "八级图纸",
+    "engname": ""
+  },
+  {
+    "sid": 87,
+    "chaname": "九级图纸",
+    "engname": ""
+  },
+  {
+    "sid": 88,
+    "chaname": "十级图纸",
+    "engname": ""
+  },
+  {
+    "sid": 89,
+    "chaname": "阵法升级书",
+    "engname": ""
+  },
+  {
+    "sid": 90,
+    "chaname": "勋章",
+    "engname": ""
+  },
+  {
+    "sid": 91,
+    "chaname": "1级培养丹",
+    "engname": ""
+  },
+  {
+    "sid": 92,
+    "chaname": "2级培养丹",
+    "engname": ""
+  },
+  {
+    "sid": 93,
+    "chaname": "3级培养丹",
+    "engname": ""
+  },
+  {
+    "sid": 94,
+    "chaname": "4级培养丹",
+    "engname": ""
+  },
+  {
+    "sid": 95,
+    "chaname": "5级培养丹",
+    "engname": ""
+  },
+  {
+    "sid": 96,
+    "chaname": "6级培养丹",
+    "engname": ""
+  },
+  {
+    "sid": 97,
+    "chaname": "7级培养丹",
+    "engname": ""
+  },
+  {
+    "sid": 98,
+    "chaname": "8级培养丹",
+    "engname": ""
+  },
+  {
+    "sid": 99,
+    "chaname": "9级培养丹",
+    "engname": ""
+  },
+  {
+    "sid": 100,
+    "chaname": "10级培养丹",
+    "engname": ""
+  },
+  {
+    "sid": 101,
+    "chaname": "转职书",
+    "engname": ""
+  },
+  {
+    "sid": 102,
+    "chaname": "打造一阶装备所需的图纸，黄巾之乱精英副本掉落",
+    "engname": ""
+  },
+  {
+    "sid": 103,
+    "chaname": "打造二阶装备所需的图纸，反董卓战精英副本掉落",
+    "engname": ""
+  },
+  {
+    "sid": 104,
+    "chaname": "打造三阶装备所需的图纸，兖州之战精英副本掉落",
+    "engname": ""
+  },
+  {
+    "sid": 105,
+    "chaname": "打造四阶装备所需的图纸，东吴霸主精英副本掉落",
+    "engname": ""
+  },
+  {
+    "sid": 106,
+    "chaname": "打造五阶装备所需的图纸，官渡之战精英副本掉落",
+    "engname": ""
+  },
+  {
+    "sid": 107,
+    "chaname": "打造六阶装备所需的图纸，卧龙出世精英副本掉落",
+    "engname": ""
+  },
+  {
+    "sid": 108,
+    "chaname": "打造七阶装备所需的图纸，火烧赤壁精英副本掉落",
+    "engname": ""
+  },
+  {
+    "sid": 109,
+    "chaname": "打造八阶装备所需的图纸，蜀中之王精英副本掉落",
+    "engname": ""
+  },
+  {
+    "sid": 110,
+    "chaname": "打造九阶装备所需的图纸，南蛮入侵精英副本掉落",
+    "engname": ""
+  },
+  {
+    "sid": 111,
+    "chaname": "打造十阶装备所需的图纸，吞并西凉精英副本掉落",
+    "engname": ""
+  },
+  {
+    "sid": 112,
+    "chaname": "阵法升级所需道具，可用军功兑换",
+    "engname": ""
+  },
+  {
+    "sid": 113,
+    "chaname": "武将军衔挑战所需道具",
+    "engname": ""
+  },
+  {
+    "sid": 114,
+    "chaname": "一星武将培养所需道具",
+    "engname": ""
+  },
+  {
+    "sid": 115,
+    "chaname": "二星武将培养所需道具",
+    "engname": ""
+  },
+  {
+    "sid": 116,
+    "chaname": "三星武将培养所需道具",
+    "engname": ""
+  },
+  {
+    "sid": 117,
+    "chaname": "四星武将培养所需道具",
+    "engname": ""
+  },
+  {
+    "sid": 118,
+    "chaname": "五星武将培养所需道具",
+    "engname": ""
+  },
+  {
+    "sid": 119,
+    "chaname": "六星武将培养所需道具",
+    "engname": ""
+  },
+  {
+    "sid": 120,
+    "chaname": "七星武将培养所需道具",
+    "engname": ""
+  },
+  {
+    "sid": 121,
+    "chaname": "八星武将培养所需道具",
+    "engname": ""
+  },
+  {
+    "sid": 122,
+    "chaname": "九星武将培养所需道具",
+    "engname": ""
+  },
+  {
+    "sid": 123,
+    "chaname": "十星武将培养所需道具",
+    "engname": ""
+  },
+  {
+    "sid": 124,
+    "chaname": "武将转职所需物品，可用军功兑换",
+    "engname": ""
+  },
+  {
+    "sid": 125,
+    "chaname": "鱼鳞阵法书",
+    "engname": ""
+  },
+  {
+    "sid": 126,
+    "chaname": "鹤翼阵法书",
+    "engname": ""
+  },
+  {
+    "sid": 127,
+    "chaname": "锥形阵法书",
+    "engname": ""
+  },
+  {
+    "sid": 128,
+    "chaname": "锋矢阵法书",
+    "engname": ""
+  },
+  {
+    "sid": 129,
+    "chaname": "雁形阵法书",
+    "engname": ""
+  },
+  {
+    "sid": 130,
+    "chaname": "箕形阵法书",
+    "engname": ""
+  },
+  {
+    "sid": 131,
+    "chaname": "长蛇阵法书",
+    "engname": ""
+  },
+  {
+    "sid": 132,
+    "chaname": "方圆阵法书",
+    "engname": ""
+  },
+  {
+    "sid": 133,
+    "chaname": "汉白玉",
+    "engname": ""
+  },
+  {
+    "sid": 134,
+    "chaname": "黄晶",
+    "engname": ""
+  },
+  {
+    "sid": 135,
+    "chaname": "猫眼石",
+    "engname": ""
+  },
+  {
+    "sid": 136,
+    "chaname": "绿松石",
+    "engname": ""
+  },
+  {
+    "sid": 137,
+    "chaname": "青金石",
+    "engname": ""
+  },
+  {
+    "sid": 138,
+    "chaname": "木变石",
+    "engname": ""
+  },
+  {
+    "sid": 139,
+    "chaname": "玛瑙",
+    "engname": "卖出可获得35000铜币，征战副本有几率获得"
+  },
+  {
+    "sid": 140,
+    "chaname": "卖出可获得35000铜币，征战副本有几率获得",
+    "engname": "卖出可获得50000铜币，征战副本有几率获得"
+  },
+  {
+    "sid": 141,
+    "chaname": "卖出可获得50000铜币，征战副本有几率获得",
+    "engname": "卖出可获得70000铜币，征战副本有几率获得"
+  },
+  {
+    "sid": 142,
+    "chaname": "卖出可获得70000铜币，征战副本有几率获得",
+    "engname": "卖出可获得90000铜币，征战副本有几率获得"
+  },
+  {
+    "sid": 143,
+    "chaname": "卖出可获得90000铜币，征战副本有几率获得",
+    "engname": "卖出可获得110000铜币，征战副本有几率获得"
+  },
+  {
+    "sid": 144,
+    "chaname": "卖出可获得110000铜币，征战副本有几率获得",
+    "engname": "卖出可获得130000铜币，征战副本有几率获得"
+  },
+  {
+    "sid": 145,
+    "chaname": "卖出可获得130000铜币，征战副本有几率获得",
+    "engname": "卖出可获得150000铜币，征战副本有几率获得"
+  },
+  {
+    "sid": 146,
+    "chaname": "卖出可获得150000铜币，征战副本有几率获得",
+    "engname": ""
+  },
+  {
+    "sid": 147,
+    "chaname": "鱼鳞阵",
+    "engname": ""
+  },
+  {
+    "sid": 148,
+    "chaname": "鹤翼阵",
+    "engname": ""
+  },
+  {
+    "sid": 149,
+    "chaname": "锥形阵",
+    "engname": ""
+  },
+  {
+    "sid": 150,
+    "chaname": "锋矢阵",
+    "engname": ""
+  },
+  {
+    "sid": 151,
+    "chaname": "雁形阵",
+    "engname": ""
+  },
+  {
+    "sid": 152,
+    "chaname": "箕形阵",
+    "engname": ""
+  },
+  {
+    "sid": 153,
+    "chaname": "长蛇阵",
+    "engname": ""
+  },
+  {
+    "sid": 154,
+    "chaname": "方圆阵",
+    "engname": ""
+  },
+  {
+    "sid": 155,
+    "chaname": "鱼鳞阵描述",
+    "engname": ""
+  },
+  {
+    "sid": 156,
+    "chaname": "鹤翼阵描述",
+    "engname": ""
+  },
+  {
+    "sid": 157,
+    "chaname": "锥形阵描述",
+    "engname": ""
+  },
+  {
+    "sid": 158,
+    "chaname": "锋矢阵描述",
+    "engname": ""
+  },
+  {
+    "sid": 159,
+    "chaname": "雁形阵描述",
+    "engname": ""
+  },
+  {
+    "sid": 160,
+    "chaname": "箕形阵描述",
+    "engname": ""
+  },
+  {
+    "sid": 161,
+    "chaname": "长蛇阵描述",
+    "engname": ""
+  },
+  {
+    "sid": 162,
+    "chaname": "方圆阵描述",
+    "engname": ""
+  },
+  {
+    "sid": 206,
+    "chaname": "政令",
+    "engname": ""
+  },
+  {
+    "sid": 207,
+    "chaname": "刷新政务所需道具。执行政务能够获得政务。",
+    "engname": ""
+  },
+  {
+    "sid": 208,
+    "chaname": "1日礼包",
+    "engname": ""
+  },
+  {
+    "sid": 209,
+    "chaname": "2日礼包",
+    "engname": ""
+  },
+  {
+    "sid": 210,
+    "chaname": "3日礼包",
+    "engname": ""
+  },
+  {
+    "sid": 211,
+    "chaname": "4日礼包",
+    "engname": ""
+  },
+  {
+    "sid": 212,
+    "chaname": "5日礼包",
+    "engname": ""
+  },
+  {
+    "sid": 213,
+    "chaname": "签到5次礼包",
+    "engname": ""
+  },
+  {
+    "sid": 214,
+    "chaname": "签到10次礼包",
+    "engname": ""
+  },
+  {
+    "sid": 215,
+    "chaname": "签到15次礼包",
+    "engname": ""
+  },
+  {
+    "sid": 216,
+    "chaname": "签到20次礼包",
+    "engname": ""
+  },
+  {
+    "sid": 217,
+    "chaname": "签到25次礼包",
+    "engname": ""
+  },
+  {
+    "sid": 218,
+    "chaname": "1日礼包描述",
+    "engname": ""
+  },
+  {
+    "sid": 219,
+    "chaname": "2日礼包描述",
+    "engname": ""
+  },
+  {
+    "sid": 220,
+    "chaname": "3日礼包描述",
+    "engname": ""
+  },
+  {
+    "sid": 221,
+    "chaname": "4日礼包描述",
+    "engname": ""
+  },
+  {
+    "sid": 222,
+    "chaname": "5日礼包描述",
+    "engname": ""
+  },
+  {
+    "sid": 223,
+    "chaname": "签到5次礼包描述",
+    "engname": ""
+  },
+  {
+    "sid": 224,
+    "chaname": "签到10次礼包描述",
+    "engname": ""
+  },
+  {
+    "sid": 225,
+    "chaname": "签到15次礼包描述",
+    "engname": ""
+  },
+  {
+    "sid": 226,
+    "chaname": "签到20次礼包描述",
+    "engname": ""
+  },
+  {
+    "sid": 227,
+    "chaname": "签到25次礼包描述",
+    "engname": ""
+  },
+  {
+    "sid": 228,
+    "chaname": "30活跃度奖励",
+    "engname": ""
+  },
+  {
+    "sid": 229,
+    "chaname": "60活跃度奖励",
+    "engname": ""
+  },
+  {
+    "sid": 230,
+    "chaname": "90活跃度奖励",
+    "engname": ""
+  },
+  {
+    "sid": 231,
+    "chaname": "120活跃度奖励",
+    "engname": ""
+  },
+  {
+    "sid": 232,
+    "chaname": "150活跃度奖励",
+    "engname": ""
+  },
+  {
+    "sid": 233,
+    "chaname": "30活跃度奖励描述",
+    "engname": ""
+  },
+  {
+    "sid": 234,
+    "chaname": "60活跃度奖励描述",
+    "engname": ""
+  },
+  {
+    "sid": 235,
+    "chaname": "90活跃度奖励描述",
+    "engname": ""
+  },
+  {
+    "sid": 236,
+    "chaname": "120活跃度奖励描述",
+    "engname": ""
+  },
+  {
+    "sid": 237,
+    "chaname": "150活跃度奖励描述",
+    "engname": ""
+  },
+  {
+    "sid": 238,
+    "chaname": "收获农田",
+    "engname": ""
+  },
+  {
+    "sid": 239,
+    "chaname": "收获民居",
+    "engname": ""
+  },
+  {
+    "sid": 240,
+    "chaname": "收获木场",
+    "engname": ""
+  },
+  {
+    "sid": 241,
+    "chaname": "处理政务",
+    "engname": ""
+  },
+  {
+    "sid": 242,
+    "chaname": "竞技挑战",
+    "engname": ""
+  },
+  {
+    "sid": 243,
+    "chaname": "副本征战",
+    "engname": ""
+  },
+  {
+    "sid": 244,
+    "chaname": "闯封神塔",
+    "engname": ""
+  },
+  {
+    "sid": 245,
+    "chaname": "占领金矿",
+    "engname": ""
+  },
+  {
+    "sid": 246,
+    "chaname": "强化装备",
+    "engname": ""
+  },
+  {
+    "sid": 247,
+    "chaname": "抓捕奴隶",
+    "engname": ""
+  },
+  {
+    "sid": 248,
+    "chaname": "君主达到20级",
+    "engname": ""
+  },
+  {
+    "sid": 249,
+    "chaname": "君主达到25级",
+    "engname": ""
+  },
+  {
+    "sid": 250,
+    "chaname": "君主达到30级",
+    "engname": ""
+  },
+  {
+    "sid": 251,
+    "chaname": "君主达到35级",
+    "engname": ""
+  },
+  {
+    "sid": 252,
+    "chaname": "君主达到40级",
+    "engname": ""
+  },
+  {
+    "sid": 253,
+    "chaname": "君主达到45级",
+    "engname": ""
+  },
+  {
+    "sid": 254,
+    "chaname": "战斗力达到5000",
+    "engname": ""
+  },
+  {
+    "sid": 255,
+    "chaname": "战斗力达到7000",
+    "engname": ""
+  },
+  {
+    "sid": 256,
+    "chaname": "战斗力达到9000",
+    "engname": ""
+  },
+  {
+    "sid": 257,
+    "chaname": "战斗力达到10000",
+    "engname": ""
+  },
+  {
+    "sid": 258,
+    "chaname": "拥有2个蓝色武将",
+    "engname": ""
+  },
+  {
+    "sid": 259,
+    "chaname": "拥有3个蓝色武将",
+    "engname": ""
+  },
+  {
+    "sid": 260,
+    "chaname": "拥有4个紫色武将",
+    "engname": ""
+  },
+  {
+    "sid": 261,
+    "chaname": "拥有5个紫色武将",
+    "engname": ""
+  },
+  {
+    "sid": 262,
+    "chaname": "铜币产量7000/时",
+    "engname": ""
+  },
+  {
+    "sid": 263,
+    "chaname": "铜币产量20000/时",
+    "engname": ""
+  },
+  {
+    "sid": 264,
+    "chaname": "木材产量3000/时",
+    "engname": ""
+  },
+  {
+    "sid": 265,
+    "chaname": "木材产量30000/时",
+    "engname": ""
+  },
+  {
+    "sid": 266,
+    "chaname": "粮草产量3000/时",
+    "engname": ""
+  },
+  {
+    "sid": 267,
+    "chaname": "粮草产量10000/时",
+    "engname": ""
+  },
+  {
+    "sid": 268,
+    "chaname": "君主达到50级",
+    "engname": ""
+  },
+  {
+    "sid": 269,
+    "chaname": "君主达到55级",
+    "engname": ""
+  },
+  {
+    "sid": 270,
+    "chaname": "君主达到60级",
+    "engname": ""
+  },
+  {
+    "sid": 271,
+    "chaname": "君主达到65级",
+    "engname": ""
+  },
+  {
+    "sid": 272,
+    "chaname": "君主达到70级",
+    "engname": ""
+  },
+  {
+    "sid": 273,
+    "chaname": "君主达到75级",
+    "engname": ""
+  },
+  {
+    "sid": 274,
+    "chaname": "战斗力达到20000",
+    "engname": ""
+  },
+  {
+    "sid": 275,
+    "chaname": "战斗力达到30000",
+    "engname": ""
+  },
+  {
+    "sid": 276,
+    "chaname": "战斗力达到50000",
+    "engname": ""
+  },
+  {
+    "sid": 277,
+    "chaname": "战斗力达到70000",
+    "engname": ""
+  },
+  {
+    "sid": 278,
+    "chaname": "拥有2个红色武将",
+    "engname": ""
+  },
+  {
+    "sid": 279,
+    "chaname": "拥有3个红色武将",
+    "engname": ""
+  },
+  {
+    "sid": 280,
+    "chaname": "拥有4个红色武将",
+    "engname": ""
+  },
+  {
+    "sid": 281,
+    "chaname": "拥有5个红色武将",
+    "engname": ""
+  },
+  {
+    "sid": 282,
+    "chaname": "铜币产量30000/时",
+    "engname": ""
+  },
+  {
+    "sid": 283,
+    "chaname": "铜币产量50000/时",
+    "engname": ""
+  },
+  {
+    "sid": 284,
+    "chaname": "木材产量18000/时",
+    "engname": ""
+  },
+  {
+    "sid": 285,
+    "chaname": "木材产量27000/时",
+    "engname": ""
+  },
+  {
+    "sid": 286,
+    "chaname": "粮草产量18000/时",
+    "engname": ""
+  },
+  {
+    "sid": 287,
+    "chaname": "粮草产量27000/时",
+    "engname": ""
+  },
+  {
+    "sid": 288,
+    "chaname": "君主达到80级",
+    "engname": ""
+  },
+  {
+    "sid": 289,
+    "chaname": "君主达到85级",
+    "engname": ""
+  },
+  {
+    "sid": 290,
+    "chaname": "君主达到90级",
+    "engname": ""
+  },
+  {
+    "sid": 291,
+    "chaname": "君主达到95级",
+    "engname": ""
+  },
+  {
+    "sid": 292,
+    "chaname": "君主达到100级",
+    "engname": ""
+  },
+  {
+    "sid": 293,
+    "chaname": "战斗力达到100000",
+    "engname": ""
+  },
+  {
+    "sid": 294,
+    "chaname": "战斗力达到130000",
+    "engname": ""
+  },
+  {
+    "sid": 295,
+    "chaname": "战斗力达到150000",
+    "engname": ""
+  },
+  {
+    "sid": 296,
+    "chaname": "战斗力达到180000",
+    "engname": ""
+  },
+  {
+    "sid": 297,
+    "chaname": "战斗力达到200000",
+    "engname": ""
+  },
+  {
+    "sid": 298,
+    "chaname": "拥有2个橙色武将",
+    "engname": ""
+  },
+  {
+    "sid": 299,
+    "chaname": "拥有3个橙色武将",
+    "engname": ""
+  },
+  {
+    "sid": 300,
+    "chaname": "拥有4个橙色武将",
+    "engname": ""
+  },
+  {
+    "sid": 301,
+    "chaname": "拥有5个橙色武将",
+    "engname": ""
+  },
+  {
+    "sid": 302,
+    "chaname": "铜币产量30000/时",
+    "engname": ""
+  },
+  {
+    "sid": 303,
+    "chaname": "铜币产量50000/时",
+    "engname": ""
+  },
+  {
+    "sid": 304,
+    "chaname": "木材产量30000/时",
+    "engname": ""
+  },
+  {
+    "sid": 305,
+    "chaname": "木材产量38000/时",
+    "engname": ""
+  },
+  {
+    "sid": 306,
+    "chaname": "粮草产量30000/时",
+    "engname": ""
+  },
+  {
+    "sid": 307,
+    "chaname": "粮草产量38000/时",
+    "engname": ""
+  },
+  {
+    "sid": 310,
+    "chaname": "君主等级1级开启宫殿",
+    "engname": ""
+  },
+  {
+    "sid": 311,
+    "chaname": "征战\\n出城杀敌",
+    "engname": ""
+  },
+  {
+    "sid": 312,
+    "chaname": "民居\\n征收铜币",
+    "engname": ""
+  },
+  {
+    "sid": 313,
+    "chaname": "酒馆\\n招募武将",
+    "engname": ""
+  },
+  {
+    "sid": 314,
+    "chaname": "布阵，增加上阵武将\\n战斗，开启跳过战斗",
+    "engname": ""
+  },
+  {
+    "sid": 315,
+    "chaname": "铁匠铺\\n强化装备",
+    "engname": ""
+  },
+  {
+    "sid": 316,
+    "chaname": "君主等级11级开启木场",
+    "engname": ""
+  },
+  {
+    "sid": 317,
+    "chaname": "君主等级11级开启木场",
+    "engname": ""
+  },
+  {
+    "sid": 318,
+    "chaname": "君主等级11级开启木场",
+    "engname": ""
+  },
+  {
+    "sid": 319,
+    "chaname": "君主等级11级开启木场",
+    "engname": ""
+  },
+  {
+    "sid": 320,
+    "chaname": "木场\\n征收木材",
+    "engname": ""
+  },
+  {
+    "sid": 321,
+    "chaname": "君主等级14级开启伙伴功能",
+    "engname": ""
+  },
+  {
+    "sid": 322,
+    "chaname": "君主等级14级开启伙伴功能",
+    "engname": ""
+  },
+  {
+    "sid": 323,
+    "chaname": "伙伴\\n邀请伙伴",
+    "engname": ""
+  },
+  {
+    "sid": 324,
+    "chaname": "农田\\n征收粮草",
+    "engname": ""
+  },
+  {
+    "sid": 325,
+    "chaname": "签到\\n每日签到",
+    "engname": ""
+  },
+  {
+    "sid": 326,
+    "chaname": "活跃度\\n每日获得大量奖励",
+    "engname": ""
+  },
+  {
+    "sid": 327,
+    "chaname": "君主等级22级开启领主试炼",
+    "engname": ""
+  },
+  {
+    "sid": 328,
+    "chaname": "君主等级22级开启领主试炼",
+    "engname": ""
+  },
+  {
+    "sid": 329,
+    "chaname": "君主等级22级开启领主试炼",
+    "engname": ""
+  },
+  {
+    "sid": 330,
+    "chaname": "君主等级22级开启领主试炼",
+    "engname": ""
+  },
+  {
+    "sid": 331,
+    "chaname": "领主试炼\\n完成试炼可领取奖励",
+    "engname": ""
+  },
+  {
+    "sid": 332,
+    "chaname": "君主等级24级开启商城",
+    "engname": ""
+  },
+  {
+    "sid": 333,
+    "chaname": "商城\\n购买道具",
+    "engname": ""
+  },
+  {
+    "sid": 334,
+    "chaname": "变强\\n提升武将战斗力",
+    "engname": ""
+  },
+  {
+    "sid": 335,
+    "chaname": "铁匠铺\\n打造装备",
+    "engname": ""
+  },
+  {
+    "sid": 336,
+    "chaname": "竞技场\\n提高排名",
+    "engname": ""
+  },
+  {
+    "sid": 337,
+    "chaname": "君主等级29级开启消息",
+    "engname": ""
+  },
+  {
+    "sid": 338,
+    "chaname": "消息\\n获得消息情报",
+    "engname": ""
+  },
+  {
+    "sid": 339,
+    "chaname": "每日奖励\\n每天领取奖励",
+    "engname": ""
+  },
+  {
+    "sid": 340,
+    "chaname": "金矿\\n占领金矿",
+    "engname": ""
+  },
+  {
+    "sid": 341,
+    "chaname": "培养\\n培养武将",
+    "engname": ""
+  },
+  {
+    "sid": 342,
+    "chaname": "君主等级34级开启签到功能",
+    "engname": ""
+  },
+  {
+    "sid": 343,
+    "chaname": "政务\\n获取声望",
+    "engname": ""
+  },
+  {
+    "sid": 344,
+    "chaname": "封神塔\\n怒闯封神塔",
+    "engname": ""
+  },
+  {
+    "sid": 345,
+    "chaname": "君主等级37级开启联盟功能",
+    "engname": ""
+  },
+  {
+    "sid": 346,
+    "chaname": "联盟\\n组建联盟，人多力量大",
+    "engname": ""
+  },
+  {
+    "sid": 347,
+    "chaname": "武将馆\\n训练武将",
+    "engname": ""
+  },
+  {
+    "sid": 348,
+    "chaname": "君主等级41级开启扫荡功能",
+    "engname": ""
+  },
+  {
+    "sid": 349,
+    "chaname": "君主等级41级开启扫荡功能",
+    "engname": ""
+  },
+  {
+    "sid": 350,
+    "chaname": "扫荡\\n快速扫荡副本",
+    "engname": ""
+  },
+  {
+    "sid": 351,
+    "chaname": "书院\\n升级科技",
+    "engname": ""
+  },
+  {
+    "sid": 352,
+    "chaname": "校场\\n提升武将战斗力",
+    "engname": ""
+  },
+  {
+    "sid": 353,
+    "chaname": "军衔\\n提升武将军衔",
+    "engname": ""
+  },
+  {
+    "sid": 354,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 355,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 356,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 357,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 358,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 359,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 360,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 361,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 362,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 363,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 364,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 365,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 366,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 367,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 368,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 369,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 370,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 371,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 372,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 373,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 374,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 375,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 376,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 377,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 378,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 379,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 380,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 381,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 382,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 383,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 384,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 385,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 386,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 387,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 388,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 389,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 390,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 391,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 392,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 393,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 394,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 395,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 396,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 397,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 398,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 399,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 400,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 401,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 402,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 403,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 404,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 405,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 406,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 407,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 408,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 409,
+    "chaname": "主公你好厉害，又升级了！",
+    "engname": ""
+  },
+  {
+    "sid": 600,
+    "chaname": "招贤令",
+    "engname": ""
+  },
+  {
+    "sid": 601,
+    "chaname": "酒馆探索武将需要消耗招贤令。",
+    "engname": ""
+  },
+  {
+    "sid": 602,
+    "chaname": "1级培养丹图纸",
+    "engname": ""
+  },
+  {
+    "sid": 603,
+    "chaname": "2级培养丹图纸",
+    "engname": ""
+  },
+  {
+    "sid": 604,
+    "chaname": "3级培养丹图纸",
+    "engname": ""
+  },
+  {
+    "sid": 605,
+    "chaname": "4级培养丹图纸",
+    "engname": ""
+  },
+  {
+    "sid": 606,
+    "chaname": "5级培养丹图纸",
+    "engname": ""
+  },
+  {
+    "sid": 607,
+    "chaname": "6级培养丹图纸",
+    "engname": ""
+  },
+  {
+    "sid": 608,
+    "chaname": "7级培养丹图纸",
+    "engname": ""
+  },
+  {
+    "sid": 609,
+    "chaname": "8级培养丹图纸",
+    "engname": ""
+  },
+  {
+    "sid": 610,
+    "chaname": "9级培养丹图纸",
+    "engname": ""
+  },
+  {
+    "sid": 611,
+    "chaname": "10级培养丹图纸",
+    "engname": ""
+  },
+  {
+    "sid": 620,
+    "chaname": "炼造1级培养丹所需图纸，可用军功兑换",
+    "engname": ""
+  },
+  {
+    "sid": 621,
+    "chaname": "炼造2级培养丹所需图纸，可用军功兑换",
+    "engname": ""
+  },
+  {
+    "sid": 622,
+    "chaname": "炼造3级培养丹所需图纸，可用军功兑换",
+    "engname": ""
+  },
+  {
+    "sid": 623,
+    "chaname": "炼造4级培养丹所需图纸，可用军功兑换",
+    "engname": ""
+  },
+  {
+    "sid": 624,
+    "chaname": "炼造5级培养丹所需图纸，可用军功兑换",
+    "engname": ""
+  },
+  {
+    "sid": 625,
+    "chaname": "炼造6级培养丹所需图纸，可用军功兑换",
+    "engname": ""
+  },
+  {
+    "sid": 626,
+    "chaname": "炼造7级培养丹所需图纸，可用军功兑换",
+    "engname": ""
+  },
+  {
+    "sid": 627,
+    "chaname": "炼造8级培养丹所需图纸，可用军功兑换",
+    "engname": ""
+  },
+  {
+    "sid": 628,
+    "chaname": "炼造9级培养丹所需图纸，可用军功兑换",
+    "engname": ""
+  },
+  {
+    "sid": 629,
+    "chaname": "炼造10级培养丹所需图纸，可用军功兑换",
+    "engname": ""
+  },
+  {
+    "sid": 1001,
+    "chaname": "给王大锤穿戴1次装备",
+    "engname": ""
+  },
+  {
+    "sid": 1002,
+    "chaname": "击败1次周仓",
+    "engname": ""
+  },
+  {
+    "sid": 1003,
+    "chaname": "收获1次铜币",
+    "engname": ""
+  },
+  {
+    "sid": 1004,
+    "chaname": "招募鲍三娘",
+    "engname": ""
+  },
+  {
+    "sid": 1005,
+    "chaname": "进行1次布阵",
+    "engname": ""
+  },
+  {
+    "sid": 1006,
+    "chaname": "击败1次张牛角",
+    "engname": ""
+  },
+  {
+    "sid": 1007,
+    "chaname": "任意一件装备强化到5级",
+    "engname": ""
+  },
+  {
+    "sid": 1008,
+    "chaname": "击败张曼成，通关汝南",
+    "engname": ""
+  },
+  {
+    "sid": 1009,
+    "chaname": "给鲍三娘穿戴装备",
+    "engname": ""
+  },
+  {
+    "sid": 1010,
+    "chaname": "任意一件装备强化到10级",
+    "engname": ""
+  },
+  {
+    "sid": 1011,
+    "chaname": "收获1次木材",
+    "engname": ""
+  },
+  {
+    "sid": 1012,
+    "chaname": "击败波才，通关宛城",
+    "engname": ""
+  },
+  {
+    "sid": 1013,
+    "chaname": "收获1次粮食",
+    "engname": ""
+  },
+  {
+    "sid": 1014,
+    "chaname": "领取一次活跃度奖励",
+    "engname": ""
+  },
+  {
+    "sid": 1015,
+    "chaname": "击败张梁，通关曲阳",
+    "engname": ""
+  },
+  {
+    "sid": 1016,
+    "chaname": "任意一件装备强化到15级",
+    "engname": ""
+  },
+  {
+    "sid": 1017,
+    "chaname": "竞技场战斗两次",
+    "engname": ""
+  },
+  {
+    "sid": 1018,
+    "chaname": "购买1个黑铁",
+    "engname": ""
+  },
+  {
+    "sid": 1019,
+    "chaname": "探索武将",
+    "engname": ""
+  },
+  {
+    "sid": 1020,
+    "chaname": "进行1次布阵",
+    "engname": ""
+  },
+  {
+    "sid": 1021,
+    "chaname": "签到1次",
+    "engname": ""
+  },
+  {
+    "sid": 1022,
+    "chaname": "击败张宝，通关巨鹿",
+    "engname": ""
+  },
+  {
+    "sid": 1023,
+    "chaname": "购买1个红玉",
+    "engname": ""
+  },
+  {
+    "sid": 1024,
+    "chaname": "任意一件装备强化到20级",
+    "engname": ""
+  },
+  {
+    "sid": 1025,
+    "chaname": "任意征战一次副本",
+    "engname": ""
+  },
+  {
+    "sid": 1026,
+    "chaname": "通关黄巾之乱精英副本",
+    "engname": ""
+  },
+  {
+    "sid": 1027,
+    "chaname": "任意打造一件装备",
+    "engname": ""
+  },
+  {
+    "sid": 1028,
+    "chaname": "战斗力提高到2500",
+    "engname": ""
+  },
+  {
+    "sid": 1029,
+    "chaname": "击败华雄，通关玉池关",
+    "engname": ""
+  },
+  {
+    "sid": 1030,
+    "chaname": "任意一件装备强化到25级",
+    "engname": ""
+  },
+  {
+    "sid": 1031,
+    "chaname": "任意征战一次副本",
+    "engname": ""
+  },
+  {
+    "sid": 1032,
+    "chaname": "再次任意打造一件装备",
+    "engname": ""
+  },
+  {
+    "sid": 1033,
+    "chaname": "扫荡华雄5次",
+    "engname": ""
+  },
+  {
+    "sid": 1034,
+    "chaname": "铜币产量达到600",
+    "engname": ""
+  },
+  {
+    "sid": 1035,
+    "chaname": "击败徐荣，通关函谷关",
+    "engname": ""
+  },
+  {
+    "sid": 1036,
+    "chaname": "任意一件装备强化到30级",
+    "engname": ""
+  },
+  {
+    "sid": 1037,
+    "chaname": "木材产量达到600",
+    "engname": ""
+  },
+  {
+    "sid": 1038,
+    "chaname": "扫荡华雄10次",
+    "engname": ""
+  },
+  {
+    "sid": 1039,
+    "chaname": "粮食产量达到600",
+    "engname": ""
+  },
+  {
+    "sid": 1040,
+    "chaname": "封神楼战斗2次",
+    "engname": ""
+  },
+  {
+    "sid": 1041,
+    "chaname": "军功达到3000",
+    "engname": ""
+  },
+  {
+    "sid": 1042,
+    "chaname": "培养一次武将",
+    "engname": ""
+  },
+  {
+    "sid": 1043,
+    "chaname": "击败李肃，通关新安关",
+    "engname": ""
+  },
+  {
+    "sid": 1044,
+    "chaname": "占领一次金矿",
+    "engname": ""
+  },
+  {
+    "sid": 1045,
+    "chaname": "任意一件装备强化到35级",
+    "engname": ""
+  },
+  {
+    "sid": 1046,
+    "chaname": "扫荡李肃10次",
+    "engname": ""
+  },
+  {
+    "sid": 1047,
+    "chaname": "执行一次政务",
+    "engname": ""
+  },
+  {
+    "sid": 1048,
+    "chaname": "爵位提升至二等州刺史",
+    "engname": ""
+  },
+  {
+    "sid": 1049,
+    "chaname": "招募第二个名将",
+    "engname": ""
+  },
+  {
+    "sid": 1050,
+    "chaname": "布阵一次",
+    "engname": ""
+  },
+  {
+    "sid": 1051,
+    "chaname": "培养一次武将",
+    "engname": ""
+  },
+  {
+    "sid": 1052,
+    "chaname": "收获1次铜币",
+    "engname": ""
+  },
+  {
+    "sid": 1053,
+    "chaname": "铜币产量达到2000",
+    "engname": ""
+  },
+  {
+    "sid": 1054,
+    "chaname": "强化一次装备",
+    "engname": ""
+  },
+  {
+    "sid": 1055,
+    "chaname": "收获1次木材",
+    "engname": ""
+  },
+  {
+    "sid": 1056,
+    "chaname": "木材产量达到1000",
+    "engname": ""
+  },
+  {
+    "sid": 1057,
+    "chaname": "击败李傕，通关虎牢关",
+    "engname": ""
+  },
+  {
+    "sid": 1058,
+    "chaname": "培养一次武将",
+    "engname": ""
+  },
+  {
+    "sid": 1059,
+    "chaname": "通关反董卓战精英副本",
+    "engname": ""
+  },
+  {
+    "sid": 1060,
+    "chaname": "任意打造一件装备",
+    "engname": ""
+  },
+  {
+    "sid": 1061,
+    "chaname": "战斗力提升至7000",
+    "engname": ""
+  },
+  {
+    "sid": 1062,
+    "chaname": "击败韩巍，通关陈留",
+    "engname": ""
+  },
+  {
+    "sid": 1063,
+    "chaname": "扫荡韩威20次",
+    "engname": ""
+  },
+  {
+    "sid": 1064,
+    "chaname": "探索武将",
+    "engname": ""
+  },
+  {
+    "sid": 1065,
+    "chaname": "布阵一次",
+    "engname": ""
+  },
+  {
+    "sid": 1066,
+    "chaname": "培养一次武将",
+    "engname": ""
+  },
+  {
+    "sid": 1067,
+    "chaname": "执行政务一次",
+    "engname": ""
+  },
+  {
+    "sid": 1401,
+    "chaname": "点击~&3&武将~&0&界面，选择~&3&“一键装备”~&0&。",
+    "engname": ""
+  },
+  {
+    "sid": 1402,
+    "chaname": "点击建筑~&3&“征战”~&0&出城，在~&3&“汝南”~&0&与周仓战斗并获胜。",
+    "engname": ""
+  },
+  {
+    "sid": 1403,
+    "chaname": "点击建筑~&3&“民居”~&0&，~&3&收获~&0&一次铜币。",
+    "engname": ""
+  },
+  {
+    "sid": 1404,
+    "chaname": "点击建筑~&3&“酒馆”~&0&，~&3&招募~&0&名将鲍三娘。",
+    "engname": ""
+  },
+  {
+    "sid": 1405,
+    "chaname": "点击~&3&布阵~&0&界面，~&3&拖动武将~&0&至阵位进行布阵。",
+    "engname": ""
+  },
+  {
+    "sid": 1406,
+    "chaname": "点击建筑~&3&“征战”~&0&出城，在~&3&“汝南”~&0&与张牛角战斗并获胜。",
+    "engname": ""
+  },
+  {
+    "sid": 1407,
+    "chaname": "点击建筑~&3&“铁匠铺”~&0&，将任意一件装备~&3&强化~&0&到5级。",
+    "engname": ""
+  },
+  {
+    "sid": 1408,
+    "chaname": "点击建筑~&3&“征战”~&0&出城，在~&3&“汝南”~&0&与张曼成战斗并获胜。",
+    "engname": ""
+  },
+  {
+    "sid": 1409,
+    "chaname": "点击~&3&武将~&0&界面，选择给任意武将~&3&穿戴装备~&0&。",
+    "engname": ""
+  },
+  {
+    "sid": 1410,
+    "chaname": "点击建筑~&3&“铁匠铺”~&0&，将任意一件装备~&3&强化~&0&到10级。",
+    "engname": ""
+  },
+  {
+    "sid": 1411,
+    "chaname": "点击建筑~&3&“木场”~&0&，~&3&收获~&0&一次木材。",
+    "engname": ""
+  },
+  {
+    "sid": 1412,
+    "chaname": "点击建筑~&3&“征战”~&0&出城，在~&3&“宛城”~&0&与波才战斗并获胜。",
+    "engname": ""
+  },
+  {
+    "sid": 1413,
+    "chaname": "点击建筑~&3&“农田”~&0&，~&3&收获~&0&一次粮食。",
+    "engname": ""
+  },
+  {
+    "sid": 1414,
+    "chaname": "点击~&3&活跃度~&0&界面，领取~&3&活跃度奖励~&0&。",
+    "engname": ""
+  },
+  {
+    "sid": 1415,
+    "chaname": "点击建筑~&3&“征战”~&0&出城，在~&3&“曲阳”~&0&与张梁战斗并获胜。",
+    "engname": ""
+  },
+  {
+    "sid": 1416,
+    "chaname": "点击建筑~&3&“铁匠铺”~&0&，将任意一件装备~&3&强化~&0&到15级。",
+    "engname": ""
+  },
+  {
+    "sid": 1417,
+    "chaname": "点击建筑~&3&“竞技场”~&0&，任意~&3&挑战~&0&两次。",
+    "engname": ""
+  },
+  {
+    "sid": 1418,
+    "chaname": "点击~&3&商城~&0&界面，购买1个~&3&黑铁~&0&。",
+    "engname": ""
+  },
+  {
+    "sid": 1419,
+    "chaname": "点击~&3&“酒馆”~&0&探索界面，~&3&探索~&0&武将并~&3&招募~&0&。",
+    "engname": ""
+  },
+  {
+    "sid": 1420,
+    "chaname": "点击~&3&布阵~&0&界面，~&3&拖动武将~&0&至阵位进行布阵。",
+    "engname": ""
+  },
+  {
+    "sid": 1421,
+    "chaname": "点击~&3&每日签到~&0&界面，领取每日登陆奖励并且~&3&签到~&0&。",
+    "engname": ""
+  },
+  {
+    "sid": 1422,
+    "chaname": "点击建筑~&3&“征战”~&0&出城，在~&3&“巨鹿”~&0&与张宝战斗并获胜。",
+    "engname": ""
+  },
+  {
+    "sid": 1423,
+    "chaname": "点击~&3&商城~&0&界面，购买1个~&3&红玉~&0&。",
+    "engname": ""
+  },
+  {
+    "sid": 1424,
+    "chaname": "点击建筑~&3&“铁匠铺”~&0&，将任意一件装备~&3&强化~&0&到20级。",
+    "engname": ""
+  },
+  {
+    "sid": 1425,
+    "chaname": "点击建筑~&3&“征战”~&0&出城，~&3&任意征战~&0&一次副本。",
+    "engname": ""
+  },
+  {
+    "sid": 1426,
+    "chaname": "点击建筑~&3&“征战”~&0&出城，在~&3&黄巾之乱精英副本~&0&与张角战斗并获胜。",
+    "engname": ""
+  },
+  {
+    "sid": 1427,
+    "chaname": "点击~&3&“铁匠铺”~&0&打造界面，任意~&3&打造~&0&一件装备。",
+    "engname": ""
+  },
+  {
+    "sid": 1428,
+    "chaname": "点击~&3&变强~&0&界面，~&3提升战斗力~&0&至2500。",
+    "engname": ""
+  },
+  {
+    "sid": 1429,
+    "chaname": "点击建筑~&3&“征战”~&0&出城，在~&3&“玉池关”~&0&与华雄战斗并获胜。",
+    "engname": ""
+  },
+  {
+    "sid": 1430,
+    "chaname": "点击建筑~&3&“铁匠铺”~&0&，将任意一件装备~&3&强化~&0&到25级。",
+    "engname": ""
+  },
+  {
+    "sid": 1431,
+    "chaname": "点击建筑~&3&“征战”~&0&出城，~&3&任意征战~&0&一次副本。",
+    "engname": ""
+  },
+  {
+    "sid": 1432,
+    "chaname": "点击~&3&“铁匠铺”~&0&打造界面，任意~&3&打造~&0&一件装备。",
+    "engname": ""
+  },
+  {
+    "sid": 1433,
+    "chaname": "点击建筑~&3&“征战”~&0&出城，在“玉池关”~&3&扫荡~&0&华雄5次。",
+    "engname": ""
+  },
+  {
+    "sid": 1434,
+    "chaname": "~&3&升级民居~&0&，提高铜币总产量至600/时。",
+    "engname": ""
+  },
+  {
+    "sid": 1435,
+    "chaname": "点击建筑~&3&“征战”~&0&出城，在~&3&“函谷关”~&0&与徐荣战斗并获胜。",
+    "engname": ""
+  },
+  {
+    "sid": 1436,
+    "chaname": "点击建筑~&3&“铁匠铺”~&0&，将任意一件装备~&3&强化~&0&到30级。",
+    "engname": ""
+  },
+  {
+    "sid": 1437,
+    "chaname": "~&3&升级木场~&0&，提高木材总产量至600/时。",
+    "engname": ""
+  },
+  {
+    "sid": 1438,
+    "chaname": "点击建筑~&3&“征战”~&0&出城，在“函谷关”~&3&扫荡~&0&徐荣10次。",
+    "engname": ""
+  },
+  {
+    "sid": 1439,
+    "chaname": "~&3&升级农田~&0&，提高粮食总产量至600/时。",
+    "engname": ""
+  },
+  {
+    "sid": 1440,
+    "chaname": "点击建筑~&3&“封神塔”~&0&，~&3&挑战~&0&2次",
+    "engname": ""
+  },
+  {
+    "sid": 1441,
+    "chaname": "点击建筑~&3&“封神塔”~&0&，挑战获得军功",
+    "engname": ""
+  },
+  {
+    "sid": 1442,
+    "chaname": "点击~&3&武将培养~&0&界面，培养武将。",
+    "engname": ""
+  },
+  {
+    "sid": 1443,
+    "chaname": "点击建筑~&3&“征战”~&0&出城，在~&3&“新安关”~&0&与李肃战斗并获胜。",
+    "engname": ""
+  },
+  {
+    "sid": 1444,
+    "chaname": "点击建筑~&3&“金矿”~&0&，~&3&占领或掠夺~&0&一次矿场。",
+    "engname": ""
+  },
+  {
+    "sid": 1445,
+    "chaname": "点击建筑~&3&“铁匠铺”~&0&，将任意一件装备~&3&强化~&0&到35级。",
+    "engname": ""
+  },
+  {
+    "sid": 1446,
+    "chaname": "点击建筑~&3&“征战”~&0&出城，在“新安关”~&3&扫荡~&0&李肃10次。",
+    "engname": ""
+  },
+  {
+    "sid": 1447,
+    "chaname": "点击~&3&政务~&0&界面，~&3执行~&0&一次政务。",
+    "engname": ""
+  },
+  {
+    "sid": 1448,
+    "chaname": "点击~&3&政务~&0&界面，提高声望成为二等州刺史。",
+    "engname": ""
+  },
+  {
+    "sid": 1449,
+    "chaname": "点击建筑~&3&“酒馆”~&0&，~&3&招募~&0&名将。",
+    "engname": ""
+  },
+  {
+    "sid": 1450,
+    "chaname": "点击~&3&布阵~&0&界面，~&3&拖动武将~&0&至阵位进行布阵。",
+    "engname": ""
+  },
+  {
+    "sid": 1451,
+    "chaname": "点击~&3&武将培养~&0&界面，培养武将。",
+    "engname": ""
+  },
+  {
+    "sid": 1452,
+    "chaname": "点击建筑~&3&“民居”~&0&，~&3&收获~&0&一次铜币。",
+    "engname": ""
+  },
+  {
+    "sid": 1453,
+    "chaname": "~&3&升级民居~&0&，提高铜币总产量至2000/时。",
+    "engname": ""
+  },
+  {
+    "sid": 1454,
+    "chaname": "点击建筑~&3&“铁匠铺”~&0&，任意强化一次装备。",
+    "engname": ""
+  },
+  {
+    "sid": 1455,
+    "chaname": "点击建筑~&3&“木场”~&0&，~&3&收获~&0&一次木材。",
+    "engname": ""
+  },
+  {
+    "sid": 1456,
+    "chaname": "~&3&升级木场~&0&，提高木材总产量至100/时。",
+    "engname": ""
+  },
+  {
+    "sid": 1457,
+    "chaname": "点击建筑~&3&“征战”~&0&出城，在~&3&“虎牢关”~&0&与李傕战斗并获胜。",
+    "engname": ""
+  },
+  {
+    "sid": 1458,
+    "chaname": "点击~&3&武将培养~&0&界面，培养武将。",
+    "engname": ""
+  },
+  {
+    "sid": 1459,
+    "chaname": "点击建筑~&3&“征战”~&0&出城，在~&3&反董卓战精英副本~&0&与董卓~&3&战斗~&0&并获胜。",
+    "engname": ""
+  },
+  {
+    "sid": 1460,
+    "chaname": "点击~&3&“铁匠铺”~&0&打造界面，任意~&3&打造~&0&一件装备。",
+    "engname": ""
+  },
+  {
+    "sid": 1461,
+    "chaname": "战斗力提升至7000",
+    "engname": ""
+  },
+  {
+    "sid": 1462,
+    "chaname": "点击建筑~&3&“征战”~&0&出城，在~&3&“陈留”~&0&与韩巍战斗并获胜。",
+    "engname": ""
+  },
+  {
+    "sid": 1463,
+    "chaname": "点击建筑~&3&“征战”~&0&出城，在“陈留”~&3&扫荡~&0&韩巍20次。",
+    "engname": ""
+  },
+  {
+    "sid": 1464,
+    "chaname": "点击~&3&“酒馆”~&0&探索界面，~&3&探索~&0&武将并~&3&招募~&0&。",
+    "engname": ""
+  },
+  {
+    "sid": 1465,
+    "chaname": "点击~&3&布阵~&0&界面，~&3&拖动武将~&0&至阵位进行布阵。",
+    "engname": ""
+  },
+  {
+    "sid": 1466,
+    "chaname": "点击~&3&武将培养~&0&界面，培养武将。",
+    "engname": ""
+  },
+  {
+    "sid": 1467,
+    "chaname": "点击~&3&政务~&0&界面，~&3执行~&0&一次政务。",
+    "engname": ""
+  },
+  {
+    "sid": 1600,
+    "chaname": "玉石碎片",
+    "engname": ""
+  },
+  {
+    "sid": 1601,
+    "chaname": "1级攻击玉",
+    "engname": ""
+  },
+  {
+    "sid": 1602,
+    "chaname": "2级攻击玉",
+    "engname": ""
+  },
+  {
+    "sid": 1603,
+    "chaname": "3级攻击玉",
+    "engname": ""
+  },
+  {
+    "sid": 1604,
+    "chaname": "4级攻击玉",
+    "engname": ""
+  },
+  {
+    "sid": 1605,
+    "chaname": "5级攻击玉",
+    "engname": ""
+  },
+  {
+    "sid": 1606,
+    "chaname": "6级攻击玉",
+    "engname": ""
+  },
+  {
+    "sid": 1607,
+    "chaname": "7级攻击玉",
+    "engname": ""
+  },
+  {
+    "sid": 1608,
+    "chaname": "8级攻击玉",
+    "engname": ""
+  },
+  {
+    "sid": 1609,
+    "chaname": "9级攻击玉",
+    "engname": ""
+  },
+  {
+    "sid": 1610,
+    "chaname": "1级防御玉",
+    "engname": ""
+  },
+  {
+    "sid": 1611,
+    "chaname": "2级防御玉",
+    "engname": ""
+  },
+  {
+    "sid": 1612,
+    "chaname": "3级防御玉",
+    "engname": ""
+  },
+  {
+    "sid": 1613,
+    "chaname": "4级防御玉",
+    "engname": ""
+  },
+  {
+    "sid": 1614,
+    "chaname": "5级防御玉",
+    "engname": ""
+  },
+  {
+    "sid": 1615,
+    "chaname": "6级防御玉",
+    "engname": ""
+  },
+  {
+    "sid": 1616,
+    "chaname": "7级防御玉",
+    "engname": ""
+  },
+  {
+    "sid": 1617,
+    "chaname": "8级防御玉",
+    "engname": ""
+  },
+  {
+    "sid": 1618,
+    "chaname": "9级防御玉",
+    "engname": ""
+  },
+  {
+    "sid": 1619,
+    "chaname": "1级战功玉",
+    "engname": ""
+  },
+  {
+    "sid": 1620,
+    "chaname": "2级战功玉",
+    "engname": ""
+  },
+  {
+    "sid": 1621,
+    "chaname": "3级战功玉",
+    "engname": ""
+  },
+  {
+    "sid": 1622,
+    "chaname": "4级战功玉",
+    "engname": ""
+  },
+  {
+    "sid": 1623,
+    "chaname": "5级战功玉",
+    "engname": ""
+  },
+  {
+    "sid": 1624,
+    "chaname": "6级战功玉",
+    "engname": ""
+  },
+  {
+    "sid": 1625,
+    "chaname": "7级战功玉",
+    "engname": ""
+  },
+  {
+    "sid": 1626,
+    "chaname": "8级战功玉",
+    "engname": ""
+  },
+  {
+    "sid": 1627,
+    "chaname": "9级战功玉",
+    "engname": ""
+  },
+  {
+    "sid": 1628,
+    "chaname": "1级战防玉",
+    "engname": ""
+  },
+  {
+    "sid": 1629,
+    "chaname": "2级战防玉",
+    "engname": ""
+  },
+  {
+    "sid": 1630,
+    "chaname": "3级战防玉",
+    "engname": ""
+  },
+  {
+    "sid": 1631,
+    "chaname": "4级战防玉",
+    "engname": ""
+  },
+  {
+    "sid": 1632,
+    "chaname": "5级战防玉",
+    "engname": ""
+  },
+  {
+    "sid": 1633,
+    "chaname": "6级战防玉",
+    "engname": ""
+  },
+  {
+    "sid": 1634,
+    "chaname": "7级战防玉",
+    "engname": ""
+  },
+  {
+    "sid": 1635,
+    "chaname": "8级战防玉",
+    "engname": ""
+  },
+  {
+    "sid": 1636,
+    "chaname": "9级战防玉",
+    "engname": ""
+  },
+  {
+    "sid": 1637,
+    "chaname": "1级统兵玉",
+    "engname": ""
+  },
+  {
+    "sid": 1638,
+    "chaname": "2级统兵玉",
+    "engname": ""
+  },
+  {
+    "sid": 1639,
+    "chaname": "3级统兵玉",
+    "engname": ""
+  },
+  {
+    "sid": 1640,
+    "chaname": "4级统兵玉",
+    "engname": ""
+  },
+  {
+    "sid": 1641,
+    "chaname": "5级统兵玉",
+    "engname": ""
+  },
+  {
+    "sid": 1642,
+    "chaname": "6级统兵玉",
+    "engname": ""
+  },
+  {
+    "sid": 1643,
+    "chaname": "7级统兵玉",
+    "engname": ""
+  },
+  {
+    "sid": 1644,
+    "chaname": "8级统兵玉",
+    "engname": ""
+  },
+  {
+    "sid": 1645,
+    "chaname": "9级统兵玉",
+    "engname": ""
+  },
+  {
+    "sid": 1646,
+    "chaname": "1级暴击玉",
+    "engname": ""
+  },
+  {
+    "sid": 1647,
+    "chaname": "2级暴击玉",
+    "engname": ""
+  },
+  {
+    "sid": 1648,
+    "chaname": "3级暴击玉",
+    "engname": ""
+  },
+  {
+    "sid": 1649,
+    "chaname": "4级暴击玉",
+    "engname": ""
+  },
+  {
+    "sid": 1650,
+    "chaname": "5级暴击玉",
+    "engname": ""
+  },
+  {
+    "sid": 1651,
+    "chaname": "6级暴击玉",
+    "engname": ""
+  },
+  {
+    "sid": 1652,
+    "chaname": "7级暴击玉",
+    "engname": ""
+  },
+  {
+    "sid": 1653,
+    "chaname": "8级暴击玉",
+    "engname": ""
+  },
+  {
+    "sid": 1654,
+    "chaname": "9级暴击玉",
+    "engname": ""
+  },
+  {
+    "sid": 1655,
+    "chaname": "1级命中玉",
+    "engname": ""
+  },
+  {
+    "sid": 1656,
+    "chaname": "2级命中玉",
+    "engname": ""
+  },
+  {
+    "sid": 1657,
+    "chaname": "3级命中玉",
+    "engname": ""
+  },
+  {
+    "sid": 1658,
+    "chaname": "4级命中玉",
+    "engname": ""
+  },
+  {
+    "sid": 1659,
+    "chaname": "5级命中玉",
+    "engname": ""
+  },
+  {
+    "sid": 1660,
+    "chaname": "6级命中玉",
+    "engname": ""
+  },
+  {
+    "sid": 1661,
+    "chaname": "7级命中玉",
+    "engname": ""
+  },
+  {
+    "sid": 1662,
+    "chaname": "8级命中玉",
+    "engname": ""
+  },
+  {
+    "sid": 1663,
+    "chaname": "9级命中玉",
+    "engname": ""
+  },
+  {
+    "sid": 1664,
+    "chaname": "1级闪避玉",
+    "engname": ""
+  },
+  {
+    "sid": 1665,
+    "chaname": "2级闪避玉",
+    "engname": ""
+  },
+  {
+    "sid": 1666,
+    "chaname": "3级闪避玉",
+    "engname": ""
+  },
+  {
+    "sid": 1667,
+    "chaname": "4级闪避玉",
+    "engname": ""
+  },
+  {
+    "sid": 1668,
+    "chaname": "5级闪避玉",
+    "engname": ""
+  },
+  {
+    "sid": 1669,
+    "chaname": "6级闪避玉",
+    "engname": ""
+  },
+  {
+    "sid": 1670,
+    "chaname": "7级闪避玉",
+    "engname": ""
+  },
+  {
+    "sid": 1671,
+    "chaname": "8级闪避玉",
+    "engname": ""
+  },
+  {
+    "sid": 1672,
+    "chaname": "9级闪避玉",
+    "engname": ""
+  },
+  {
+    "sid": 1701,
+    "chaname": "毫无手感",
+    "engname": ""
+  },
+  {
+    "sid": 1702,
+    "chaname": "再接再厉",
+    "engname": ""
+  },
+  {
+    "sid": 1703,
+    "chaname": "灵光乍现",
+    "engname": ""
+  },
+  {
+    "sid": 1704,
+    "chaname": "如有神助",
+    "engname": ""
+  },
+  {
+    "sid": 1705,
+    "chaname": "黄金之瞳",
+    "engname": ""
+  }
+]

@@ -1,6 +1,14 @@
 package com.model.item;
 
-public class Item {
+import com.model.BaseObject;
+
+/**
+ * 道具
+ * @date 	2018年6月6日 下午12:30:46
+ * @author 	weihongchang
+ *
+ */
+public class Item extends BaseObject {
 
 	
 	/**

@@ -1,5 +1,8 @@
 package com.core.db;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
@@ -49,12 +52,18 @@ public class MainMonHelperImpl {
 //        	System.out.println("list is null!!!");
 //        }
         
+		User u1=new User();
+		u1.setId(1+"");
+		u1.setContent("ceshi1");
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
+		u1.setDate(df.format(new Date()));
+		u1.setTitle("title1");    
         
-        
+		MongoManager.getInstance().getMongoTemplate().save(u1);
         //修改数据
-        Query query=new Query(Criteria.where("account").is("用户名"));
-        Update update = Update.update("level", 5);
-        MongoManager.getInstance().getMongoTemplate().updateFirst(query, update, Player.class);
+//        Query query=new Query(Criteria.where("account").is("用户名"));
+//        Update update = Update.update("level", 5);
+//        MongoManager.getInstance().getMongoTemplate().updateFirst(query, update, Player.class);
         
 //        Map<String,Integer> map1 = mongoDaoImpl.queryByID(mongoDataBase, table, 2);//检索event_id,注意id类型是字符串还是int
 //        if(map1 != null)

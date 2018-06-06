@@ -13,6 +13,8 @@ import org.springframework.data.mongodb.core.query.Query;
 import com.core.WsPool;
 import com.core.db.MongoManager;
 import com.google.protobuf.GeneratedMessage;
+import com.model.BaseObject;
+import com.model.formation.Formation;
 import com.model.hero.Hero;
 import com.model.item.Item;
 
@@ -23,7 +25,7 @@ import com.model.item.Item;
  *
  */
 @Document(collection="player") 
-public class Player  {
+public class Player extends BaseObject  {
 	
 //	Logger logger = LoggerFactory.getLogger("msg");
 	
@@ -44,6 +46,12 @@ public class Player  {
 	private String ip;
 	private String createTime;
 	private String lastLoginTime;
+	
+	/**
+	 * 阵型
+	 */
+	@Transient
+	private Formation formation;
 	
 	//英雄列表
 	@Transient
@@ -159,7 +167,15 @@ public class Player  {
 		this.itemList = itemList;
 	}
 
-/************************************************************************************/
+	public Formation getFormation() {
+		return formation;
+	}
+
+	public void setFormation(Formation formation) {
+		this.formation = formation;
+	}
+
+	/************************************************************************************/
 /************************************************************************************/
 	/**
 	 * 发送消息到客户端
@@ -212,5 +228,61 @@ public class Player  {
 		 Query query=new Query(Criteria.where("playerID").is(getPlayerid()));
 		 setItemList( MongoManager.getInstance().getMongoTemplate().find(query,Item.class));
 	}
-
+	
+	/**
+	 * 添加一名英雄到阵型
+	 * @param index
+	 * @param hero
+	 * @return 0上阵成功；1数据错误；2位置不变
+	 */
+	public int AddFormationHero(int index,Hero hero)
+	{
+		if( index >= 0 && index < 6 )
+		{
+			if( hero != null )
+			{
+				int oldIndex = hero.getFormationIndex();
+				if(oldIndex == index)
+				{
+					return 2;
+				}
+				if( formation.getFormation()[index] >=0 )
+				{
+					//原有位置有hero
+					Hero oldHero = getHeroForID(formation.getFormation()[index]);
+					if( oldHero != null )
+					{
+						oldHero.setFormationIndex(-1);
+						oldHero.dbUpdate();
+					}
+				}
+				
+				hero.setFormationIndex(index);
+				formation.getFormation()[index] = hero.getHeroID();
+				
+				hero.dbUpdate();
+				dbUpdate();
+				return 0;
+			}
+		}
+		return 1;
+	}
+	
+	/**
+	 * 获得英雄列表中某个英雄
+	 * @param heroid
+	 * @return
+	 */
+	public Hero getHeroForID(int heroid)
+	{
+		for(int i=0;i<heroList.size();i++)
+		{
+			Hero hero = heroList.get( i );
+			if( hero != null && hero.getHeroID() == heroid )
+			{
+				return hero;
+			}
+		}
+		return null;
+	}
 }

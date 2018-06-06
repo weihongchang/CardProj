@@ -16,6 +16,11 @@ public class PlayerManager {
 	 */
 	public final int heroMaxCount = 100;
 	
+	/**
+	 * 阵型格子数
+	 */
+	public final int formationMaxIndex  = 6;
+	
 	private static volatile PlayerManager sInst = null;
 
 	private PlayerManager() {

@@ -29,10 +29,10 @@ var game;
                 this.label_level0.text = "1";
                 this.label_Name.text = itemTemplate["itemnameid"];
                 if (this.data.index == 1 || this.data.index == 3) {
-                    this.imgHead.source = "head_caifuren_png";
+                    this.imgHead.source = "item_1104009_png";
                 }
                 else {
-                    this.imgHead.source = "head_caocao_png";
+                    this.imgHead.source = "item_1209003_png";
                 }
             }
         };

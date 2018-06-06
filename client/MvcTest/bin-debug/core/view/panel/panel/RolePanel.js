@@ -19,15 +19,19 @@ var game;
             var _this = _super.call(this) || this;
             _this.listHero = null;
             _this.listHeroHead = null;
-            _this.size = 4;
+            _this.size = 6;
             _this.isMoving = false;
             _this.currentPage = 0;
             // this.skinName = "src/core/view/panel/ui/RoleSkin.exml";
             _this.skinName = "resource/eui_skins/Panel_RoleSkin.exml";
+            _this.group_formation.visible = false;
             _this.addEventListener(eui.UIEvent.COMPLETE, _this.createCompleteEvent, _this);
             _this.scroller.throwSpeed = 0;
             _this.scroller.addEventListener(egret.TouchEvent.TOUCH_BEGIN, _this.onMoveBegin, _this);
             _this.scroller.addEventListener(eui.UIEvent.CHANGE_END, _this.onMoveEnd, _this);
+            _this.img_rightBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onFormation, _this);
+            _this.btn_changeHero.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onChangeHero, _this);
+            _this.btn_formationClose.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.onFormationClose, _this);
             return _this;
             // this.scroller.addEventListener(egret.TouchEvent.TOUCH_END,this.onMoveEnd,this);
             // this.scroller.addEventListener(egret.TouchEvent.TOUCH_MOVE,this.onMove,this);
@@ -76,7 +80,7 @@ var game;
             this.listHeroHead.layout = new eui.HorizontalLayout();
             this.listHeroHead.itemRenderer = game.Item_HeroHeadList;
             var sourceArr = [];
-            for (var i = 0; i < this.size * 2; i++) {
+            for (var i = 0; i < this.size; i++) {
                 sourceArr.push({ name: "item" + i, index: i });
             }
             this.listHeroHead.dataProvider = new eui.ArrayCollection(sourceArr);
@@ -99,6 +103,16 @@ var game;
             // this.currentPointX = 0;
             this.getCurrentPage();
             console.log("end");
+        };
+        RolePanel.prototype.onFormation = function (e) {
+            console.log("切换阵型");
+            this.group_formation.visible = true;
+        };
+        RolePanel.prototype.onChangeHero = function (e) {
+            console.log("切换英雄");
+        };
+        RolePanel.prototype.onFormationClose = function (e) {
+            this.group_formation.visible = false;
         };
         RolePanel.prototype.getCurrentPage = function () {
             var moNum = this.scroller.viewport.scrollH % this.stage.stageWidth;

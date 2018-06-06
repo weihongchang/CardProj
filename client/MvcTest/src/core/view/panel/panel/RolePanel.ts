@@ -8,12 +8,16 @@ module game {
         private listHero:eui.List = null;
         private listHeroHead:eui.List = null;
 
-        private size:number = 4;
+        private size:number = 6;
 
 
         public closeBtn: eui.Button;
         public scroller:eui.Scroller;
         public scroller_head:eui.Scroller;
+        public img_rightBtn:eui.Image;
+        public btn_changeHero:eui.Button;
+        public btn_formationClose:eui.Image;
+        public group_formation:eui.Group;
 
         private currentPointX:number;
         private isMoving:boolean = false;
@@ -23,10 +27,16 @@ module game {
             super();
             // this.skinName = "src/core/view/panel/ui/RoleSkin.exml";
             this.skinName = "resource/eui_skins/Panel_RoleSkin.exml";
+
+            this.group_formation.visible=false;
             this.addEventListener(eui.UIEvent.COMPLETE , this.createCompleteEvent, this);
             this.scroller.throwSpeed=0;
             this.scroller.addEventListener(egret.TouchEvent.TOUCH_BEGIN,this.onMoveBegin,this);
             this.scroller.addEventListener(eui.UIEvent.CHANGE_END,this.onMoveEnd,this);
+
+            this.img_rightBtn.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onFormation,this);
+            this.btn_changeHero.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onChangeHero,this);
+            this.btn_formationClose.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onFormationClose,this);
             // this.scroller.addEventListener(egret.TouchEvent.TOUCH_END,this.onMoveEnd,this);
             // this.scroller.addEventListener(egret.TouchEvent.TOUCH_MOVE,this.onMove,this);
             // this.scroller.addEventListener(egret.TouchEvent.TOUCH_CANCEL,this.onMoveCancel,this);
@@ -86,7 +96,7 @@ module game {
             this.listHeroHead.itemRenderer = Item_HeroHeadList;
             var sourceArr:any[] = [];
 
-            for (var i:number = 0; i < this.size*2; i++){
+            for (var i:number = 0; i < this.size; i++){
                 sourceArr.push({name:"item"+i,index:i});
             }
             this.listHeroHead.dataProvider = new eui.ArrayCollection(sourceArr);
@@ -121,6 +131,23 @@ module game {
             this.getCurrentPage();
             console.log("end");
         }
+
+        public onFormation(e:egret.TouchEvent)
+        {
+            console.log("切换阵型");
+            this.group_formation.visible=true;
+        }
+
+        public onChangeHero(e:egret.TouchEvent)
+        {
+            console.log("切换英雄");
+        }
+        
+        public onFormationClose(e:egret.TouchEvent)
+        {
+            this.group_formation.visible=false;
+        }
+
 
         private getCurrentPage()
         {

@@ -1,8 +1,14 @@
 package com.model.hero;
 
-import org.springframework.data.mongodb.core.mapping.Document;
+import com.model.BaseObject;
 
-public class Hero {
+/**
+ * 英雄
+ * @date 	2018年6月6日 下午12:30:26
+ * @author 	weihongchang
+ *
+ */
+public class Hero extends BaseObject {
 	
 	//模板id
 	private int templateID;
@@ -19,6 +25,9 @@ public class Hero {
 	//经验
 	private int exp;
 	
+	//是否上阵
+	private int formationIndex;
+	
 	public Hero(long playerID,int templateID,int heroID)
 	{
 		this.playerID = playerID;
@@ -26,6 +35,7 @@ public class Hero {
 		this.heroID = heroID;
 		this.level = 1;
 		this.exp = 0;
+		this.formationIndex = -1;
 	}
 
 	public int getTemplateID() {
@@ -67,7 +77,13 @@ public class Hero {
 	public void setPlayerID(long playerID) {
 		this.playerID = playerID;
 	}
-	
-	
-	
+
+	public int getFormationIndex() {
+		return formationIndex;
+	}
+
+	public void setFormationIndex(int formationIndex) {
+		this.formationIndex = formationIndex;
+	}
+
 }
