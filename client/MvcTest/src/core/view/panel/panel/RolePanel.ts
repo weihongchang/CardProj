@@ -20,6 +20,14 @@ module game {
         public group_formation:eui.Group;
 
         public img_fromation_hero0:eui.Image;
+        //阵型位置
+        public img_formation_box0:eui.Image;
+        public img_formation_box1:eui.Image;
+        public img_formation_box2:eui.Image;
+        public img_formation_box3:eui.Image;
+        public img_formation_box4:eui.Image;
+        public img_formation_box5:eui.Image;
+
 
         private currentPointX:number;
         private isMoving:boolean = false;
@@ -27,10 +35,24 @@ module game {
 
         private isImgMove:boolean = false;
 
+        private formationBox:eui.Image[] = [];
+
+
+        private moveHeroOldx:number = 0;
+        private moveHeroOldy:number = 0;
+        private isMoveHeroSuccess:boolean = false;
+
         public constructor() {
             super();
             // this.skinName = "src/core/view/panel/ui/RoleSkin.exml";
             this.skinName = "resource/eui_skins/Panel_RoleSkin.exml";
+
+            this.formationBox[0] = this.img_formation_box0;
+            this.formationBox[1] = this.img_formation_box1;
+            this.formationBox[2] = this.img_formation_box2;
+            this.formationBox[3] = this.img_formation_box3;
+            this.formationBox[4] = this.img_formation_box4;
+            this.formationBox[5] = this.img_formation_box5;
 
             this.group_formation.visible=false;
             this.addEventListener(eui.UIEvent.COMPLETE , this.createCompleteEvent, this);
@@ -42,16 +64,11 @@ module game {
             this.btn_changeHero.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onChangeHero,this);
             this.btn_formationClose.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onFormationClose,this);
 
-            this.img_fromation_hero0.addEventListener(egret.TouchEvent.TOUCH_MOVE,this.imgTouchBegin,this);
-             
-            this.img_fromation_hero0.addEventListener(egret.TouchEvent.TOUCH_BEGIN,function(e:egret.TouchEvent){
-                this.isImgMove = true;
-             },this);
 
-            this.img_fromation_hero0.addEventListener(egret.TouchEvent.TOUCH_END,function(e:egret.TouchEvent){
-                this.isImgMove = false;
-                
-            },this);
+            this.img_fromation_hero0.addEventListener(egret.TouchEvent.TOUCH_BEGIN,this.imgTouchBegin,this);
+            this.img_fromation_hero0.addEventListener(egret.TouchEvent.TOUCH_MOVE,this.imgTouchMove,this);
+            this.img_fromation_hero0.addEventListener(egret.TouchEvent.TOUCH_END,this.imgToucEnd,this);
+            this.img_fromation_hero0.addEventListener(egret.TouchEvent.TOUCH_CANCEL,this.imgToucEnd,this);
 
             // this.scroller.addEventListener(egret.TouchEvent.TOUCH_END,this.onMoveEnd,this);
             // this.scroller.addEventListener(egret.TouchEvent.TOUCH_MOVE,this.onMove,this);
@@ -61,10 +78,38 @@ module game {
 
         public imgTouchBegin(e:egret.TouchEvent)
         {
+            this.isImgMove = true;
+            this.isMoveHeroSuccess = false;
+            this.moveHeroOldx = this.img_fromation_hero0.x;
+            this.moveHeroOldy = this.img_fromation_hero0.y;
+        }
+        public imgTouchMove(e:egret.TouchEvent)
+        {
             if(this.isImgMove)
             {
                 this.img_fromation_hero0.x = e.$stageX-this.img_fromation_hero0.width/2;
                 this.img_fromation_hero0.y = e.$stageY - this.img_fromation_hero0.height/2;
+            }
+        }
+        public imgToucEnd(e:egret.TouchEvent)
+        {
+            this.isImgMove = false;
+            //判断是否移动到新坐标
+            for(var i=0;i<this.formationBox.length;i++)
+            {
+                if( Global.isOverlap(this.img_fromation_hero0,this.formationBox[i]))
+                {
+                    this.img_fromation_hero0.x = this.formationBox[i].x + (this.formationBox[i].width - this.img_fromation_hero0.width)/2;
+                    this.img_fromation_hero0.y = this.formationBox[i].y + (this.formationBox[i].height - this.img_fromation_hero0.height)/2;
+                    this.isMoveHeroSuccess = true;
+                    break;
+                }
+            }
+
+            if( !this.isMoveHeroSuccess )
+            {
+                this.img_fromation_hero0.x = this.moveHeroOldx;
+                this.img_fromation_hero0.y = this.moveHeroOldy;
             }
         }
 

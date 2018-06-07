@@ -32,7 +32,7 @@ var SocketManager;
     }
     SocketManager.onSocketOpen = onSocketOpen;
     //连接异常
-    function SocketError() {
+    function SocketError(e) {
         this.connState = false;
         Global.hideWaritPanel();
         EffectUtils.showTipsMid("网络连接异常", true);

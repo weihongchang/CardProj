@@ -54,6 +54,7 @@ public class GameStart {
 //		process.start();
 		
 		WebSocketImpl.DEBUG = false;
+		
         int port = 8888; // 端口
         WsServer s = new WsServer(port);
         s.start();

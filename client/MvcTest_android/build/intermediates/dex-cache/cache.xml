@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\3ea086b7254fadf8357411ce39de066107112950\output\jars\libs\egretNativeAndroid.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="2c07cf578de7a41c2698b584b611ff3b17d8ea37">
+        <dex dex="F:\GitWork\CardProj\client\MvcTest_android\app\build\intermediates\pre-dexed\release\egretNativeAndroid_2bfcad8054b3667d4af76b53273b9002622954da.jar" />
+    </item>
+
+</items>

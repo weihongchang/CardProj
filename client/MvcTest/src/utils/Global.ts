@@ -38,6 +38,24 @@ module Global {
         }
         return message.build(str);
     }
+
+	 /**
+	 * @brief 判断两个轴对齐的矩形是否重叠
+	 * @param rc1 第一个矩阵的位置
+	 * @param rc2 第二个矩阵的位置
+	 * @return 两个矩阵是否重叠（边沿重叠，也认为是重叠）
+	 */
+	export function isOverlap(rc1:eui.Image,rc2:eui.Image):boolean
+	{
+		if (rc1.x + rc1.width  > rc2.x &&
+			rc2.x + rc2.width  > rc1.x &&
+			rc1.y + rc1.height > rc2.y &&
+			rc2.y + rc2.height > rc1.y
+		)
+			return true;
+		else
+			return false;
+	}
     
 	//获取大写数字
 	export function getNumber(num:number):string {

@@ -35,6 +35,22 @@ var Global;
         return Global.message.build(str);
     }
     Global.getMessage = getMessage;
+    /**
+    * @brief 判断两个轴对齐的矩形是否重叠
+    * @param rc1 第一个矩阵的位置
+    * @param rc2 第二个矩阵的位置
+    * @return 两个矩阵是否重叠（边沿重叠，也认为是重叠）
+    */
+    function isOverlap(rc1, rc2) {
+        if (rc1.x + rc1.width > rc2.x &&
+            rc2.x + rc2.width > rc1.x &&
+            rc1.y + rc1.height > rc2.y &&
+            rc2.y + rc2.height > rc1.y)
+            return true;
+        else
+            return false;
+    }
+    Global.isOverlap = isOverlap;
     //获取大写数字
     function getNumber(num) {
         switch (num) {

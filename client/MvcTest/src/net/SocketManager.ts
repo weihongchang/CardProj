@@ -17,6 +17,7 @@ module SocketManager {
         Global.showWaritPanel();
         this.sock = new egret.WebSocket();
         this.sock.type = "webSocketTypeBinary";
+        
         this.sock.addEventListener(egret.ProgressEvent.SOCKET_DATA, this.onReceiveMessage, this);
         this.sock.addEventListener(egret.Event.CONNECT, this.onSocketOpen, this);
         this.sock.addEventListener(egret.Event.CLOSE ,this.SocketClose,this);
@@ -34,7 +35,7 @@ module SocketManager {
     }
 
      //连接异常
-    export function SocketError(): void {
+    export function SocketError(e:egret.IOErrorEvent): void {
         this.connState = false;
         Global.hideWaritPanel();
         EffectUtils.showTipsMid("网络连接异常",true);
