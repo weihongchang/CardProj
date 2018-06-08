@@ -4,7 +4,7 @@
             
              source.down="button_down_png" source="officer_3_png"/>
 	<e:Image id="img_selected" width="98" height="96" x="0" y="0" source="officer_h_png" visible="false"/>
-	<e:Image id="img_head" width="80" height="80" scale9Grid="1,3,8,8" x="9" y="8" source="head_feibiao_png"/>
+	<e:Image id="img_head" width="80" height="80" scale9Grid="1,3,8,8" x="9" y="8" source="head_feibiao_png" visible="false"/>
 
 	<w:Config id="162cddd4562" ></w:Config>
 </e:Skin>

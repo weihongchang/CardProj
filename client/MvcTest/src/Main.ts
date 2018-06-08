@@ -218,8 +218,8 @@ private imgBG :egret.Sprite;
 
         GameLayerManager.gameLayer().mainLayer.addChild(this.imgBG);
         game.AppFacade.getInstance().startUp(GameLayerManager.gameLayer());
-        // SocketManager.connectServer("127.0.0.1",8888);
-        SocketManager.connectServer("192.168.0.111",8888);
+        SocketManager.connectServer("127.0.0.1",8888);
+        // SocketManager.connectServer("192.168.0.111",8888);
         // EXML.load("resource/eui_skins/MainSkin.exml",this.onLoaded,this);
     }
 
