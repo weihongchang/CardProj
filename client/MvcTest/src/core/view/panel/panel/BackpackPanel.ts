@@ -66,6 +66,7 @@ module game {
             this.list.dataProvider = new eui.ArrayCollection(sourceArr);
             
             //  this.list.dataProviderRefreshed();
+            this.scroller.viewport.scrollV = 0;
             this.scroller.viewport = this.list;
         }
 
