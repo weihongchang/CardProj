@@ -10,6 +10,10 @@ module GlobalData {
     export var myName: string = "dily";
     export var heroTemplate:any = [];
     export var itemTemplate:any = [];
+    export var dungeonTemplate:any = [];
+    export var customTemplate:any = [];
+    export var courseTemplate:any = [];
+    export var formationTemplate:any = [];
 
     /**
      * 根据heroID获取模板

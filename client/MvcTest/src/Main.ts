@@ -69,6 +69,10 @@ private imgBG :egret.Sprite;
 
         GlobalData.heroTemplate = await RES.getResAsync("Hero_json")
         GlobalData.itemTemplate = await RES.getResAsync("Item_json")
+        GlobalData.dungeonTemplate = await RES.getResAsync("Dungeon_json")
+        GlobalData.customTemplate = await RES.getResAsync("Custom_json")
+        GlobalData.courseTemplate = await RES.getResAsync("Course_json")
+        GlobalData.formationTemplate = await RES.getResAsync("Formation_json")
         // JSON.parse(GlobalData.heroTemplate)
         // this.starHeroFile(result);
         

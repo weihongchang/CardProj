@@ -100,12 +100,12 @@ var Main = (function (_super) {
     };
     Main.prototype.runGame = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _a, _b, userInfo;
-            return __generator(this, function (_c) {
-                switch (_c.label) {
+            var _a, _b, _c, _d, _e, _f, userInfo;
+            return __generator(this, function (_g) {
+                switch (_g.label) {
                     case 0: return [4 /*yield*/, this.loadResource()];
                     case 1:
-                        _c.sent();
+                        _g.sent();
                         this.createGameScene();
                         // const result = await RES.getResAsync("description_json")
                         // this.startAnimation(result);
@@ -114,24 +114,40 @@ var Main = (function (_super) {
                     case 2:
                         // const result = await RES.getResAsync("description_json")
                         // this.startAnimation(result);
-                        _a.heroTemplate = _c.sent();
+                        _a.heroTemplate = _g.sent();
                         _b = GlobalData;
-                        return [4 /*yield*/, RES.getResAsync("Item_json")
+                        return [4 /*yield*/, RES.getResAsync("Item_json")];
+                    case 3:
+                        _b.itemTemplate = _g.sent();
+                        _c = GlobalData;
+                        return [4 /*yield*/, RES.getResAsync("Dungeon_json")];
+                    case 4:
+                        _c.dungeonTemplate = _g.sent();
+                        _d = GlobalData;
+                        return [4 /*yield*/, RES.getResAsync("Custom_json")];
+                    case 5:
+                        _d.customTemplate = _g.sent();
+                        _e = GlobalData;
+                        return [4 /*yield*/, RES.getResAsync("Course_json")];
+                    case 6:
+                        _e.courseTemplate = _g.sent();
+                        _f = GlobalData;
+                        return [4 /*yield*/, RES.getResAsync("Formation_json")
                             // JSON.parse(GlobalData.heroTemplate)
                             // this.starHeroFile(result);
                         ];
-                    case 3:
-                        _b.itemTemplate = _c.sent();
+                    case 7:
+                        _f.formationTemplate = _g.sent();
                         // JSON.parse(GlobalData.heroTemplate)
                         // this.starHeroFile(result);
                         return [4 /*yield*/, platform.login()];
-                    case 4:
+                    case 8:
                         // JSON.parse(GlobalData.heroTemplate)
                         // this.starHeroFile(result);
-                        _c.sent();
+                        _g.sent();
                         return [4 /*yield*/, platform.getUserInfo()];
-                    case 5:
-                        userInfo = _c.sent();
+                    case 9:
+                        userInfo = _g.sent();
                         return [2 /*return*/];
                 }
             });

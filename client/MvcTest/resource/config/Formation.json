@@ -1,0 +1,1486 @@
+[
+  {
+    "formationid": 10000,
+    "fname": "张角",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "10000001;10000002;10000003;10000004;10000005"
+  },
+  {
+    "formationid": 10001,
+    "fname": "貂蝉",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "10000006;10000007;10000008;10000009;10000010"
+  },
+  {
+    "formationid": 1,
+    "fname": "周仓",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "10111;0;0;0;0"
+  },
+  {
+    "formationid": 2,
+    "fname": "张牛角",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "10121;0;0;0;0"
+  },
+  {
+    "formationid": 3,
+    "fname": "白绕",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "10131;0;0;0;0"
+  },
+  {
+    "formationid": 4,
+    "fname": "韩忠",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "10141;0;0;0;0"
+  },
+  {
+    "formationid": 5,
+    "fname": "张曼成",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "10151;0;0;0;0"
+  },
+  {
+    "formationid": 6,
+    "fname": "陶升",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "10161;0;0;0;0"
+  },
+  {
+    "formationid": 7,
+    "fname": "马元义",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "10171;0;0;0;0"
+  },
+  {
+    "formationid": 8,
+    "fname": "赵弘",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "10181;10182;0;0;0"
+  },
+  {
+    "formationid": 9,
+    "fname": "彭脱",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "10191;10192;0;0;0"
+  },
+  {
+    "formationid": 10,
+    "fname": "波才",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "11101;11102;0;0;0"
+  },
+  {
+    "formationid": 11,
+    "fname": "卜已",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "11111;11112;0;0;0"
+  },
+  {
+    "formationid": 12,
+    "fname": "邓茂",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "11121;11122;0;0;0"
+  },
+  {
+    "formationid": 13,
+    "fname": "杨凤",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "11131;11132;0;0;0"
+  },
+  {
+    "formationid": 14,
+    "fname": "高升",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "11141;11142;0;0;0"
+  },
+  {
+    "formationid": 15,
+    "fname": "张梁",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "11151;11152;0;0;0"
+  },
+  {
+    "formationid": 16,
+    "fname": "于毒",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "11161;11162;0;0;0"
+  },
+  {
+    "formationid": 17,
+    "fname": "孙夏",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "11171;11172;0;0;0"
+  },
+  {
+    "formationid": 18,
+    "fname": "程远志",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "11181;11182;0;0;0"
+  },
+  {
+    "formationid": 19,
+    "fname": "张燕",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "11191;11192;11193;0;0"
+  },
+  {
+    "formationid": 20,
+    "fname": "张宝",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "11201;11202;11203;0;0"
+  },
+  {
+    "formationid": 21,
+    "fname": "张角",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "11211;0;0;0;0"
+  },
+  {
+    "formationid": 22,
+    "fname": "伍琼",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "12221;12222;12223;0;0"
+  },
+  {
+    "formationid": 23,
+    "fname": "杨彪",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "12231;12232;12233;0;0"
+  },
+  {
+    "formationid": 24,
+    "fname": "赵谦",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "12241;12242;12243;0;0"
+  },
+  {
+    "formationid": 25,
+    "fname": "刘嚣",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "12251;12252;12253;0;0"
+  },
+  {
+    "formationid": 26,
+    "fname": "华雄",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "12261;12262;12263;12264;0"
+  },
+  {
+    "formationid": 27,
+    "fname": "杨定",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "12271;12272;12273;12274;0"
+  },
+  {
+    "formationid": 28,
+    "fname": "杨奉",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "12281;12282;12283;12284;0"
+  },
+  {
+    "formationid": 29,
+    "fname": "樊稠",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "12291;12292;12293;12294;0"
+  },
+  {
+    "formationid": 30,
+    "fname": "郭汜",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "12301;12302;12303;12304;12305"
+  },
+  {
+    "formationid": 31,
+    "fname": "徐荣",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "12311;12312;12313;12314;12315"
+  },
+  {
+    "formationid": 32,
+    "fname": "段煨",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "12321;12322;12323;12324;12325"
+  },
+  {
+    "formationid": 33,
+    "fname": "胡轸",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "12331;12332;12333;12334;12335"
+  },
+  {
+    "formationid": 34,
+    "fname": "董越",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "12341;12342;12343;12344;12345"
+  },
+  {
+    "formationid": 35,
+    "fname": "张济",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "12351;12352;12353;12354;12355"
+  },
+  {
+    "formationid": 36,
+    "fname": "李肃",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "12361;12362;12363;12364;12365"
+  },
+  {
+    "formationid": 37,
+    "fname": "董旻",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "12371;12372;12373;12374;12375"
+  },
+  {
+    "formationid": 38,
+    "fname": "董璜",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "12381;12382;12383;12384;12385"
+  },
+  {
+    "formationid": 39,
+    "fname": "李儒",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "12391;12392;12393;12394;12395"
+  },
+  {
+    "formationid": 40,
+    "fname": "牛辅",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "12401;12402;12403;12404;12405"
+  },
+  {
+    "formationid": 41,
+    "fname": "李傕",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "12411;12412;12413;12414;12415"
+  },
+  {
+    "formationid": 42,
+    "fname": "董卓",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "12421;12422;12423;12424;12425"
+  },
+  {
+    "formationid": 43,
+    "fname": "秦宜禄",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "13431;13432;13433;13434;13435"
+  },
+  {
+    "formationid": 44,
+    "fname": "王楷",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "13441;13442;13443;13444;13445"
+  },
+  {
+    "formationid": 45,
+    "fname": "许汜",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "13451;13452;13453;13454;13455"
+  },
+  {
+    "formationid": 46,
+    "fname": "陈宫",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "13461;13462;13463;13464;13465"
+  },
+  {
+    "formationid": 47,
+    "fname": "韩巍",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "13471;13472;13473;13474;13475"
+  },
+  {
+    "formationid": 48,
+    "fname": "刘何",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "13481;13482;13483;13484;13485"
+  },
+  {
+    "formationid": 49,
+    "fname": "李封",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "13491;13492;13493;13494;13495"
+  },
+  {
+    "formationid": 50,
+    "fname": "王贺",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "13501;13502;13503;13504;13505"
+  },
+  {
+    "formationid": 51,
+    "fname": "高顺",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "13511;13512;13513;13514;13515"
+  },
+  {
+    "formationid": 52,
+    "fname": "薛兰",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "13521;13522;13523;13524;13525"
+  },
+  {
+    "formationid": 53,
+    "fname": "张辽",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "13531;13532;13533;13534;13535"
+  },
+  {
+    "formationid": 54,
+    "fname": "魏续",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "13541;13542;13543;13544;13545"
+  },
+  {
+    "formationid": 55,
+    "fname": "成廉",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "13551;13552;13553;13554;13555"
+  },
+  {
+    "formationid": 56,
+    "fname": "臧霸",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "13561;13562;13563;13564;13565"
+  },
+  {
+    "formationid": 57,
+    "fname": "郝荫",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "13571;13572;13573;13574;13575"
+  },
+  {
+    "formationid": 58,
+    "fname": "宋宪",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "13581;13582;13583;13584;13585"
+  },
+  {
+    "formationid": 59,
+    "fname": "曹性",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "13591;13592;13593;13594;13595"
+  },
+  {
+    "formationid": 60,
+    "fname": "侯成",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "13601;13602;13603;13604;13605"
+  },
+  {
+    "formationid": 61,
+    "fname": "貂婵",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "13611;13612;13613;13614;13615"
+  },
+  {
+    "formationid": 62,
+    "fname": "张邈",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "13621;13622;13623;13624;13625"
+  },
+  {
+    "formationid": 63,
+    "fname": "吕布",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "13631;13632;13633;13634;13635"
+  },
+  {
+    "formationid": 64,
+    "fname": "吕岱",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "14641;14642;14643;14644;14645"
+  },
+  {
+    "formationid": 65,
+    "fname": "潘璋",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "14651;14652;14653;14654;14655"
+  },
+  {
+    "formationid": 66,
+    "fname": "董朝",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "14661;14662;14663;14664;14665"
+  },
+  {
+    "formationid": 67,
+    "fname": "丁奉",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "14671;14672;14673;14674;14675"
+  },
+  {
+    "formationid": 68,
+    "fname": "凌统",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "14681;14682;14683;14684;14685"
+  },
+  {
+    "formationid": 69,
+    "fname": "陆绩",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "14691;14692;14693;14694;14695"
+  },
+  {
+    "formationid": 70,
+    "fname": "吕范",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "14701;14702;14703;14704;14705"
+  },
+  {
+    "formationid": 71,
+    "fname": "孙静",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "14711;14712;14713;14714;14715"
+  },
+  {
+    "formationid": 72,
+    "fname": "程秉",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "14721;14722;14723;14724;14725"
+  },
+  {
+    "formationid": 73,
+    "fname": "鲁肃",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "14731;14732;14733;14734;14735"
+  },
+  {
+    "formationid": 74,
+    "fname": "贺齐",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "14741;14742;14743;14744;14745"
+  },
+  {
+    "formationid": 75,
+    "fname": "孙朗",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "14751;14752;14753;14754;14755"
+  },
+  {
+    "formationid": 76,
+    "fname": "黄盖",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "14761;14762;14763;14764;14765"
+  },
+  {
+    "formationid": 77,
+    "fname": "吕据",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "14771;14772;14773;14774;14775"
+  },
+  {
+    "formationid": 78,
+    "fname": "程普",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "14781;14782;14783;14784;14785"
+  },
+  {
+    "formationid": 79,
+    "fname": "韩当",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "14791;14792;14793;14794;14795"
+  },
+  {
+    "formationid": 80,
+    "fname": "于吉",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "14801;14802;14803;14804;14805"
+  },
+  {
+    "formationid": 81,
+    "fname": "宋谦",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "14811;14812;14813;14814;14815"
+  },
+  {
+    "formationid": 82,
+    "fname": "陆逊",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "14821;14822;14823;14824;14825"
+  },
+  {
+    "formationid": 83,
+    "fname": "孙权",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "14831;14832;14833;14834;14835"
+  },
+  {
+    "formationid": 84,
+    "fname": "孙策",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "14841;14842;14843;14844;14845"
+  },
+  {
+    "formationid": 85,
+    "fname": "田畴",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "15851;15852;15853;15854;15855"
+  },
+  {
+    "formationid": 86,
+    "fname": "焦触",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "15861;15862;15863;15864;15865"
+  },
+  {
+    "formationid": 87,
+    "fname": "牵招",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "15871;15872;15873;15874;15875"
+  },
+  {
+    "formationid": 88,
+    "fname": "麹义",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "15881;15882;15883;15884;15885"
+  },
+  {
+    "formationid": 89,
+    "fname": "田丰",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "15891;15892;15893;15894;15895"
+  },
+  {
+    "formationid": 90,
+    "fname": "张顗",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "15901;15902;15903;15904;15905"
+  },
+  {
+    "formationid": 91,
+    "fname": "张南",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "15911;15912;15913;15914;15915"
+  },
+  {
+    "formationid": 92,
+    "fname": "朱灵",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "15921;15922;15923;15924;15925"
+  },
+  {
+    "formationid": 93,
+    "fname": "崔琰",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "15931;15932;15933;15934;15935"
+  },
+  {
+    "formationid": 94,
+    "fname": "文丑",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "15941;15942;15943;15944;15945"
+  },
+  {
+    "formationid": 95,
+    "fname": "辛毗",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "15951;15952;15953;15954;15955"
+  },
+  {
+    "formationid": 96,
+    "fname": "陈琳",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "15961;15962;15963;15964;15965"
+  },
+  {
+    "formationid": 97,
+    "fname": "荀谌",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "15971;15972;15973;15974;15975"
+  },
+  {
+    "formationid": 98,
+    "fname": "李孚",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "15981;15982;15983;15984;15985"
+  },
+  {
+    "formationid": 99,
+    "fname": "颜良",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "15991;15992;15993;15994;15995"
+  },
+  {
+    "formationid": 100,
+    "fname": "沮授",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "61001;61002;61003;61004;61005"
+  },
+  {
+    "formationid": 101,
+    "fname": "郭图",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "61011;61012;61013;61014;61015"
+  },
+  {
+    "formationid": 102,
+    "fname": "许攸",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "61021;61022;61023;61024;61025"
+  },
+  {
+    "formationid": 103,
+    "fname": "审配",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "61031;61032;61033;61034;61035"
+  },
+  {
+    "formationid": 104,
+    "fname": "淳于琼",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "61041;61042;61043;61044;61045"
+  },
+  {
+    "formationid": 105,
+    "fname": "袁绍",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "61051;61052;61053;61054;61055"
+  },
+  {
+    "formationid": 106,
+    "fname": "胡轸",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "71061;71062;71063;71064;71065"
+  },
+  {
+    "formationid": 107,
+    "fname": "曹纯",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "71071;71072;71073;71074;71075"
+  },
+  {
+    "formationid": 108,
+    "fname": "司马师",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "71081;71082;71083;71084;71085"
+  },
+  {
+    "formationid": 109,
+    "fname": "高升",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "71091;71092;71093;71094;71095"
+  },
+  {
+    "formationid": 110,
+    "fname": "李典",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "71101;71102;71103;71104;71105"
+  },
+  {
+    "formationid": 111,
+    "fname": "魏续",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "71111;71112;71113;71114;71115"
+  },
+  {
+    "formationid": 112,
+    "fname": "杨修",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "71121;71122;71123;71124;71125"
+  },
+  {
+    "formationid": 113,
+    "fname": "陈矫",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "71131;71132;71133;71134;71135"
+  },
+  {
+    "formationid": 114,
+    "fname": "董承",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "71141;71142;71143;71144;71145"
+  },
+  {
+    "formationid": 115,
+    "fname": "乐进",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "71151;71152;71153;71154;71155"
+  },
+  {
+    "formationid": 116,
+    "fname": "严政",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "71161;71162;71163;71164;71165"
+  },
+  {
+    "formationid": 117,
+    "fname": "毋丘甸",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "71171;71172;71173;71174;71175"
+  },
+  {
+    "formationid": 118,
+    "fname": "皇普嵩",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "71181;71182;71183;71184;71185"
+  },
+  {
+    "formationid": 119,
+    "fname": "裴秀",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "71191;71192;71193;71194;71195"
+  },
+  {
+    "formationid": 120,
+    "fname": "于禁",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "71201;71202;71203;71204;71205"
+  },
+  {
+    "formationid": 121,
+    "fname": "杜预",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "71211;71212;71213;71214;71215"
+  },
+  {
+    "formationid": 122,
+    "fname": "张辽",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "71221;71222;71223;71224;71225"
+  },
+  {
+    "formationid": 123,
+    "fname": "陈群",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "71231;71232;71233;71234;71235"
+  },
+  {
+    "formationid": 124,
+    "fname": "孔融",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "71241;71242;71243;71244;71245"
+  },
+  {
+    "formationid": 125,
+    "fname": "曹仁",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "71251;71252;71253;71254;71255"
+  },
+  {
+    "formationid": 126,
+    "fname": "夏侯惇",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "71261;71262;71263;71264;71265"
+  },
+  {
+    "formationid": 127,
+    "fname": "司马炎",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "81271;81272;81273;81274;81275"
+  },
+  {
+    "formationid": 128,
+    "fname": "杨济",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "81281;81282;81283;81284;81285"
+  },
+  {
+    "formationid": 129,
+    "fname": "鲍信",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "81291;81292;81293;81294;81295"
+  },
+  {
+    "formationid": 130,
+    "fname": "孔侑",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "81301;81302;81303;81304;81305"
+  },
+  {
+    "formationid": 131,
+    "fname": "程昱",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "81311;81312;81313;81314;81315"
+  },
+  {
+    "formationid": 132,
+    "fname": "司马昭",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "81321;81322;81323;81324;81325"
+  },
+  {
+    "formationid": 133,
+    "fname": "王浚",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "81331;81332;81333;81334;81335"
+  },
+  {
+    "formationid": 134,
+    "fname": "蒋干",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "81341;81342;81343;81344;81345"
+  },
+  {
+    "formationid": 135,
+    "fname": "李通",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "81351;81352;81353;81354;81355"
+  },
+  {
+    "formationid": 136,
+    "fname": "荀彧",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "81361;81362;81363;81364;81365"
+  },
+  {
+    "formationid": 137,
+    "fname": "何曾",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "81371;81372;81373;81374;81375"
+  },
+  {
+    "formationid": 138,
+    "fname": "毕轨",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "81381;81382;81383;81384;81385"
+  },
+  {
+    "formationid": 139,
+    "fname": "李肃",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "81391;81392;81393;81394;81395"
+  },
+  {
+    "formationid": 140,
+    "fname": "赵弘",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "81401;81402;81403;81404;81405"
+  },
+  {
+    "formationid": 141,
+    "fname": "典满",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "81411;81412;81413;81414;81415"
+  },
+  {
+    "formationid": 142,
+    "fname": "郭嘉",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "81421;81422;81423;81424;81425"
+  },
+  {
+    "formationid": 143,
+    "fname": "许褚",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "81431;81432;81433;81434;81435"
+  },
+  {
+    "formationid": 144,
+    "fname": "典韦",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "81441;81442;81443;81444;81445"
+  },
+  {
+    "formationid": 145,
+    "fname": "徐晃",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "81451;81452;81453;81454;81455"
+  },
+  {
+    "formationid": 146,
+    "fname": "司马懿",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "81461;81462;81463;81464;81465"
+  },
+  {
+    "formationid": 147,
+    "fname": "曹操",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "81471;81472;81473;81474;81475"
+  },
+  {
+    "formationid": 148,
+    "fname": "糜兰",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "91481;91482;91483;91484;91485"
+  },
+  {
+    "formationid": 149,
+    "fname": "孙干",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "91491;91492;91493;91494;91495"
+  },
+  {
+    "formationid": 150,
+    "fname": "雷铜",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "91501;91502;91503;91504;91505"
+  },
+  {
+    "formationid": 151,
+    "fname": "李恢",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "91511;91512;91513;91514;91515"
+  },
+  {
+    "formationid": 152,
+    "fname": "邓芝",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "91521;91522;91523;91524;91525"
+  },
+  {
+    "formationid": 153,
+    "fname": "杨松",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "91531;91532;91533;91534;91535"
+  },
+  {
+    "formationid": 154,
+    "fname": "郭攸之",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "91541;91542;91543;91544;91545"
+  },
+  {
+    "formationid": 155,
+    "fname": "张苞",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "91551;91552;91553;91554;91555"
+  },
+  {
+    "formationid": 156,
+    "fname": "刘贤",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "91561;91562;91563;91564;91565"
+  },
+  {
+    "formationid": 157,
+    "fname": "庞统",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "91571;91572;91573;91574;91575"
+  },
+  {
+    "formationid": 158,
+    "fname": "傅士仁",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "91581;91582;91583;91584;91585"
+  },
+  {
+    "formationid": 159,
+    "fname": "糜芳",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "91591;91592;91593;91594;91595"
+  },
+  {
+    "formationid": 160,
+    "fname": "廖化",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "91601;91602;91603;91604;91605"
+  },
+  {
+    "formationid": 161,
+    "fname": "魏延",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "91611;91612;91613;91614;91615"
+  },
+  {
+    "formationid": 162,
+    "fname": "刘禅",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "91621;91622;91623;91624;91625"
+  },
+  {
+    "formationid": 163,
+    "fname": "黄忠",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "91631;91632;91633;91634;91635"
+  },
+  {
+    "formationid": 164,
+    "fname": "赵云",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "91641;91642;91643;91644;91645"
+  },
+  {
+    "formationid": 165,
+    "fname": "张飞",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "91651;91652;91653;91654;91655"
+  },
+  {
+    "formationid": 166,
+    "fname": "关羽",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "91661;91662;91663;91664;91665"
+  },
+  {
+    "formationid": 167,
+    "fname": "诸葛亮",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "91671;91672;91673;91674;91675"
+  },
+  {
+    "formationid": 168,
+    "fname": "刘备",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "91681;91682;91683;91684;91685"
+  },
+  {
+    "formationid": 169,
+    "fname": "杨稷",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "101691;101692;101693;101694;101695"
+  },
+  {
+    "formationid": 170,
+    "fname": "李球",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "101701;101702;101703;101704;101705"
+  },
+  {
+    "formationid": 171,
+    "fname": "孟优",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "101711;101712;101713;101714;101715"
+  },
+  {
+    "formationid": 172,
+    "fname": "董铭末",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "101721;101722;101723;101724;101725"
+  },
+  {
+    "formationid": 173,
+    "fname": "忙长牙",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "101731;101732;101733;101734;101735"
+  },
+  {
+    "formationid": 174,
+    "fname": "沙季虎",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "101741;101742;101743;101744;101745"
+  },
+  {
+    "formationid": 175,
+    "fname": "兀力戈",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "101751;101752;101753;101754;101755"
+  },
+  {
+    "formationid": 176,
+    "fname": "鄂焕",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "101761;101762;101763;101764;101765"
+  },
+  {
+    "formationid": 177,
+    "fname": "朱褒",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "101771;101772;101773;101774;101775"
+  },
+  {
+    "formationid": 178,
+    "fname": "毛炅",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "101781;101782;101783;101784;101785"
+  },
+  {
+    "formationid": 179,
+    "fname": "朵思大王",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "101791;101792;101793;101794;101795"
+  },
+  {
+    "formationid": 180,
+    "fname": "阿会喃",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "101801;101802;101803;101804;101805"
+  },
+  {
+    "formationid": 181,
+    "fname": "兀突骨",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "101811;101812;101813;101814;101815"
+  },
+  {
+    "formationid": 182,
+    "fname": "董荼那",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "101821;101822;101823;101824;101825"
+  },
+  {
+    "formationid": 183,
+    "fname": "带来洞主",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "101831;101832;101833;101834;101835"
+  },
+  {
+    "formationid": 184,
+    "fname": "祝融",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "101841;101842;101843;101844;101845"
+  },
+  {
+    "formationid": 185,
+    "fname": "高定",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "101851;101852;101853;101854;101855"
+  },
+  {
+    "formationid": 186,
+    "fname": "雍闿",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "101861;101862;101863;101864;101865"
+  },
+  {
+    "formationid": 187,
+    "fname": "金环三结",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "101871;101872;101873;101874;101875"
+  },
+  {
+    "formationid": 188,
+    "fname": "木鹿大王",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "101881;101882;101883;101884;101885"
+  },
+  {
+    "formationid": 189,
+    "fname": "孟获",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "101891;101892;101893;101894;101895"
+  },
+  {
+    "formationid": 190,
+    "fname": "张横",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "111901;111902;111903;111904;111905"
+  },
+  {
+    "formationid": 191,
+    "fname": "尹赏",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "111911;111912;111913;111914;111915"
+  },
+  {
+    "formationid": 192,
+    "fname": "胡渊",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "111921;111922;111923;111924;111925"
+  },
+  {
+    "formationid": 193,
+    "fname": "戴陵",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "111931;111932;111933;111934;111935"
+  },
+  {
+    "formationid": 194,
+    "fname": "马岱",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "111941;111942;111943;111944;111945"
+  },
+  {
+    "formationid": 195,
+    "fname": "梁兴",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "111951;111952;111953;111954;111955"
+  },
+  {
+    "formationid": 196,
+    "fname": "王韬",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "111961;111962;111963;111964;111965"
+  },
+  {
+    "formationid": 197,
+    "fname": "牛辅",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "111971;111972;111973;111974;111975"
+  },
+  {
+    "formationid": 198,
+    "fname": "朱儶",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "111981;111982;111983;111984;111985"
+  },
+  {
+    "formationid": 199,
+    "fname": "马玩",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "111991;111992;111993;111994;111995"
+  },
+  {
+    "formationid": 200,
+    "fname": "梁绪",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "112001;112002;112003;112004;112005"
+  },
+  {
+    "formationid": 201,
+    "fname": "杨阜",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "112011;112012;112013;112014;112015"
+  },
+  {
+    "formationid": 202,
+    "fname": "丘本",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "112021;112022;112023;112024;112025"
+  },
+  {
+    "formationid": 203,
+    "fname": "韩德",
+    "law": 3,
+    "lawlevel": 1,
+    "heroid": "112031;112032;112033;112034;112035"
+  },
+  {
+    "formationid": 204,
+    "fname": "马休",
+    "law": 4,
+    "lawlevel": 1,
+    "heroid": "112041;112042;112043;112044;112045"
+  },
+  {
+    "formationid": 205,
+    "fname": "王双",
+    "law": 5,
+    "lawlevel": 1,
+    "heroid": "112051;112052;112053;112054;112055"
+  },
+  {
+    "formationid": 206,
+    "fname": "韩遂",
+    "law": 6,
+    "lawlevel": 1,
+    "heroid": "112061;112062;112063;112064;112065"
+  },
+  {
+    "formationid": 207,
+    "fname": "李堪",
+    "law": 7,
+    "lawlevel": 1,
+    "heroid": "112071;112072;112073;112074;112075"
+  },
+  {
+    "formationid": 208,
+    "fname": "庞德",
+    "law": 8,
+    "lawlevel": 1,
+    "heroid": "112081;112082;112083;112084;112085"
+  },
+  {
+    "formationid": 209,
+    "fname": "胡烈",
+    "law": 1,
+    "lawlevel": 1,
+    "heroid": "112091;112092;112093;112094;112095"
+  },
+  {
+    "formationid": 210,
+    "fname": "马超",
+    "law": 2,
+    "lawlevel": 1,
+    "heroid": "112101;112102;112103;112104;112105"
+  }
+]

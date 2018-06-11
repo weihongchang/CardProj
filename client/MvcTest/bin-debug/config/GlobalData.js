@@ -10,6 +10,10 @@ var GlobalData;
     GlobalData.myName = "dily";
     GlobalData.heroTemplate = [];
     GlobalData.itemTemplate = [];
+    GlobalData.dungeonTemplate = [];
+    GlobalData.customTemplate = [];
+    GlobalData.courseTemplate = [];
+    GlobalData.formationTemplate = [];
     /**
      * 根据heroID获取模板
      */

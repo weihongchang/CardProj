@@ -108,6 +108,30 @@ message SCItemOne {
 	required CSItem itemData = 1;
 }
 
+//调整阵型
+// messageId:113
+message CSFormation {
+	repeated int32 formationID = 1;
+}
+
+//下发阵型
+// messageId:114
+message SCFormation {
+	repeated int32 formationID = 1;
+}
+
+
+//战斗
+// messageId:115
+message CSFight {
+	required int32 courseID = 1;
+}
+
+//下发战斗结果
+// messageId:114
+message SCFight {
+	repeated int32 formationID = 1;
+}
 
 
 
