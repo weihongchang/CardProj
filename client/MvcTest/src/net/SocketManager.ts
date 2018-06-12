@@ -81,22 +81,6 @@ module SocketManager {
         
         this.sock.flush();
     }
-
-
-     export function sendBuyHero(btype:number): void {
-        //创建user_login_class
-        var buyhero = Global.getMessage("CSBuyHero");
-        
-        //创建一条消息
-        var user_login = new buyhero({
-            "bType": btype
-        });
-        
-        //序列化
-        var bytes = user_login.toArrayBuffer();
-
-        SocketManager.sendMessage(103,1,bytes)  
-    }
 }
 
 

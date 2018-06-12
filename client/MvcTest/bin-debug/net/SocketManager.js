@@ -75,17 +75,5 @@ var SocketManager;
         this.sock.flush();
     }
     SocketManager.sendMessage = sendMessage;
-    function sendBuyHero(btype) {
-        //创建user_login_class
-        var buyhero = Global.getMessage("CSBuyHero");
-        //创建一条消息
-        var user_login = new buyhero({
-            "bType": btype
-        });
-        //序列化
-        var bytes = user_login.toArrayBuffer();
-        SocketManager.sendMessage(103, 1, bytes);
-    }
-    SocketManager.sendBuyHero = sendBuyHero;
 })(SocketManager || (SocketManager = {}));
 //# sourceMappingURL=SocketManager.js.map

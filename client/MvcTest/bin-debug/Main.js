@@ -353,7 +353,7 @@ var Main = (function (_super) {
     Main.prototype.onButton1Click = function (e) {
         if (SocketManager.connState) {
             if (this.nameLabel.text != "") {
-                UserInfoRequest.sendUserInfo(this.nameLabel.text, "123456");
+                MessageSend.sendUserInfo(this.nameLabel.text, "123456");
                 GameLayerManager.gameLayer().mainLayer.removeChild(this.imgBG);
             }
             else {

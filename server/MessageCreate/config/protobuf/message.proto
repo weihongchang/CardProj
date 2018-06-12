@@ -128,9 +128,27 @@ message CSFight {
 }
 
 //下发战斗结果
-// messageId:114
+// messageId:116
 message SCFight {
-	repeated int32 formationID = 1;
+	required int32 result 			= 1;
+	required int32 hpSelf			= 2;
+	required int32 hpTarget			= 3;
+	repeated CSFightData combatData = 4;
+}
+
+//下发战斗结果
+// messageId:117
+message CSFightData {
+	required int32 HeroIdAtk		=1;
+	required string heroIdTarget	=2;
+	required int32 atkType			=3;
+	required string atkEffect		=4;
+	required string hp				=5;
+	required string die				=6;
+	required int32 sleepTime		=7;
+	required int32 skillanu			=8;
+	required string skillpng		=9;
+	required int32 skillrange		=10;
 }
 
 

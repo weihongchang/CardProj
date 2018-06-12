@@ -305,7 +305,7 @@ private imgBG :egret.Sprite;
         {
             if(this.nameLabel.text != "")
             {
-                UserInfoRequest.sendUserInfo(this.nameLabel.text,"123456");
+                MessageSend.sendUserInfo(this.nameLabel.text,"123456");
                 GameLayerManager.gameLayer().mainLayer.removeChild(this.imgBG);
             }
             else

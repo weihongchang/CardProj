@@ -56,4 +56,4 @@ var game;
     game.Processor_SCBuyHero = Processor_SCBuyHero;
     __reflect(Processor_SCBuyHero.prototype, "game.Processor_SCBuyHero", ["puremvc.ICommand", "puremvc.INotifier"]);
 })(game || (game = {}));
-//# sourceMappingURL=Processor_SCBuyHero.1.js.map
+//# sourceMappingURL=Processor_SCBuyHero.js.map

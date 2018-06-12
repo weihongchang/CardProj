@@ -2,13 +2,22 @@ package com.model.combat;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+import java.util.Vector;
 
+import com.core.Message.Model.Message;
+import com.core.Message.Model.Message.CSFightData;
 import com.model.dungeon.CourseTemplate;
 import com.model.dungeon.DungeonManager;
 import com.model.formation.Formation;
 import com.model.formation.FormationManager;
 import com.model.formation.FormationTemplate;
+import com.model.item.ItemManager;
+import com.model.item.ItemTemplate;
 import com.model.player.Player;
+import com.model.skill.SkillManager;
+import com.model.skill.SkillTemplate;
+import com.model.skill.SkillType;
 
 public class CombatManager {
 	private static volatile CombatManager sInst = null;
@@ -30,6 +39,8 @@ public class CombatManager {
 		return inst;
 	}
 	
+	
+	private static int  stepTime = 1;
 	
 	
 	/**
@@ -78,31 +89,31 @@ public class CombatManager {
 	    	}
 	    	
 	    		
-	    		List<UST_SOLDIERLIST_COMBAT_NEWATTACK> soldierList = new ArrayList<UST_SOLDIERLIST_COMBAT_NEWATTACK>();
-	    		List<UST_HERODETAILLIST_COMBAT_NEWATTACK> heroDetailList = new ArrayList<UST_HERODETAILLIST_COMBAT_NEWATTACK>();
+//	    		List<UST_SOLDIERLIST_COMBAT_NEWATTACK> soldierList = new ArrayList<UST_SOLDIERLIST_COMBAT_NEWATTACK>();
+//	    		List<UST_HERODETAILLIST_COMBAT_NEWATTACK> heroDetailList = new ArrayList<UST_HERODETAILLIST_COMBAT_NEWATTACK>();
 	    		
 	    		List<CombatNodeData> combatNodeList = null;
 	    		
-    	    	PvpPlayerData pvpData = null;
+    	    	
     	    	//战斗类型.0pve;1pvp
     	    	int pvptype = 0;
-	    		pvpData = new PvpPlayerData(df, fightNum);
-    	    	
-    	    	if( pvpData != null && pvpData.getFormation() != null )
-    	    	{
-    	    		combatNodeList = CombatManager.getInstance().getAtkHeroAndInfo(pvptype, thePlayer, targetPlayer, soldierList, heroDetailList,pvpData);
-    	    	}
-    	    	else
-				{
-    	    		//没有对手直接胜利
-				}
+//    	    	PvpPlayerData pvpData = new PvpPlayerData(df, fightNum);
+//    	    	
+//    	    	if( pvpData != null && pvpData.getFormation() != null )
+//    	    	{
+//    	    		combatNodeList = CombatManager.getInstance().getAtkHeroAndInfo(pvptype, thePlayer, targetPlayer, soldierList, heroDetailList,pvpData);
+//    	    	}
+//    	    	else
+//				{
+//    	    		//没有对手直接胜利
+//				}
 	    	        
 	    	        
     	        int resultValue = 0;
-    	        cResult result = CombatService.getInstance().getNewResult();
+    	        cResult result = CombatManager.getInstance().getNewResult();
     	        //计算战斗过程
-    	        List<UST_ATKLOG_COMBAT_NEWATTACK> atkLog = 
-    	        	CombatService.getInstance().getAtkLogPVP(arenaType, combatNodeList, pvpData, thePlayer, targetPlayer, result);
+    	        List<CSFightData.Builder> atkLog = 
+    	        	CombatManager.getInstance().getAtkLogPVP( combatNodeList,  thePlayer, targetPlayer, result);
     	        
     	        if( result.getValue() == 1 )
     	        {
@@ -113,78 +124,27 @@ public class CombatManager {
     	        	resultValue = 1;
     	        }
     	        
-
-	    	        
-	    	        
-    	        Result checkResult = CombatService.getInstance().FightResultHandle(thePlayer, resultValue,arenaType , userid);
-    		    
-    	        int maxstart = 5;
-    	        int currentstart =3;
-    	        int attackType=0;
-    	        int dungeonid=0;
-    	        int customid=0;
-    	        int courseid=0;
-    	        int exp=checkResult.exp;
-    	        int coin=checkResult.coin;
-    	        int gold=100;
-    	        
-    	        int heroExp=checkResult.heroExp;
-    	        int jungong=checkResult.jungong;
-    	        int reputation=0;
-    	        int hun=0;
-    	        
-    	        int rewarditemIcon = 0;
-		        String rewarditemName ="";
-		        int rewarditemtype=0;
-		        int rewarditemlevel=0;
-		        int rewarditemtrait=0;
-		        int rewarditemnum=0;
-		        int rewarditematk=0;
-		        int rewarditemdef=0;
-		        int rewarditemhp=0;
-		        int rewarditemfightAtk=0;
-		        int rewarditemfightDef=0;
-		        String rewarditemDesc="";
-		        if( checkResult.item > 0  && checkResult.itemnum>0 )
-		        {
-		        	ItemConfig ic = ItemDict.getInstance().getItemConfig(checkResult.item);
-					if(ic != null)
-					{
-						rewarditemIcon = ic.icon;
-				        rewarditemName =ic.itemname;
-				        rewarditemtype=ic.itemttype;
-				        rewarditemtrait=ic.trait;
-				        rewarditemnum=checkResult.itemnum;
-				        rewarditematk=ic.atk;
-				        rewarditemdef=ic.def;
-				        rewarditemhp=ic.hp;
-				        rewarditemfightAtk=ic.fightAtk;
-				        rewarditemfightDef=ic.fightDef;
-				        
-				        if( ic.description.isEmpty() )
-				        	rewarditemDesc=ic.getPropertyDesc();
-				        else
-				        	rewarditemDesc=ic.description;
-					}
-		        }
+    	        Result checkResult = CombatManager.getInstance().FightResultHandle(thePlayer, resultValue,combatType , userid);
 		        
-		        CombatPacketHandler.sendReplyPacket_combat_newattack(iconSelf, iconTarget, sceneAnuId, scenePngId, HpSelf, HpTarget,
-						soldierList, heroDetailList, atkLog, resultValue, maxstart, currentstart, 
-						attackType, dungeonid, customid, courseid, exp, coin, gold, 
-						rewarditemIcon,rewarditemName,rewarditemtype,rewarditemlevel,
-						rewarditemtrait,rewarditemnum,rewarditematk,rewarditemdef,rewarditemhp,
-						rewarditemfightAtk,rewarditemfightDef,rewarditemDesc, 
-						heroExp, jungong, reputation, hun, thePlayer);
+		        Message.SCFight.Builder msg = Message.SCFight.newBuilder();
+		        msg.setHpSelf(HpSelf);
+		        msg.setHpTarget(HpTarget);
+		        msg.setResult(resultValue);
+		        for (int i = 0; i < atkLog.size(); i++) {
+		        	msg.addCombatData(atkLog.get( i ));
+				}
+		        
+		        thePlayer.sendMessage(msg.build());
 		        
 
-    		    
-    		    int Fightid = CombatService.getInstance().getFightingMaxID();
-				FightingData fd = new FightingData(Fightid, iconSelf, iconTarget, sceneAnuId, scenePngId, 
-						selfName,targetName,HpSelf, HpTarget, resultValue, soldierList, heroDetailList, atkLog);
-				CombatService.getInstance().addFightingData(fd);
+    		    //战斗录像
+//    		    int Fightid = CombatService.getInstance().getFightingMaxID();
+//				FightingData fd = new FightingData(Fightid, iconSelf, iconTarget, sceneAnuId, scenePngId, 
+//						selfName,targetName,HpSelf, HpTarget, resultValue, soldierList, heroDetailList, atkLog);
+//				CombatService.getInstance().addFightingData(fd);
 				
     		    //战斗处理
-				combatResultManage(resultValue, arenaType, userid, thePlayer);
+				combatResultManage(resultValue, combatType, userid, thePlayer);
 	    	}
 		}
 		catch (Exception e) {
@@ -192,6 +152,25 @@ public class CombatManager {
 			System.out.println(e.getMessage());
 		}
 	    return 0;
+	}
+	
+	/**
+	 * 战斗结果处理
+	 */
+	public void combatResultManage(int resultValue, int arenaType,int userid,Player thePlayer)
+	{
+
+		if( resultValue == 0 )
+		{
+			//胜利处理
+			if( arenaType == 4 )
+			{}
+		}
+		else
+		{
+			//失败
+			
+		}
 	}
 	
 	
@@ -202,223 +181,225 @@ public class CombatManager {
 	 * @param targetPlayer	被攻击者
 	 * @return
 	 */
-	public List<CombatNodeData> getAtkHeroAndInfo(int type,Player thePlayer,Player targetPlayer,
-			List<UST_SOLDIERLIST_COMBAT_NEWATTACK> soldierList,
-			List<UST_HERODETAILLIST_COMBAT_NEWATTACK> uhList,
-			PvpPlayerData pvpData )
+	public List<CombatNodeData> getAtkHeroAndInfo(int type,Player thePlayer,Player targetPlayer//,
+//			List<UST_SOLDIERLIST_COMBAT_NEWATTACK> soldierList,
+//			List<UST_HERODETAILLIST_COMBAT_NEWATTACK> uhList,
+//			PvpPlayerData pvpData 
+			)
 	{
-		List<CombatNodeData> combatNodeList = new ArrayList<CombatNodeData>();
-		for( int i =0 ;i<18;i++ )
-		{
-			combatNodeList.add( new CombatNodeData());
-		}
-		// 己方阵型
-		Formation formation = thePlayer.getHeroFormation().get(0);
-		for(int i = 0;i < formation.getFormation().length;i++)
-		{
-			UST_SOLDIERLIST_COMBAT_NEWATTACK us = new UST_SOLDIERLIST_COMBAT_NEWATTACK();
-			// index
-			us.boxIndex = i;
-			// 英雄id
-			us.heroID = formation.getFormation()[i];
-			
-			combatNodeList.get( i ).boxIndex = i;
-			combatNodeList.get( i ).heroID = us.heroID;
-			
-			soldierList.add(us);
-		}
-
-		FormationNew formationTarget = pvpData.getFormation();
-		// 对方阵型
-		for(int i = 9;i < formationTarget.getFormation().length + 9;i++)
-		{
-			UST_SOLDIERLIST_COMBAT_NEWATTACK us = new UST_SOLDIERLIST_COMBAT_NEWATTACK();
-			// index
-			us.boxIndex = i;
-			// 英雄id
-			us.heroID = formationTarget.getFormation()[i - 9];
-			
-			combatNodeList.get( i ).boxIndex = i;
-			combatNodeList.get( i ).heroID = us.heroID;
-			
-			soldierList.add(us);
-		}
-
-		// 英雄数据
-		for(int i = 0;i < soldierList.size();i++)
-		{
-			UST_SOLDIERLIST_COMBAT_NEWATTACK us = soldierList.get(i);
-			if(us.heroID > 0)
-			{
-				HeroLevelConfig hero = null;
-				if(us.boxIndex < 9)
-				{
-					Hero h = thePlayer.getHero(us.heroID);
-					if(h != null)
-					{
-						hero = HeroDict.getInstance().getHeroLevelConfig(h.getHeroConfigID(), 1);
-						if(hero != null)
-						{
-							UST_HERODETAILLIST_COMBAT_NEWATTACK uh = new UST_HERODETAILLIST_COMBAT_NEWATTACK();
-							uh.id = us.boxIndex;
-							uh.name = hero.getName();
-							uh.hp = h.getHp();
-							uh.AnuId = hero.getAnuId();
-							uh.PngId = hero.getPngId();
-							uh.iconId = hero.getIconId();
-							uh.bigiconId = hero.getBigheroiconid();
-							uh.modelWidth = hero.getPngwidth();
-							uh.modelHeight = hero.getPngheight();
-							uh.attackframe = hero.getAttackframe();
-							uh.hFlyAnuId = hero.gethFlyAnuId();
-							uh.hFlyPngId = hero.gethFlyPngId();
-							uh.hFlyPngX = hero.gethFlyPngX();
-							uh.hFlyPngY = hero.gethFlyPngY();
-							uh.hFlyHeight = hero.gethFlyHeight();
-							uh.hFlySpeed = hero.gethFlySpeed();
-							uh.hFlyAngle = hero.gethFlyAngle();
-							uh.pngHeight = hero.getPngheight();
-							uh.pngWidth = hero.getPngwidth();
-							uh.heroColor = hero.getColor().getValue();
-							uh.soldierNum = hero.getSoldiernum();
-							//战斗用的数据
-							combatNodeList.get( i ).name = hero.getName();
-							combatNodeList.get( i ).AnuId = hero.getAnuId();
-							combatNodeList.get( i ).PngId = hero.getPngId();
-							combatNodeList.get( i ).iconId = hero.getIconId();
-							combatNodeList.get( i ).bigiconId = hero.getBigheroiconid();
-							combatNodeList.get( i ).modelWidth = hero.getPngwidth();
-							combatNodeList.get( i ).modelHeight = hero.getPngheight();
-							combatNodeList.get( i ).attackframe = hero.getAttackframe();
-							combatNodeList.get( i ).hFlyAnuId = hero.gethFlyAnuId();
-							combatNodeList.get( i ).hFlyPngId = hero.gethFlyPngId();
-							combatNodeList.get( i ).hFlyPngX = hero.gethFlyPngX();
-							combatNodeList.get( i ).hFlyPngY = hero.gethFlyPngY();
-							combatNodeList.get( i ).hFlyHeight = hero.gethFlyHeight();
-							combatNodeList.get( i ).hFlySpeed = hero.gethFlySpeed();
-							combatNodeList.get( i ).hFlyAngle = hero.gethFlyAngle();
-							combatNodeList.get( i ).pngHeight = hero.getPngheight();
-							combatNodeList.get( i ).pngWidth = hero.getPngwidth();
-							combatNodeList.get( i ).heroColor = hero.getColor().getValue();
-							combatNodeList.get( i ).soldierNum = hero.getSoldiernum();
-							
-							combatNodeList.get( i ).hp = h.getHp();
-							combatNodeList.get( i ).def = h.getDef();
-							combatNodeList.get( i ).atk = h.getAtk();
-							combatNodeList.get( i ).fightAtk = h.getFightAtk();
-							combatNodeList.get( i ).fightDef = h.getFightDef();
-							combatNodeList.get( i ).skillID = h.getSkill().getSkillID();
-							combatNodeList.get( i ).herovio = hero.getHerovio();	
-							combatNodeList.get( i ).herodes = hero.getHerodes();	
-							combatNodeList.get( i ).herores = hero.getHerores();	
-							combatNodeList.get( i ).heroten = hero.getHeroten();	
-							combatNodeList.get( i ).herodod = hero.getHerodod();	
-							combatNodeList.get( i ).herotar = hero.getHerotar();	
-							combatNodeList.get( i ).heroang = hero.getHeroang();
-
-							uhList.add(uh);
-						}
-					}
-				}
-				else
-				{
-					UST_HERODETAILLIST_COMBAT_NEWATTACK uh = new UST_HERODETAILLIST_COMBAT_NEWATTACK();
-					HeroLevelExpConfig heroLevel = null;
-					HeroData hd = pvpData.getHeroData(us.heroID);
-					if( hd != null )
-					{
-						if(type > 0)
-						{// pvp
-							hero = HeroDict.getInstance().getHeroLevelConfig(hd.heroType, 1);
-							uh.hp = hd.hp;
-							combatNodeList.get( i ).hp = hd.hp;
-							combatNodeList.get( i ).def = hd.def;
-							combatNodeList.get( i ).atk = hd.atk;
-							combatNodeList.get( i ).fightAtk = hd.fightAtk;
-							combatNodeList.get( i ).fightDef = hd.fightDef;
-							combatNodeList.get( i ).skillID = hd.skillID;
-						}
-						else
-						{
-							//pve
-							int level = 1;
-							hero = HeroDict.getInstance().getMonsterConfig(hd.heroType);
-							if(hero != null)
-							{
-								level = hero.getMonsterlevel();
-								heroLevel = HeroLevelExpDict.getInstance().getHeroLevelExp(level);
-								if( heroLevel != null )
-								{
-									uh.hp = heroLevel.getHerohp1();
-									combatNodeList.get( i ).hp = heroLevel.getHerohp1();
-									combatNodeList.get( i ).def = heroLevel.getHerodef1();
-									combatNodeList.get( i ).atk = heroLevel.getHeroatk1();
-									combatNodeList.get( i ).fightAtk = heroLevel.getHeroFightAtk();
-									combatNodeList.get( i ).fightDef = heroLevel.getHeroFightDef();
-									combatNodeList.get( i ).skillID =hero.getSkillId();
-								}
-							}
-						}
-					}
-					if(hero != null)
-					{
-						uh.id = us.boxIndex;
-						uh.name = hero.getName();
-						uh.AnuId = hero.getAnuId();
-						uh.PngId = hero.getPngId();
-						uh.iconId = hero.getIconId();
-						uh.bigiconId = hero.getBigheroiconid();
-						uh.modelWidth = hero.getPngwidth();
-						uh.modelHeight = hero.getPngheight();
-						uh.attackframe = hero.getAttackframe();
-						uh.hFlyAnuId = hero.gethFlyAnuId();
-						uh.hFlyPngId = hero.gethFlyPngId();
-						uh.hFlyPngX = hero.gethFlyPngX();
-						uh.hFlyPngY = hero.gethFlyPngY();
-						uh.hFlyHeight = hero.gethFlyHeight();
-						uh.hFlySpeed = hero.gethFlySpeed();
-						uh.hFlyAngle = hero.gethFlyAngle();
-						uh.pngHeight = hero.getPngheight();
-						uh.pngWidth = hero.getPngwidth();
-						uh.heroColor = hero.getColor().getValue();
-						uh.soldierNum = hero.getSoldiernum();
-						
-						//战斗用的数据
-						combatNodeList.get( i ).name = hero.getName();
-						combatNodeList.get( i ).AnuId = hero.getAnuId();
-						combatNodeList.get( i ).PngId = hero.getPngId();
-						combatNodeList.get( i ).iconId = hero.getIconId();
-						combatNodeList.get( i ).bigiconId = hero.getBigheroiconid();
-						combatNodeList.get( i ).modelWidth = hero.getPngwidth();
-						combatNodeList.get( i ).modelHeight = hero.getPngheight();
-						combatNodeList.get( i ).attackframe = hero.getAttackframe();
-						combatNodeList.get( i ).hFlyAnuId = hero.gethFlyAnuId();
-						combatNodeList.get( i ).hFlyPngId = hero.gethFlyPngId();
-						combatNodeList.get( i ).hFlyPngX = hero.gethFlyPngX();
-						combatNodeList.get( i ).hFlyPngY = hero.gethFlyPngY();
-						combatNodeList.get( i ).hFlyHeight = hero.gethFlyHeight();
-						combatNodeList.get( i ).hFlySpeed = hero.gethFlySpeed();
-						combatNodeList.get( i ).hFlyAngle = hero.gethFlyAngle();
-						combatNodeList.get( i ).pngHeight = hero.getPngheight();
-						combatNodeList.get( i ).pngWidth = hero.getPngwidth();
-						combatNodeList.get( i ).heroColor = hero.getColor().getValue();
-						combatNodeList.get( i ).soldierNum = hero.getSoldiernum();
-						
-						combatNodeList.get( i ).herovio = hero.getHerovio();	
-						combatNodeList.get( i ).herodes = hero.getHerodes();	
-						combatNodeList.get( i ).herores = hero.getHerores();	
-						combatNodeList.get( i ).heroten = hero.getHeroten();	
-						combatNodeList.get( i ).herodod = hero.getHerodod();	
-						combatNodeList.get( i ).herotar = hero.getHerotar();	
-						combatNodeList.get( i ).heroang = hero.getHeroang();
-						
-						uhList.add(uh);
-					}
-				}
-			}
-
-		}
-		return combatNodeList;
+		return null;
+//		List<CombatNodeData> combatNodeList = new ArrayList<CombatNodeData>();
+//		for( int i =0 ;i<18;i++ )
+//		{
+//			combatNodeList.add( new CombatNodeData());
+//		}
+//		// 己方阵型
+//		Formation formation = thePlayer.getHeroFormation().get(0);
+//		for(int i = 0;i < formation.getFormation().length;i++)
+//		{
+//			UST_SOLDIERLIST_COMBAT_NEWATTACK us = new UST_SOLDIERLIST_COMBAT_NEWATTACK();
+//			// index
+//			us.boxIndex = i;
+//			// 英雄id
+//			us.heroID = formation.getFormation()[i];
+//			
+//			combatNodeList.get( i ).boxIndex = i;
+//			combatNodeList.get( i ).heroID = us.heroID;
+//			
+//			soldierList.add(us);
+//		}
+//
+//		FormationNew formationTarget = pvpData.getFormation();
+//		// 对方阵型
+//		for(int i = 9;i < formationTarget.getFormation().length + 9;i++)
+//		{
+//			UST_SOLDIERLIST_COMBAT_NEWATTACK us = new UST_SOLDIERLIST_COMBAT_NEWATTACK();
+//			// index
+//			us.boxIndex = i;
+//			// 英雄id
+//			us.heroID = formationTarget.getFormation()[i - 9];
+//			
+//			combatNodeList.get( i ).boxIndex = i;
+//			combatNodeList.get( i ).heroID = us.heroID;
+//			
+//			soldierList.add(us);
+//		}
+//
+//		// 英雄数据
+//		for(int i = 0;i < soldierList.size();i++)
+//		{
+//			UST_SOLDIERLIST_COMBAT_NEWATTACK us = soldierList.get(i);
+//			if(us.heroID > 0)
+//			{
+//				HeroLevelConfig hero = null;
+//				if(us.boxIndex < 9)
+//				{
+//					Hero h = thePlayer.getHero(us.heroID);
+//					if(h != null)
+//					{
+//						hero = HeroDict.getInstance().getHeroLevelConfig(h.getHeroConfigID(), 1);
+//						if(hero != null)
+//						{
+//							UST_HERODETAILLIST_COMBAT_NEWATTACK uh = new UST_HERODETAILLIST_COMBAT_NEWATTACK();
+//							uh.id = us.boxIndex;
+//							uh.name = hero.getName();
+//							uh.hp = h.getHp();
+//							uh.AnuId = hero.getAnuId();
+//							uh.PngId = hero.getPngId();
+//							uh.iconId = hero.getIconId();
+//							uh.bigiconId = hero.getBigheroiconid();
+//							uh.modelWidth = hero.getPngwidth();
+//							uh.modelHeight = hero.getPngheight();
+//							uh.attackframe = hero.getAttackframe();
+//							uh.hFlyAnuId = hero.gethFlyAnuId();
+//							uh.hFlyPngId = hero.gethFlyPngId();
+//							uh.hFlyPngX = hero.gethFlyPngX();
+//							uh.hFlyPngY = hero.gethFlyPngY();
+//							uh.hFlyHeight = hero.gethFlyHeight();
+//							uh.hFlySpeed = hero.gethFlySpeed();
+//							uh.hFlyAngle = hero.gethFlyAngle();
+//							uh.pngHeight = hero.getPngheight();
+//							uh.pngWidth = hero.getPngwidth();
+//							uh.heroColor = hero.getColor().getValue();
+//							uh.soldierNum = hero.getSoldiernum();
+//							//战斗用的数据
+//							combatNodeList.get( i ).name = hero.getName();
+//							combatNodeList.get( i ).AnuId = hero.getAnuId();
+//							combatNodeList.get( i ).PngId = hero.getPngId();
+//							combatNodeList.get( i ).iconId = hero.getIconId();
+//							combatNodeList.get( i ).bigiconId = hero.getBigheroiconid();
+//							combatNodeList.get( i ).modelWidth = hero.getPngwidth();
+//							combatNodeList.get( i ).modelHeight = hero.getPngheight();
+//							combatNodeList.get( i ).attackframe = hero.getAttackframe();
+//							combatNodeList.get( i ).hFlyAnuId = hero.gethFlyAnuId();
+//							combatNodeList.get( i ).hFlyPngId = hero.gethFlyPngId();
+//							combatNodeList.get( i ).hFlyPngX = hero.gethFlyPngX();
+//							combatNodeList.get( i ).hFlyPngY = hero.gethFlyPngY();
+//							combatNodeList.get( i ).hFlyHeight = hero.gethFlyHeight();
+//							combatNodeList.get( i ).hFlySpeed = hero.gethFlySpeed();
+//							combatNodeList.get( i ).hFlyAngle = hero.gethFlyAngle();
+//							combatNodeList.get( i ).pngHeight = hero.getPngheight();
+//							combatNodeList.get( i ).pngWidth = hero.getPngwidth();
+//							combatNodeList.get( i ).heroColor = hero.getColor().getValue();
+//							combatNodeList.get( i ).soldierNum = hero.getSoldiernum();
+//							
+//							combatNodeList.get( i ).hp = h.getHp();
+//							combatNodeList.get( i ).def = h.getDef();
+//							combatNodeList.get( i ).atk = h.getAtk();
+//							combatNodeList.get( i ).fightAtk = h.getFightAtk();
+//							combatNodeList.get( i ).fightDef = h.getFightDef();
+//							combatNodeList.get( i ).skillID = h.getSkill().getSkillID();
+//							combatNodeList.get( i ).herovio = hero.getHerovio();	
+//							combatNodeList.get( i ).herodes = hero.getHerodes();	
+//							combatNodeList.get( i ).herores = hero.getHerores();	
+//							combatNodeList.get( i ).heroten = hero.getHeroten();	
+//							combatNodeList.get( i ).herodod = hero.getHerodod();	
+//							combatNodeList.get( i ).herotar = hero.getHerotar();	
+//							combatNodeList.get( i ).heroang = hero.getHeroang();
+//
+//							uhList.add(uh);
+//						}
+//					}
+//				}
+//				else
+//				{
+//					UST_HERODETAILLIST_COMBAT_NEWATTACK uh = new UST_HERODETAILLIST_COMBAT_NEWATTACK();
+//					HeroLevelExpConfig heroLevel = null;
+//					HeroData hd = pvpData.getHeroData(us.heroID);
+//					if( hd != null )
+//					{
+//						if(type > 0)
+//						{// pvp
+//							hero = HeroDict.getInstance().getHeroLevelConfig(hd.heroType, 1);
+//							uh.hp = hd.hp;
+//							combatNodeList.get( i ).hp = hd.hp;
+//							combatNodeList.get( i ).def = hd.def;
+//							combatNodeList.get( i ).atk = hd.atk;
+//							combatNodeList.get( i ).fightAtk = hd.fightAtk;
+//							combatNodeList.get( i ).fightDef = hd.fightDef;
+//							combatNodeList.get( i ).skillID = hd.skillID;
+//						}
+//						else
+//						{
+//							//pve
+//							int level = 1;
+//							hero = HeroDict.getInstance().getMonsterConfig(hd.heroType);
+//							if(hero != null)
+//							{
+//								level = hero.getMonsterlevel();
+//								heroLevel = HeroLevelExpDict.getInstance().getHeroLevelExp(level);
+//								if( heroLevel != null )
+//								{
+//									uh.hp = heroLevel.getHerohp1();
+//									combatNodeList.get( i ).hp = heroLevel.getHerohp1();
+//									combatNodeList.get( i ).def = heroLevel.getHerodef1();
+//									combatNodeList.get( i ).atk = heroLevel.getHeroatk1();
+//									combatNodeList.get( i ).fightAtk = heroLevel.getHeroFightAtk();
+//									combatNodeList.get( i ).fightDef = heroLevel.getHeroFightDef();
+//									combatNodeList.get( i ).skillID =hero.getSkillId();
+//								}
+//							}
+//						}
+//					}
+//					if(hero != null)
+//					{
+//						uh.id = us.boxIndex;
+//						uh.name = hero.getName();
+//						uh.AnuId = hero.getAnuId();
+//						uh.PngId = hero.getPngId();
+//						uh.iconId = hero.getIconId();
+//						uh.bigiconId = hero.getBigheroiconid();
+//						uh.modelWidth = hero.getPngwidth();
+//						uh.modelHeight = hero.getPngheight();
+//						uh.attackframe = hero.getAttackframe();
+//						uh.hFlyAnuId = hero.gethFlyAnuId();
+//						uh.hFlyPngId = hero.gethFlyPngId();
+//						uh.hFlyPngX = hero.gethFlyPngX();
+//						uh.hFlyPngY = hero.gethFlyPngY();
+//						uh.hFlyHeight = hero.gethFlyHeight();
+//						uh.hFlySpeed = hero.gethFlySpeed();
+//						uh.hFlyAngle = hero.gethFlyAngle();
+//						uh.pngHeight = hero.getPngheight();
+//						uh.pngWidth = hero.getPngwidth();
+//						uh.heroColor = hero.getColor().getValue();
+//						uh.soldierNum = hero.getSoldiernum();
+//						
+//						//战斗用的数据
+//						combatNodeList.get( i ).name = hero.getName();
+//						combatNodeList.get( i ).AnuId = hero.getAnuId();
+//						combatNodeList.get( i ).PngId = hero.getPngId();
+//						combatNodeList.get( i ).iconId = hero.getIconId();
+//						combatNodeList.get( i ).bigiconId = hero.getBigheroiconid();
+//						combatNodeList.get( i ).modelWidth = hero.getPngwidth();
+//						combatNodeList.get( i ).modelHeight = hero.getPngheight();
+//						combatNodeList.get( i ).attackframe = hero.getAttackframe();
+//						combatNodeList.get( i ).hFlyAnuId = hero.gethFlyAnuId();
+//						combatNodeList.get( i ).hFlyPngId = hero.gethFlyPngId();
+//						combatNodeList.get( i ).hFlyPngX = hero.gethFlyPngX();
+//						combatNodeList.get( i ).hFlyPngY = hero.gethFlyPngY();
+//						combatNodeList.get( i ).hFlyHeight = hero.gethFlyHeight();
+//						combatNodeList.get( i ).hFlySpeed = hero.gethFlySpeed();
+//						combatNodeList.get( i ).hFlyAngle = hero.gethFlyAngle();
+//						combatNodeList.get( i ).pngHeight = hero.getPngheight();
+//						combatNodeList.get( i ).pngWidth = hero.getPngwidth();
+//						combatNodeList.get( i ).heroColor = hero.getColor().getValue();
+//						combatNodeList.get( i ).soldierNum = hero.getSoldiernum();
+//						
+//						combatNodeList.get( i ).herovio = hero.getHerovio();	
+//						combatNodeList.get( i ).herodes = hero.getHerodes();	
+//						combatNodeList.get( i ).herores = hero.getHerores();	
+//						combatNodeList.get( i ).heroten = hero.getHeroten();	
+//						combatNodeList.get( i ).herodod = hero.getHerodod();	
+//						combatNodeList.get( i ).herotar = hero.getHerotar();	
+//						combatNodeList.get( i ).heroang = hero.getHeroang();
+//						
+//						uhList.add(uh);
+//					}
+//				}
+//			}
+//
+//		}
+//		return combatNodeList;
 	}
 	
 
@@ -428,7 +409,7 @@ public class CombatManager {
 	 * @param targetPlayer	被攻击者
 	 * @return
 	 */
-	public List<UST_ATKLOG_COMBAT_NEWATTACK> getAtkLogPVP(int atkType,List<CombatNodeData> soldierList, PvpPlayerData pvpData,
+	public List<CSFightData.Builder> getAtkLogPVP(List<CombatNodeData> soldierList, 
 			Player thePlayer,Player targetPlayer,cResult cresult)
 	{
 //		if( thePlayer != null && targetPlayer != null )
@@ -460,7 +441,7 @@ public class CombatManager {
     			}
     		}
     		
-    		List<UST_ATKLOG_COMBAT_NEWATTACK> atkLog = new ArrayList<UST_ATKLOG_COMBAT_NEWATTACK>();
+    		List<CSFightData.Builder> atkLog = new ArrayList<CSFightData.Builder>();
     		
     		int result = 0;
     		int boutNum = 0;
@@ -509,43 +490,43 @@ public class CombatManager {
         								Random	rand = new Random();
         								
             							//第一回合
-            				    		UST_ATKLOG_COMBAT_NEWATTACK ua1 = new UST_ATKLOG_COMBAT_NEWATTACK();
+        								Message.CSFightData.Builder ua1 = Message.CSFightData.newBuilder();
 //            				    		ua1.boutNum = boutNum;
             				    		//攻击英雄index
-            				    		ua1.HeroIdAtk = atkStep;
+            				    		ua1.setHeroIdAtk( atkStep);
             				    		
             				    		//攻击类型；1普通攻击，2技能攻击，3反击
-            				    		ua1.atkType = 1;
+            				    		ua1.setAtkType(1);
             				    		
             				    		//被攻击英雄index
-            				    		ua1.heroIdTarget = "";
+            				    		ua1.setHeroIdTarget("");
             				    		//攻击效果；0,无效果,1暴击，2闪避
-            				    		ua1.atkEffect = "";
-            				    		ua1.hp = "";
-            				    		ua1.die="";
+            				    		ua1.setAtkEffect("");
+            				    		ua1.setHp("");
+            				    		ua1.setDie("");
             				    		
             				    		
 //            				    		int[][] hurt = new int[9][2];
             				    		//range 1.普通攻击，2技能攻击
             				    		int range = 1;//rand.nextInt(4)+1;
             				    		int nuqi = nuqilist.get(atkStep);
-            				    		SkillConfig skill = null;
+            				    		SkillTemplate skill = null;
             				    		if( nuqi >= 100 )
             				    		{
             				    			range = 2;
             				    			nuqilist.set(atkStep, 0);
             				    			//技能攻击
             				    			int skillID = atkHero.skillID;
-            				    			skill = SkillDict.getInstance().getSkillConfig(skillID);
+            				    			skill = SkillManager.getInstance().getSkillTemplate(skillID);
             				    		}
-            				    		ua1.skillrange = range;
+            				    		ua1.setSkillrange( range);
             				    		//左边是否被攻击
             				    		boolean isLeft = false;
             				    		boolean isGuwu = false;
-            				    		if( thePlayer.getQunxiongGuwu() >0 )
-            				    		{
-            				    			isGuwu = true;
-            				    		}
+//            				    		if( thePlayer.getQunxiongGuwu() >0 )
+//            				    		{
+//            				    			isGuwu = true;
+//            				    		}
             				    		int[][] hurt = attack(atkHero, range, targetStep, isLeft, soldierList, 
             				    				thePlayer, targetPlayer,hplist,isGuwu,nuqi);
             				    		
@@ -584,22 +565,24 @@ public class CombatManager {
                     				    		if( currentHp == 0 )
                     				    			die = 1;
                     				    		
-                    				    		ua1.heroIdTarget+=heroIdTarget+","+atkEffect+","+hp+","+die+","+newnuqi+",";
+                    				    		
+                    				    		String _hitarget = ua1.getHeroIdTarget()+heroIdTarget+","+atkEffect+","+hp+","+die+","+newnuqi+",";
+                    				    		ua1.setHeroIdTarget(_hitarget);
                     				    		
             				    			}
             				    		}
             				    		
             				    		//下次攻击时间,秒
-            				    		ua1.sleepTime = stepTime;
+            				    		ua1.setSleepTime(stepTime);
             				    		
-            				    		ua1.skillanu = 11;
-            				    		ua1.skillpng = "11";
+            				    		ua1.setSkillanu( 11);
+            				    		ua1.setSkillpng( "11");
 //            				    		ua1.skillNameAnu = 0;
 //            				    		ua1.skillNamePng="";
             				    		if( skill != null )
             				    		{
-            				    			ua1.skillanu = skill.getAnuID();
-                				    		ua1.skillpng = skill.getPngID();
+            				    			ua1.setSkillanu( Integer.parseInt( skill.skillanu ));
+                				    		ua1.setSkillpng( skill.skillpng);
 //                				    		ua1.skillNameAnu = skill.getSkillnameanu();
 //                				    		ua1.skillNamePng=skill.getSkillnamepng();
 //                				    		ua1.skillAttackStep = skill.getAtkframe();
@@ -654,26 +637,26 @@ public class CombatManager {
         								Random	rand = new Random();
         								
             							//第一回合
-            				    		UST_ATKLOG_COMBAT_NEWATTACK ua1 = new UST_ATKLOG_COMBAT_NEWATTACK();
+            				    		Message.CSFightData.Builder ua1 = Message.CSFightData.newBuilder();
 //            				    		ua1.boutNum = boutNum;
             				    		//攻击英雄index
-            				    		ua1.HeroIdAtk = defStep;
+            				    		ua1.setHeroIdAtk( defStep);
             				    		
             				    		
             				    		//攻击类型；1普通攻击，2技能攻击，3反击
-            				    		ua1.atkType = 1;
+            				    		ua1.setAtkType( 1);
             				    		
             				    		//被攻击英雄index
-            				    		ua1.heroIdTarget = "";
+            				    		ua1.setHeroIdTarget( "");
             				    		//攻击效果；0,无效果,1暴击，2闪避
-            				    		ua1.atkEffect = "";
-            				    		ua1.hp = "";
-            				    		ua1.die="";
+            				    		ua1.setAtkEffect("");
+            				    		ua1.setHp("");
+            				    		ua1.setDie("");
             				    		
             				    		//range 1.普通攻击，2技能攻击
             				    		int range = 1;//rand.nextInt(4)+1;
             				    		int nuqi = nuqilist.get(defStep);
-            				    		SkillConfig skill = null;
+            				    		SkillTemplate skill = null;
             				    		if( nuqi >= 100 )
             				    		{
             				    			range = 2;
@@ -681,19 +664,19 @@ public class CombatManager {
             				    			
             				    			//技能攻击
             				    			int skillID = atkHero.skillID;
-            				    			skill = SkillDict.getInstance().getSkillConfig(skillID);
+            				    			skill = SkillManager.getInstance().getSkillTemplate(skillID);
             				    		}
-            				    		ua1.skillrange = range;
+            				    		ua1.setSkillrange( range);
             				    		
             				    		//左边是否被攻击
             				    		boolean isLeft = true;
             				    		boolean isGuwu = false;
             				    		if( targetPlayer != null  )
             				    		{
-                				    		if( targetPlayer.getQunxiongGuwu() >0 )
-                				    		{
-                				    			isGuwu = true;
-                				    		}
+//                				    		if( targetPlayer.getQunxiongGuwu() >0 )
+//                				    		{
+//                				    			isGuwu = true;
+//                				    		}
             				    		}
             				    		int[][] hurt = attack(atkHero, range, targetStep, isLeft, soldierList,  thePlayer, targetPlayer,hplist,isGuwu,nuqi);
             				    		
@@ -732,26 +715,27 @@ public class CombatManager {
                     				    		if( currentHp == 0 )
                     				    			die = 1;
                     				    		
-                    				    		ua1.heroIdTarget+=heroIdTarget+","+atkEffect+","+hp+","+die+","+newnuqi+",";
+                    				    		String _hitarget = ua1.getHeroIdTarget()+heroIdTarget+","+atkEffect+","+hp+","+die+","+newnuqi+",";
+                    				    		ua1.setHeroIdTarget(_hitarget);
             				    			}
             				    		}
-            				    		
             				    		//下次攻击时间,秒
-            				    		ua1.sleepTime = stepTime;
+            				    		ua1.setSleepTime(stepTime);
             				    		
-            				    		ua1.skillanu = 11;
-            				    		ua1.skillpng = "11";
+            				    		ua1.setSkillanu( 11);
+            				    		ua1.setSkillpng( "11");
 //            				    		ua1.skillNameAnu = 0;
 //            				    		ua1.skillNamePng="";
             				    		if( skill != null )
             				    		{
-            				    			ua1.skillanu = skill.getAnuID();
-                				    		ua1.skillpng = skill.getPngID();
+            				    			ua1.setSkillanu( Integer.parseInt( skill.skillanu ));
+                				    		ua1.setSkillpng( skill.skillpng);
 //                				    		ua1.skillNameAnu = skill.getSkillnameanu();
 //                				    		ua1.skillNamePng=skill.getSkillnamepng();
 //                				    		ua1.skillAttackStep = skill.getAtkframe();
             				    		}
-//            				    		ua1.nuqi =  nuqilist.get(defStep);
+//            				    		ua1.nuqi =  nuqilist.get(atkStep);
+            				    		
             				    		atkLog.add(ua1);
         							}
         						}
@@ -768,5 +752,794 @@ public class CombatManager {
     		return atkLog;
 		}
 //		return null;
+	}
+	
+	/**
+	 * 是否有胜出者
+	 * @param hplist
+	 * @return
+	 */
+	private int isWinner( List<Integer> hplist )
+	{
+		int allHp = 0;
+		for( int i=0;i<9;i++ )
+		{
+			allHp += hplist.get(i );
+		}
+		if( allHp <= 0 )
+		{
+			return 2;
+		}
+		allHp = 0;
+		for( int i=9;i<18;i++ )
+		{
+			allHp+= hplist.get( i );
+		}
+		
+		if( allHp <=0 )
+		{
+			return 1;
+		}
+		
+		return 0;
+	}
+	
+	/**
+	 *
+	 * @param hplist
+	 * @param atkIndex
+	 * @return
+	 */
+	private int getAtkTargetIndex(List<Integer> hplist,int atkIndex)
+	{
+		if( atkIndex <9 )
+		{
+			for( int k=0;k<3;k++ )
+			{
+    			if( atkIndex == k || atkIndex == k+3 || atkIndex == k+6)
+    			{
+    				if( hplist.get(k+9) > 0 )
+    				{
+    					return k+9;
+    				}
+    				else if( hplist.get(k+12) > 0 )
+    				{
+    					return k+12;
+    				}
+    				else if( hplist.get(k+15) > 0 )
+    				{
+    					return k+15;
+    				}
+    				else
+    				{
+    					for( int i=9;i<18;i++ )
+    					{
+    						if( hplist.get(i) >0 )
+    						{
+    							return i;
+    						}
+    					}
+    				}
+    			}
+			}
+		}
+		else if( atkIndex >= 9 )
+		{
+			for( int k=0;k<3;k++ )
+			{
+    			if( atkIndex == k+9 || atkIndex == k+12 || atkIndex == k+15 )
+    			{
+    				if( hplist.get(k) > 0 )
+    				{
+    					return k;
+    				}
+    				else if( hplist.get(k+3) > 0 )
+    				{
+    					return k+3;
+    				}
+    				else if( hplist.get(k+6) > 0 )
+    				{
+    					return k+6;
+    				}
+    				else
+    				{
+    					for( int i=0;i<9;i++ )
+    					{
+    						if( hplist.get(i) >0 )
+    						{
+    							return i;
+    						}
+    					}
+    				}
+    			}
+			}
+		}
+		return -1;
+	}
+	
+	
+	/**
+	 * 攻击
+	 * @param atkHero
+	 * @param defHero
+	 * @param range
+	 * @param targetStep
+	 * @param isLeft 是否左边被攻击
+	 * @return
+	 * int[0] 攻击的英雄位置
+	 * int[1] 攻击效果
+	 * int[2] 攻击伤害
+	 */
+//	public int[][] attack(HeroLevelConfig atkHero,int range,int targetStep,boolean isLeft,
+//			List<UST_SOLDIERLIST_COMBAT_NEWATTACK> soldierList,Player player,Player targetPlayer,
+//			List<Integer> hplist,boolean isGuwu,int nuqi)
+//	{
+//		int[][] hurt = new int[9][3];
+//		int skillRange = 1;
+//		SkillTemplate skill = null;
+//		if( range == 2 )
+//		{
+//			//技能攻击
+//			int skillID = atkHero.getSkillId();
+//			skill = SkillManager.getInstance().getSkillTemplate(skillID);
+//			if( skill != null )
+//			{
+//				skillRange =  skill.getSkillType().getValue();
+//			}
+//		}
+//		
+//		if( skillRange == SkillType.skill_type_danti.getValue() )
+//		{
+////			int[0] 伤害
+////			int[1] 攻击效果
+//			if( hplist.get(targetStep) > 0 )
+//			{
+//    			HeroLevelConfig defHero = getHeroForIndex(soldierList, targetStep, player, targetPlayer);
+//    			if( defHero != null )
+//    			{
+//        			int[] atkHurt = hurt(atkHero, defHero,skill,isGuwu,nuqi);
+//        			hurt[0][0] = targetStep;
+//        			hurt[0][1] = atkHurt[1];
+//        			hurt[0][2] = atkHurt[0];
+//    			}
+//			}
+//			
+//		}
+//		else if( skillRange == SkillType.skill_type_heng.getValue() )
+//		{
+//			int[] index1 = new int[3];
+//			if( targetStep % 3 == 0)
+//			{
+//				//最上边一行
+//				if(!isLeft)
+//				{
+//					index1[0] = 9;
+//    				index1[1] = 12;
+//    				index1[2] = 15;
+//				}
+//				else
+//				{
+//					index1[0] = 0;
+//    				index1[1] = 3;
+//    				index1[2] = 6;
+//				}
+//			}
+//			else if( targetStep % 3 == 1 )
+//			{
+//				//中间行
+//				if(!isLeft)
+//				{
+//					index1[0] = 10;
+//    				index1[1] = 13;
+//    				index1[2] = 16;
+//				}
+//				else
+//				{
+//					index1[0] = 1;
+//    				index1[1] = 4;
+//    				index1[2] = 7;
+//				}
+//			}
+//			else if( targetStep % 3 == 2 )
+//			{
+//				//最下边行
+//				if(!isLeft)
+//				{
+//					index1[0] = 11;
+//    				index1[1] = 14;
+//    				index1[2] = 17;
+//				}
+//				else
+//				{
+//					index1[0] = 2;
+//    				index1[1] = 5;
+//    				index1[2] = 8;
+//				}
+//			}
+//			
+//			for( int i=0;i<3;i++ )
+//			{
+//				int heroIndex = index1[i];
+//				if( hplist.get(heroIndex) > 0 )
+//				{
+//    				HeroLevelConfig defHero = getHeroForIndex(soldierList, heroIndex, player, targetPlayer);
+//    				if( defHero != null )
+//    				{
+//        				int[] atkHurt = hurt(atkHero, defHero,skill,isGuwu,nuqi);
+//        				hurt[i][0] = heroIndex;
+//        				hurt[i][1] = atkHurt[1];
+//        				hurt[i][2] = atkHurt[0];
+//    				}
+//				}
+//			}
+//		}
+//		else if( skillRange == SkillType.skill_type_shu.getValue() )
+//		{
+//			int[] index1 = new int[3];
+//			index1[0] = targetStep;
+//			if( targetStep % 3 == 0)
+//			{
+//				//最上边一行
+//				index1[1] = targetStep + 1;
+//				index1[2] = targetStep + 2;
+//			}
+//			else if( targetStep % 3 == 1 )
+//			{
+//				//中间行
+//				index1[1] = targetStep - 1;
+//				index1[2] = targetStep + 1;
+//			}
+//			else if( targetStep % 3 == 2 )
+//			{
+//				//最下边行
+//				index1[1] = targetStep - 1;
+//				index1[2] = targetStep - 2;
+//			}
+//			
+//			for( int i=0;i<3;i++ )
+//			{
+//				int heroIndex = index1[i];
+//				if( hplist.get(heroIndex) > 0 )
+//				{
+//    				HeroLevelConfig defHero = getHeroForIndex(soldierList, heroIndex, player, targetPlayer);
+//    				if( defHero != null )
+//    				{
+//        				int[] atkHurt = hurt(atkHero, defHero,skill,isGuwu,nuqi);
+//        				hurt[i][0] = heroIndex;
+//        				hurt[i][1] = atkHurt[1];
+//        				hurt[i][2] = atkHurt[0];
+//    				}
+//				}
+//			}
+//		}
+//		else if( skillRange == SkillType.skill_type_all.getValue() )
+//		{
+//			if( !isLeft )
+//			{
+//				for( int i=9;i<18;i++ )
+//				{
+//					if( hplist.get(i) > 0 )
+//					{
+//    					HeroLevelConfig defHero = getHeroForIndex(soldierList, i, player, targetPlayer);
+//    					if( defHero != null )
+//    					{
+//            				int[] atkHurt = hurt(atkHero, defHero,skill,isGuwu,nuqi);
+//            				hurt[i-9][0] = i;
+//            				hurt[i-9][1] = atkHurt[1];
+//            				hurt[i-9][2] = atkHurt[0];
+//    					}
+//					}
+//				}
+//			}
+//			else
+//			{
+//				for( int i=0;i<9;i++ )
+//				{
+//					if( hplist.get(i) > 0 )
+//					{
+//    					HeroLevelConfig defHero = getHeroForIndex(soldierList, i, player, targetPlayer);
+//    					if( defHero != null )
+//    					{
+//            				int[] atkHurt = hurt(atkHero, defHero,skill,isGuwu,nuqi);
+//            				hurt[i][0] = i;
+//            				hurt[i][1] = atkHurt[1];
+//            				hurt[i][2] = atkHurt[0];
+//    					}
+//					}
+//				}
+//			}
+//		}
+//		return hurt;
+//	}
+	
+	
+	/**
+	 * 攻击
+	 * @param atkHero
+	 * @param defHero
+	 * @param range
+	 * @param targetStep
+	 * @param isLeft 是否左边被攻击
+	 * @return
+	 * int[0] 攻击的英雄位置
+	 * int[1] 攻击效果
+	 * int[2] 攻击伤害
+	 */
+	public int[][] attack(CombatNodeData atkHero,int range,int targetStep,boolean isLeft,
+			List<CombatNodeData> soldierList,Player player,Player targetPlayer,
+			List<Integer> hplist,boolean isGuwu,int nuqi)
+	{
+		int[][] hurt = new int[9][3];
+		int skillRange = 1;
+		SkillTemplate skill = null;
+		if( range == 2 )
+		{
+			//技能攻击
+			int skillID = atkHero.skillID;
+			skill = SkillManager.getInstance().getSkillTemplate(skillID);
+			if( skill != null )
+			{
+//				skillRange =  skill.getSkillType().getValue();
+			}
+		}
+		
+		if( skillRange == SkillType.skill_type_danti.getValue() )
+		{
+//			int[0] 伤害
+//			int[1] 攻击效果
+			if( hplist.get(targetStep) > 0 )
+			{
+//    			CombatNodeData defHero = getHeroForIndex(soldierList, targetStep, player, targetPlayer);
+    			CombatNodeData defHero = soldierList.get(targetStep);
+    			if( defHero != null )
+    			{
+        			int[] atkHurt = hurt(atkHero, defHero,skill,isGuwu,nuqi);
+        			hurt[0][0] = targetStep;
+        			hurt[0][1] = atkHurt[1];
+        			hurt[0][2] = atkHurt[0];
+    			}
+			}
+			
+		}
+		else if( skillRange == SkillType.skill_type_heng.getValue() )
+		{
+			int[] index1 = new int[3];
+			if( targetStep % 3 == 0)
+			{
+				//最上边一行
+				if(!isLeft)
+				{
+					index1[0] = 9;
+    				index1[1] = 12;
+    				index1[2] = 15;
+				}
+				else
+				{
+					index1[0] = 0;
+    				index1[1] = 3;
+    				index1[2] = 6;
+				}
+			}
+			else if( targetStep % 3 == 1 )
+			{
+				//中间行
+				if(!isLeft)
+				{
+					index1[0] = 10;
+    				index1[1] = 13;
+    				index1[2] = 16;
+				}
+				else
+				{
+					index1[0] = 1;
+    				index1[1] = 4;
+    				index1[2] = 7;
+				}
+			}
+			else if( targetStep % 3 == 2 )
+			{
+				//最下边行
+				if(!isLeft)
+				{
+					index1[0] = 11;
+    				index1[1] = 14;
+    				index1[2] = 17;
+				}
+				else
+				{
+					index1[0] = 2;
+    				index1[1] = 5;
+    				index1[2] = 8;
+				}
+			}
+			
+			for( int i=0;i<3;i++ )
+			{
+				int heroIndex = index1[i];
+				if( hplist.get(heroIndex) > 0 )
+				{
+//    				HeroLevelConfig defHero = getHeroForIndex(soldierList, heroIndex, player, targetPlayer);
+    				CombatNodeData defHero = soldierList.get(heroIndex);
+    				if( defHero != null )
+    				{
+        				int[] atkHurt = hurt(atkHero, defHero,skill,isGuwu,nuqi);
+        				hurt[i][0] = heroIndex;
+        				hurt[i][1] = atkHurt[1];
+        				hurt[i][2] = atkHurt[0];
+    				}
+				}
+			}
+		}
+		else if( skillRange == SkillType.skill_type_shu.getValue() )
+		{
+			int[] index1 = new int[3];
+			index1[0] = targetStep;
+			if( targetStep % 3 == 0)
+			{
+				//最上边一行
+				index1[1] = targetStep + 1;
+				index1[2] = targetStep + 2;
+			}
+			else if( targetStep % 3 == 1 )
+			{
+				//中间行
+				index1[1] = targetStep - 1;
+				index1[2] = targetStep + 1;
+			}
+			else if( targetStep % 3 == 2 )
+			{
+				//最下边行
+				index1[1] = targetStep - 1;
+				index1[2] = targetStep - 2;
+			}
+			
+			for( int i=0;i<3;i++ )
+			{
+				int heroIndex = index1[i];
+				if( hplist.get(heroIndex) > 0 )
+				{
+//    				HeroLevelConfig defHero = getHeroForIndex(soldierList, heroIndex, player, targetPlayer);
+					CombatNodeData defHero = soldierList.get(heroIndex);
+    				if( defHero != null )
+    				{
+        				int[] atkHurt = hurt(atkHero, defHero,skill,isGuwu,nuqi);
+        				hurt[i][0] = heroIndex;
+        				hurt[i][1] = atkHurt[1];
+        				hurt[i][2] = atkHurt[0];
+    				}
+				}
+			}
+		}
+		else if( skillRange == SkillType.skill_type_all.getValue() )
+		{
+			if( !isLeft )
+			{
+				for( int i=9;i<18;i++ )
+				{
+					if( hplist.get(i) > 0 )
+					{
+//    					HeroLevelConfig defHero = getHeroForIndex(soldierList, i, player, targetPlayer);
+    					CombatNodeData defHero = soldierList.get(i);
+    					if( defHero != null )
+    					{
+            				int[] atkHurt = hurt(atkHero, defHero,skill,isGuwu,nuqi);
+            				hurt[i-9][0] = i;
+            				hurt[i-9][1] = atkHurt[1];
+            				hurt[i-9][2] = atkHurt[0];
+    					}
+					}
+				}
+			}
+			else
+			{
+				for( int i=0;i<9;i++ )
+				{
+					if( hplist.get(i) > 0 )
+					{
+//    					HeroLevelConfig defHero = getHeroForIndex(soldierList, i, player, targetPlayer);
+						CombatNodeData defHero = soldierList.get(i);
+    					if( defHero != null )
+    					{
+            				int[] atkHurt = hurt(atkHero, defHero,skill,isGuwu,nuqi);
+            				hurt[i][0] = i;
+            				hurt[i][1] = atkHurt[1];
+            				hurt[i][2] = atkHurt[0];
+    					}
+					}
+				}
+			}
+		}
+		return hurt;
+	}
+	
+	
+	/**
+	 * 计算伤害
+	 * @param atkHero
+	 * @param defHero
+	 * @return
+	 * int[0] 伤害
+	 * int[1] 攻击效果
+	 */
+	public int[] hurt(CombatNodeData atkHero,CombatNodeData defHero,SkillTemplate skill,boolean isGuwu,int nuqi)
+	{
+		Random rand = new Random();
+		int[] hurt = new int[3];
+		//伤害
+		int atkEffect = 0;
+		int atkAdd = 0;
+		
+		int hp = 0;
+		if( skill != null )
+		{
+			int skillMultiple = 100;//skill.getMultiple()
+			
+			hp = (int) ( (float)( (atkHero.atk+atkHero.fightAtk) - (defHero.def+defHero.fightDef) ) * skillMultiple /100 * ( nuqi/100) );
+		}
+		else
+		{
+			hp = atkHero.atk+atkAdd - defHero.def;
+		}
+		if( hp <= 0  ) hp = 1;
+		
+		if( isGuwu )
+		{
+			hp += (int)(hp*0.2);
+		}
+		
+//		int hp = atkHero.atk - defHero.def;
+//		if( hp <= 0  ) hp = 1;
+		
+//		命中几率=攻击方命中-被攻击方闪避， 当命中几率≥95%,95%几率命中，反之当命中几率<5，则5%几率命中。
+//		（即攻击方最低有5%的命中率，而被攻击方最低也会有5%几率的闪避）
+		int defShanbi = defHero.herodod;
+		if( defShanbi < 5 ) defShanbi = 5;
+		int mingzhong = atkHero.herotar - defShanbi + 95;
+		if( mingzhong <5 ) mingzhong =5;
+		
+		
+		int r = rand.nextInt(100)+1;
+		boolean isShanbi = false;
+		//是否闪避
+		if(r > mingzhong)
+		{
+			isShanbi = true;
+			hp = 0;
+			atkEffect = 2;
+		}
+		
+//		暴击几率=攻击方的暴击-被攻击方的韧性，当暴击几率≥100时，
+//		100%暴击，当暴击几率≤0时，则不暴击
+		int baoji = atkHero.herovio - defHero.heroten;
+		if( !isShanbi )
+		{
+    		if( baoji >0 )
+    		{
+    			r = rand.nextInt(100)+1;
+    			if( r <= baoji )
+    			{
+//    	总暴击的攻击倍数=(200+（攻击方总破击-被攻击方总抗性）)/100，
+//    	小数位保留2位计算伤害。总暴击的攻击倍数最低为2.
+//    				System.out.println("baoji");
+    				hp=hp*( (200+(atkHero.herodes - defHero.herores ))/100 );
+    				atkEffect = 1;
+    			}
+    		}
+		}
+		
+		hurt[0] = hp;
+		hurt[1] = atkEffect;
+		
+		return hurt;
+	}
+	
+	/**
+	 * 计算伤害
+	 * @param atkHero
+	 * @param defHero
+	 * @return
+	 * int[0] 伤害
+	 * int[1] 攻击效果
+	 */
+//	public int[] hurt(HeroLevelConfig atkHero,HeroLevelConfig defHero,SkillTemplate skill,boolean isGuwu,int nuqi)
+//	{
+//		Random rand = new Random();
+//		int[] hurt = new int[3];
+//		//伤害
+//		int atkEffect = 0;
+//		
+//		int hp = 0 ;
+//		if( skill != null )
+//		{
+//			int skillMultiple = 100;//skill.getMultiple()
+//			hp = (int) ( (float)( (atkHero.getAtk()+atkHero.fightAtk) - (defHero.getDef()+defHero.fightDef) ) * skillMultiple /100 * ( nuqi/100) );
+//		}
+//		else
+//		{
+//			hp = atkHero.getAtk() - defHero.getDef();
+//		}
+//		if( hp <= 0  ) hp = 1;
+//		
+//		if( isGuwu )
+//		{
+//			hp += (int)(hp*0.2);
+//		}
+//		
+//		
+////		命中几率=攻击方命中-被攻击方闪避， 当命中几率≥95%,95%几率命中，反之当命中几率<5，则5%几率命中。
+////		（即攻击方最低有5%的命中率，而被攻击方最低也会有5%几率的闪避）
+//		int defShanbi = defHero.getHerodod();
+////		System.out.println("闪避:"+defShanbi);
+//		if( defShanbi < 5 ) defShanbi = 5;
+//		int mingzhong = atkHero.getHerotar() - defShanbi + 95;
+//		if( mingzhong <5 ) mingzhong =5;
+//
+//		int r = rand.nextInt(100)+1;
+////		System.out.println("命中:"+mingzhong);
+////		System.out.println("随机值:"+r);
+//		boolean isShanbi = false;
+//		//是否闪避
+//		if(r > mingzhong)
+//		{
+//			isShanbi = true;
+//			hp = 0;
+//			atkEffect = 2;
+//		}
+//		
+////		暴击几率=攻击方的暴击-被攻击方的韧性，当暴击几率≥100时，
+////		100%暴击，当暴击几率≤0时，则不暴击
+//		int baoji = atkHero.getHerovio() - defHero.getHeroten();
+//		if( !isShanbi )
+//		{
+//    		if( baoji >0 )
+//    		{
+//    			r = rand.nextInt(100)+1;
+//    			if( r <= baoji )
+//    			{
+////    	总暴击的攻击倍数=(200+（攻击方总破击-被攻击方总抗性）)/100，
+////    	小数位保留2位计算伤害。总暴击的攻击倍数最低为2.
+////    				System.out.println("baoji");
+//    				hp=hp*( (200+(atkHero.getHerodes() - defHero.getHerores() ))/100 );
+//    				atkEffect = 1;
+//    			}
+//    		}
+//		}
+//		
+//		hurt[0] = hp;
+//		hurt[1] = atkEffect;
+//		
+//		return hurt;
+//	}
+	
+	
+	/**
+	 * 战斗结束处理
+	 * @param player
+	 * @param result
+	 * @param type
+	 * @param userid
+	 */
+	public Result FightResultHandle(Player player, int result ,int type, int userid)
+	{
+//		Result checkResult = new Result();
+//		if( result == 0 )
+//		{
+//		if(type == 1)
+//		{
+//			int courseId = userid;
+//			DungeonCourseConfig course = DungeonDict.getInstance().getCourseById(courseId);
+//			if(course != null)
+//			{
+////				int dungeonIsFight = 0;
+//				int customId = course.getCustomspassid();
+//				DungeonCustomConfig custom = DungeonDict.getInstance().getCustomById(customId);
+//				int dungeonId = custom.getDungeonId();
+//				player.setDungeonState(false);
+////				int _courseId = DungeonDict.getInstance().getCustomLastCourseID(customId);
+////				if(_courseId == courseId)
+////				{
+////					dungeonIsFight = 1;
+////				}
+//
+//				player.getPlayerDungeon().dealWithCustomEnd(dungeonId, customId, courseId, player);
+//
+//				DungeonCourseConfig dco = DungeonDict.getInstance().getCourseById(courseId);
+//				
+//				if(dco != null)
+//				{
+////					int rcash = dco.getRewardcash();
+//					int rcoin = dco.getRewardcoin();
+//					int rexp = dco.getRewardexp();
+//					int heroExp = dco.getHeroexp();
+////					int reputation = dco.getReputation();
+//					int jungong = dco.getJungong();
+////					int hun = dco.getHun();
+//
+////					checkResult.cash = rcash;
+//					checkResult.coin = rcoin;
+//					checkResult.exp = rexp;
+//					checkResult.heroExp = heroExp;
+////					checkResult.shengwang = reputation;
+//					checkResult.jungong = jungong;
+////					checkResult.hun = hun;
+//
+//					DungeonConfig dc = DungeonDict.getInstance().getDungeonByCourseID(courseId);
+////					if(dc != null)
+////					{
+////						int lastCurseID = DungeonDict.getInstance().getDungeonLastCourseID(dc);
+////						if(courseId == lastCurseID && courseId >= player.getPlayerDungeon().courseCurrent(1))
+////						{
+////							String msg = player.getUserName() + "通过了副本" + dc.getDungeonName() + "。";
+////							ChatServiceImpl.getInstance().sendSystemMsg(msg);
+////						}
+////					}
+//				}
+//				int currentstart = 3;
+//				PlayerDungeonStart pds = new PlayerDungeonStart(1, 1, courseId, currentstart);
+//				player.getPlayerDungeon().addStartNum(pds);
+////				PlayerDungeonDAO.updateDungeonStart(player);
+//
+//				int[] dlist = player.getPlayerDungeon().getNextDungeon(dungeonId, customId, courseId);
+//				checkResult.doungeonid = dungeonId;
+//				checkResult.customid = customId;
+//				checkResult.courseid = dlist[2];
+//			}
+//
+//		}
+//		}
+//		else
+//		{
+//			//失败
+//		}
+//		return checkResult;
+		return null;
+	}
+	
+	public cResult getNewResult()
+	{
+		cResult r = new cResult();
+		return r;
+	}
+	
+	public class cResult{
+		int retValue;
+		
+		public int getValue()
+		{
+			return retValue;
+		}
+	}
+	
+	public static class UST_ATKLOG_COMBAT_NEWATTACK
+	{
+	    public int HeroIdAtk;
+	    public String heroIdTarget;
+	    public int atkType;
+	    public String atkEffect;
+	    public String hp;
+	    public String die;
+	    public int sleepTime;
+	    public int skillanu;
+	    public String skillpng;
+	    public int skillrange;
+	}
+	
+	public static class Result {
+		public boolean checkScuess = false;;
+		public int exp = 0;
+		public int coin = 0;
+		public int cash = 0;
+		public int item = 0;
+		public int itemnum = 1;
+		public int doungeonid = 0;
+		public int customid = 0;
+		public int courseid = 0;
+		public int heroid = 0;
+		public int gold= 0;
+		public int heroExp = 0;
+		public int jungong=0;
+		public int shengwang=0;
+		public int hun=0;
+		public Vector<Integer> heroList;
 	}
 }

@@ -28,7 +28,7 @@ module game {
 
         private card1Click(e: egret.TouchEvent) {
             
-            SocketManager.sendBuyHero(1);
+            MessageSend.sendBuyHero(1);
         }        
     }
 }

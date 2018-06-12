@@ -31,7 +31,7 @@ var game;
             _super.prototype.partAdded.call(this, partName, instance);
         };
         ZhaoXianPanel.prototype.card1Click = function (e) {
-            SocketManager.sendBuyHero(1);
+            MessageSend.sendBuyHero(1);
         };
         return ZhaoXianPanel;
     }(eui.Component));

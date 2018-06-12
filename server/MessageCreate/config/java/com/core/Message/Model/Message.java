@@ -6882,6 +6882,3934 @@ public final class Message {
     // @@protoc_insertion_point(class_scope:com.core.Message.Model.SCItemOne)
   }
 
+  public interface CSFormationOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // repeated int32 formationID = 1;
+    /**
+     * <code>repeated int32 formationID = 1;</code>
+     */
+    java.util.List<java.lang.Integer> getFormationIDList();
+    /**
+     * <code>repeated int32 formationID = 1;</code>
+     */
+    int getFormationIDCount();
+    /**
+     * <code>repeated int32 formationID = 1;</code>
+     */
+    int getFormationID(int index);
+  }
+  /**
+   * Protobuf type {@code com.core.Message.Model.CSFormation}
+   *
+   * <pre>
+   *调整阵型
+   * messageId:113
+   * </pre>
+   */
+  public static final class CSFormation extends
+      com.google.protobuf.GeneratedMessage
+      implements CSFormationOrBuilder {
+    // Use CSFormation.newBuilder() to construct.
+    private CSFormation(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSFormation(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSFormation defaultInstance;
+    public static CSFormation getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSFormation getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSFormation(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                formationID_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              formationID_.add(input.readInt32());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001) && input.getBytesUntilLimit() > 0) {
+                formationID_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                formationID_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          formationID_ = java.util.Collections.unmodifiableList(formationID_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSFormation_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSFormation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.core.Message.Model.Message.CSFormation.class, com.core.Message.Model.Message.CSFormation.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSFormation> PARSER =
+        new com.google.protobuf.AbstractParser<CSFormation>() {
+      public CSFormation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSFormation(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSFormation> getParserForType() {
+      return PARSER;
+    }
+
+    // repeated int32 formationID = 1;
+    public static final int FORMATIONID_FIELD_NUMBER = 1;
+    private java.util.List<java.lang.Integer> formationID_;
+    /**
+     * <code>repeated int32 formationID = 1;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getFormationIDList() {
+      return formationID_;
+    }
+    /**
+     * <code>repeated int32 formationID = 1;</code>
+     */
+    public int getFormationIDCount() {
+      return formationID_.size();
+    }
+    /**
+     * <code>repeated int32 formationID = 1;</code>
+     */
+    public int getFormationID(int index) {
+      return formationID_.get(index);
+    }
+
+    private void initFields() {
+      formationID_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < formationID_.size(); i++) {
+        output.writeInt32(1, formationID_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < formationID_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(formationID_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getFormationIDList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.core.Message.Model.Message.CSFormation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.core.Message.Model.Message.CSFormation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.CSFormation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.core.Message.Model.Message.CSFormation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.CSFormation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.core.Message.Model.Message.CSFormation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.CSFormation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.core.Message.Model.Message.CSFormation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.CSFormation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.core.Message.Model.Message.CSFormation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.core.Message.Model.Message.CSFormation prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.core.Message.Model.CSFormation}
+     *
+     * <pre>
+     *调整阵型
+     * messageId:113
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.core.Message.Model.Message.CSFormationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSFormation_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSFormation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.core.Message.Model.Message.CSFormation.class, com.core.Message.Model.Message.CSFormation.Builder.class);
+      }
+
+      // Construct using com.core.Message.Model.Message.CSFormation.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        formationID_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSFormation_descriptor;
+      }
+
+      public com.core.Message.Model.Message.CSFormation getDefaultInstanceForType() {
+        return com.core.Message.Model.Message.CSFormation.getDefaultInstance();
+      }
+
+      public com.core.Message.Model.Message.CSFormation build() {
+        com.core.Message.Model.Message.CSFormation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.core.Message.Model.Message.CSFormation buildPartial() {
+        com.core.Message.Model.Message.CSFormation result = new com.core.Message.Model.Message.CSFormation(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          formationID_ = java.util.Collections.unmodifiableList(formationID_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.formationID_ = formationID_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.core.Message.Model.Message.CSFormation) {
+          return mergeFrom((com.core.Message.Model.Message.CSFormation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.core.Message.Model.Message.CSFormation other) {
+        if (other == com.core.Message.Model.Message.CSFormation.getDefaultInstance()) return this;
+        if (!other.formationID_.isEmpty()) {
+          if (formationID_.isEmpty()) {
+            formationID_ = other.formationID_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureFormationIDIsMutable();
+            formationID_.addAll(other.formationID_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.core.Message.Model.Message.CSFormation parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.core.Message.Model.Message.CSFormation) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // repeated int32 formationID = 1;
+      private java.util.List<java.lang.Integer> formationID_ = java.util.Collections.emptyList();
+      private void ensureFormationIDIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          formationID_ = new java.util.ArrayList<java.lang.Integer>(formationID_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated int32 formationID = 1;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getFormationIDList() {
+        return java.util.Collections.unmodifiableList(formationID_);
+      }
+      /**
+       * <code>repeated int32 formationID = 1;</code>
+       */
+      public int getFormationIDCount() {
+        return formationID_.size();
+      }
+      /**
+       * <code>repeated int32 formationID = 1;</code>
+       */
+      public int getFormationID(int index) {
+        return formationID_.get(index);
+      }
+      /**
+       * <code>repeated int32 formationID = 1;</code>
+       */
+      public Builder setFormationID(
+          int index, int value) {
+        ensureFormationIDIsMutable();
+        formationID_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 formationID = 1;</code>
+       */
+      public Builder addFormationID(int value) {
+        ensureFormationIDIsMutable();
+        formationID_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 formationID = 1;</code>
+       */
+      public Builder addAllFormationID(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureFormationIDIsMutable();
+        super.addAll(values, formationID_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 formationID = 1;</code>
+       */
+      public Builder clearFormationID() {
+        formationID_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.core.Message.Model.CSFormation)
+    }
+
+    static {
+      defaultInstance = new CSFormation(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.core.Message.Model.CSFormation)
+  }
+
+  public interface SCFormationOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // repeated int32 formationID = 1;
+    /**
+     * <code>repeated int32 formationID = 1;</code>
+     */
+    java.util.List<java.lang.Integer> getFormationIDList();
+    /**
+     * <code>repeated int32 formationID = 1;</code>
+     */
+    int getFormationIDCount();
+    /**
+     * <code>repeated int32 formationID = 1;</code>
+     */
+    int getFormationID(int index);
+  }
+  /**
+   * Protobuf type {@code com.core.Message.Model.SCFormation}
+   *
+   * <pre>
+   *下发阵型
+   * messageId:114
+   * </pre>
+   */
+  public static final class SCFormation extends
+      com.google.protobuf.GeneratedMessage
+      implements SCFormationOrBuilder {
+    // Use SCFormation.newBuilder() to construct.
+    private SCFormation(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SCFormation(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SCFormation defaultInstance;
+    public static SCFormation getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SCFormation getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SCFormation(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                formationID_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              formationID_.add(input.readInt32());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001) && input.getBytesUntilLimit() > 0) {
+                formationID_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                formationID_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          formationID_ = java.util.Collections.unmodifiableList(formationID_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCFormation_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCFormation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.core.Message.Model.Message.SCFormation.class, com.core.Message.Model.Message.SCFormation.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SCFormation> PARSER =
+        new com.google.protobuf.AbstractParser<SCFormation>() {
+      public SCFormation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SCFormation(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SCFormation> getParserForType() {
+      return PARSER;
+    }
+
+    // repeated int32 formationID = 1;
+    public static final int FORMATIONID_FIELD_NUMBER = 1;
+    private java.util.List<java.lang.Integer> formationID_;
+    /**
+     * <code>repeated int32 formationID = 1;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getFormationIDList() {
+      return formationID_;
+    }
+    /**
+     * <code>repeated int32 formationID = 1;</code>
+     */
+    public int getFormationIDCount() {
+      return formationID_.size();
+    }
+    /**
+     * <code>repeated int32 formationID = 1;</code>
+     */
+    public int getFormationID(int index) {
+      return formationID_.get(index);
+    }
+
+    private void initFields() {
+      formationID_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < formationID_.size(); i++) {
+        output.writeInt32(1, formationID_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < formationID_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(formationID_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getFormationIDList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.core.Message.Model.Message.SCFormation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.core.Message.Model.Message.SCFormation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.SCFormation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.core.Message.Model.Message.SCFormation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.SCFormation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.core.Message.Model.Message.SCFormation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.SCFormation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.core.Message.Model.Message.SCFormation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.SCFormation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.core.Message.Model.Message.SCFormation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.core.Message.Model.Message.SCFormation prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.core.Message.Model.SCFormation}
+     *
+     * <pre>
+     *下发阵型
+     * messageId:114
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.core.Message.Model.Message.SCFormationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCFormation_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCFormation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.core.Message.Model.Message.SCFormation.class, com.core.Message.Model.Message.SCFormation.Builder.class);
+      }
+
+      // Construct using com.core.Message.Model.Message.SCFormation.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        formationID_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCFormation_descriptor;
+      }
+
+      public com.core.Message.Model.Message.SCFormation getDefaultInstanceForType() {
+        return com.core.Message.Model.Message.SCFormation.getDefaultInstance();
+      }
+
+      public com.core.Message.Model.Message.SCFormation build() {
+        com.core.Message.Model.Message.SCFormation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.core.Message.Model.Message.SCFormation buildPartial() {
+        com.core.Message.Model.Message.SCFormation result = new com.core.Message.Model.Message.SCFormation(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          formationID_ = java.util.Collections.unmodifiableList(formationID_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.formationID_ = formationID_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.core.Message.Model.Message.SCFormation) {
+          return mergeFrom((com.core.Message.Model.Message.SCFormation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.core.Message.Model.Message.SCFormation other) {
+        if (other == com.core.Message.Model.Message.SCFormation.getDefaultInstance()) return this;
+        if (!other.formationID_.isEmpty()) {
+          if (formationID_.isEmpty()) {
+            formationID_ = other.formationID_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureFormationIDIsMutable();
+            formationID_.addAll(other.formationID_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.core.Message.Model.Message.SCFormation parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.core.Message.Model.Message.SCFormation) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // repeated int32 formationID = 1;
+      private java.util.List<java.lang.Integer> formationID_ = java.util.Collections.emptyList();
+      private void ensureFormationIDIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          formationID_ = new java.util.ArrayList<java.lang.Integer>(formationID_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated int32 formationID = 1;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getFormationIDList() {
+        return java.util.Collections.unmodifiableList(formationID_);
+      }
+      /**
+       * <code>repeated int32 formationID = 1;</code>
+       */
+      public int getFormationIDCount() {
+        return formationID_.size();
+      }
+      /**
+       * <code>repeated int32 formationID = 1;</code>
+       */
+      public int getFormationID(int index) {
+        return formationID_.get(index);
+      }
+      /**
+       * <code>repeated int32 formationID = 1;</code>
+       */
+      public Builder setFormationID(
+          int index, int value) {
+        ensureFormationIDIsMutable();
+        formationID_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 formationID = 1;</code>
+       */
+      public Builder addFormationID(int value) {
+        ensureFormationIDIsMutable();
+        formationID_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 formationID = 1;</code>
+       */
+      public Builder addAllFormationID(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureFormationIDIsMutable();
+        super.addAll(values, formationID_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 formationID = 1;</code>
+       */
+      public Builder clearFormationID() {
+        formationID_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.core.Message.Model.SCFormation)
+    }
+
+    static {
+      defaultInstance = new SCFormation(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.core.Message.Model.SCFormation)
+  }
+
+  public interface CSFightOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 courseID = 1;
+    /**
+     * <code>required int32 courseID = 1;</code>
+     */
+    boolean hasCourseID();
+    /**
+     * <code>required int32 courseID = 1;</code>
+     */
+    int getCourseID();
+  }
+  /**
+   * Protobuf type {@code com.core.Message.Model.CSFight}
+   *
+   * <pre>
+   *战斗
+   * messageId:115
+   * </pre>
+   */
+  public static final class CSFight extends
+      com.google.protobuf.GeneratedMessage
+      implements CSFightOrBuilder {
+    // Use CSFight.newBuilder() to construct.
+    private CSFight(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSFight(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSFight defaultInstance;
+    public static CSFight getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSFight getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSFight(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              courseID_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSFight_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSFight_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.core.Message.Model.Message.CSFight.class, com.core.Message.Model.Message.CSFight.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSFight> PARSER =
+        new com.google.protobuf.AbstractParser<CSFight>() {
+      public CSFight parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSFight(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSFight> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 courseID = 1;
+    public static final int COURSEID_FIELD_NUMBER = 1;
+    private int courseID_;
+    /**
+     * <code>required int32 courseID = 1;</code>
+     */
+    public boolean hasCourseID() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 courseID = 1;</code>
+     */
+    public int getCourseID() {
+      return courseID_;
+    }
+
+    private void initFields() {
+      courseID_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasCourseID()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, courseID_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, courseID_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.core.Message.Model.Message.CSFight parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.core.Message.Model.Message.CSFight parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.CSFight parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.core.Message.Model.Message.CSFight parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.CSFight parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.core.Message.Model.Message.CSFight parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.CSFight parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.core.Message.Model.Message.CSFight parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.CSFight parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.core.Message.Model.Message.CSFight parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.core.Message.Model.Message.CSFight prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.core.Message.Model.CSFight}
+     *
+     * <pre>
+     *战斗
+     * messageId:115
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.core.Message.Model.Message.CSFightOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSFight_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSFight_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.core.Message.Model.Message.CSFight.class, com.core.Message.Model.Message.CSFight.Builder.class);
+      }
+
+      // Construct using com.core.Message.Model.Message.CSFight.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        courseID_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSFight_descriptor;
+      }
+
+      public com.core.Message.Model.Message.CSFight getDefaultInstanceForType() {
+        return com.core.Message.Model.Message.CSFight.getDefaultInstance();
+      }
+
+      public com.core.Message.Model.Message.CSFight build() {
+        com.core.Message.Model.Message.CSFight result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.core.Message.Model.Message.CSFight buildPartial() {
+        com.core.Message.Model.Message.CSFight result = new com.core.Message.Model.Message.CSFight(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.courseID_ = courseID_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.core.Message.Model.Message.CSFight) {
+          return mergeFrom((com.core.Message.Model.Message.CSFight)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.core.Message.Model.Message.CSFight other) {
+        if (other == com.core.Message.Model.Message.CSFight.getDefaultInstance()) return this;
+        if (other.hasCourseID()) {
+          setCourseID(other.getCourseID());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasCourseID()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.core.Message.Model.Message.CSFight parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.core.Message.Model.Message.CSFight) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 courseID = 1;
+      private int courseID_ ;
+      /**
+       * <code>required int32 courseID = 1;</code>
+       */
+      public boolean hasCourseID() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 courseID = 1;</code>
+       */
+      public int getCourseID() {
+        return courseID_;
+      }
+      /**
+       * <code>required int32 courseID = 1;</code>
+       */
+      public Builder setCourseID(int value) {
+        bitField0_ |= 0x00000001;
+        courseID_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 courseID = 1;</code>
+       */
+      public Builder clearCourseID() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        courseID_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.core.Message.Model.CSFight)
+    }
+
+    static {
+      defaultInstance = new CSFight(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.core.Message.Model.CSFight)
+  }
+
+  public interface SCFightOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 result = 1;
+    /**
+     * <code>required int32 result = 1;</code>
+     */
+    boolean hasResult();
+    /**
+     * <code>required int32 result = 1;</code>
+     */
+    int getResult();
+
+    // required int32 hpSelf = 2;
+    /**
+     * <code>required int32 hpSelf = 2;</code>
+     */
+    boolean hasHpSelf();
+    /**
+     * <code>required int32 hpSelf = 2;</code>
+     */
+    int getHpSelf();
+
+    // required int32 hpTarget = 3;
+    /**
+     * <code>required int32 hpTarget = 3;</code>
+     */
+    boolean hasHpTarget();
+    /**
+     * <code>required int32 hpTarget = 3;</code>
+     */
+    int getHpTarget();
+
+    // repeated .com.core.Message.Model.CSFightData combatData = 4;
+    /**
+     * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+     */
+    java.util.List<com.core.Message.Model.Message.CSFightData> 
+        getCombatDataList();
+    /**
+     * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+     */
+    com.core.Message.Model.Message.CSFightData getCombatData(int index);
+    /**
+     * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+     */
+    int getCombatDataCount();
+    /**
+     * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+     */
+    java.util.List<? extends com.core.Message.Model.Message.CSFightDataOrBuilder> 
+        getCombatDataOrBuilderList();
+    /**
+     * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+     */
+    com.core.Message.Model.Message.CSFightDataOrBuilder getCombatDataOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code com.core.Message.Model.SCFight}
+   *
+   * <pre>
+   *下发战斗结果
+   * messageId:116
+   * </pre>
+   */
+  public static final class SCFight extends
+      com.google.protobuf.GeneratedMessage
+      implements SCFightOrBuilder {
+    // Use SCFight.newBuilder() to construct.
+    private SCFight(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SCFight(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SCFight defaultInstance;
+    public static SCFight getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SCFight getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SCFight(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              result_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              hpSelf_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              hpTarget_ = input.readInt32();
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                combatData_ = new java.util.ArrayList<com.core.Message.Model.Message.CSFightData>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              combatData_.add(input.readMessage(com.core.Message.Model.Message.CSFightData.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          combatData_ = java.util.Collections.unmodifiableList(combatData_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCFight_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCFight_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.core.Message.Model.Message.SCFight.class, com.core.Message.Model.Message.SCFight.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SCFight> PARSER =
+        new com.google.protobuf.AbstractParser<SCFight>() {
+      public SCFight parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SCFight(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SCFight> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 result = 1;
+    public static final int RESULT_FIELD_NUMBER = 1;
+    private int result_;
+    /**
+     * <code>required int32 result = 1;</code>
+     */
+    public boolean hasResult() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 result = 1;</code>
+     */
+    public int getResult() {
+      return result_;
+    }
+
+    // required int32 hpSelf = 2;
+    public static final int HPSELF_FIELD_NUMBER = 2;
+    private int hpSelf_;
+    /**
+     * <code>required int32 hpSelf = 2;</code>
+     */
+    public boolean hasHpSelf() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int32 hpSelf = 2;</code>
+     */
+    public int getHpSelf() {
+      return hpSelf_;
+    }
+
+    // required int32 hpTarget = 3;
+    public static final int HPTARGET_FIELD_NUMBER = 3;
+    private int hpTarget_;
+    /**
+     * <code>required int32 hpTarget = 3;</code>
+     */
+    public boolean hasHpTarget() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required int32 hpTarget = 3;</code>
+     */
+    public int getHpTarget() {
+      return hpTarget_;
+    }
+
+    // repeated .com.core.Message.Model.CSFightData combatData = 4;
+    public static final int COMBATDATA_FIELD_NUMBER = 4;
+    private java.util.List<com.core.Message.Model.Message.CSFightData> combatData_;
+    /**
+     * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+     */
+    public java.util.List<com.core.Message.Model.Message.CSFightData> getCombatDataList() {
+      return combatData_;
+    }
+    /**
+     * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+     */
+    public java.util.List<? extends com.core.Message.Model.Message.CSFightDataOrBuilder> 
+        getCombatDataOrBuilderList() {
+      return combatData_;
+    }
+    /**
+     * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+     */
+    public int getCombatDataCount() {
+      return combatData_.size();
+    }
+    /**
+     * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+     */
+    public com.core.Message.Model.Message.CSFightData getCombatData(int index) {
+      return combatData_.get(index);
+    }
+    /**
+     * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+     */
+    public com.core.Message.Model.Message.CSFightDataOrBuilder getCombatDataOrBuilder(
+        int index) {
+      return combatData_.get(index);
+    }
+
+    private void initFields() {
+      result_ = 0;
+      hpSelf_ = 0;
+      hpTarget_ = 0;
+      combatData_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasResult()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasHpSelf()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasHpTarget()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      for (int i = 0; i < getCombatDataCount(); i++) {
+        if (!getCombatData(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, result_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, hpSelf_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, hpTarget_);
+      }
+      for (int i = 0; i < combatData_.size(); i++) {
+        output.writeMessage(4, combatData_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, result_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, hpSelf_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, hpTarget_);
+      }
+      for (int i = 0; i < combatData_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, combatData_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.core.Message.Model.Message.SCFight parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.core.Message.Model.Message.SCFight parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.SCFight parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.core.Message.Model.Message.SCFight parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.SCFight parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.core.Message.Model.Message.SCFight parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.SCFight parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.core.Message.Model.Message.SCFight parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.SCFight parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.core.Message.Model.Message.SCFight parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.core.Message.Model.Message.SCFight prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.core.Message.Model.SCFight}
+     *
+     * <pre>
+     *下发战斗结果
+     * messageId:116
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.core.Message.Model.Message.SCFightOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCFight_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCFight_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.core.Message.Model.Message.SCFight.class, com.core.Message.Model.Message.SCFight.Builder.class);
+      }
+
+      // Construct using com.core.Message.Model.Message.SCFight.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getCombatDataFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        result_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        hpSelf_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        hpTarget_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (combatDataBuilder_ == null) {
+          combatData_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          combatDataBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_SCFight_descriptor;
+      }
+
+      public com.core.Message.Model.Message.SCFight getDefaultInstanceForType() {
+        return com.core.Message.Model.Message.SCFight.getDefaultInstance();
+      }
+
+      public com.core.Message.Model.Message.SCFight build() {
+        com.core.Message.Model.Message.SCFight result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.core.Message.Model.Message.SCFight buildPartial() {
+        com.core.Message.Model.Message.SCFight result = new com.core.Message.Model.Message.SCFight(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.result_ = result_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.hpSelf_ = hpSelf_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.hpTarget_ = hpTarget_;
+        if (combatDataBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+            combatData_ = java.util.Collections.unmodifiableList(combatData_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.combatData_ = combatData_;
+        } else {
+          result.combatData_ = combatDataBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.core.Message.Model.Message.SCFight) {
+          return mergeFrom((com.core.Message.Model.Message.SCFight)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.core.Message.Model.Message.SCFight other) {
+        if (other == com.core.Message.Model.Message.SCFight.getDefaultInstance()) return this;
+        if (other.hasResult()) {
+          setResult(other.getResult());
+        }
+        if (other.hasHpSelf()) {
+          setHpSelf(other.getHpSelf());
+        }
+        if (other.hasHpTarget()) {
+          setHpTarget(other.getHpTarget());
+        }
+        if (combatDataBuilder_ == null) {
+          if (!other.combatData_.isEmpty()) {
+            if (combatData_.isEmpty()) {
+              combatData_ = other.combatData_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureCombatDataIsMutable();
+              combatData_.addAll(other.combatData_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.combatData_.isEmpty()) {
+            if (combatDataBuilder_.isEmpty()) {
+              combatDataBuilder_.dispose();
+              combatDataBuilder_ = null;
+              combatData_ = other.combatData_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              combatDataBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getCombatDataFieldBuilder() : null;
+            } else {
+              combatDataBuilder_.addAllMessages(other.combatData_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasResult()) {
+          
+          return false;
+        }
+        if (!hasHpSelf()) {
+          
+          return false;
+        }
+        if (!hasHpTarget()) {
+          
+          return false;
+        }
+        for (int i = 0; i < getCombatDataCount(); i++) {
+          if (!getCombatData(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.core.Message.Model.Message.SCFight parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.core.Message.Model.Message.SCFight) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 result = 1;
+      private int result_ ;
+      /**
+       * <code>required int32 result = 1;</code>
+       */
+      public boolean hasResult() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 result = 1;</code>
+       */
+      public int getResult() {
+        return result_;
+      }
+      /**
+       * <code>required int32 result = 1;</code>
+       */
+      public Builder setResult(int value) {
+        bitField0_ |= 0x00000001;
+        result_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 result = 1;</code>
+       */
+      public Builder clearResult() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        result_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 hpSelf = 2;
+      private int hpSelf_ ;
+      /**
+       * <code>required int32 hpSelf = 2;</code>
+       */
+      public boolean hasHpSelf() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 hpSelf = 2;</code>
+       */
+      public int getHpSelf() {
+        return hpSelf_;
+      }
+      /**
+       * <code>required int32 hpSelf = 2;</code>
+       */
+      public Builder setHpSelf(int value) {
+        bitField0_ |= 0x00000002;
+        hpSelf_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 hpSelf = 2;</code>
+       */
+      public Builder clearHpSelf() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        hpSelf_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 hpTarget = 3;
+      private int hpTarget_ ;
+      /**
+       * <code>required int32 hpTarget = 3;</code>
+       */
+      public boolean hasHpTarget() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required int32 hpTarget = 3;</code>
+       */
+      public int getHpTarget() {
+        return hpTarget_;
+      }
+      /**
+       * <code>required int32 hpTarget = 3;</code>
+       */
+      public Builder setHpTarget(int value) {
+        bitField0_ |= 0x00000004;
+        hpTarget_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 hpTarget = 3;</code>
+       */
+      public Builder clearHpTarget() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        hpTarget_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // repeated .com.core.Message.Model.CSFightData combatData = 4;
+      private java.util.List<com.core.Message.Model.Message.CSFightData> combatData_ =
+        java.util.Collections.emptyList();
+      private void ensureCombatDataIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          combatData_ = new java.util.ArrayList<com.core.Message.Model.Message.CSFightData>(combatData_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.core.Message.Model.Message.CSFightData, com.core.Message.Model.Message.CSFightData.Builder, com.core.Message.Model.Message.CSFightDataOrBuilder> combatDataBuilder_;
+
+      /**
+       * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+       */
+      public java.util.List<com.core.Message.Model.Message.CSFightData> getCombatDataList() {
+        if (combatDataBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(combatData_);
+        } else {
+          return combatDataBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+       */
+      public int getCombatDataCount() {
+        if (combatDataBuilder_ == null) {
+          return combatData_.size();
+        } else {
+          return combatDataBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+       */
+      public com.core.Message.Model.Message.CSFightData getCombatData(int index) {
+        if (combatDataBuilder_ == null) {
+          return combatData_.get(index);
+        } else {
+          return combatDataBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+       */
+      public Builder setCombatData(
+          int index, com.core.Message.Model.Message.CSFightData value) {
+        if (combatDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCombatDataIsMutable();
+          combatData_.set(index, value);
+          onChanged();
+        } else {
+          combatDataBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+       */
+      public Builder setCombatData(
+          int index, com.core.Message.Model.Message.CSFightData.Builder builderForValue) {
+        if (combatDataBuilder_ == null) {
+          ensureCombatDataIsMutable();
+          combatData_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          combatDataBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+       */
+      public Builder addCombatData(com.core.Message.Model.Message.CSFightData value) {
+        if (combatDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCombatDataIsMutable();
+          combatData_.add(value);
+          onChanged();
+        } else {
+          combatDataBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+       */
+      public Builder addCombatData(
+          int index, com.core.Message.Model.Message.CSFightData value) {
+        if (combatDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCombatDataIsMutable();
+          combatData_.add(index, value);
+          onChanged();
+        } else {
+          combatDataBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+       */
+      public Builder addCombatData(
+          com.core.Message.Model.Message.CSFightData.Builder builderForValue) {
+        if (combatDataBuilder_ == null) {
+          ensureCombatDataIsMutable();
+          combatData_.add(builderForValue.build());
+          onChanged();
+        } else {
+          combatDataBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+       */
+      public Builder addCombatData(
+          int index, com.core.Message.Model.Message.CSFightData.Builder builderForValue) {
+        if (combatDataBuilder_ == null) {
+          ensureCombatDataIsMutable();
+          combatData_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          combatDataBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+       */
+      public Builder addAllCombatData(
+          java.lang.Iterable<? extends com.core.Message.Model.Message.CSFightData> values) {
+        if (combatDataBuilder_ == null) {
+          ensureCombatDataIsMutable();
+          super.addAll(values, combatData_);
+          onChanged();
+        } else {
+          combatDataBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+       */
+      public Builder clearCombatData() {
+        if (combatDataBuilder_ == null) {
+          combatData_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          combatDataBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+       */
+      public Builder removeCombatData(int index) {
+        if (combatDataBuilder_ == null) {
+          ensureCombatDataIsMutable();
+          combatData_.remove(index);
+          onChanged();
+        } else {
+          combatDataBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+       */
+      public com.core.Message.Model.Message.CSFightData.Builder getCombatDataBuilder(
+          int index) {
+        return getCombatDataFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+       */
+      public com.core.Message.Model.Message.CSFightDataOrBuilder getCombatDataOrBuilder(
+          int index) {
+        if (combatDataBuilder_ == null) {
+          return combatData_.get(index);  } else {
+          return combatDataBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+       */
+      public java.util.List<? extends com.core.Message.Model.Message.CSFightDataOrBuilder> 
+           getCombatDataOrBuilderList() {
+        if (combatDataBuilder_ != null) {
+          return combatDataBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(combatData_);
+        }
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+       */
+      public com.core.Message.Model.Message.CSFightData.Builder addCombatDataBuilder() {
+        return getCombatDataFieldBuilder().addBuilder(
+            com.core.Message.Model.Message.CSFightData.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+       */
+      public com.core.Message.Model.Message.CSFightData.Builder addCombatDataBuilder(
+          int index) {
+        return getCombatDataFieldBuilder().addBuilder(
+            index, com.core.Message.Model.Message.CSFightData.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.core.Message.Model.CSFightData combatData = 4;</code>
+       */
+      public java.util.List<com.core.Message.Model.Message.CSFightData.Builder> 
+           getCombatDataBuilderList() {
+        return getCombatDataFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.core.Message.Model.Message.CSFightData, com.core.Message.Model.Message.CSFightData.Builder, com.core.Message.Model.Message.CSFightDataOrBuilder> 
+          getCombatDataFieldBuilder() {
+        if (combatDataBuilder_ == null) {
+          combatDataBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.core.Message.Model.Message.CSFightData, com.core.Message.Model.Message.CSFightData.Builder, com.core.Message.Model.Message.CSFightDataOrBuilder>(
+                  combatData_,
+                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  getParentForChildren(),
+                  isClean());
+          combatData_ = null;
+        }
+        return combatDataBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.core.Message.Model.SCFight)
+    }
+
+    static {
+      defaultInstance = new SCFight(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.core.Message.Model.SCFight)
+  }
+
+  public interface CSFightDataOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 HeroIdAtk = 1;
+    /**
+     * <code>required int32 HeroIdAtk = 1;</code>
+     */
+    boolean hasHeroIdAtk();
+    /**
+     * <code>required int32 HeroIdAtk = 1;</code>
+     */
+    int getHeroIdAtk();
+
+    // required string heroIdTarget = 2;
+    /**
+     * <code>required string heroIdTarget = 2;</code>
+     */
+    boolean hasHeroIdTarget();
+    /**
+     * <code>required string heroIdTarget = 2;</code>
+     */
+    java.lang.String getHeroIdTarget();
+    /**
+     * <code>required string heroIdTarget = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getHeroIdTargetBytes();
+
+    // required int32 atkType = 3;
+    /**
+     * <code>required int32 atkType = 3;</code>
+     */
+    boolean hasAtkType();
+    /**
+     * <code>required int32 atkType = 3;</code>
+     */
+    int getAtkType();
+
+    // required string atkEffect = 4;
+    /**
+     * <code>required string atkEffect = 4;</code>
+     */
+    boolean hasAtkEffect();
+    /**
+     * <code>required string atkEffect = 4;</code>
+     */
+    java.lang.String getAtkEffect();
+    /**
+     * <code>required string atkEffect = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getAtkEffectBytes();
+
+    // required string hp = 5;
+    /**
+     * <code>required string hp = 5;</code>
+     */
+    boolean hasHp();
+    /**
+     * <code>required string hp = 5;</code>
+     */
+    java.lang.String getHp();
+    /**
+     * <code>required string hp = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getHpBytes();
+
+    // required string die = 6;
+    /**
+     * <code>required string die = 6;</code>
+     */
+    boolean hasDie();
+    /**
+     * <code>required string die = 6;</code>
+     */
+    java.lang.String getDie();
+    /**
+     * <code>required string die = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getDieBytes();
+
+    // required int32 sleepTime = 7;
+    /**
+     * <code>required int32 sleepTime = 7;</code>
+     */
+    boolean hasSleepTime();
+    /**
+     * <code>required int32 sleepTime = 7;</code>
+     */
+    int getSleepTime();
+
+    // required int32 skillanu = 8;
+    /**
+     * <code>required int32 skillanu = 8;</code>
+     */
+    boolean hasSkillanu();
+    /**
+     * <code>required int32 skillanu = 8;</code>
+     */
+    int getSkillanu();
+
+    // required string skillpng = 9;
+    /**
+     * <code>required string skillpng = 9;</code>
+     */
+    boolean hasSkillpng();
+    /**
+     * <code>required string skillpng = 9;</code>
+     */
+    java.lang.String getSkillpng();
+    /**
+     * <code>required string skillpng = 9;</code>
+     */
+    com.google.protobuf.ByteString
+        getSkillpngBytes();
+
+    // required int32 skillrange = 10;
+    /**
+     * <code>required int32 skillrange = 10;</code>
+     */
+    boolean hasSkillrange();
+    /**
+     * <code>required int32 skillrange = 10;</code>
+     */
+    int getSkillrange();
+  }
+  /**
+   * Protobuf type {@code com.core.Message.Model.CSFightData}
+   *
+   * <pre>
+   *下发战斗结果
+   * messageId:117
+   * </pre>
+   */
+  public static final class CSFightData extends
+      com.google.protobuf.GeneratedMessage
+      implements CSFightDataOrBuilder {
+    // Use CSFightData.newBuilder() to construct.
+    private CSFightData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSFightData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSFightData defaultInstance;
+    public static CSFightData getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSFightData getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSFightData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              heroIdAtk_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              heroIdTarget_ = input.readBytes();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              atkType_ = input.readInt32();
+              break;
+            }
+            case 34: {
+              bitField0_ |= 0x00000008;
+              atkEffect_ = input.readBytes();
+              break;
+            }
+            case 42: {
+              bitField0_ |= 0x00000010;
+              hp_ = input.readBytes();
+              break;
+            }
+            case 50: {
+              bitField0_ |= 0x00000020;
+              die_ = input.readBytes();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              sleepTime_ = input.readInt32();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              skillanu_ = input.readInt32();
+              break;
+            }
+            case 74: {
+              bitField0_ |= 0x00000100;
+              skillpng_ = input.readBytes();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000200;
+              skillrange_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSFightData_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSFightData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.core.Message.Model.Message.CSFightData.class, com.core.Message.Model.Message.CSFightData.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSFightData> PARSER =
+        new com.google.protobuf.AbstractParser<CSFightData>() {
+      public CSFightData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSFightData(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSFightData> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 HeroIdAtk = 1;
+    public static final int HEROIDATK_FIELD_NUMBER = 1;
+    private int heroIdAtk_;
+    /**
+     * <code>required int32 HeroIdAtk = 1;</code>
+     */
+    public boolean hasHeroIdAtk() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 HeroIdAtk = 1;</code>
+     */
+    public int getHeroIdAtk() {
+      return heroIdAtk_;
+    }
+
+    // required string heroIdTarget = 2;
+    public static final int HEROIDTARGET_FIELD_NUMBER = 2;
+    private java.lang.Object heroIdTarget_;
+    /**
+     * <code>required string heroIdTarget = 2;</code>
+     */
+    public boolean hasHeroIdTarget() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string heroIdTarget = 2;</code>
+     */
+    public java.lang.String getHeroIdTarget() {
+      java.lang.Object ref = heroIdTarget_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          heroIdTarget_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string heroIdTarget = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getHeroIdTargetBytes() {
+      java.lang.Object ref = heroIdTarget_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        heroIdTarget_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // required int32 atkType = 3;
+    public static final int ATKTYPE_FIELD_NUMBER = 3;
+    private int atkType_;
+    /**
+     * <code>required int32 atkType = 3;</code>
+     */
+    public boolean hasAtkType() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required int32 atkType = 3;</code>
+     */
+    public int getAtkType() {
+      return atkType_;
+    }
+
+    // required string atkEffect = 4;
+    public static final int ATKEFFECT_FIELD_NUMBER = 4;
+    private java.lang.Object atkEffect_;
+    /**
+     * <code>required string atkEffect = 4;</code>
+     */
+    public boolean hasAtkEffect() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required string atkEffect = 4;</code>
+     */
+    public java.lang.String getAtkEffect() {
+      java.lang.Object ref = atkEffect_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          atkEffect_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string atkEffect = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAtkEffectBytes() {
+      java.lang.Object ref = atkEffect_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        atkEffect_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // required string hp = 5;
+    public static final int HP_FIELD_NUMBER = 5;
+    private java.lang.Object hp_;
+    /**
+     * <code>required string hp = 5;</code>
+     */
+    public boolean hasHp() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>required string hp = 5;</code>
+     */
+    public java.lang.String getHp() {
+      java.lang.Object ref = hp_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          hp_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string hp = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getHpBytes() {
+      java.lang.Object ref = hp_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hp_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // required string die = 6;
+    public static final int DIE_FIELD_NUMBER = 6;
+    private java.lang.Object die_;
+    /**
+     * <code>required string die = 6;</code>
+     */
+    public boolean hasDie() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>required string die = 6;</code>
+     */
+    public java.lang.String getDie() {
+      java.lang.Object ref = die_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          die_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string die = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDieBytes() {
+      java.lang.Object ref = die_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        die_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // required int32 sleepTime = 7;
+    public static final int SLEEPTIME_FIELD_NUMBER = 7;
+    private int sleepTime_;
+    /**
+     * <code>required int32 sleepTime = 7;</code>
+     */
+    public boolean hasSleepTime() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>required int32 sleepTime = 7;</code>
+     */
+    public int getSleepTime() {
+      return sleepTime_;
+    }
+
+    // required int32 skillanu = 8;
+    public static final int SKILLANU_FIELD_NUMBER = 8;
+    private int skillanu_;
+    /**
+     * <code>required int32 skillanu = 8;</code>
+     */
+    public boolean hasSkillanu() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>required int32 skillanu = 8;</code>
+     */
+    public int getSkillanu() {
+      return skillanu_;
+    }
+
+    // required string skillpng = 9;
+    public static final int SKILLPNG_FIELD_NUMBER = 9;
+    private java.lang.Object skillpng_;
+    /**
+     * <code>required string skillpng = 9;</code>
+     */
+    public boolean hasSkillpng() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>required string skillpng = 9;</code>
+     */
+    public java.lang.String getSkillpng() {
+      java.lang.Object ref = skillpng_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          skillpng_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string skillpng = 9;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSkillpngBytes() {
+      java.lang.Object ref = skillpng_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        skillpng_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // required int32 skillrange = 10;
+    public static final int SKILLRANGE_FIELD_NUMBER = 10;
+    private int skillrange_;
+    /**
+     * <code>required int32 skillrange = 10;</code>
+     */
+    public boolean hasSkillrange() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>required int32 skillrange = 10;</code>
+     */
+    public int getSkillrange() {
+      return skillrange_;
+    }
+
+    private void initFields() {
+      heroIdAtk_ = 0;
+      heroIdTarget_ = "";
+      atkType_ = 0;
+      atkEffect_ = "";
+      hp_ = "";
+      die_ = "";
+      sleepTime_ = 0;
+      skillanu_ = 0;
+      skillpng_ = "";
+      skillrange_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasHeroIdAtk()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasHeroIdTarget()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasAtkType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasAtkEffect()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasHp()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDie()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasSleepTime()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasSkillanu()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasSkillpng()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasSkillrange()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, heroIdAtk_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getHeroIdTargetBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, atkType_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, getAtkEffectBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBytes(5, getHpBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBytes(6, getDieBytes());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeInt32(7, sleepTime_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeInt32(8, skillanu_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeBytes(9, getSkillpngBytes());
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeInt32(10, skillrange_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, heroIdAtk_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getHeroIdTargetBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, atkType_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getAtkEffectBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getHpBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, getDieBytes());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, sleepTime_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, skillanu_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(9, getSkillpngBytes());
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(10, skillrange_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.core.Message.Model.Message.CSFightData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.core.Message.Model.Message.CSFightData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.CSFightData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.core.Message.Model.Message.CSFightData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.CSFightData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.core.Message.Model.Message.CSFightData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.CSFightData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.core.Message.Model.Message.CSFightData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.core.Message.Model.Message.CSFightData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.core.Message.Model.Message.CSFightData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.core.Message.Model.Message.CSFightData prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.core.Message.Model.CSFightData}
+     *
+     * <pre>
+     *下发战斗结果
+     * messageId:117
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.core.Message.Model.Message.CSFightDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSFightData_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSFightData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.core.Message.Model.Message.CSFightData.class, com.core.Message.Model.Message.CSFightData.Builder.class);
+      }
+
+      // Construct using com.core.Message.Model.Message.CSFightData.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        heroIdAtk_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        heroIdTarget_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        atkType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        atkEffect_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        hp_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        die_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
+        sleepTime_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        skillanu_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        skillpng_ = "";
+        bitField0_ = (bitField0_ & ~0x00000100);
+        skillrange_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.core.Message.Model.Message.internal_static_com_core_Message_Model_CSFightData_descriptor;
+      }
+
+      public com.core.Message.Model.Message.CSFightData getDefaultInstanceForType() {
+        return com.core.Message.Model.Message.CSFightData.getDefaultInstance();
+      }
+
+      public com.core.Message.Model.Message.CSFightData build() {
+        com.core.Message.Model.Message.CSFightData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.core.Message.Model.Message.CSFightData buildPartial() {
+        com.core.Message.Model.Message.CSFightData result = new com.core.Message.Model.Message.CSFightData(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.heroIdAtk_ = heroIdAtk_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.heroIdTarget_ = heroIdTarget_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.atkType_ = atkType_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.atkEffect_ = atkEffect_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.hp_ = hp_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.die_ = die_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.sleepTime_ = sleepTime_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.skillanu_ = skillanu_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.skillpng_ = skillpng_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.skillrange_ = skillrange_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.core.Message.Model.Message.CSFightData) {
+          return mergeFrom((com.core.Message.Model.Message.CSFightData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.core.Message.Model.Message.CSFightData other) {
+        if (other == com.core.Message.Model.Message.CSFightData.getDefaultInstance()) return this;
+        if (other.hasHeroIdAtk()) {
+          setHeroIdAtk(other.getHeroIdAtk());
+        }
+        if (other.hasHeroIdTarget()) {
+          bitField0_ |= 0x00000002;
+          heroIdTarget_ = other.heroIdTarget_;
+          onChanged();
+        }
+        if (other.hasAtkType()) {
+          setAtkType(other.getAtkType());
+        }
+        if (other.hasAtkEffect()) {
+          bitField0_ |= 0x00000008;
+          atkEffect_ = other.atkEffect_;
+          onChanged();
+        }
+        if (other.hasHp()) {
+          bitField0_ |= 0x00000010;
+          hp_ = other.hp_;
+          onChanged();
+        }
+        if (other.hasDie()) {
+          bitField0_ |= 0x00000020;
+          die_ = other.die_;
+          onChanged();
+        }
+        if (other.hasSleepTime()) {
+          setSleepTime(other.getSleepTime());
+        }
+        if (other.hasSkillanu()) {
+          setSkillanu(other.getSkillanu());
+        }
+        if (other.hasSkillpng()) {
+          bitField0_ |= 0x00000100;
+          skillpng_ = other.skillpng_;
+          onChanged();
+        }
+        if (other.hasSkillrange()) {
+          setSkillrange(other.getSkillrange());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasHeroIdAtk()) {
+          
+          return false;
+        }
+        if (!hasHeroIdTarget()) {
+          
+          return false;
+        }
+        if (!hasAtkType()) {
+          
+          return false;
+        }
+        if (!hasAtkEffect()) {
+          
+          return false;
+        }
+        if (!hasHp()) {
+          
+          return false;
+        }
+        if (!hasDie()) {
+          
+          return false;
+        }
+        if (!hasSleepTime()) {
+          
+          return false;
+        }
+        if (!hasSkillanu()) {
+          
+          return false;
+        }
+        if (!hasSkillpng()) {
+          
+          return false;
+        }
+        if (!hasSkillrange()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.core.Message.Model.Message.CSFightData parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.core.Message.Model.Message.CSFightData) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 HeroIdAtk = 1;
+      private int heroIdAtk_ ;
+      /**
+       * <code>required int32 HeroIdAtk = 1;</code>
+       */
+      public boolean hasHeroIdAtk() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 HeroIdAtk = 1;</code>
+       */
+      public int getHeroIdAtk() {
+        return heroIdAtk_;
+      }
+      /**
+       * <code>required int32 HeroIdAtk = 1;</code>
+       */
+      public Builder setHeroIdAtk(int value) {
+        bitField0_ |= 0x00000001;
+        heroIdAtk_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 HeroIdAtk = 1;</code>
+       */
+      public Builder clearHeroIdAtk() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        heroIdAtk_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required string heroIdTarget = 2;
+      private java.lang.Object heroIdTarget_ = "";
+      /**
+       * <code>required string heroIdTarget = 2;</code>
+       */
+      public boolean hasHeroIdTarget() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string heroIdTarget = 2;</code>
+       */
+      public java.lang.String getHeroIdTarget() {
+        java.lang.Object ref = heroIdTarget_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          heroIdTarget_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string heroIdTarget = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getHeroIdTargetBytes() {
+        java.lang.Object ref = heroIdTarget_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          heroIdTarget_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string heroIdTarget = 2;</code>
+       */
+      public Builder setHeroIdTarget(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        heroIdTarget_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string heroIdTarget = 2;</code>
+       */
+      public Builder clearHeroIdTarget() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        heroIdTarget_ = getDefaultInstance().getHeroIdTarget();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string heroIdTarget = 2;</code>
+       */
+      public Builder setHeroIdTargetBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        heroIdTarget_ = value;
+        onChanged();
+        return this;
+      }
+
+      // required int32 atkType = 3;
+      private int atkType_ ;
+      /**
+       * <code>required int32 atkType = 3;</code>
+       */
+      public boolean hasAtkType() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required int32 atkType = 3;</code>
+       */
+      public int getAtkType() {
+        return atkType_;
+      }
+      /**
+       * <code>required int32 atkType = 3;</code>
+       */
+      public Builder setAtkType(int value) {
+        bitField0_ |= 0x00000004;
+        atkType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 atkType = 3;</code>
+       */
+      public Builder clearAtkType() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        atkType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required string atkEffect = 4;
+      private java.lang.Object atkEffect_ = "";
+      /**
+       * <code>required string atkEffect = 4;</code>
+       */
+      public boolean hasAtkEffect() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required string atkEffect = 4;</code>
+       */
+      public java.lang.String getAtkEffect() {
+        java.lang.Object ref = atkEffect_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          atkEffect_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string atkEffect = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAtkEffectBytes() {
+        java.lang.Object ref = atkEffect_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          atkEffect_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string atkEffect = 4;</code>
+       */
+      public Builder setAtkEffect(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        atkEffect_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string atkEffect = 4;</code>
+       */
+      public Builder clearAtkEffect() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        atkEffect_ = getDefaultInstance().getAtkEffect();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string atkEffect = 4;</code>
+       */
+      public Builder setAtkEffectBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        atkEffect_ = value;
+        onChanged();
+        return this;
+      }
+
+      // required string hp = 5;
+      private java.lang.Object hp_ = "";
+      /**
+       * <code>required string hp = 5;</code>
+       */
+      public boolean hasHp() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>required string hp = 5;</code>
+       */
+      public java.lang.String getHp() {
+        java.lang.Object ref = hp_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          hp_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string hp = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getHpBytes() {
+        java.lang.Object ref = hp_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hp_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string hp = 5;</code>
+       */
+      public Builder setHp(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        hp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string hp = 5;</code>
+       */
+      public Builder clearHp() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        hp_ = getDefaultInstance().getHp();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string hp = 5;</code>
+       */
+      public Builder setHpBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        hp_ = value;
+        onChanged();
+        return this;
+      }
+
+      // required string die = 6;
+      private java.lang.Object die_ = "";
+      /**
+       * <code>required string die = 6;</code>
+       */
+      public boolean hasDie() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>required string die = 6;</code>
+       */
+      public java.lang.String getDie() {
+        java.lang.Object ref = die_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          die_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string die = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDieBytes() {
+        java.lang.Object ref = die_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          die_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string die = 6;</code>
+       */
+      public Builder setDie(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        die_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string die = 6;</code>
+       */
+      public Builder clearDie() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        die_ = getDefaultInstance().getDie();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string die = 6;</code>
+       */
+      public Builder setDieBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        die_ = value;
+        onChanged();
+        return this;
+      }
+
+      // required int32 sleepTime = 7;
+      private int sleepTime_ ;
+      /**
+       * <code>required int32 sleepTime = 7;</code>
+       */
+      public boolean hasSleepTime() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>required int32 sleepTime = 7;</code>
+       */
+      public int getSleepTime() {
+        return sleepTime_;
+      }
+      /**
+       * <code>required int32 sleepTime = 7;</code>
+       */
+      public Builder setSleepTime(int value) {
+        bitField0_ |= 0x00000040;
+        sleepTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 sleepTime = 7;</code>
+       */
+      public Builder clearSleepTime() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        sleepTime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 skillanu = 8;
+      private int skillanu_ ;
+      /**
+       * <code>required int32 skillanu = 8;</code>
+       */
+      public boolean hasSkillanu() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>required int32 skillanu = 8;</code>
+       */
+      public int getSkillanu() {
+        return skillanu_;
+      }
+      /**
+       * <code>required int32 skillanu = 8;</code>
+       */
+      public Builder setSkillanu(int value) {
+        bitField0_ |= 0x00000080;
+        skillanu_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 skillanu = 8;</code>
+       */
+      public Builder clearSkillanu() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        skillanu_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required string skillpng = 9;
+      private java.lang.Object skillpng_ = "";
+      /**
+       * <code>required string skillpng = 9;</code>
+       */
+      public boolean hasSkillpng() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>required string skillpng = 9;</code>
+       */
+      public java.lang.String getSkillpng() {
+        java.lang.Object ref = skillpng_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          skillpng_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string skillpng = 9;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSkillpngBytes() {
+        java.lang.Object ref = skillpng_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          skillpng_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string skillpng = 9;</code>
+       */
+      public Builder setSkillpng(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
+        skillpng_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string skillpng = 9;</code>
+       */
+      public Builder clearSkillpng() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        skillpng_ = getDefaultInstance().getSkillpng();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string skillpng = 9;</code>
+       */
+      public Builder setSkillpngBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
+        skillpng_ = value;
+        onChanged();
+        return this;
+      }
+
+      // required int32 skillrange = 10;
+      private int skillrange_ ;
+      /**
+       * <code>required int32 skillrange = 10;</code>
+       */
+      public boolean hasSkillrange() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>required int32 skillrange = 10;</code>
+       */
+      public int getSkillrange() {
+        return skillrange_;
+      }
+      /**
+       * <code>required int32 skillrange = 10;</code>
+       */
+      public Builder setSkillrange(int value) {
+        bitField0_ |= 0x00000200;
+        skillrange_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 skillrange = 10;</code>
+       */
+      public Builder clearSkillrange() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        skillrange_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.core.Message.Model.CSFightData)
+    }
+
+    static {
+      defaultInstance = new CSFightData(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.core.Message.Model.CSFightData)
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_core_Message_Model_CSLogin_descriptor;
   private static
@@ -6932,6 +10860,31 @@ public final class Message {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_core_Message_Model_SCItemOne_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_core_Message_Model_CSFormation_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_core_Message_Model_CSFormation_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_core_Message_Model_SCFormation_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_core_Message_Model_SCFormation_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_core_Message_Model_CSFight_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_core_Message_Model_CSFight_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_core_Message_Model_SCFight_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_core_Message_Model_SCFight_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_core_Message_Model_CSFightData_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_core_Message_Model_CSFightData_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -6960,7 +10913,17 @@ public final class Message {
       "\002(\005\">\n\nSCItemList\0220\n\010itemData\030\001 \003(\0132\036.co" +
       "m.core.Message.Model.CSItem\"=\n\tSCItemOne" +
       "\0220\n\010itemData\030\001 \002(\0132\036.com.core.Message.Mo" +
-      "del.CSItemB\tB\007Message"
+      "del.CSItem\"\"\n\013CSFormation\022\023\n\013formationID",
+      "\030\001 \003(\005\"\"\n\013SCFormation\022\023\n\013formationID\030\001 \003" +
+      "(\005\"\033\n\007CSFight\022\020\n\010courseID\030\001 \002(\005\"t\n\007SCFig" +
+      "ht\022\016\n\006result\030\001 \002(\005\022\016\n\006hpSelf\030\002 \002(\005\022\020\n\010hp" +
+      "Target\030\003 \002(\005\0227\n\ncombatData\030\004 \003(\0132#.com.c" +
+      "ore.Message.Model.CSFightData\"\276\001\n\013CSFigh" +
+      "tData\022\021\n\tHeroIdAtk\030\001 \002(\005\022\024\n\014heroIdTarget" +
+      "\030\002 \002(\t\022\017\n\007atkType\030\003 \002(\005\022\021\n\tatkEffect\030\004 \002" +
+      "(\t\022\n\n\002hp\030\005 \002(\t\022\013\n\003die\030\006 \002(\t\022\021\n\tsleepTime" +
+      "\030\007 \002(\005\022\020\n\010skillanu\030\010 \002(\005\022\020\n\010skillpng\030\t \002" +
+      "(\t\022\022\n\nskillrange\030\n \002(\005B\tB\007Message"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -7027,6 +10990,36 @@ public final class Message {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_core_Message_Model_SCItemOne_descriptor,
               new java.lang.String[] { "ItemData", });
+          internal_static_com_core_Message_Model_CSFormation_descriptor =
+            getDescriptor().getMessageTypes().get(10);
+          internal_static_com_core_Message_Model_CSFormation_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_core_Message_Model_CSFormation_descriptor,
+              new java.lang.String[] { "FormationID", });
+          internal_static_com_core_Message_Model_SCFormation_descriptor =
+            getDescriptor().getMessageTypes().get(11);
+          internal_static_com_core_Message_Model_SCFormation_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_core_Message_Model_SCFormation_descriptor,
+              new java.lang.String[] { "FormationID", });
+          internal_static_com_core_Message_Model_CSFight_descriptor =
+            getDescriptor().getMessageTypes().get(12);
+          internal_static_com_core_Message_Model_CSFight_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_core_Message_Model_CSFight_descriptor,
+              new java.lang.String[] { "CourseID", });
+          internal_static_com_core_Message_Model_SCFight_descriptor =
+            getDescriptor().getMessageTypes().get(13);
+          internal_static_com_core_Message_Model_SCFight_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_core_Message_Model_SCFight_descriptor,
+              new java.lang.String[] { "Result", "HpSelf", "HpTarget", "CombatData", });
+          internal_static_com_core_Message_Model_CSFightData_descriptor =
+            getDescriptor().getMessageTypes().get(14);
+          internal_static_com_core_Message_Model_CSFightData_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_core_Message_Model_CSFightData_descriptor,
+              new java.lang.String[] { "HeroIdAtk", "HeroIdTarget", "AtkType", "AtkEffect", "Hp", "Die", "SleepTime", "Skillanu", "Skillpng", "Skillrange", });
           return null;
         }
       };

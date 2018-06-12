@@ -31,6 +31,7 @@ var game;
             (new game.Processor_SCItemList()).register();
             (new game.Processor_SCHero()).register();
             (new game.Processor_SCItem()).register();
+            (new game.Processor_SCFight()).register();
         };
         return ControllerPrepCommand;
     }(puremvc.SimpleCommand));

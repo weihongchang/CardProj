@@ -15,7 +15,8 @@ module game {
 		private onImgClick()
 		{
 			console.log("img click!!"+this.data.name);
-			game.AppFacade.getInstance().sendNotification(PanelNotify.OPEN_QIANGHUA);
+			MessageSend.sendFight(1);
+			// game.AppFacade.getInstance().sendNotification(PanelNotify.OPEN_QIANGHUA);
 		}
 
 		protected childrenCreated():void

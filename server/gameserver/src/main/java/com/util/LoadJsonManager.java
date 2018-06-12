@@ -5,14 +5,21 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+
 import com.alibaba.fastjson.JSON;
+import com.log.Loggers;
 import com.model.BaseTemplate;
 import com.model.dungeon.DungeonManager;
 import com.model.formation.FormationManager;
 import com.model.hero.HeroManager;
 import com.model.item.ItemManager;
+import com.model.skill.SkillManager;
 
 public class LoadJsonManager {
+	
+	private static final Logger logger = Loggers.gameLogger;
+	
 	private static LoadJsonManager instance;
 	 
 	public static LoadJsonManager getInstance()
@@ -57,6 +64,10 @@ public class LoadJsonManager {
 		//加载所有阵型模板
 		List<BaseTemplate> formationlist =  loadJosonFile("Formation", "com.model.formation.FormationTemplate");
 		FormationManager.getInstance().setFormationTemplate(formationlist);
+		
+		//加载所有技能模板
+		List<BaseTemplate> skilllist =  loadJosonFile("Skill", "com.model.skill.SkillTemplate");
+		SkillManager.getInstance().setSkillTemplate(skilllist);
 	}
 	
 	/**
@@ -70,7 +81,7 @@ public class LoadJsonManager {
 		
 //		templateName = "Hero";
 		String jsonPath = "/res/"+templateName+".json";
-		
+		logger.info("加载配置文件:"+jsonPath);
 //		className = "com.model.hero.HeroTemplate";
 		
 		InputStream in = this.getClass().getResourceAsStream(jsonPath);

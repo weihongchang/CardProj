@@ -45,6 +45,10 @@ var game;
                     console.log("112");
                     new game.Processor_SCItem().executeData(data);
                     break;
+                case 116:
+                    console.log("116");
+                    new game.Processor_SCItem().executeData(data);
+                    break;
             }
         };
         return MessageController;
