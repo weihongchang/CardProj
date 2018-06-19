@@ -25,6 +25,17 @@ public class Hero extends BaseObject {
 	//经验
 	private int exp;
 	
+	//血量
+	private int hp;
+	
+	private int def;
+	
+	private int atk;
+	
+	private int fightAtk;
+	private int fightDef;
+	
+	
 	//是否上阵
 	private int formationIndex;
 	
@@ -84,6 +95,46 @@ public class Hero extends BaseObject {
 
 	public void setFormationIndex(int formationIndex) {
 		this.formationIndex = formationIndex;
+	}
+
+	public int getHp() {
+		return hp;
+	}
+
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
+
+	public int getDef() {
+		return def;
+	}
+
+	public void setDef(int def) {
+		this.def = def;
+	}
+
+	public int getAtk() {
+		return atk;
+	}
+
+	public void setAtk(int atk) {
+		this.atk = atk;
+	}
+
+	public int getFightAtk() {
+		return fightAtk;
+	}
+
+	public void setFightAtk(int fightAtk) {
+		this.fightAtk = fightAtk;
+	}
+
+	public int getFightDef() {
+		return fightDef;
+	}
+
+	public void setFightDef(int fightDef) {
+		this.fightDef = fightDef;
 	}
 
 }

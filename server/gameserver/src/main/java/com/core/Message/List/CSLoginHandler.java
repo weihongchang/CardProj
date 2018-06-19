@@ -17,6 +17,7 @@ import com.core.Message.Model.Message.CSLogin;
 import com.core.db.MongoManager;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.InvalidProtocolBufferException;
+import com.model.hero.Hero;
 import com.model.player.Player;
 import com.model.player.PlayerManager;
 
@@ -78,6 +79,12 @@ public class CSLoginHandler extends CGMessage {
         		player = pl;
         		player.dbLoadHero();
         		player.dbLoadItem();
+        		
+        		Hero hero = player.getHeroForID(100011);
+        		if( hero.getFormationIndex() == -1 )
+        		{
+        			player.AddFormationHero(1, hero);
+        		}
         	}
         }
         else

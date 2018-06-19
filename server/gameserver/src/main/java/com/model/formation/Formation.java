@@ -10,6 +10,24 @@ public class Formation {
 	private long playerID;
 	private int[] formation;
 	
+	public Formation()
+	{
+		formation = new int[6];
+	}
+	
+	public Formation(FormationTemplate ft)
+	{
+		formation = new int[6];
+		String[] hlist = ft.heroid.split(";");
+		if( hlist != null && hlist.length >0 )
+		{
+			for(int i=0;i< hlist.length;i++)
+			{
+				formation[i] = Integer.parseInt(hlist[i]);
+			}
+		}
+	}
+	
 	public long getPlayerID() {
 		return playerID;
 	}

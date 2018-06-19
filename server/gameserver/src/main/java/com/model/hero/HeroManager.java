@@ -82,8 +82,9 @@ public class HeroManager {
 	public HeroTemplate getHeroTemplateForID(int tID)
 	{
 		for (int i = 0; i < heroTemplateList.size(); i++) {
+			
 			HeroTemplate heroTemplate = (HeroTemplate) heroTemplateList.get( i );
-			if(heroTemplate != null && heroTemplate.heroid == tID+"" )
+			if(heroTemplate != null && heroTemplate.heroid.equals(tID+"" ))
 			{
 				return heroTemplate;
 			}

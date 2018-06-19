@@ -12,8 +12,9 @@ import com.model.dungeon.DungeonManager;
 import com.model.formation.Formation;
 import com.model.formation.FormationManager;
 import com.model.formation.FormationTemplate;
-import com.model.item.ItemManager;
-import com.model.item.ItemTemplate;
+import com.model.hero.Hero;
+import com.model.hero.HeroManager;
+import com.model.hero.HeroTemplate;
 import com.model.player.Player;
 import com.model.skill.SkillManager;
 import com.model.skill.SkillTemplate;
@@ -68,7 +69,7 @@ public class CombatManager {
         FormationTemplate df = null;
 		int formationId = 0;
 		int courseId = userid;
-    	int customId = 0;
+    	courseId = 8;
     	
     	//跳过战斗;1不可跳过.0可跳过
     	int jumpAttack = 1;
@@ -80,7 +81,7 @@ public class CombatManager {
 	    		CourseTemplate course = DungeonManager.getInstance().getCourseById(courseId);
 		    	if( course != null )
 		    	{
-		    		customId = Integer.parseInt( course.customspassid);
+		    		
 		    		formationId = Integer.parseInt( course.formationid);
 		    	}
 		    	
@@ -92,13 +93,14 @@ public class CombatManager {
 //	    		List<UST_SOLDIERLIST_COMBAT_NEWATTACK> soldierList = new ArrayList<UST_SOLDIERLIST_COMBAT_NEWATTACK>();
 //	    		List<UST_HERODETAILLIST_COMBAT_NEWATTACK> heroDetailList = new ArrayList<UST_HERODETAILLIST_COMBAT_NEWATTACK>();
 	    		
-	    		List<CombatNodeData> combatNodeList = null;
-	    		
+	    	Formation targetFormation = new Formation(df);
+    		List<CombatNodeData> combatNodeList = null;
+    		combatNodeList = CombatManager.getInstance().getAtkHeroAndInfo(combatType, thePlayer, targetPlayer, targetFormation);
     	    	
     	    	//战斗类型.0pve;1pvp
     	    	int pvptype = 0;
 //    	    	PvpPlayerData pvpData = new PvpPlayerData(df, fightNum);
-//    	    	
+//
 //    	    	if( pvpData != null && pvpData.getFormation() != null )
 //    	    	{
 //    	    		combatNodeList = CombatManager.getInstance().getAtkHeroAndInfo(pvptype, thePlayer, targetPlayer, soldierList, heroDetailList,pvpData);
@@ -107,8 +109,8 @@ public class CombatManager {
 //				{
 //    	    		//没有对手直接胜利
 //				}
-	    	        
-	    	        
+
+
     	        int resultValue = 0;
     	        cResult result = CombatManager.getInstance().getNewResult();
     	        //计算战斗过程
@@ -181,225 +183,124 @@ public class CombatManager {
 	 * @param targetPlayer	被攻击者
 	 * @return
 	 */
-	public List<CombatNodeData> getAtkHeroAndInfo(int type,Player thePlayer,Player targetPlayer//,
-//			List<UST_SOLDIERLIST_COMBAT_NEWATTACK> soldierList,
-//			List<UST_HERODETAILLIST_COMBAT_NEWATTACK> uhList,
-//			PvpPlayerData pvpData 
+	public List<CombatNodeData> getAtkHeroAndInfo(int type,Player thePlayer,Player targetPlayer,Formation formationTarget
 			)
 	{
-		return null;
-//		List<CombatNodeData> combatNodeList = new ArrayList<CombatNodeData>();
-//		for( int i =0 ;i<18;i++ )
-//		{
-//			combatNodeList.add( new CombatNodeData());
-//		}
-//		// 己方阵型
-//		Formation formation = thePlayer.getHeroFormation().get(0);
-//		for(int i = 0;i < formation.getFormation().length;i++)
-//		{
+
+		List<CombatNodeData> combatNodeList = new ArrayList<CombatNodeData>();
+		for( int i =0 ;i<18;i++ )
+		{
+			combatNodeList.add( new CombatNodeData());
+		}
+		// 己方阵型
+		Formation formation = thePlayer.getFormation();
+		for(int i = 0;i < formation.getFormation().length;i++)
+		{
 //			UST_SOLDIERLIST_COMBAT_NEWATTACK us = new UST_SOLDIERLIST_COMBAT_NEWATTACK();
 //			// index
 //			us.boxIndex = i;
 //			// 英雄id
 //			us.heroID = formation.getFormation()[i];
-//			
-//			combatNodeList.get( i ).boxIndex = i;
-//			combatNodeList.get( i ).heroID = us.heroID;
-//			
+			
+			combatNodeList.get( i ).boxIndex = i;
+			combatNodeList.get( i ).heroID = formation.getFormation()[i];
+			
 //			soldierList.add(us);
-//		}
-//
-//		FormationNew formationTarget = pvpData.getFormation();
-//		// 对方阵型
-//		for(int i = 9;i < formationTarget.getFormation().length + 9;i++)
-//		{
+		}
+
+		
+		// 对方阵型
+		for(int i = 9;i < formationTarget.getFormation().length + 9;i++)
+		{
 //			UST_SOLDIERLIST_COMBAT_NEWATTACK us = new UST_SOLDIERLIST_COMBAT_NEWATTACK();
 //			// index
 //			us.boxIndex = i;
 //			// 英雄id
 //			us.heroID = formationTarget.getFormation()[i - 9];
-//			
-//			combatNodeList.get( i ).boxIndex = i;
-//			combatNodeList.get( i ).heroID = us.heroID;
-//			
+			
+			combatNodeList.get( i ).boxIndex = i;
+			combatNodeList.get( i ).heroID = formationTarget.getFormation()[i - 9];//us.heroID;
+			
 //			soldierList.add(us);
-//		}
-//
-//		// 英雄数据
-//		for(int i = 0;i < soldierList.size();i++)
-//		{
-//			UST_SOLDIERLIST_COMBAT_NEWATTACK us = soldierList.get(i);
-//			if(us.heroID > 0)
-//			{
-//				HeroLevelConfig hero = null;
-//				if(us.boxIndex < 9)
-//				{
-//					Hero h = thePlayer.getHero(us.heroID);
-//					if(h != null)
+		}
+
+		// 英雄数据
+		for(int i = 0;i < combatNodeList.size();i++)
+		{
+			CombatNodeData us = combatNodeList.get(i);
+			if(us.heroID > 0)
+			{
+				HeroTemplate hero = null;
+				Hero h = null;
+				int templateID = 0;
+				if(us.boxIndex < 9)
+				{
+					h = thePlayer.getHeroForID(us.heroID);
+					if(h != null)
+					{
+						templateID = h.getTemplateID();
+					}	
+				}
+				else
+				{
+					templateID = us.heroID;
+				}
+				
+				
+				hero = HeroManager.getInstance().getHeroTemplateForID(templateID);
+				if(hero != null)
+				{
+					//战斗用的数据
+					combatNodeList.get( i ).name = hero.heroname;
+					combatNodeList.get( i ).AnuId = Integer.parseInt( hero.anuid);
+					combatNodeList.get( i ).PngId = hero.pngid;
+					combatNodeList.get( i ).iconId =Integer.parseInt( hero.heroiconid);
+					combatNodeList.get( i ).bigiconId = Integer.parseInt(hero.heroiconid);
+					combatNodeList.get( i ).modelWidth = Integer.parseInt(hero.pngwidth);
+					combatNodeList.get( i ).modelHeight = Integer.parseInt(hero.pngheight);
+					combatNodeList.get( i ).attackframe = 1;
+					combatNodeList.get( i ).hFlyAnuId = 1;
+					combatNodeList.get( i ).hFlyPngId = 1;
+					combatNodeList.get( i ).hFlyPngX = 1;
+					combatNodeList.get( i ).hFlyPngY = 1;
+					combatNodeList.get( i ).hFlyHeight = 1;
+					combatNodeList.get( i ).hFlySpeed = 1;
+					combatNodeList.get( i ).hFlyAngle = 1;
+					combatNodeList.get( i ).pngHeight = Integer.parseInt(hero.pngheight);
+					combatNodeList.get( i ).pngWidth = Integer.parseInt(hero.pngwidth);
+					combatNodeList.get( i ).heroColor = Integer.parseInt(hero.color);
+					combatNodeList.get( i ).soldierNum = Integer.parseInt(hero.soldiernum);
+					
+//					if(us.boxIndex < 9)
 //					{
-//						hero = HeroDict.getInstance().getHeroLevelConfig(h.getHeroConfigID(), 1);
-//						if(hero != null)
-//						{
-//							UST_HERODETAILLIST_COMBAT_NEWATTACK uh = new UST_HERODETAILLIST_COMBAT_NEWATTACK();
-//							uh.id = us.boxIndex;
-//							uh.name = hero.getName();
-//							uh.hp = h.getHp();
-//							uh.AnuId = hero.getAnuId();
-//							uh.PngId = hero.getPngId();
-//							uh.iconId = hero.getIconId();
-//							uh.bigiconId = hero.getBigheroiconid();
-//							uh.modelWidth = hero.getPngwidth();
-//							uh.modelHeight = hero.getPngheight();
-//							uh.attackframe = hero.getAttackframe();
-//							uh.hFlyAnuId = hero.gethFlyAnuId();
-//							uh.hFlyPngId = hero.gethFlyPngId();
-//							uh.hFlyPngX = hero.gethFlyPngX();
-//							uh.hFlyPngY = hero.gethFlyPngY();
-//							uh.hFlyHeight = hero.gethFlyHeight();
-//							uh.hFlySpeed = hero.gethFlySpeed();
-//							uh.hFlyAngle = hero.gethFlyAngle();
-//							uh.pngHeight = hero.getPngheight();
-//							uh.pngWidth = hero.getPngwidth();
-//							uh.heroColor = hero.getColor().getValue();
-//							uh.soldierNum = hero.getSoldiernum();
-//							//战斗用的数据
-//							combatNodeList.get( i ).name = hero.getName();
-//							combatNodeList.get( i ).AnuId = hero.getAnuId();
-//							combatNodeList.get( i ).PngId = hero.getPngId();
-//							combatNodeList.get( i ).iconId = hero.getIconId();
-//							combatNodeList.get( i ).bigiconId = hero.getBigheroiconid();
-//							combatNodeList.get( i ).modelWidth = hero.getPngwidth();
-//							combatNodeList.get( i ).modelHeight = hero.getPngheight();
-//							combatNodeList.get( i ).attackframe = hero.getAttackframe();
-//							combatNodeList.get( i ).hFlyAnuId = hero.gethFlyAnuId();
-//							combatNodeList.get( i ).hFlyPngId = hero.gethFlyPngId();
-//							combatNodeList.get( i ).hFlyPngX = hero.gethFlyPngX();
-//							combatNodeList.get( i ).hFlyPngY = hero.gethFlyPngY();
-//							combatNodeList.get( i ).hFlyHeight = hero.gethFlyHeight();
-//							combatNodeList.get( i ).hFlySpeed = hero.gethFlySpeed();
-//							combatNodeList.get( i ).hFlyAngle = hero.gethFlyAngle();
-//							combatNodeList.get( i ).pngHeight = hero.getPngheight();
-//							combatNodeList.get( i ).pngWidth = hero.getPngwidth();
-//							combatNodeList.get( i ).heroColor = hero.getColor().getValue();
-//							combatNodeList.get( i ).soldierNum = hero.getSoldiernum();
-//							
-//							combatNodeList.get( i ).hp = h.getHp();
-//							combatNodeList.get( i ).def = h.getDef();
-//							combatNodeList.get( i ).atk = h.getAtk();
-//							combatNodeList.get( i ).fightAtk = h.getFightAtk();
-//							combatNodeList.get( i ).fightDef = h.getFightDef();
-//							combatNodeList.get( i ).skillID = h.getSkill().getSkillID();
-//							combatNodeList.get( i ).herovio = hero.getHerovio();	
-//							combatNodeList.get( i ).herodes = hero.getHerodes();	
-//							combatNodeList.get( i ).herores = hero.getHerores();	
-//							combatNodeList.get( i ).heroten = hero.getHeroten();	
-//							combatNodeList.get( i ).herodod = hero.getHerodod();	
-//							combatNodeList.get( i ).herotar = hero.getHerotar();	
-//							combatNodeList.get( i ).heroang = hero.getHeroang();
-//
-//							uhList.add(uh);
-//						}
+//						combatNodeList.get( i ).hp = h.getHp();
+//						combatNodeList.get( i ).def = h.getDef();
+//						combatNodeList.get( i ).atk = h.getAtk();
+//						combatNodeList.get( i ).fightAtk = h.getFightAtk();
+//						combatNodeList.get( i ).fightDef = h.getFightDef();
 //					}
-//				}
-//				else
-//				{
-//					UST_HERODETAILLIST_COMBAT_NEWATTACK uh = new UST_HERODETAILLIST_COMBAT_NEWATTACK();
-//					HeroLevelExpConfig heroLevel = null;
-//					HeroData hd = pvpData.getHeroData(us.heroID);
-//					if( hd != null )
-//					{
-//						if(type > 0)
-//						{// pvp
-//							hero = HeroDict.getInstance().getHeroLevelConfig(hd.heroType, 1);
-//							uh.hp = hd.hp;
-//							combatNodeList.get( i ).hp = hd.hp;
-//							combatNodeList.get( i ).def = hd.def;
-//							combatNodeList.get( i ).atk = hd.atk;
-//							combatNodeList.get( i ).fightAtk = hd.fightAtk;
-//							combatNodeList.get( i ).fightDef = hd.fightDef;
-//							combatNodeList.get( i ).skillID = hd.skillID;
-//						}
-//						else
-//						{
-//							//pve
-//							int level = 1;
-//							hero = HeroDict.getInstance().getMonsterConfig(hd.heroType);
-//							if(hero != null)
-//							{
-//								level = hero.getMonsterlevel();
-//								heroLevel = HeroLevelExpDict.getInstance().getHeroLevelExp(level);
-//								if( heroLevel != null )
-//								{
-//									uh.hp = heroLevel.getHerohp1();
-//									combatNodeList.get( i ).hp = heroLevel.getHerohp1();
-//									combatNodeList.get( i ).def = heroLevel.getHerodef1();
-//									combatNodeList.get( i ).atk = heroLevel.getHeroatk1();
-//									combatNodeList.get( i ).fightAtk = heroLevel.getHeroFightAtk();
-//									combatNodeList.get( i ).fightDef = heroLevel.getHeroFightDef();
-//									combatNodeList.get( i ).skillID =hero.getSkillId();
-//								}
-//							}
-//						}
-//					}
-//					if(hero != null)
-//					{
-//						uh.id = us.boxIndex;
-//						uh.name = hero.getName();
-//						uh.AnuId = hero.getAnuId();
-//						uh.PngId = hero.getPngId();
-//						uh.iconId = hero.getIconId();
-//						uh.bigiconId = hero.getBigheroiconid();
-//						uh.modelWidth = hero.getPngwidth();
-//						uh.modelHeight = hero.getPngheight();
-//						uh.attackframe = hero.getAttackframe();
-//						uh.hFlyAnuId = hero.gethFlyAnuId();
-//						uh.hFlyPngId = hero.gethFlyPngId();
-//						uh.hFlyPngX = hero.gethFlyPngX();
-//						uh.hFlyPngY = hero.gethFlyPngY();
-//						uh.hFlyHeight = hero.gethFlyHeight();
-//						uh.hFlySpeed = hero.gethFlySpeed();
-//						uh.hFlyAngle = hero.gethFlyAngle();
-//						uh.pngHeight = hero.getPngheight();
-//						uh.pngWidth = hero.getPngwidth();
-//						uh.heroColor = hero.getColor().getValue();
-//						uh.soldierNum = hero.getSoldiernum();
-//						
-//						//战斗用的数据
-//						combatNodeList.get( i ).name = hero.getName();
-//						combatNodeList.get( i ).AnuId = hero.getAnuId();
-//						combatNodeList.get( i ).PngId = hero.getPngId();
-//						combatNodeList.get( i ).iconId = hero.getIconId();
-//						combatNodeList.get( i ).bigiconId = hero.getBigheroiconid();
-//						combatNodeList.get( i ).modelWidth = hero.getPngwidth();
-//						combatNodeList.get( i ).modelHeight = hero.getPngheight();
-//						combatNodeList.get( i ).attackframe = hero.getAttackframe();
-//						combatNodeList.get( i ).hFlyAnuId = hero.gethFlyAnuId();
-//						combatNodeList.get( i ).hFlyPngId = hero.gethFlyPngId();
-//						combatNodeList.get( i ).hFlyPngX = hero.gethFlyPngX();
-//						combatNodeList.get( i ).hFlyPngY = hero.gethFlyPngY();
-//						combatNodeList.get( i ).hFlyHeight = hero.gethFlyHeight();
-//						combatNodeList.get( i ).hFlySpeed = hero.gethFlySpeed();
-//						combatNodeList.get( i ).hFlyAngle = hero.gethFlyAngle();
-//						combatNodeList.get( i ).pngHeight = hero.getPngheight();
-//						combatNodeList.get( i ).pngWidth = hero.getPngwidth();
-//						combatNodeList.get( i ).heroColor = hero.getColor().getValue();
-//						combatNodeList.get( i ).soldierNum = hero.getSoldiernum();
-//						
-//						combatNodeList.get( i ).herovio = hero.getHerovio();	
-//						combatNodeList.get( i ).herodes = hero.getHerodes();	
-//						combatNodeList.get( i ).herores = hero.getHerores();	
-//						combatNodeList.get( i ).heroten = hero.getHeroten();	
-//						combatNodeList.get( i ).herodod = hero.getHerodod();	
-//						combatNodeList.get( i ).herotar = hero.getHerotar();	
-//						combatNodeList.get( i ).heroang = hero.getHeroang();
-//						
-//						uhList.add(uh);
-//					}
-//				}
-//			}
-//
-//		}
-//		return combatNodeList;
+//					else
+					{
+						combatNodeList.get( i ).hp = Integer.parseInt(hero.hp);
+						combatNodeList.get( i ).def = Integer.parseInt(hero.def);
+						combatNodeList.get( i ).atk = Integer.parseInt(hero.atk);
+						combatNodeList.get( i ).fightAtk = 1;
+						combatNodeList.get( i ).fightDef = 1;
+					}
+					
+					combatNodeList.get( i ).skillID = 0;//h.getSkill().getSkillID();
+					combatNodeList.get( i ).herovio = Integer.parseInt(hero.herovio);	
+					combatNodeList.get( i ).herodes = Integer.parseInt(hero.herodes);	
+					combatNodeList.get( i ).herores = Integer.parseInt(hero.herores);	
+					combatNodeList.get( i ).heroten = Integer.parseInt(hero.heroten);	
+					combatNodeList.get( i ).herodod = Integer.parseInt(hero.herodod);	
+					combatNodeList.get( i ).herotar = Integer.parseInt(hero.herotar);	
+					combatNodeList.get( i ).heroang = 1;
+				}
+			}
+
+		}
+		return combatNodeList;
 	}
 	
 

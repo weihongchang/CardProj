@@ -67,6 +67,7 @@ public class Player extends BaseObject  {
 	public Player(String ip)
 	{
 		this.ip = ip;
+		formation = new Formation();
 	}
 	
 	public long getPlayerid() {

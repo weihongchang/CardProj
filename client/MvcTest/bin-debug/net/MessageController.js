@@ -47,7 +47,7 @@ var game;
                     break;
                 case 116:
                     console.log("116");
-                    new game.Processor_SCItem().executeData(data);
+                    new game.Processor_SCFight().executeData(data);
                     break;
             }
         };

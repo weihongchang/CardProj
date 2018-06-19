@@ -47,7 +47,7 @@ module game {
 					break
 				case 116:
 					console.log("116");
-					new Processor_SCItem().executeData(data);
+					new Processor_SCFight().executeData(data);
 					break
 			}
 		}
