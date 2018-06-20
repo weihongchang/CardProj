@@ -20,6 +20,7 @@ var game;
     __reflect(BattleSingle.prototype, "game.BattleSingle");
     var BattleManager = (function () {
         function BattleManager() {
+            this.batData = "";
             this.battleSingleArray = [];
         }
         BattleManager.getInstance = function () {
@@ -36,11 +37,27 @@ var game;
             this.formation2 = new game.Formation();
             this.formation1.PlayerID = 1;
             this.formation2.PlayerID = 2;
-            this.formation1.formation = [0, 1, 1, 1, 1, 1];
-            this.formation2.formation = [0, 0, 1, 1, 1, 0];
+            this.formation1.formation = game.DataManager.getInstance().formation["formationID"];
+            this.formation2.formation = [1, 1, 1, 1, 1, 0];
             //攻击方，被攻击方，攻击类型，技能id，附带效果，伤害
+            // heroIdTarget+","+atkEffect+","+hp+","+die+","+newnuqi+",
+            var battleList = game.DataManager.getInstance().battleLog["combatData"];
+            for (var i = 0; i < battleList.length; i++) {
+                var atkIndex = battleList[i]["HeroIdAtk"];
+                var atkType = battleList[i]["atkType"];
+                var atkEffect = battleList[i]["atkEffect"];
+                var die = battleList[i]["die"];
+                var skillanu = battleList[i]["skillanu"];
+                var skillpng = battleList[i]["skillpng"];
+                var skillrange = battleList[i]["skillrange"];
+                var sleepTime = battleList[i]["sleepTime"];
+                var heroIdTarget = battleList[i]["heroIdTarget"];
+                var hp = battleList[i]["hp"];
+                this.batData += atkIndex + "," + heroIdTarget + ";";
+            }
             //加载战斗数据
-            this.batData = "1,8,0,1,0,100;9,1,0,1,0,100;2,8,0,1,0,100;8,1,0,1,0,100;";
+            //this.batData = "1,8,0,1,0,100;9,1,0,1,0,100;1,8,0,1,0,100;8,1,0,1,0,100;";
+            console.log(this.batData);
             // this.batData = "1,8,0,1,0,100;";
             //加载战斗资源
             //播放战斗
@@ -87,9 +104,10 @@ var game;
             }
         };
         BattleManager.prototype.BattleFinishCallBack = function () {
-            game.AppFacade.getInstance().sendNotification(MainNotify.OPEN_MAIN);
-            game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_HOME);
-            game.AppFacade.getInstance().sendNotification(SceneNotify.CLOSE_BATTLE);
+            game.AppFacade.getInstance().sendNotification(PanelNotify.CLOSE_Battle);
+            // game.AppFacade.getInstance().sendNotification(MainNotify.OPEN_MAIN);
+            // game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_HOME);
+            // game.AppFacade.getInstance().sendNotification(SceneNotify.CLOSE_BATTLE);
         };
         return BattleManager;
     }());

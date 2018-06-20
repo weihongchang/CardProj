@@ -77,10 +77,10 @@ module game {
         }
 
         private onChuangDangBtnClick(e: egret.TouchEvent) {
-            // game.AppFacade.getInstance().sendNotification(PanelNotify.OPEN_CHUANGDANG);
-            game.AppFacade.getInstance().sendNotification(MainNotify.CLOSE_MAIN);
-            game.AppFacade.getInstance().sendNotification(SceneNotify.CLOSE_HOME);
-            game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_BATTLE);
+            game.AppFacade.getInstance().sendNotification(PanelNotify.OPEN_Battle);
+            // game.AppFacade.getInstance().sendNotification(MainNotify.CLOSE_MAIN);
+            // game.AppFacade.getInstance().sendNotification(SceneNotify.CLOSE_HOME);
+            // game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_BATTLE);
         }
  
         private onShopBtnClick(e: egret.TouchEvent) {
@@ -96,8 +96,6 @@ module game {
             // game.AppFacade.getInstance().sendNotification(PanelNotify.OPEN_SHOP);
             game.AppFacade.getInstance().sendNotification(MainNotify.CLOSE_MAIN);
             game.AppFacade.getInstance().sendNotification(SceneNotify.CLOSE_HOME);
-            game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_BATTLE);
-            
         }
 
         //public activityBar: game.ActivityBar;

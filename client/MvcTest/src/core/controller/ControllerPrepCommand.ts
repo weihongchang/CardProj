@@ -23,6 +23,7 @@ module game {
             (new Processor_SCHero()).register();
             (new Processor_SCItem()).register();
             (new Processor_SCFight()).register();
+            (new Processor_SCFormation()).register();
         }
 	}
 }

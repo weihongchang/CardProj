@@ -66,6 +66,8 @@ public class PlayerManager {
 		PlayerManager.getInstance().sendHeroList(player);
 		
 		PlayerManager.getInstance().sendItemList(player);
+		
+		PlayerManager.getInstance().sendFormation(player);
 	}
 	
 	
@@ -121,6 +123,24 @@ public class PlayerManager {
 		}
 		
 		if( msg.getItemDataCount() >0 )
+		{
+			player.sendMessage(msg.build());
+		}
+		
+	}
+	
+	/**
+	 * 发送阵型信息
+	 * @param player
+	 */
+	public void sendFormation(Player player)
+	{
+		Message.SCFormation.Builder msg = Message.SCFormation.newBuilder();
+		for (int i = 0; i < player.getFormation().getFormation().length; i++) {
+			msg.addFormationID(player.getFormation().getFormation()[i]);
+		}
+		
+		if( msg.getFormationIDCount() >0 )
 		{
 			player.sendMessage(msg.build());
 		}

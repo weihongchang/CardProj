@@ -1,3 +1,6 @@
+/**
+ *
+ */
 var __reflect = (this && this.__reflect) || function (p, c, t) {
     p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
 };
@@ -8,23 +11,22 @@ var __extends = this && this.__extends || function __extends(t, e) {
 for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
 r.prototype = e.prototype, t.prototype = new r();
 };
-/**
- * 战斗场景
- */
 var game;
 (function (game) {
-    var BattleScene = (function (_super) {
-        __extends(BattleScene, _super);
-        function BattleScene() {
+    var BattlePanel = (function (_super) {
+        __extends(BattlePanel, _super);
+        function BattlePanel() {
             var _this = _super.call(this) || this;
             _this.aniList = [];
-            _this.skinName = "src/core/view/scene/BattleScene.exml";
+            // this.skinName = "src/core/view/panel/ui/MapSkin.exml";
+            _this.skinName = "resource/eui_skins/BattleScene.exml";
             _this.addEventListener(eui.UIEvent.COMPLETE, _this.createCompleteEvent, _this);
             return _this;
-            //this.createCompleteEvent();
         }
-        BattleScene.prototype.createCompleteEvent = function (event) {
+        BattlePanel.prototype.createCompleteEvent = function (event) {
             this.removeEventListener(eui.UIEvent.COMPLETE, this.createCompleteEvent, this);
+        };
+        BattlePanel.prototype.initData = function () {
             game.BattleManager.getInstance().CreateBattle();
             for (var i = 1; i <= 6; i++) {
                 if (game.BattleManager.getInstance().formation1.formation[i - 1] > 0) {
@@ -47,10 +49,11 @@ var game;
                     this.aniList[nIndex].gotoAndPlay("stand", -1);
                 }
             }
+            this.name = "battlepanel";
             GameLayerManager.gameLayer().sceneLayer.addChild(this);
-            this.PlayBattle();
+            // EffectUtils.showTips("战斗开始",4,50,false,GameConfig.curWidth()/2,GameConfig.curHeight()/2,this.PlayBattle);
         };
-        BattleScene.prototype.PlayBattle = function () {
+        BattlePanel.prototype.PlayBattle = function () {
             //攻击方，被攻击方，攻击类型，技能id，附带效果，伤害
             // this.batData = "1,6,0,1,0,100;1,6,0,1,0,100;1,6,0,1,0,100;";
             var strList = game.BattleManager.getInstance().batData.split(";");
@@ -92,47 +95,18 @@ var game;
             }
             game.BattleManager.getInstance().PlayBattle();
         };
-        // /**
-        //  * 移动到目标
-        //  */
-        // private async MoveTo(objAni:AniMC,xPoint:number,yPoint:number) {
-        // 	try {
-        // 		console.log("开始移动到目标"+xPoint+"   "+yPoint);
-        // 		egret.Tween.get(objAni).to({ x:xPoint,y: yPoint},300);   
-        // 	}
-        // 	catch (e) {
-        // 		console.error(e);
-        // 	}
-        // }
-        // /**
-        //  * 播放攻击动画
-        //  */
-        // private async PlayAtkAni(objAni:AniMC) {
-        // 	try {
-        // 		objAni.gotoAndPlay("Atk",1);
-        // 	}
-        // 	catch (e) {
-        // 		console.error(e);
-        // 	}
-        // }
-        // /**
-        //  * 移动回来
-        //  */
-        // private async MoveBack(objAni:AniMC,xPoint:number,yPoint:number) {
-        // 	try {
-        // 		console.log("开始移动回元目标"+xPoint+"   "+yPoint);
-        // 		egret.Tween.get(objAni).to({ x:xPoint,y: yPoint},300);   
-        // 	}
-        // 	catch (e) {
-        // 		console.error(e);
-        // 	}
-        // }
-        BattleScene.prototype.partAdded = function (partName, instance) {
+        BattlePanel.prototype.RemoveAllChildren = function () {
+            for (var i = 0; i < this.aniList.length; i++) {
+                if (this.aniList[i] && this.aniList[i].parent == this)
+                    this.removeChild(this.aniList[i]);
+            }
+        };
+        BattlePanel.prototype.partAdded = function (partName, instance) {
             _super.prototype.partAdded.call(this, partName, instance);
         };
-        return BattleScene;
+        return BattlePanel;
     }(eui.Component));
-    game.BattleScene = BattleScene;
-    __reflect(BattleScene.prototype, "game.BattleScene");
+    game.BattlePanel = BattlePanel;
+    __reflect(BattlePanel.prototype, "game.BattlePanel");
 })(game || (game = {}));
-//# sourceMappingURL=BattleScene.js.map
+//# sourceMappingURL=BattlePanel.js.map

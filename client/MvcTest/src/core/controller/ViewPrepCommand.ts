@@ -20,6 +20,7 @@ module game {
             this.facade.registerMediator(new ChuangDangMediator());
             this.facade.registerMediator(new ShopMediator());
             this.facade.registerMediator(new MapMediator());
+            this.facade.registerMediator(new BattleMediator());
 		}
 	}
 }

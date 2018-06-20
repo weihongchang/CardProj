@@ -29,8 +29,6 @@ var game;
         SceneManager.prototype.register = function () {
             this.facade.registerCommand(SceneNotify.OPEN_HOME, SceneManager); //打开主城
             this.facade.registerCommand(SceneNotify.CLOSE_HOME, SceneManager); //关闭主城
-            this.facade.registerCommand(SceneNotify.OPEN_BATTLE, SceneManager); //打开战斗
-            this.facade.registerCommand(SceneNotify.CLOSE_BATTLE, SceneManager); //关闭战斗
         };
         SceneManager.prototype.execute = function (notification) {
             var data = notification.getBody(); //携带数据
@@ -47,20 +45,6 @@ var game;
                     if (GameLayerManager.gameLayer().homeCity != null) {
                         panelCon.removeChild(GameLayerManager.gameLayer().homeCity);
                         GameLayerManager.gameLayer().homeCity = null;
-                    }
-                    break;
-                }
-                case SceneNotify.OPEN_BATTLE: {
-                    if (GameLayerManager.gameLayer().battleScene == null) {
-                        GameLayerManager.gameLayer().battleScene = new game.BattleScene();
-                        panelCon.addChild(GameLayerManager.gameLayer().battleScene);
-                    }
-                    break;
-                }
-                case SceneNotify.CLOSE_BATTLE: {
-                    if (GameLayerManager.gameLayer().battleScene != null) {
-                        panelCon.removeChild(GameLayerManager.gameLayer().battleScene);
-                        GameLayerManager.gameLayer().battleScene = null;
                     }
                     break;
                 }

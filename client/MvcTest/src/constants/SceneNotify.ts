@@ -14,12 +14,7 @@
 
 		//关闭主城场景
 		public static CLOSE_HOME:string = "SceneNotify_CLOSE_HOME";
-
-		//进入战斗场景
-		public static OPEN_BATTLE:string = "SceneNotify_OPEN_BATTLE";
-
-		//关闭战斗场景
-		public static CLOSE_BATTLE:string = "SceneNotify_CLOSE_BATTLE";
+		
 	}	
 
 

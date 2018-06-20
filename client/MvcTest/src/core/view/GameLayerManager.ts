@@ -28,8 +28,7 @@ class GameLayerManager extends eui.UILayer{
 
     //主场景实例
     public homeCity:game.HomeCity;
-    //战斗场景实例
-    public battleScene:game.BattleScene;
+    
 
     private static _instance:GameLayerManager; 
 

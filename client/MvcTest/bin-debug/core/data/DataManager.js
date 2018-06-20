@@ -9,6 +9,8 @@ var game;
             this.dungeonLevelList = [];
             this.heroList = [];
             this.itemList = [];
+            this.formation = [];
+            this.battleLog = [];
         }
         DataManager.getInstance = function () {
             if (this.instance == null) {

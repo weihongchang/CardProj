@@ -15,6 +15,8 @@ module game {
 		public player:PlayerData ;
 		public heroList:any = [];
 		public itemList:any = [];
+		public formation:any = [];
+		public battleLog:any = [];
 
 		public InitTestData(){
 			this.player = new PlayerData();

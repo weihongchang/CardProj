@@ -14,10 +14,6 @@ var SceneNotify = (function () {
     SceneNotify.OPEN_HOME = "SceneNotify_OPEN_HOME";
     //关闭主城场景
     SceneNotify.CLOSE_HOME = "SceneNotify_CLOSE_HOME";
-    //进入战斗场景
-    SceneNotify.OPEN_BATTLE = "SceneNotify_OPEN_BATTLE";
-    //关闭战斗场景
-    SceneNotify.CLOSE_BATTLE = "SceneNotify_CLOSE_BATTLE";
     return SceneNotify;
 }());
 __reflect(SceneNotify.prototype, "SceneNotify");

@@ -26,7 +26,7 @@ module game {
 
 		protected dataChanged(): void {
 			// console.trace(this.data, ">>>>>>>>>>>>>>>>>>>>>>>>>>")
-			console.log(this.data, ">>>>>>>>>>>>>>>>>>>>>>>>>>");
+			// console.log(this.data, ">>>>>>>>>>>>>>>>>>>>>>>>>>");
 			// this.imgHead.source = "dungeon"+this.data.index+"_jpg";
 			var dungeon =  DataManager.getInstance().getDungeonForID(this.data.index);
 			if( dungeon != null )

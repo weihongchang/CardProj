@@ -65,6 +65,12 @@ class PanelNotify{
     //关闭战斗胜利
     public static CLOSE_BattleFinish: string = "PANELNOTIFY_CLOSE_BATTLEFINISH";
 
+    //打开战斗
+    public static OPEN_Battle: string = "PANELNOTIFY_OPEN_BATTLE";
+
+    //关闭战斗
+    public static CLOSE_Battle: string = "PANELNOTIFY_CLOSE_BATTLE";
+
 }	
 
 

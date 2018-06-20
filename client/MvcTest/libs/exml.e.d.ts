@@ -8,6 +8,8 @@ declare module main{
 	class BackpackBtnSkin extends eui.Skin{
 	}
 }
+declare class BattleSceneSkin extends eui.Skin{
+}
 declare module skins{
 	class ButtonSkin extends eui.Skin{
 	}

@@ -46,6 +46,10 @@ var PanelNotify = (function () {
     PanelNotify.OPEN_BattleFinish = "PANELNOTIFY_OPEN_BATTLEFINISH";
     //关闭战斗胜利
     PanelNotify.CLOSE_BattleFinish = "PANELNOTIFY_CLOSE_BATTLEFINISH";
+    //打开战斗
+    PanelNotify.OPEN_Battle = "PANELNOTIFY_OPEN_BATTLE";
+    //关闭战斗
+    PanelNotify.CLOSE_Battle = "PANELNOTIFY_CLOSE_BATTLE";
     return PanelNotify;
 }());
 __reflect(PanelNotify.prototype, "PanelNotify");

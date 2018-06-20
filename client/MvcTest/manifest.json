@@ -14,8 +14,8 @@
 	],
 	"game": [
 		"bin-debug/core/ani/BaseMovieClip.js",
-		"bin-debug/core/model/ResourceProxyBase.js",
 		"bin-debug/core/view/panel/BaseMediator.js",
+		"bin-debug/core/model/ResourceProxyBase.js",
 		"bin-debug/core/logic/Battle/Formation.js",
 		"bin-debug/ThemeAdapter.js",
 		"bin-debug/WaitPanel.js",
@@ -44,6 +44,7 @@
 		"bin-debug/core/controller/Processor/Processor_100.js",
 		"bin-debug/core/controller/Processor/Processor_SCBuyHero.js",
 		"bin-debug/core/controller/Processor/Processor_SCFight.js",
+		"bin-debug/core/controller/Processor/Processor_SCFormation.js",
 		"bin-debug/core/controller/Processor/Processor_SCHero.js",
 		"bin-debug/core/controller/Processor/Processor_SCHeroList.js",
 		"bin-debug/core/controller/Processor/Processor_SCItem.js",
@@ -55,7 +56,7 @@
 		"bin-debug/core/data/FormationData.js",
 		"bin-debug/core/data/PlayerData.js",
 		"bin-debug/core/logic/Battle/BattleManager.js",
-		"bin-debug/LoadingUI.js",
+		"bin-debug/utils/UtilsClass/TipsUtils.js",
 		"bin-debug/core/model/P.js",
 		"bin-debug/Main.js",
 		"bin-debug/core/model/proxy/GameProxy.js",
@@ -72,6 +73,7 @@
 		"bin-debug/core/view/panel/PopUpManager.js",
 		"bin-debug/core/view/panel/mediator/BackpackMediator.js",
 		"bin-debug/core/view/panel/mediator/BattleFinishMediator.js",
+		"bin-debug/core/view/panel/mediator/BattleMediator.js",
 		"bin-debug/core/view/panel/mediator/ChuangDangMediator.js",
 		"bin-debug/core/view/panel/mediator/MapMediator.js",
 		"bin-debug/core/view/panel/mediator/QianghuaMediator.js",
@@ -80,13 +82,13 @@
 		"bin-debug/core/view/panel/mediator/ZhaoXianMediator.js",
 		"bin-debug/core/view/panel/panel/BackpackPanel.js",
 		"bin-debug/core/view/panel/panel/BattleFinishPanel.js",
+		"bin-debug/core/view/panel/panel/BattlePanel.js",
 		"bin-debug/core/view/panel/panel/ChuangDangPanel.js",
 		"bin-debug/core/view/panel/panel/MapPanel.js",
 		"bin-debug/core/view/panel/panel/QianghuaPanel.js",
 		"bin-debug/core/view/panel/panel/RolePanel.js",
 		"bin-debug/core/view/panel/panel/ShopPanel.js",
 		"bin-debug/core/view/panel/panel/ZhaoXianPanel.js",
-		"bin-debug/core/view/scene/BattleScene.js",
 		"bin-debug/core/view/scene/HomeCity.js",
 		"bin-debug/net/MessageController.js",
 		"bin-debug/net/SocketManager.js",
@@ -97,6 +99,6 @@
 		"bin-debug/utils/TipsManager.js",
 		"bin-debug/utils/TipsPanel.js",
 		"bin-debug/utils/UtilsClass/BitmapBlink.js",
-		"bin-debug/utils/UtilsClass/TipsUtils.js"
+		"bin-debug/LoadingUI.js"
 	]
 }

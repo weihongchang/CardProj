@@ -30,6 +30,7 @@ var game;
             this.facade.registerMediator(new game.ChuangDangMediator());
             this.facade.registerMediator(new game.ShopMediator());
             this.facade.registerMediator(new game.MapMediator());
+            this.facade.registerMediator(new game.BattleMediator());
         };
         return ViewPrepCommand;
     }(puremvc.SimpleCommand));

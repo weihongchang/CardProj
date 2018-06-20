@@ -76,10 +76,10 @@ var game;
             game.AppFacade.getInstance().sendNotification(PanelNotify.OPEN_ZHAOXIAN);
         };
         MainUI.prototype.onChuangDangBtnClick = function (e) {
-            // game.AppFacade.getInstance().sendNotification(PanelNotify.OPEN_CHUANGDANG);
-            game.AppFacade.getInstance().sendNotification(MainNotify.CLOSE_MAIN);
-            game.AppFacade.getInstance().sendNotification(SceneNotify.CLOSE_HOME);
-            game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_BATTLE);
+            game.AppFacade.getInstance().sendNotification(PanelNotify.OPEN_Battle);
+            // game.AppFacade.getInstance().sendNotification(MainNotify.CLOSE_MAIN);
+            // game.AppFacade.getInstance().sendNotification(SceneNotify.CLOSE_HOME);
+            // game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_BATTLE);
         };
         MainUI.prototype.onShopBtnClick = function (e) {
             game.AppFacade.getInstance().sendNotification(PanelNotify.OPEN_SHOP);
@@ -92,7 +92,6 @@ var game;
             // game.AppFacade.getInstance().sendNotification(PanelNotify.OPEN_SHOP);
             game.AppFacade.getInstance().sendNotification(MainNotify.CLOSE_MAIN);
             game.AppFacade.getInstance().sendNotification(SceneNotify.CLOSE_HOME);
-            game.AppFacade.getInstance().sendNotification(SceneNotify.OPEN_BATTLE);
         };
         //public btnAtk:eui.Button;
         MainUI.prototype.partAdded = function (partName, instance) {

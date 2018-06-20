@@ -69,7 +69,7 @@ public class CombatManager {
         FormationTemplate df = null;
 		int formationId = 0;
 		int courseId = userid;
-    	courseId = 8;
+    	courseId = 30;
     	
     	//跳过战斗;1不可跳过.0可跳过
     	int jumpAttack = 1;
@@ -467,7 +467,7 @@ public class CombatManager {
                     				    			die = 1;
                     				    		
                     				    		
-                    				    		String _hitarget = ua1.getHeroIdTarget()+heroIdTarget+","+atkEffect+","+hp+","+die+","+newnuqi+",";
+                    				    		String _hitarget = ua1.getHeroIdTarget()+heroIdTarget+","+atkEffect+","+hp+","+die+","+newnuqi;
                     				    		ua1.setHeroIdTarget(_hitarget);
                     				    		
             				    			}
@@ -616,7 +616,7 @@ public class CombatManager {
                     				    		if( currentHp == 0 )
                     				    			die = 1;
                     				    		
-                    				    		String _hitarget = ua1.getHeroIdTarget()+heroIdTarget+","+atkEffect+","+hp+","+die+","+newnuqi+",";
+                    				    		String _hitarget = ua1.getHeroIdTarget()+heroIdTarget+","+atkEffect+","+hp+","+die+","+newnuqi;
                     				    		ua1.setHeroIdTarget(_hitarget);
             				    			}
             				    		}
