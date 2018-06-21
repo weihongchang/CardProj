@@ -10,6 +10,11 @@ module game {
 			return this.instance;
 		}
 
+		/**
+		 * 阵型最大格子数
+		 */
+		public fightBoxMaxNum:number = 9;
+
 		public dungeonList:DungeonData[] = [];
 		public dungeonLevelList:DungeonLevelData[] = [];
 		public player:PlayerData ;
@@ -17,6 +22,7 @@ module game {
 		public itemList:any = [];
 		public formation:any = [];
 		public battleLog:any = [];
+		
 
 		public InitTestData(){
 			this.player = new PlayerData();

@@ -8,8 +8,6 @@ module game {
         private listHero:eui.List = null;
         private listHeroHead:eui.List = null;
 
-        private size:number = 6;
-
 
         public closeBtn: eui.Button;
         public scroller:eui.Scroller;
@@ -27,6 +25,10 @@ module game {
         public img_formation_box3:eui.Image;
         public img_formation_box4:eui.Image;
         public img_formation_box5:eui.Image;
+        public img_formation_box6:eui.Image;
+        public img_formation_box7:eui.Image;
+        public img_formation_box8:eui.Image;
+        
 
 
         private currentPointX:number;
@@ -42,6 +44,16 @@ module game {
         private moveHeroOldy:number = 0;
         private isMoveHeroSuccess:boolean = false;
 
+        /**
+         * 临时阵型
+         */
+        private formationTemp:number[] = [];
+
+        /**
+         * 阵型中的英雄头像
+         */
+        private formationHeroTemp:eui.Image[] = [];
+
         public constructor() {
             super();
             // this.skinName = "src/core/view/panel/ui/RoleSkin.exml";
@@ -53,6 +65,9 @@ module game {
             this.formationBox[3] = this.img_formation_box3;
             this.formationBox[4] = this.img_formation_box4;
             this.formationBox[5] = this.img_formation_box5;
+            this.formationBox[6] = this.img_formation_box6;
+            this.formationBox[7] = this.img_formation_box7;
+            this.formationBox[8] = this.img_formation_box8;
 
             this.group_formation.visible=false;
             this.addEventListener(eui.UIEvent.COMPLETE , this.createCompleteEvent, this);
@@ -147,7 +162,7 @@ module game {
             this.listHero.itemRenderer = Item_Hero;
             var sourceArr:any[] = [];
 
-            for (var i:number = 0; i < this.size; i++){
+            for (var i:number = 0; i < DataManager.getInstance().fightBoxMaxNum; i++){
                 sourceArr.push({name:"item"+i,index:i});
             }
             this.listHero.dataProvider = new eui.ArrayCollection(sourceArr);
@@ -166,11 +181,24 @@ module game {
             this.listHeroHead.itemRenderer = Item_HeroHeadList;
             var sourceArr:any[] = [];
 
-            for (var i:number = 0; i < this.size; i++){
+            for (var i:number = 0; i < DataManager.getInstance().fightBoxMaxNum; i++){
                 sourceArr.push({name:"item"+i,index:i});
             }
             this.listHeroHead.dataProvider = new eui.ArrayCollection(sourceArr);
             this.scroller_head.viewport = this.listHeroHead;
+        }
+
+        /**
+         * 初始化阵型panel
+         */
+        public initFormation()
+        {
+            this.formationTemp = DataManager.getInstance().formation["formationID"];
+            // formationHeroTemp
+            for(var i=0;i<this.formationTemp.length;i++)
+            {
+                
+            }
         }
 
         
@@ -205,6 +233,7 @@ module game {
         public onFormation(e:egret.TouchEvent)
         {
             console.log("切换阵型");
+            this.initFormation();
             this.group_formation.visible=true;
         }
 

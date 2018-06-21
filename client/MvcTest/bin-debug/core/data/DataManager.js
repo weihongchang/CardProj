@@ -5,6 +5,10 @@ var game;
 (function (game) {
     var DataManager = (function () {
         function DataManager() {
+            /**
+             * 阵型最大格子数
+             */
+            this.fightBoxMaxNum = 9;
             this.dungeonList = [];
             this.dungeonLevelList = [];
             this.heroList = [];

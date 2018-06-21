@@ -28,7 +28,7 @@ var game;
         };
         BattlePanel.prototype.initData = function () {
             game.BattleManager.getInstance().CreateBattle();
-            for (var i = 1; i <= 6; i++) {
+            for (var i = 1; i <= game.DataManager.getInstance().fightBoxMaxNum; i++) {
                 if (game.BattleManager.getInstance().formation1.formation[i - 1] > 0) {
                     this.aniList[i - 1] = new AniMC();
                     var herobg = this.getChildByName("heroBg" + i);
@@ -38,9 +38,9 @@ var game;
                     this.aniList[i - 1].gotoAndPlay("stand", -1);
                 }
             }
-            for (var i = 1; i <= 6; i++) {
+            for (var i = 1; i <= game.DataManager.getInstance().fightBoxMaxNum; i++) {
                 if (game.BattleManager.getInstance().formation2.formation[i - 1] > 0) {
-                    var nIndex = 6 + i - 1;
+                    var nIndex = game.DataManager.getInstance().fightBoxMaxNum + i - 1;
                     this.aniList[nIndex] = new AniMC();
                     var herobg = this.getChildByName("monsterBg" + i);
                     this.aniList[nIndex].x = herobg.x - herobg.width / 2;
@@ -66,7 +66,7 @@ var game;
                         var atkType = atkList[2];
                         var skillID = atkList[3];
                         var bufferID = atkList[4];
-                        var damageValue = atkList[5];
+                        var damageValue = Number(atkList[5]);
                         console.log(atkIndex + "使用技能" + skillID + "攻击" + defIndex + "收到伤害" + damageValue);
                         var oldX = this.aniList[atkIndex].x;
                         var oldY = this.aniList[atkIndex].y;
@@ -83,6 +83,7 @@ var game;
                         bsAtk.xPoint = 0;
                         bsAtk.yPoint = 0;
                         bsAtk.defObj = this.aniList[defIndex];
+                        bsAtk.hp = damageValue;
                         game.BattleManager.getInstance().battleSingleArray.unshift(bsAtk);
                         var bs2 = new game.BattleSingle();
                         bs2.battleType = game.BattleSingleType.move;

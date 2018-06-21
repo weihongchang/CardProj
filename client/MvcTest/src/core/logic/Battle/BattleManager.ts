@@ -16,7 +16,7 @@ module game {
 		public defObj:AniMC;
 		public xPoint:number;
 		public yPoint:number;
-
+		public hp:number;
 	}
 
 	export class BattleManager {
@@ -69,7 +69,6 @@ module game {
 			}
 			//加载战斗数据
 			//this.batData = "1,8,0,1,0,100;9,1,0,1,0,100;1,8,0,1,0,100;8,1,0,1,0,100;";
-			console.log(this.batData);
 			// this.batData = "1,8,0,1,0,100;";
 			//加载战斗资源
 
@@ -103,7 +102,7 @@ module game {
 										//受击飘血
 										var hitx = bs.defObj.x + bs.defObj.width/2;
 										var hity = bs.defObj.y - bs.defObj.height;
-										EffectUtils.showTips("1000",4,30,false,hitx,hity);
+										EffectUtils.showTips( bs.hp+"" ,4,30,false,hitx,hity);
 										//调用下一帧
 										this.PlayBattle();	
 									}

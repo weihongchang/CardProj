@@ -81,7 +81,6 @@ public class CombatManager {
 	    		CourseTemplate course = DungeonManager.getInstance().getCourseById(courseId);
 		    	if( course != null )
 		    	{
-		    		
 		    		formationId = Integer.parseInt( course.formationid);
 		    	}
 		    	
@@ -89,7 +88,7 @@ public class CombatManager {
 		    	fightNum = FormationManager.getInstance().getFormationFightNum( formationId );
 	    	}
 	    	
-	    		
+
 //	    		List<UST_SOLDIERLIST_COMBAT_NEWATTACK> soldierList = new ArrayList<UST_SOLDIERLIST_COMBAT_NEWATTACK>();
 //	    		List<UST_HERODETAILLIST_COMBAT_NEWATTACK> heroDetailList = new ArrayList<UST_HERODETAILLIST_COMBAT_NEWATTACK>();
 	    		

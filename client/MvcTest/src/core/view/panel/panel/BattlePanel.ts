@@ -37,7 +37,7 @@ module game {
         {
             BattleManager.getInstance().CreateBattle();
             
-            for (var i = 1; i <= 6; i ++) {
+			for (var i = 1; i <= DataManager.getInstance().fightBoxMaxNum; i ++) {
                 if(BattleManager.getInstance().formation1.formation[i-1] > 0)
                 {
                     this.aniList[i-1] = new AniMC();
@@ -50,11 +50,11 @@ module game {
 
             }	
 
-            for (var i = 1; i <= 6; i ++) {
+            for (var i = 1; i <= DataManager.getInstance().fightBoxMaxNum; i ++) {
                     
                 if(BattleManager.getInstance().formation2.formation[i-1] > 0)
                 {
-                    let nIndex = 6+i-1;
+                    let nIndex = DataManager.getInstance().fightBoxMaxNum + i-1;
                     this.aniList[nIndex] = new AniMC();
                     let herobg = this.getChildByName("monsterBg"+i);
 
@@ -81,13 +81,13 @@ module game {
 				if( strList.length >0 )
 				{
 					let atkList = strList[i].split(",");
-					if(atkList.length>=6){
+					if(atkList.length >= 6){
 						let atkIndex:number = Number( atkList[0]);
 						let defIndex:number = Number(atkList[1]);
 						let atkType:string = atkList[2];
 						let skillID:string = atkList[3];
 						let bufferID:string = atkList[4];
-						let damageValue:string = atkList[5];
+						let damageValue:number = Number( atkList[5]);
 						console.log(atkIndex+"使用技能"+skillID+"攻击"+defIndex+"收到伤害"+damageValue);
 						
 						var oldX = this.aniList[atkIndex].x;
@@ -107,6 +107,7 @@ module game {
 						bsAtk.xPoint = 0;
 						bsAtk.yPoint = 0;
 						bsAtk.defObj = this.aniList[defIndex];
+						bsAtk.hp = damageValue;
 						BattleManager.getInstance().battleSingleArray.unshift(bsAtk);
 
 						var bs2:BattleSingle = new BattleSingle();

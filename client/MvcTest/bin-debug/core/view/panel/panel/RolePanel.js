@@ -19,7 +19,6 @@ var game;
             var _this = _super.call(this) || this;
             _this.listHero = null;
             _this.listHeroHead = null;
-            _this.size = 6;
             _this.isMoving = false;
             _this.currentPage = 0;
             _this.isImgMove = false;
@@ -35,6 +34,9 @@ var game;
             _this.formationBox[3] = _this.img_formation_box3;
             _this.formationBox[4] = _this.img_formation_box4;
             _this.formationBox[5] = _this.img_formation_box5;
+            _this.formationBox[6] = _this.img_formation_box6;
+            _this.formationBox[7] = _this.img_formation_box7;
+            _this.formationBox[8] = _this.img_formation_box8;
             _this.group_formation.visible = false;
             _this.addEventListener(eui.UIEvent.COMPLETE, _this.createCompleteEvent, _this);
             _this.scroller.throwSpeed = 0;
@@ -106,7 +108,7 @@ var game;
             this.listHero.layout = new eui.HorizontalLayout();
             this.listHero.itemRenderer = game.Item_Hero;
             var sourceArr = [];
-            for (var i = 0; i < this.size; i++) {
+            for (var i = 0; i < game.DataManager.getInstance().fightBoxMaxNum; i++) {
                 sourceArr.push({ name: "item" + i, index: i });
             }
             this.listHero.dataProvider = new eui.ArrayCollection(sourceArr);
@@ -123,7 +125,7 @@ var game;
             this.listHeroHead.layout = new eui.HorizontalLayout();
             this.listHeroHead.itemRenderer = game.Item_HeroHeadList;
             var sourceArr = [];
-            for (var i = 0; i < this.size; i++) {
+            for (var i = 0; i < game.DataManager.getInstance().fightBoxMaxNum; i++) {
                 sourceArr.push({ name: "item" + i, index: i });
             }
             this.listHeroHead.dataProvider = new eui.ArrayCollection(sourceArr);

@@ -52,13 +52,18 @@
 		<e:Image width="100%" height="100%" y="0" scaleY="1" x="0" source="transparent_png"/>
 		<e:Image width="432" height="461" scaleY="1" source="module_bg_png" horizontalCenter="0" y="339"/>
 		<e:Image id="btn_formationClose" width="80" height="80" scaleY="1" y="287" source="mainBtn_png" x="582"/>
-		<e:Image id="img_formation_box0" width="100" height="100" y="398" scaleY="1" x="202" source="cell9s_png"/>
-		<e:Image id="img_formation_box1" width="100" height="100" y="516" scaleY="1" x="202" source="cell9s_png"/>
-		<e:Image id="img_formation_box2" width="100" height="100" y="634" scaleY="1" x="202" source="cell9s_png"/>
-		<e:Image id="img_formation_box3" width="100" height="100" y="398" scaleY="1" x="411" source="cell9s_png"/>
-		<e:Image id="img_formation_box4" width="100" height="100" y="516" scaleY="1" x="411" source="cell9s_png"/>
-		<e:Image id="img_formation_box5" width="100" height="100" y="634" scaleY="1" x="411" source="cell9s_png"/>
-		<e:Image id="img_fromation_hero0" width="80" height="80" x="212" y="408" source="head_zhangjiao_png"/>
+		<e:Image id="img_formation_box0" width="100" height="100" y="398" scaleY="1" x="167" source="cell9s_png"/>
+		<e:Image id="img_formation_box1" width="100" height="100" y="398" scaleY="1" x="313" source="cell9s_png"/>
+		<e:Image id="img_formation_box2" width="100" height="100" y="398" scaleY="1" x="459" source="cell9s_png"/>
+		<e:Image id="img_formation_box3" width="100" height="100" y="516" scaleY="1" x="167" source="cell9s_png"/>
+		<e:Image id="img_formation_box4" width="100" height="100" y="516" scaleY="1" x="313" source="cell9s_png"/>
+		<e:Image id="img_formation_box5" width="100" height="100" y="516" scaleY="1" x="459" source="cell9s_png"/>
+		<e:Image id="img_formation_box6" width="100" height="100" y="634" scaleY="1" x="167" source="cell9s_png"/>
+
+
+		<e:Image id="img_formation_box7" width="100" height="100" y="634" scaleY="1" x="313" source="cell9s_png"/>
+		<e:Image id="img_formation_box8" width="100" height="100" y="634" scaleY="1" x="459" source="cell9s_png"/>
+		<e:Image id="img_fromation_hero0" width="80" height="80" x="167" y="408" source="head_zhangjiao_png"/>
 	</e:Group>
 	<e:Group id="group_herolist" width="100%" height="100%" x="10" y="10" visible="false">
 		<e:Image width="100%" height="100%" y="0" scaleY="1" x="0" source="transparent_png"/>
