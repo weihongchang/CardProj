@@ -52,7 +52,7 @@ module game {
         /**
          * 阵型中的英雄头像
          */
-        private formationHeroTemp:eui.Image[] = [];
+        private formationHeroTemp:any = [];
 
         public constructor() {
             super();
@@ -95,15 +95,15 @@ module game {
         {
             this.isImgMove = true;
             this.isMoveHeroSuccess = false;
-            this.moveHeroOldx = this.img_fromation_hero0.x;
-            this.moveHeroOldy = this.img_fromation_hero0.y;
+            this.moveHeroOldx = e.currentTarget.x;
+            this.moveHeroOldy = e.currentTarget.y;
         }
         public imgTouchMove(e:egret.TouchEvent)
         {
             if(this.isImgMove)
             {
-                this.img_fromation_hero0.x = e.$stageX-this.img_fromation_hero0.width/2;
-                this.img_fromation_hero0.y = e.$stageY - this.img_fromation_hero0.height/2;
+                e.currentTarget.x = e.$stageX- e.currentTarget.width/2;
+                e.currentTarget.y = e.$stageY - e.currentTarget.height/2;
             }
         }
         public imgToucEnd(e:egret.TouchEvent)
@@ -112,10 +112,10 @@ module game {
             //判断是否移动到新坐标
             for(var i=0;i<this.formationBox.length;i++)
             {
-                if( Global.isOverlap(this.img_fromation_hero0,this.formationBox[i]))
+                if( Global.isOverlap(e.currentTarget,this.formationBox[i]))
                 {
-                    this.img_fromation_hero0.x = this.formationBox[i].x + (this.formationBox[i].width - this.img_fromation_hero0.width)/2;
-                    this.img_fromation_hero0.y = this.formationBox[i].y + (this.formationBox[i].height - this.img_fromation_hero0.height)/2;
+                    e.currentTarget.x = this.formationBox[i].x + (this.formationBox[i].width - e.currentTarget.width)/2;
+                    e.currentTarget.y = this.formationBox[i].y + (this.formationBox[i].height - e.currentTarget.height)/2;
                     this.isMoveHeroSuccess = true;
                     break;
                 }
@@ -123,8 +123,8 @@ module game {
 
             if( !this.isMoveHeroSuccess )
             {
-                this.img_fromation_hero0.x = this.moveHeroOldx;
-                this.img_fromation_hero0.y = this.moveHeroOldy;
+                e.currentTarget.x = this.moveHeroOldx;
+                e.currentTarget.y = this.moveHeroOldy;
             }
         }
 
@@ -193,11 +193,68 @@ module game {
          */
         public initFormation()
         {
+            this.clearFormation();
             this.formationTemp = DataManager.getInstance().formation["formationID"];
             // formationHeroTemp
             for(var i=0;i<this.formationTemp.length;i++)
             {
-                
+                if( this.formationTemp[i] > 0 )
+                {
+                    let imgIcon:eui.Image = new eui.Image();
+                    imgIcon.source = "head_zhangjiao_png";
+                    imgIcon.width = 80;
+                    imgIcon.height = 80;
+                    this.formationHeroIconPoint(i,imgIcon);
+
+                    imgIcon.addEventListener(egret.TouchEvent.TOUCH_BEGIN,this.imgTouchBegin,this);
+                    imgIcon.addEventListener(egret.TouchEvent.TOUCH_MOVE,this.imgTouchMove,this);
+                    imgIcon.addEventListener(egret.TouchEvent.TOUCH_END,this.imgToucEnd,this);
+                    imgIcon.addEventListener(egret.TouchEvent.TOUCH_CANCEL,this.imgToucEnd,this);
+
+                    this.formationHeroTemp.push({index:i,heroid:this.formationTemp[i],icon:imgIcon});
+                    this.group_formation.addChild( imgIcon );
+                }
+            }
+        }
+
+        /**
+         * 清空阵型
+         */
+        private clearFormation()
+        {
+            if( this.formationHeroTemp && this.formationHeroTemp.length>0)
+            {
+                for( var i=0;i<this.formationHeroTemp.length;i++ )
+                {
+                    this.group_formation.removeChild(this.formationHeroTemp[i].icon);
+                }
+            }
+            this.formationHeroTemp = [];
+        }
+
+        /**
+         * 阵型英雄头像位置
+         */
+        public formationHeroIconPoint(index:number,imgHeroIcon:eui.Image)
+        {
+            imgHeroIcon.x = this.formationBox[index].x + (this.formationBox[index].width - imgHeroIcon.width)/2;
+            imgHeroIcon.y = this.formationBox[index].y + (this.formationBox[index].height - imgHeroIcon.height)/2;
+        }
+
+        /**
+         * 保存阵型
+         */
+        private saveFormation()
+        {
+            
+            for( var i=0;i<this.formationTemp.length;i++ )
+            {
+                this.formationTemp[i] = 0;
+            }
+
+            for( var i=0;i<this.formationHeroTemp.length;i++ )
+            {
+                this.formationTemp[this.formationHeroTemp[i].index] =  this.formationHeroTemp[i].heroid;
             }
         }
 
@@ -244,6 +301,7 @@ module game {
         
         public onFormationClose(e:egret.TouchEvent)
         {
+            this.saveFormation();
             this.group_formation.visible=false;
         }
 

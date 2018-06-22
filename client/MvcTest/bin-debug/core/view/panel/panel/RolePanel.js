@@ -26,6 +26,14 @@ var game;
             _this.moveHeroOldx = 0;
             _this.moveHeroOldy = 0;
             _this.isMoveHeroSuccess = false;
+            /**
+             * 临时阵型
+             */
+            _this.formationTemp = [];
+            /**
+             * 阵型中的英雄头像
+             */
+            _this.formationHeroTemp = [];
             // this.skinName = "src/core/view/panel/ui/RoleSkin.exml";
             _this.skinName = "resource/eui_skins/Panel_RoleSkin.exml";
             _this.formationBox[0] = _this.img_formation_box0;
@@ -57,29 +65,29 @@ var game;
         RolePanel.prototype.imgTouchBegin = function (e) {
             this.isImgMove = true;
             this.isMoveHeroSuccess = false;
-            this.moveHeroOldx = this.img_fromation_hero0.x;
-            this.moveHeroOldy = this.img_fromation_hero0.y;
+            this.moveHeroOldx = e.currentTarget.x;
+            this.moveHeroOldy = e.currentTarget.y;
         };
         RolePanel.prototype.imgTouchMove = function (e) {
             if (this.isImgMove) {
-                this.img_fromation_hero0.x = e.$stageX - this.img_fromation_hero0.width / 2;
-                this.img_fromation_hero0.y = e.$stageY - this.img_fromation_hero0.height / 2;
+                e.currentTarget.x = e.$stageX - e.currentTarget.width / 2;
+                e.currentTarget.y = e.$stageY - e.currentTarget.height / 2;
             }
         };
         RolePanel.prototype.imgToucEnd = function (e) {
             this.isImgMove = false;
             //判断是否移动到新坐标
             for (var i = 0; i < this.formationBox.length; i++) {
-                if (Global.isOverlap(this.img_fromation_hero0, this.formationBox[i])) {
-                    this.img_fromation_hero0.x = this.formationBox[i].x + (this.formationBox[i].width - this.img_fromation_hero0.width) / 2;
-                    this.img_fromation_hero0.y = this.formationBox[i].y + (this.formationBox[i].height - this.img_fromation_hero0.height) / 2;
+                if (Global.isOverlap(e.currentTarget, this.formationBox[i])) {
+                    e.currentTarget.x = this.formationBox[i].x + (this.formationBox[i].width - e.currentTarget.width) / 2;
+                    e.currentTarget.y = this.formationBox[i].y + (this.formationBox[i].height - e.currentTarget.height) / 2;
                     this.isMoveHeroSuccess = true;
                     break;
                 }
             }
             if (!this.isMoveHeroSuccess) {
-                this.img_fromation_hero0.x = this.moveHeroOldx;
-                this.img_fromation_hero0.y = this.moveHeroOldy;
+                e.currentTarget.x = this.moveHeroOldx;
+                e.currentTarget.y = this.moveHeroOldy;
             }
         };
         RolePanel.prototype.createCompleteEvent = function (event) {
@@ -131,6 +139,52 @@ var game;
             this.listHeroHead.dataProvider = new eui.ArrayCollection(sourceArr);
             this.scroller_head.viewport = this.listHeroHead;
         };
+        /**
+         * 初始化阵型panel
+         */
+        RolePanel.prototype.initFormation = function () {
+            this.clearFormation();
+            this.formationTemp = game.DataManager.getInstance().formation["formationID"];
+            // formationHeroTemp
+            for (var i = 0; i < this.formationTemp.length; i++) {
+                if (this.formationTemp[i] > 0) {
+                    var imgIcon = new eui.Image();
+                    imgIcon.source = "head_zhangjiao_png";
+                    imgIcon.width = 80;
+                    imgIcon.height = 80;
+                    this.formationHeroIconPoint(i, imgIcon);
+                    imgIcon.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.imgTouchBegin, this);
+                    imgIcon.addEventListener(egret.TouchEvent.TOUCH_MOVE, this.imgTouchMove, this);
+                    imgIcon.addEventListener(egret.TouchEvent.TOUCH_END, this.imgToucEnd, this);
+                    imgIcon.addEventListener(egret.TouchEvent.TOUCH_CANCEL, this.imgToucEnd, this);
+                    this.formationHeroTemp.push({ index: i, icon: imgIcon });
+                    this.group_formation.addChild(imgIcon);
+                }
+            }
+        };
+        /**
+         * 清空阵型
+         */
+        RolePanel.prototype.clearFormation = function () {
+            if (this.formationHeroTemp && this.formationHeroTemp.length > 0) {
+                for (var i = 0; i < this.formationHeroTemp.length; i++) {
+                    this.group_formation.removeChild(this.formationHeroTemp[i].icon);
+                }
+            }
+            this.formationHeroTemp = [];
+        };
+        /**
+         * 阵型英雄头像位置
+         */
+        RolePanel.prototype.formationHeroIconPoint = function (index, imgHeroIcon) {
+            imgHeroIcon.x = this.formationBox[index].x + (this.formationBox[index].width - imgHeroIcon.width) / 2;
+            imgHeroIcon.y = this.formationBox[index].y + (this.formationBox[index].height - imgHeroIcon.height) / 2;
+        };
+        /**
+         * 保存阵型
+         */
+        RolePanel.prototype.saveFormation = function () {
+        };
         RolePanel.prototype.partAdded = function (partName, instance) {
             _super.prototype.partAdded.call(this, partName, instance);
         };
@@ -151,6 +205,7 @@ var game;
         };
         RolePanel.prototype.onFormation = function (e) {
             console.log("切换阵型");
+            this.initFormation();
             this.group_formation.visible = true;
         };
         RolePanel.prototype.onChangeHero = function (e) {
