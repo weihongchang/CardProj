@@ -361,7 +361,8 @@ var Main = (function (_super) {
             }
         }
         else {
-            EffectUtils.showTipsMid("网络连接异常！", true);
+            EffectUtils.showTipsMid("网络连接异常！重新连接中....", true);
+            SocketManager.connectServer("192.168.0.111", 8888);
         }
     };
     return Main;

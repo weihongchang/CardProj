@@ -13,6 +13,7 @@ import com.core.Exception.MessageParseException;
 import com.core.Message.CGMessage;
 import com.core.Message.Model.Message;
 import com.core.Message.Model.Message.CSBuyHero;
+import com.core.Message.Model.Message.CSFormation;
 import com.core.db.MongoManager;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.InvalidProtocolBufferException;
@@ -43,15 +44,14 @@ public class CSFormationHandler extends CGMessage {
 
     @Override
     protected boolean readImpl() throws InvalidProtocolBufferException {
-    	data = Message.CSBuyHero.parseFrom(readBytes());
+    	data = Message.CSFormation.parseFrom(readBytes());
 		return true;
     }
 
     public void execute(Player player) {
-        System.out.println("csbuyhero");
+        System.out.println("CSFormation");
         
-        //1 单绿  ;2 单蓝；3 单紫；4 十绿；5 十蓝；6 十紫；
-        int bType = ((CSBuyHero)data).getBType();
+        int count = ((CSFormation)data).getFormationIDCount();
         
         Message.SCBuyHero.Builder msg = Message.SCBuyHero.newBuilder();
         msg.setStatus(0);
@@ -66,7 +66,7 @@ public class CSFormationHandler extends CGMessage {
 			}
         }
         
-//        Query query=new Query(Criteria.where("playerid").is(player.getPlayerid()));
+//      Query query=new Query(Criteria.where("playerid").is(player.getPlayerid()));
 //		Update update = Update.update("heroList", player.getHeroList());
 //		MongoManager.getInstance().getMongoTemplate().updateFirst(query, update, Player.class);
 

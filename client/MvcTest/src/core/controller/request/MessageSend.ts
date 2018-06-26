@@ -59,4 +59,22 @@ module MessageSend {
 
         SocketManager.sendMessage(115,1,bytes)  
     }
+    
+    /**
+     * 保存阵型
+     */
+    export function sendSaveFormation(formation:number[]): void {
+        //创建user_login_class
+        var buyhero = Global.getMessage("CSFormation");
+        
+        //创建一条消息
+        var user_login = new buyhero({
+            "formationID": formation
+        });
+        
+        //序列化
+        var bytes = user_login.toArrayBuffer();
+
+        SocketManager.sendMessage(113,1,bytes)  
+    }
 }

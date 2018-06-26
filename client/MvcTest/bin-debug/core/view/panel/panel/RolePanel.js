@@ -157,7 +157,7 @@ var game;
                     imgIcon.addEventListener(egret.TouchEvent.TOUCH_MOVE, this.imgTouchMove, this);
                     imgIcon.addEventListener(egret.TouchEvent.TOUCH_END, this.imgToucEnd, this);
                     imgIcon.addEventListener(egret.TouchEvent.TOUCH_CANCEL, this.imgToucEnd, this);
-                    this.formationHeroTemp.push({ index: i, icon: imgIcon });
+                    this.formationHeroTemp.push({ index: i, heroid: this.formationTemp[i], icon: imgIcon });
                     this.group_formation.addChild(imgIcon);
                 }
             }
@@ -184,6 +184,13 @@ var game;
          * 保存阵型
          */
         RolePanel.prototype.saveFormation = function () {
+            for (var i = 0; i < this.formationTemp.length; i++) {
+                this.formationTemp[i] = 0;
+            }
+            for (var i = 0; i < this.formationHeroTemp.length; i++) {
+                this.formationTemp[this.formationHeroTemp[i].index] = this.formationHeroTemp[i].heroid;
+            }
+            MessageSend.sendSaveFormation(this.formationTemp);
         };
         RolePanel.prototype.partAdded = function (partName, instance) {
             _super.prototype.partAdded.call(this, partName, instance);
@@ -212,6 +219,7 @@ var game;
             console.log("切换英雄");
         };
         RolePanel.prototype.onFormationClose = function (e) {
+            this.saveFormation();
             this.group_formation.visible = false;
         };
         RolePanel.prototype.getCurrentPage = function () {

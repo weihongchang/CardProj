@@ -256,6 +256,7 @@ module game {
             {
                 this.formationTemp[this.formationHeroTemp[i].index] =  this.formationHeroTemp[i].heroid;
             }
+            MessageSend.sendSaveFormation(this.formationTemp);
         }
 
         
